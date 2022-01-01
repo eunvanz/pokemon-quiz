@@ -1,23 +1,56 @@
+import { ButtonHTMLAttributes, DetailedHTMLProps, useMemo } from "react";
 import { colors } from "~/styles/colors";
 
-export interface ButtonProps {
-  label: string;
+export interface ButtonProps
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
+  color?: "primary" | "secondary";
 }
 
-const Button: React.FC<ButtonProps> = ({ label }) => {
+const Button: React.FC<ButtonProps> = ({ color = "primary", ...props }) => {
+  const cssByColor = useMemo(() => {
+    switch (color) {
+      case "primary":
+        return {
+          backgroundColor: colors.primary,
+          color: colors.white,
+          borderColor: colors.primary,
+        };
+      case "secondary":
+        return {
+          backgroundColor: colors.white,
+          color: colors.primary,
+          borderColor: colors.primary,
+        };
+    }
+  }, [color]);
+
   return (
     <button
       css={{
-        backgroundColor: colors.white,
-        color: colors.primary,
-        padding: 16,
-        border: "2px solid",
-        borderColor: colors.primary,
+        padding: "1rem",
+        borderWidth: 3,
+        borderStyle: "solid",
+        fontSize: "1rem",
+        fontWeight: "bold",
         borderRadius: 16,
+        boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.2)",
+        transition: "all 100ms linear",
+        cursor: "pointer",
+        ...cssByColor,
+        "&:hover": {
+          boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.2)",
+          transform: "translateY(-1px)",
+        },
+        "&:active": {
+          boxShadow: "0px 0px 5px 0px rgba(0,0,0,0.2)",
+          transform: "translateY(1px)",
+        },
       }}
-    >
-      {label}
-    </button>
+      {...props}
+    />
   );
 };
 

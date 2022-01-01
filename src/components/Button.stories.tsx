@@ -5,11 +5,15 @@ import Button from "./Button";
 export default {
   title: "components/Button",
   component: Button,
-  args: {},
+  args: {
+    children: "Button Label",
+  },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Default = createStoryComponent(Template, {
-  label: "Button label",
+export const Primary = createStoryComponent(Template);
+
+export const Secondary = createStoryComponent(Template, {
+  color: "secondary",
 });
