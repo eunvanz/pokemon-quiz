@@ -2,10 +2,7 @@ import { ButtonHTMLAttributes, DetailedHTMLProps, useMemo } from "react";
 import { colors } from "~/styles/colors";
 
 export interface ButtonProps
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
+  extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   color?: "primary" | "secondary";
 }
 
