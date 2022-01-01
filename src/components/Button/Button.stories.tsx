@@ -19,3 +19,7 @@ export const Primary = createStoryComponent(Template);
 export const Secondary = createStoryComponent(Template, {
   color: "secondary",
 });
+
+export const Disabled = createStoryComponent(Template, {
+  disabled: true,
+});

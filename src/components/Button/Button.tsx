@@ -24,6 +24,22 @@ const Button: React.FC<ButtonProps> = ({ color = "primary", ...props }) => {
     }
   }, [color]);
 
+  const cssByDisabled = useMemo(() => {
+    if (!props.disabled) {
+      return {
+        "&:hover": {
+          boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.2)",
+          transform: "translateY(-1px)",
+        },
+        "&:active": {
+          boxShadow: "0px 0px 5px 0px rgba(0,0,0,0.2)",
+          transform: "translateY(1px)",
+        },
+      };
+    }
+    return undefined;
+  }, [props.disabled]);
+
   return (
     <button
       css={{
@@ -35,16 +51,9 @@ const Button: React.FC<ButtonProps> = ({ color = "primary", ...props }) => {
         borderRadius: 16,
         boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.2)",
         transition: "all 100ms linear",
-        cursor: "pointer",
+        opacity: props.disabled ? "50%" : undefined,
         ...cssByColor,
-        "&:hover": {
-          boxShadow: "0px 3px 5px 0px rgba(0,0,0,0.2)",
-          transform: "translateY(-1px)",
-        },
-        "&:active": {
-          boxShadow: "0px 0px 5px 0px rgba(0,0,0,0.2)",
-          transform: "translateY(1px)",
-        },
+        ...cssByDisabled,
       }}
       {...props}
     />
