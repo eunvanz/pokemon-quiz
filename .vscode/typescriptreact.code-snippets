@@ -1,0 +1,269 @@
+{
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "const $1 = () => {",
+      "  return (",
+      "    <>",
+      "    </>",
+      "  );",
+      "};",
+      "",
+      "export default $1"
+    ]
+  },
+  "Use Effect": {
+    "prefix": "usef",
+    "body": ["useEffect$1(() => {", "  $2", "}, [$3]);"]
+  },
+  "Use State": {
+    "prefix": "usst",
+    "body": ["const [$1, $2] = useState$3($4);"]
+  },
+  "Use Callback": {
+    "prefix": "uscb",
+    "body": ["const $1 = useCallback$2(() => {", "  $3", "}, [$4]);"]
+  },
+  "Use Memo": {
+    "prefix": "usmm",
+    "body": ["const $1 = useMemo$2(() => {", "  $3", "}, [$4]);"]
+  },
+  "Use Ref": {
+    "prefix": "usrf",
+    "body": ["const $1 = useRef$2<$3>(null);"]
+  },
+  "Component Test Template": {
+    "prefix": "testcomp",
+    "body": [
+      "import { render } from \"@testing-library/react\";",
+      "",
+      "import ${TM_FILENAME_BASE/\\.test//}, { ${TM_FILENAME_BASE/\\.test//}Props } from \"./${TM_FILENAME_BASE/\\.test//}\"",
+      "",
+      "describe(\"${TM_FILENAME_BASE/\\.test//}\", () => {",
+      "  const setup = (props: ${TM_FILENAME_BASE/\\.test//}Props) => render(<${TM_FILENAME_BASE/\\.test//} {...props} />);",
+      "",
+      "  it(\"matches with previous snapshot.\", () => {",
+      "    const { container } = setup();",
+      "    expect(container).toMatchSnapshot();",
+      "  });",
+      "",
+      "  it(\"$1\", () => {",
+      "    $2",
+      "  });",
+      "});"
+    ]
+  },
+  "Component Test With Storybook Template": {
+    "prefix": "testcompstory",
+    "body": [
+      "import { composeStories } from \"@storybook/testing-react\";",
+      "import { screen } from \"@testing-library/react\";",
+      "import { ${TM_FILENAME_BASE/\\.test//}Props } from \"./${TM_FILENAME_BASE/\\.test//}\"",
+      "",
+      "import * as stories from \"./${TM_FILENAME_BASE/\\.test//}.stories\";",
+      "",
+      "const { $2 } = composeStories(stories);",
+      "",
+      "describe(\"${TM_FILENAME_BASE/\\.test//}\", () => {",
+      "  describe(\"$1\", () => {",
+      "    const setup = (props?: Partial<${TM_FILENAME_BASE/\\.test//}Props>) => renderStory($2, props);",
+      "",
+      "    it(\"matches with previous snapshot.\", () => {",
+      "      const { container } = setup();",
+      "      expect(container).toMatchSnapshot();",
+      "    });",
+      "",
+      "    it(\"$3\", () => {",
+      "      $4",
+      "    });",
+      "",
+      "  });",
+      "});",
+      ""
+    ]
+  },
+  "Test Template": {
+    "prefix": "test",
+    "body": [
+      "describe(\"$1\", () => {",
+      "  $2",
+      "  it(\"$3\", () => {",
+      "    $4",
+      "  });",
+      "})"
+    ]
+  },
+  "Test Todo Template": {
+    "prefix": "itto",
+    "body": ["it.todo(\"$1\");"]
+  },
+  "It Template": {
+    "prefix": "itt",
+    "body": ["it(\"$1\", () => {", "  $2", "})"]
+  },
+  "Component Template": {
+    "prefix": "compt",
+    "body": [
+      "export interface ${TM_FILENAME_BASE}Props {",
+      "  $1",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = ({",
+      "  $1",
+      "}) => {",
+      "  return <>$2</>",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "description": "Component Template"
+  },
+  "View Template": {
+    "prefix": "viewt",
+    "body": [
+      "export interface ${TM_FILENAME_BASE/.view//}$1Props {",
+      "  $2",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE/.view//}$1: React.FC<${TM_FILENAME_BASE/.view//}$1Props> = ({",
+      "  $3",
+      "}) => {",
+      "  return (",
+      "    <>",
+      "    </>",
+      "  );",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE/.view//}$1",
+      ""
+    ],
+    "description": "View Template"
+  },
+  "Container Template": {
+    "prefix": "contt",
+    "body": [
+      "import ${TM_FILENAME_BASE/Container//}View from \"./${TM_FILENAME_BASE/Container//}View\"",
+      "",
+      "const ${TM_FILENAME_BASE} = () => {",
+      "  return <${TM_FILENAME_BASE/Container//}View />;",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "description": "Container Template"
+  },
+  "Storybook Template ": {
+    "prefix": "storyt",
+    "body": [
+      "import type { ComponentStory, ComponentMeta } from \"@storybook/react\";",
+      "import { createStoryComponent } from \"~/helpers/storybookHelpers\";",
+      "import ${TM_FILENAME_BASE/\\.stories//} from \"./${TM_FILENAME_BASE/\\.stories//}\";",
+      "",
+      "export default {",
+      "  title: \"$1/$2\",",
+      "  component: ${TM_FILENAME_BASE/\\.stories//},",
+      "  args: {},",
+      "} as ComponentMeta<typeof ${TM_FILENAME_BASE/\\.stories//}>;",
+      "",
+      "const Template: ComponentStory<typeof ${TM_FILENAME_BASE/\\.stories//}> = (args) => (",
+      "  <${TM_FILENAME_BASE/\\.stories//} {...args} />",
+      ");",
+      "",
+      "export const Default = createStoryComponent(Template);",
+      ""
+    ],
+    "description": "Storybook Template"
+  },
+  "View Storybook Template ": {
+    "prefix": "viewstoryt",
+    "body": [
+      "import type { ComponentStory, ComponentMeta } from \"@storybook/react\";",
+      "import { createStoryComponent } from \"~/helpers/storybookHelpers\";",
+      "import ${TM_FILENAME_BASE/\\.stories//} from \"./${TM_FILENAME_BASE/\\.stories//}.view\";",
+      "",
+      "export default {",
+      "  title: \"$1/$2\",",
+      "  component: ${TM_FILENAME_BASE/\\.stories//},",
+      "  args: {},",
+      "} as ComponentMeta<typeof ${TM_FILENAME_BASE/\\.stories//}>;",
+      "",
+      "const Template: ComponentStory<typeof ${TM_FILENAME_BASE/\\.stories//}> = (args) => (",
+      "  <${TM_FILENAME_BASE/\\.stories//} {...args} />",
+      ");",
+      "",
+      "export const Default = createStoryComponent(Template);",
+      ""
+    ],
+    "description": "Storybook Template"
+  },
+  "Hook Test Template": {
+    "prefix": "testhook",
+    "body": [
+      "import { renderHook } from \"@testing-library/react-hooks\";",
+      "import ${TM_FILENAME_BASE/\\.test//} from \"./${TM_FILENAME_BASE/\\.test//}\";",
+      "",
+      "describe(\"${TM_FILENAME_BASE/\\.test//}\", () => {",
+      "  const mockDispatch = jest.fn();",
+      "",
+      "  const setup = (recipe?: Recipe) => {",
+      "    return renderHook(() => ${TM_FILENAME_BASE/\\.test//}(), {",
+      "      wrapper: ({ children }) => (",
+      "        <ProviderWrapper state={recipe} mockDispatch={mockDispatch}>",
+      "          {children}",
+      "        </ProviderWrapper>",
+      "      ),",
+      "    });",
+      "  };",
+      "});",
+      ""
+    ],
+    "description": "Hook Test Template"
+  },
+  "Page Index Template": {
+    "prefix": "pidx",
+    "body": [
+      "import { NextPage } from \"next\";",
+      "import Head from \"next/head\";",
+      "import $1 from \"./$1.view\";",
+      "import use$1Props from \"./use$1Props\";",
+      "",
+      "const $1Page: NextPage<void> = () => {",
+      "  const props = use$1Props();",
+      "",
+      "  return (",
+      "    <>",
+      "      <Head>",
+      "        <title><$2/title>",
+      "        <$1 {...props} />;",
+      "      </Head>",
+      "    <>",
+      "  );",
+      "};",
+      "",
+      "export default $1Page;",
+      ""
+    ],
+    "description": "Page Index Template"
+  },
+  "Container Index Template": {
+    "prefix": "ctidx",
+    "body": [
+      "import ${TM_DIRECTORY/^.+\\/(.*)$/$1/} from \"./${TM_DIRECTORY/^.+\\/(.*)$/$1/}\";",
+      "import use${TM_DIRECTORY/^.+\\/(.*)$/$1/}Props from \"./use${TM_DIRECTORY/^.+\\/(.*)$/$1/}Props\";",
+      "",
+      "export interface ${TM_DIRECTORY/^.+\\/(.*)$/$1/}ContainerProps {",
+      "  $1",
+      "}",
+      "",
+      "const ${TM_DIRECTORY/^.+\\/(.*)$/$1/}Container: React.FC<${TM_DIRECTORY/^.+\\/(.*)$/$1/}ContainerProps> = ({ children, $1 }) => {",
+      "  const props = use${TM_DIRECTORY/^.+\\/(.*)$/$1/}Props({ children, $1 });",
+      "",
+      "  return <${TM_DIRECTORY/^.+\\/(.*)$/$1/} {...props} />;",
+      "};",
+      "",
+      "export default ${TM_DIRECTORY/^.+\\/(.*)$/$1/}Container;",
+      ""
+    ],
+    "description": "Component Container Template"
+  }
+}
