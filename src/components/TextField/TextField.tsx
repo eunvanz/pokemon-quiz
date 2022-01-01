@@ -1,10 +1,22 @@
-import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+import { DetailedHTMLProps, InputHTMLAttributes, useMemo } from "react";
 import { colors } from "~/styles/colors";
 
 export interface TextFieldProps
-  extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {}
+  extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+  isBlock: boolean;
+}
 
-const TextField: React.FC<TextFieldProps> = ({ ...props }) => {
+const TextField: React.FC<TextFieldProps> = ({ isBlock, ...props }) => {
+  const cssByIsBlock = useMemo(() => {
+    if (isBlock) {
+      return {
+        display: "block",
+        width: "100%",
+      };
+    }
+    return undefined;
+  }, [isBlock]);
+
   return (
     <input
       css={{
@@ -16,6 +28,7 @@ const TextField: React.FC<TextFieldProps> = ({ ...props }) => {
         borderRadius: 16,
         transition: "all 200ms linear",
         fontSize: "1rem",
+        ...cssByIsBlock,
         "&:hover": {
           borderColor: props.disabled ? undefined : colors.gray,
         },
