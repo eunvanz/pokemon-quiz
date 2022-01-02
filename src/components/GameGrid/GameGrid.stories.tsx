@@ -7,6 +7,7 @@ export default {
   component: GameGrid,
   args: {
     width: 300,
+    gridItemSize: 6,
   },
 } as ComponentMeta<typeof GameGrid>;
 
