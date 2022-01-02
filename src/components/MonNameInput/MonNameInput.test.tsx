@@ -83,14 +83,19 @@ describe("MonNameInput", () => {
 
     describe("keyboard events", () => {
       describe("when press [Space]", () => {
-        it("calls [onSkip]", () => {
+        it("calls [onSkip] and reset value", async () => {
           setup({ onSkip });
 
           const input = screen.getByLabelText("mon name");
 
+          userEvent.type(input, "wrongAnswer");
           userEvent.type(input, "[Space]");
 
           expect(onSkip).toBeCalled();
+
+          await waitFor(() => {
+            expect(input).toHaveValue("");
+          });
         });
       });
     });
