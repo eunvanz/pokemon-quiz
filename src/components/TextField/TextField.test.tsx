@@ -1,13 +1,15 @@
+import { ComponentProps } from "react";
 import { composeStories } from "@storybook/testing-react";
 import { renderStory } from "~/helpers/testHelpers";
-import { TextFieldProps } from "./TextField";
+import TextField from "./TextField";
 import * as stories from "./TextField.stories";
 
 const { Default, Disabled, Error } = composeStories(stories);
 
 describe("TextField", () => {
   describe("Default", () => {
-    const setup = (props?: Partial<TextFieldProps>) => renderStory(Default, props);
+    const setup = (props?: ComponentProps<typeof TextField>) =>
+      renderStory(Default, props);
 
     it("matches with previous snapshot.", () => {
       const { container } = setup();
@@ -16,7 +18,8 @@ describe("TextField", () => {
   });
 
   describe("Disabled", () => {
-    const setup = (props?: Partial<TextFieldProps>) => renderStory(Disabled, props);
+    const setup = (props?: ComponentProps<typeof TextField>) =>
+      renderStory(Disabled, props);
 
     it("matches with previous snapshot.", () => {
       const { container } = setup();
@@ -25,7 +28,7 @@ describe("TextField", () => {
   });
 
   describe("Error", () => {
-    const setup = (props?: Partial<TextFieldProps>) => renderStory(Error, props);
+    const setup = (props?: ComponentProps<typeof TextField>) => renderStory(Error, props);
 
     it("matches with previous snapshot.", () => {
       const { container } = setup();
