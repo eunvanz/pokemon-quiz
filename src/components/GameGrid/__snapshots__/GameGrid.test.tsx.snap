@@ -4,6 +4,7 @@ exports[`GameGrid matches with previous snapshot. 1`] = `
 <div>
   <div
     css="[object Object]"
+    data-testid="game-grid-container"
   >
     <div
       css="[object Object]"

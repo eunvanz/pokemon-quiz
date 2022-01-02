@@ -7,7 +7,7 @@
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",

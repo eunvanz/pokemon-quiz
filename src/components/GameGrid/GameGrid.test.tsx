@@ -14,5 +14,15 @@ describe("GameGrid", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("", () => {});
+  describe("grid items", () => {
+    it("count should be [girdItemSize] ** 2 * 2", () => {
+      const gridItemSize = 10;
+
+      setup({ gridItemSize });
+
+      const gridContainer = screen.getByTestId("game-grid-container");
+
+      expect(gridContainer.childElementCount).toBe(200);
+    });
+  });
 });
