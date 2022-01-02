@@ -49,14 +49,14 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           ]}
           {...props}
         />
-        <caption
+        <div
           css={[
             tw`transition-all text-red-500 text-left overflow-hidden text-sm pl-2`,
             hasError && errorMessage ? tw`h-5` : tw`h-0`,
           ]}
         >
           {errorMessage || ""}
-        </caption>
+        </div>
       </div>
     );
   },

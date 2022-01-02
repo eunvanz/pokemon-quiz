@@ -13,16 +13,19 @@ exports[`MonNameInput Default matches with previous snapshot 1`] = `
           css="[object Object]"
         >
           <input
+            aria-label="mon name"
             css="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],"
+            name="monName"
             placeholder="Enter Pokémon's name"
           />
-          <caption
+          <div
             css="[object Object],[object Object]"
           />
         </div>
       </div>
       <button
         css="[object Object]"
+        type="submit"
       >
         Fire (Enter)
       </button>

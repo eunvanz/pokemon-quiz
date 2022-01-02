@@ -10,4 +10,5 @@ export default {
   coverageDirectory: "coverage",
   coverageProvider: "v8",
   testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["./setupTests.ts"],
 };

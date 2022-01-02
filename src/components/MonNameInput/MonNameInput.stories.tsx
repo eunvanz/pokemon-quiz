@@ -5,7 +5,9 @@ import MonNameInput from "./MonNameInput";
 export default {
   title: "components/MonNameInput",
   component: MonNameInput,
-  args: {},
+  args: {
+    correctAnswer: "ditto",
+  },
 } as ComponentMeta<typeof MonNameInput>;
 
 const Template: ComponentStory<typeof MonNameInput> = (args) => (
