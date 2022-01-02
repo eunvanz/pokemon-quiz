@@ -9,7 +9,7 @@ const { Default } = composeStories(stories);
 describe("GameGrid", () => {
   const setup = (props?: Partial<GameGridProps>) => renderStory(Default, props);
 
-  it("matches with previous snapshot.", () => {
+  it("matches with previous snapshot", () => {
     const { container } = setup();
     expect(container).toMatchSnapshot();
   });

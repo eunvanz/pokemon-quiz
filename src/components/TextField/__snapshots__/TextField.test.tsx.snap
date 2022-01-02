@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField Default matches with previous snapshot. 1`] = `
+<div>
+  <div
+    css="[object Object]"
+  >
+    <input
+      css="[object Object],[object Object],[object Object],[object Object],[object Object],,"
+      placeholder="Placeholder"
+    />
+    <caption
+      css="[object Object],[object Object]"
+    />
+  </div>
+</div>
+`;
+
+exports[`TextField Disabled matches with previous snapshot. 1`] = `
+<div>
+  <div
+    css="[object Object]"
+  >
+    <input
+      css="[object Object],[object Object],[object Object],[object Object],[object Object],,"
+      disabled=""
+      placeholder="Placeholder"
+    />
+    <caption
+      css="[object Object],[object Object]"
+    />
+  </div>
+</div>
+`;
+
+exports[`TextField Error matches with previous snapshot. 1`] = `
+<div>
+  <div
+    css="[object Object]"
+  >
+    <input
+      css="[object Object],[object Object],[object Object],[object Object],[object Object],,[object Object]"
+      placeholder="Placeholder"
+    />
+    <caption
+      css="[object Object],[object Object]"
+    >
+      It's wrong answer
+    </caption>
+  </div>
+</div>
+`;

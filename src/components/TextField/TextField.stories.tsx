@@ -17,3 +17,8 @@ export const Default = createStoryComponent(Template);
 export const Disabled = createStoryComponent(Template, {
   disabled: true,
 });
+
+export const Error = createStoryComponent(Template, {
+  hasError: true,
+  errorMessage: "It's wrong answer",
+});

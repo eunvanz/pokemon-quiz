@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MonNameInput Default matches with previous snapshot 1`] = `
+<div>
+  <form>
+    <div
+      css="[object Object]"
+    >
+      <div
+        css="[object Object]"
+      >
+        <div
+          css="[object Object]"
+        >
+          <input
+            css="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],"
+            placeholder="Enter Pokémon's name"
+          />
+          <caption
+            css="[object Object],[object Object]"
+          />
+        </div>
+      </div>
+      <button
+        css="[object Object]"
+      >
+        Fire (Enter)
+      </button>
+    </div>
+    <div
+      css="[object Object]"
+    >
+      <button
+        css="[object Object]"
+      >
+        Skip (Space bar)
+      </button>
+    </div>
+  </form>
+</div>
+`;
