@@ -39,6 +39,7 @@ const MonNameInput: React.FC<MonNameInputProps> = ({ onSubmit, correctAnswer }) 
             placeholder="Enter Pokémon's name"
             hasError={!!errors.monName}
             errorMessage={errors.monName?.message}
+            autoComplete="off"
           />
         </div>
         <Button css={tw`px-6`} type="submit">

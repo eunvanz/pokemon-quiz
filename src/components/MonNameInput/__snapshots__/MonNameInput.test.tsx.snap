@@ -12,6 +12,7 @@ exports[`MonNameInput Default matches with previous snapshot 1`] = `
         <div>
           <input
             aria-label="mon name"
+            autocomplete="off"
             css="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],"
             name="monName"
             placeholder="Enter Pokémon's name"
