@@ -38,7 +38,7 @@ const TextField: React.FC<TextFieldProps> = ({ isBlock, ...props }) => {
           borderColor: colors.primary,
         },
         "&::placeholder": {
-          color: colors.darkGray,
+          color: colors.gray,
         },
         "&[disabled]": {
           backgroundColor: colors.lightGray,
