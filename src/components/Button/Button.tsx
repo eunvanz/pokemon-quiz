@@ -4,17 +4,26 @@ import tw from "twin.macro";
 export interface ButtonProps
   extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   variant?: "contained" | "outlined";
+  color?: "primary" | "secondary";
 }
 
-const Button: React.FC<ButtonProps> = ({ variant = "contained", ...props }) => {
-  const cssByColor = useMemo(() => {
+const Button: React.FC<ButtonProps> = ({
+  variant = "contained",
+  color = "primary",
+  ...props
+}) => {
+  const cssByVariant = useMemo(() => {
     switch (variant) {
       case "contained":
-        return tw`bg-blue-500 text-white border-blue-500`;
+        return color === "primary"
+          ? tw`bg-primary text-white border-primary`
+          : tw`bg-secondary text-white border-secondary`;
       case "outlined":
-        return tw`bg-white text-blue-500 border-blue-500`;
+        return color === "primary"
+          ? tw`bg-white text-primary border-primary`
+          : tw`bg-white text-secondary border-secondary`;
     }
-  }, [variant]);
+  }, [variant, color]);
 
   const cssByDisabled = useMemo(() => {
     if (!props.disabled) {
@@ -36,12 +45,12 @@ const Button: React.FC<ButtonProps> = ({ variant = "contained", ...props }) => {
     <button
       css={[
         tw`
-          p-3 border-2 border-solid rounded-xl shadow-sm text-blue-500 transition-all text-base
+          p-3 border-2 border-solid rounded-xl shadow-sm text-primary transition-all text-base
         `,
         {
           boxShadow: "0px 1px 4px 0px rgba(0,0,0,0.2)",
         },
-        cssByColor,
+        cssByVariant,
         cssByDisabled,
       ]}
       {...props}

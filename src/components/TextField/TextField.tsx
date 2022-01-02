@@ -3,7 +3,7 @@ import tw from "twin.macro";
 
 export interface TextFieldProps
   extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
-  isBlock: boolean;
+  isBlock?: boolean;
 }
 
 const TextField: React.FC<TextFieldProps> = ({ isBlock, ...props }) => {
