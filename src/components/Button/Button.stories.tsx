@@ -14,10 +14,10 @@ const Template: ComponentStory<typeof Button> = (args: ButtonProps) => (
   <Button {...args} />
 );
 
-export const Primary = createStoryComponent(Template);
+export const Contained = createStoryComponent(Template);
 
-export const Secondary = createStoryComponent(Template, {
-  color: "secondary",
+export const Outlined = createStoryComponent(Template, {
+  variant: "outlined",
 });
 
 export const Disabled = createStoryComponent(Template, {
