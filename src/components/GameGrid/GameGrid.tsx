@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { colors } from "~/styles/colors";
+import tw from "twin.macro";
 
 export interface GameGridProps {
   width: number;
@@ -8,28 +8,25 @@ export interface GameGridProps {
 
 const GameGrid: React.FC<GameGridProps> = ({ width, gridItemSize }) => {
   const gridItemCss = useMemo(() => {
-    return {
-      borderColor: colors.lightGray,
-      borderStyle: "solid",
-      borderWidth: "1px 1px 0 0",
-      height: "100%",
-      [`&:nth-child(${gridItemSize}n + 1)`]: {
-        borderLeftWidth: "1px",
+    return [
+      tw`border-gray-200 border-solid border-0 border-t border-r h-full`,
+      {
+        [`&:nth-child(${gridItemSize}n + 1)`]: tw`border-l`,
+        [`&:nth-child(n + ${gridItemSize ** 2 * 2 - gridItemSize + 1})`]: tw`border-b`,
       },
-      [`&:nth-child(n + ${gridItemSize ** 2 * 2 - gridItemSize + 1})`]: {
-        borderBottomWidth: "1px",
-      },
-    };
+    ];
   }, [gridItemSize]);
 
   return (
     <div
-      css={{
-        display: "grid",
-        gridTemplateColumns: `repeat(${gridItemSize}, 1fr)`,
-        width,
-        height: width * 2,
-      }}
+      css={[
+        {
+          display: "grid",
+          gridTemplateColumns: `repeat(${gridItemSize}, 1fr)`,
+          width,
+          height: width * 2,
+        },
+      ]}
       data-testid="game-grid-container"
     >
       {Array.from({ length: gridItemSize ** 2 * 2 }).map((_, idx) => (

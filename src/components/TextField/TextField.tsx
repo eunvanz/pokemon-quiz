@@ -1,5 +1,5 @@
 import { DetailedHTMLProps, InputHTMLAttributes, useMemo } from "react";
-import { colors } from "~/styles/colors";
+import tw from "twin.macro";
 
 export interface TextFieldProps
   extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
@@ -9,42 +9,31 @@ export interface TextFieldProps
 const TextField: React.FC<TextFieldProps> = ({ isBlock, ...props }) => {
   const cssByIsBlock = useMemo(() => {
     if (isBlock) {
-      return {
-        display: "block",
-        width: "100%",
-      };
+      return tw`block w-full`;
     }
     return undefined;
   }, [isBlock]);
 
   return (
     <input
-      css={{
-        padding: "1rem",
-        border: "none",
-        borderColor: colors.lightGray,
-        borderStyle: "solid",
-        borderWidth: 3,
-        borderRadius: 16,
-        transition: "all 200ms linear",
-        fontSize: "1rem",
-        ...cssByIsBlock,
-        "&:hover": {
-          borderColor: props.disabled ? undefined : colors.gray,
+      css={[
+        tw`
+          p-3 border-2 border-solid rounded-xl border-gray-200 transition-all text-base outline-none
+        `,
+        {
+          "&:hover": props.disabled ? undefined : tw`border-gray-400`,
         },
-        "&:focus-visible": {
-          outline: "none",
-          borderWidth: 3,
-          borderColor: colors.primary,
+        {
+          "&:focus-visible": tw`border-2 border-blue-500`,
         },
-        "&::placeholder": {
-          color: colors.gray,
+        {
+          "&::placeholder": tw`text-gray-400`,
         },
-        "&[disabled]": {
-          backgroundColor: colors.lightGray,
-          cursor: "not-allowed",
+        {
+          "&[disabled]": tw`bg-gray-200 cursor-not-allowed`,
         },
-      }}
+        cssByIsBlock,
+      ]}
       {...props}
     />
   );
