@@ -1,5 +1,16 @@
 import { DetailedHTMLProps, forwardRef, InputHTMLAttributes, useMemo } from "react";
+import { motion, useAnimation, Variants } from "framer-motion";
 import tw from "twin.macro";
+
+const motionVariants: Variants = {
+  vibe: {
+    translateX: [0, -4, 0, 4, 0],
+    transition: {
+      repeat: 5,
+      duration: 0.1,
+    },
+  },
+};
 
 export interface TextFieldProps
   extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
@@ -25,13 +36,17 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
     }, [hasError]);
 
     return (
-      <div css={tw`flex flex-col`}>
+      <motion.div
+        css={tw`flex flex-col items-start`}
+        animate={hasError ? "vibe" : undefined}
+        variants={motionVariants}
+      >
         <input
           ref={ref}
           css={[
             tw`
-            p-3 border-2 border-solid rounded-xl border-gray-200 transition-all text-base outline-none
-          `,
+              p-3 border-2 border-solid rounded-xl border-gray-200 transition-all text-base outline-none
+            `,
             {
               "&:hover": props.disabled ? undefined : tw`border-gray-400`,
             },
@@ -57,7 +72,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
         >
           {errorMessage || ""}
         </div>
-      </div>
+      </motion.div>
     );
   },
 );

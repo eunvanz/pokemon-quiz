@@ -9,9 +9,7 @@ exports[`MonNameInput Default matches with previous snapshot 1`] = `
       <div
         css="[object Object]"
       >
-        <div
-          css="[object Object]"
-        >
+        <div>
           <input
             aria-label="mon name"
             css="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],"
