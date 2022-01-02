@@ -14,6 +14,10 @@ const Template: ComponentStory<typeof TextField> = (args) => <TextField {...args
 
 export const Default = createStoryComponent(Template);
 
+export const Block = createStoryComponent(Template, {
+  isBlock: true,
+});
+
 export const Disabled = createStoryComponent(Template, {
   disabled: true,
 });
