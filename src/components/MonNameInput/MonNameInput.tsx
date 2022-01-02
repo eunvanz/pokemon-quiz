@@ -47,16 +47,16 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
   }, []);
 
   useEffect(() => {
-    const skip = (e: KeyboardEvent) => {
+    const skipOnSpaceKeyDown = (e: KeyboardEvent) => {
       if (e.code === "Space") {
         e.preventDefault();
         onSkip();
         resetValue();
       }
     };
-    monNameInputRef.current?.addEventListener("keydown", skip);
+    monNameInputRef.current?.addEventListener("keydown", skipOnSpaceKeyDown);
     return () => {
-      monNameInputRef.current?.removeEventListener("keydown", skip);
+      monNameInputRef.current?.removeEventListener("keydown", skipOnSpaceKeyDown);
     };
   }, [onSkip]);
 

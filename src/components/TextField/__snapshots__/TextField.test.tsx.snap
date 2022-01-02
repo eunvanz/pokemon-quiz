@@ -2,13 +2,15 @@
 
 exports[`TextField Block matches with previous snapshot. 1`] = `
 <div>
-  <div>
+  <div
+    class="css-1iqmk5w-TextField"
+  >
     <input
-      css="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],"
+      class="css-b5txhi-TextField"
       placeholder="Placeholder"
     />
     <div
-      css="[object Object],[object Object]"
+      class="css-11l6zdc-TextField"
     />
   </div>
 </div>
@@ -16,13 +18,15 @@ exports[`TextField Block matches with previous snapshot. 1`] = `
 
 exports[`TextField Default matches with previous snapshot. 1`] = `
 <div>
-  <div>
+  <div
+    class="css-1iqmk5w-TextField"
+  >
     <input
-      css="[object Object],[object Object],[object Object],[object Object],[object Object],,"
+      class="css-skram1-TextField"
       placeholder="Placeholder"
     />
     <div
-      css="[object Object],[object Object]"
+      class="css-11l6zdc-TextField"
     />
   </div>
 </div>
@@ -30,14 +34,16 @@ exports[`TextField Default matches with previous snapshot. 1`] = `
 
 exports[`TextField Disabled matches with previous snapshot. 1`] = `
 <div>
-  <div>
+  <div
+    class="css-1iqmk5w-TextField"
+  >
     <input
-      css="[object Object],[object Object],[object Object],[object Object],[object Object],,"
+      class="css-92l7va-TextField"
       disabled=""
       placeholder="Placeholder"
     />
     <div
-      css="[object Object],[object Object]"
+      class="css-11l6zdc-TextField"
     />
   </div>
 </div>
@@ -45,13 +51,15 @@ exports[`TextField Disabled matches with previous snapshot. 1`] = `
 
 exports[`TextField Error matches with previous snapshot. 1`] = `
 <div>
-  <div>
+  <div
+    class="css-1iqmk5w-TextField"
+  >
     <input
-      css="[object Object],[object Object],[object Object],[object Object],[object Object],,[object Object]"
+      class="css-9r0qlt-TextField"
       placeholder="Placeholder"
     />
     <div
-      css="[object Object],[object Object]"
+      class="css-3qe9u1-TextField"
     >
       It's wrong answer
     </div>

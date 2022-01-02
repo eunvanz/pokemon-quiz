@@ -11,8 +11,8 @@ const GameGrid: React.FC<GameGridProps> = ({ width, gridItemSize }) => {
     return [
       tw`border-gray-200 border-solid border-0 border-t border-r h-full`,
       {
-        [`&:nth-child(${gridItemSize}n + 1)`]: tw`border-l`,
-        [`&:nth-child(n + ${gridItemSize ** 2 * 2 - gridItemSize + 1})`]: tw`border-b`,
+        [`&:nth-of-type(${gridItemSize}n + 1)`]: tw`border-l`,
+        [`&:nth-of-type(n + ${gridItemSize ** 2 * 2 - gridItemSize + 1})`]: tw`border-b`,
       },
     ];
   }, [gridItemSize]);
