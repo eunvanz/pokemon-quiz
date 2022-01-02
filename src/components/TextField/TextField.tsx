@@ -1,4 +1,10 @@
-import { DetailedHTMLProps, forwardRef, InputHTMLAttributes, useMemo } from "react";
+import {
+  DetailedHTMLProps,
+  forwardRef,
+  InputHTMLAttributes,
+  useEffect,
+  useMemo,
+} from "react";
 import { motion, useAnimation, Variants } from "framer-motion";
 import tw from "twin.macro";
 
@@ -6,7 +12,7 @@ const motionVariants: Variants = {
   vibe: {
     translateX: [0, -4, 0, 4, 0],
     transition: {
-      repeat: 5,
+      repeat: 2,
       duration: 0.1,
     },
   },
@@ -21,6 +27,8 @@ export interface TextFieldProps
 
 const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
   ({ isBlock, hasError, errorMessage, ...props }, ref) => {
+    const animation = useAnimation();
+
     const cssByIsBlock = useMemo(() => {
       if (isBlock) {
         return tw`block w-full`;
@@ -35,10 +43,16 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
       return undefined;
     }, [hasError]);
 
+    useEffect(() => {
+      if (hasError) {
+        animation.start("vibe");
+      }
+    }, [hasError, errorMessage]);
+
     return (
       <motion.div
         css={tw`flex flex-col items-start`}
-        animate={hasError ? "vibe" : undefined}
+        animate={animation}
         variants={motionVariants}
       >
         <input

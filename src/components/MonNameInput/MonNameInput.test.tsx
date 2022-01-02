@@ -10,6 +10,7 @@ const { Default } = composeStories(stories);
 describe("MonNameInput", () => {
   const correctAnswer = "ditto";
   const onSubmit = jest.fn();
+  const onSkip = jest.fn();
 
   describe("Default", () => {
     const setup = (props?: Partial<MonNameInputProps>) => renderStory(Default, props);
@@ -17,6 +18,14 @@ describe("MonNameInput", () => {
     it("matches with previous snapshot", () => {
       const { container } = setup();
       expect(container).toMatchSnapshot();
+    });
+
+    it("has [autocomplete] attribute as [off]", () => {
+      setup();
+
+      const input = screen.getByLabelText("mon name");
+
+      expect(input.getAttribute("autocomplete")).toBe("off");
     });
 
     describe("when input is empty", () => {
@@ -69,6 +78,20 @@ describe("MonNameInput", () => {
           expect(onSubmit).toBeCalledWith("ditto");
         });
         expect(input).toHaveValue("");
+      });
+    });
+
+    describe("keyboard events", () => {
+      describe("when press [Space]", () => {
+        it("calls [onSkip]", () => {
+          setup({ onSkip });
+
+          const input = screen.getByLabelText("mon name");
+
+          userEvent.type(input, "[Space]");
+
+          expect(onSkip).toBeCalled();
+        });
       });
     });
   });
