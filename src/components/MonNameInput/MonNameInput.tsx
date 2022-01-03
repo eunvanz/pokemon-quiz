@@ -62,7 +62,7 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
 
   return (
     <form onSubmit={handleSubmit(handleOnSubmit)}>
-      <div css={tw`flex`}>
+      <div css={tw`flex items-start`}>
         <div css={tw`flex-1 pr-2`}>
           <TextField
             {...restTextFieldProps}
