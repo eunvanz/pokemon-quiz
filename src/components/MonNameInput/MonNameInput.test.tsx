@@ -13,7 +13,22 @@ describe("MonNameInput", () => {
   const onSkip = jest.fn();
 
   describe("Default", () => {
-    const setup = (props?: Partial<MonNameInputProps>) => renderStory(Default, props);
+    const setup = (props?: Partial<MonNameInputProps>) => {
+      const result = renderStory(Default, props);
+
+      const input = screen.getByLabelText("mon name");
+
+      const fireBtn = screen.getByRole("button", { name: /fire/i });
+
+      const skipBtn = screen.getByRole("button", { name: /skip/i });
+
+      return {
+        ...result,
+        input,
+        fireBtn,
+        skipBtn,
+      };
+    };
 
     it("matches with previous snapshot", () => {
       const { container } = setup();
@@ -29,13 +44,9 @@ describe("MonNameInput", () => {
     });
 
     it("focuses input after click [Fire] button", async () => {
-      setup({ correctAnswer });
-
-      const fireBtn = screen.getByRole("button", { name: /fire/i });
+      const { fireBtn, input } = setup({ correctAnswer });
 
       userEvent.click(fireBtn);
-
-      const input = screen.getByLabelText("mon name");
 
       expect(input).toHaveFocus();
 
@@ -44,25 +55,26 @@ describe("MonNameInput", () => {
       });
     });
 
-    it("focuses input after click [Skip] button", async () => {
-      setup({ onSkip });
+    it("focuses input and reset error after click [Skip] button", async () => {
+      const { input, fireBtn, skipBtn } = setup({ correctAnswer, onSkip });
 
-      const skipBtn = screen.getByRole("button", { name: /skip/i });
+      userEvent.click(fireBtn);
+
+      await waitFor(() => {
+        expect(screen.getByText(/Input the answer/)).toBeInTheDocument();
+      });
 
       userEvent.click(skipBtn);
-
-      const input = screen.getByLabelText("mon name");
 
       await waitFor(() => {
         expect(input).toHaveFocus();
       });
+      expect(screen.queryByText(/It's wrong answer/)).not.toBeInTheDocument();
     });
 
     describe("when input is empty", () => {
       it("shows error message", async () => {
-        setup({ correctAnswer, onSubmit });
-
-        const fireBtn = screen.getByRole("button", { name: /fire/i });
+        const { fireBtn } = setup({ correctAnswer, onSubmit });
 
         userEvent.click(fireBtn);
 
@@ -75,13 +87,9 @@ describe("MonNameInput", () => {
 
     describe("when wrong answer is submitted", () => {
       it("resets input and shows error message", async () => {
-        setup({ correctAnswer, onSubmit });
-
-        const input = screen.getByLabelText("mon name");
+        const { input, fireBtn } = setup({ correctAnswer, onSubmit });
 
         userEvent.type(input, "pikachu");
-
-        const fireBtn = screen.getByRole("button", { name: /fire/i });
 
         userEvent.click(fireBtn);
 
@@ -94,13 +102,9 @@ describe("MonNameInput", () => {
 
     describe("when correct answer is submitted", () => {
       it("calls [onSubmit] and reset field", async () => {
-        setup({ correctAnswer, onSubmit });
-
-        const input = screen.getByLabelText("mon name");
+        const { input, fireBtn } = setup({ correctAnswer, onSubmit });
 
         userEvent.type(input, "ditto");
-
-        const fireBtn = screen.getByRole("button", { name: /fire/i });
 
         userEvent.click(fireBtn);
 
@@ -114,9 +118,7 @@ describe("MonNameInput", () => {
     describe("keyboard events", () => {
       describe("when press [Space]", () => {
         it("calls [onSkip] and reset value", async () => {
-          setup({ onSkip });
-
-          const input = screen.getByLabelText("mon name");
+          const { input } = setup({ onSkip });
 
           userEvent.type(input, "wrongAnswer");
           userEvent.type(input, "[Space]");

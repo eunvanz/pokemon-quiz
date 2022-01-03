@@ -21,6 +21,7 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
     setError,
     formState: { errors },
     setValue,
+    reset,
   } = useForm({ mode: "onSubmit" });
 
   const resetValue = useCallback(() => {
@@ -52,7 +53,7 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
 
   const skip = useCallback(() => {
     onSkip();
-    resetValue();
+    reset();
     focusInput();
   }, [onSkip]);
 
