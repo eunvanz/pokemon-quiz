@@ -21,13 +21,17 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
     setError,
     formState: { errors },
     setValue,
-  } = useForm();
+  } = useForm({ mode: "onSubmit" });
 
   const resetValue = useCallback(() => {
     setValue("monName", "");
   }, []);
 
   const monNameInputRef = useRef<HTMLInputElement | null>();
+
+  const focusInput = useCallback(() => {
+    monNameInputRef.current?.focus();
+  }, []);
 
   const handleOnSubmit = useCallback(
     ({ monName }) => {
@@ -46,19 +50,28 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
     return register("monName", { required: "Input the answer" });
   }, []);
 
-  useEffect(() => {
-    const skipOnSpaceKeyDown = (e: KeyboardEvent) => {
+  const skip = useCallback(() => {
+    onSkip();
+    resetValue();
+    focusInput();
+  }, [onSkip]);
+
+  const skipOnSpaceKeyDown = useCallback(
+    (e: KeyboardEvent) => {
       if (e.code === "Space") {
         e.preventDefault();
-        onSkip();
-        resetValue();
+        skip();
       }
-    };
+    },
+    [skip],
+  );
+
+  useEffect(() => {
     monNameInputRef.current?.addEventListener("keydown", skipOnSpaceKeyDown);
     return () => {
       monNameInputRef.current?.removeEventListener("keydown", skipOnSpaceKeyDown);
     };
-  }, [onSkip]);
+  }, [skipOnSpaceKeyDown]);
 
   return (
     <form onSubmit={handleSubmit(handleOnSubmit)}>
@@ -78,12 +91,12 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
             autoComplete="off"
           />
         </div>
-        <Button css={tw`px-6`} type="submit">
+        <Button css={tw`px-6`} type="submit" onClick={focusInput}>
           Fire (Enter)
         </Button>
       </div>
       <div css={tw`pt-2`}>
-        <Button css={tw`w-full`} color="secondary" onClick={onSkip}>
+        <Button css={tw`w-full`} color="secondary" type="button" onClick={skip}>
           Skip (Space bar)
         </Button>
       </div>

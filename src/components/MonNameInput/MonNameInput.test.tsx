@@ -1,5 +1,5 @@
 import { composeStories } from "@storybook/testing-react";
-import { screen, waitFor } from "@testing-library/react";
+import { act, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { renderStory } from "~/helpers/testHelpers";
 import { MonNameInputProps } from "./MonNameInput";
@@ -28,11 +28,41 @@ describe("MonNameInput", () => {
       expect(input.getAttribute("autocomplete")).toBe("off");
     });
 
+    it("focuses input after click [Fire] button", async () => {
+      setup({ correctAnswer });
+
+      const fireBtn = screen.getByRole("button", { name: /fire/i });
+
+      userEvent.click(fireBtn);
+
+      const input = screen.getByLabelText("mon name");
+
+      expect(input).toHaveFocus();
+
+      await waitFor(() => {
+        expect(screen.getByText(/Input the answer/)).toBeInTheDocument();
+      });
+    });
+
+    it("focuses input after click [Skip] button", async () => {
+      setup({ onSkip });
+
+      const skipBtn = screen.getByRole("button", { name: /skip/i });
+
+      userEvent.click(skipBtn);
+
+      const input = screen.getByLabelText("mon name");
+
+      await waitFor(() => {
+        expect(input).toHaveFocus();
+      });
+    });
+
     describe("when input is empty", () => {
       it("shows error message", async () => {
         setup({ correctAnswer, onSubmit });
 
-        const fireBtn = screen.getByRole("button", { name: /Fire/ });
+        const fireBtn = screen.getByRole("button", { name: /fire/i });
 
         userEvent.click(fireBtn);
 
@@ -51,7 +81,7 @@ describe("MonNameInput", () => {
 
         userEvent.type(input, "pikachu");
 
-        const fireBtn = screen.getByRole("button", { name: /Fire/ });
+        const fireBtn = screen.getByRole("button", { name: /fire/i });
 
         userEvent.click(fireBtn);
 
@@ -70,7 +100,7 @@ describe("MonNameInput", () => {
 
         userEvent.type(input, "ditto");
 
-        const fireBtn = screen.getByRole("button", { name: /Fire/ });
+        const fireBtn = screen.getByRole("button", { name: /fire/i });
 
         userEvent.click(fireBtn);
 
