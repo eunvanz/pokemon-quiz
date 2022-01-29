@@ -38,7 +38,10 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
         }, interval);
       }
     }
-  }, []);
+    return () => {
+      intervalRef.current !== null && clearInterval(intervalRef.current);
+    };
+  }, [currentMonImage, currentColumn, duration]);
 
   return (
     <div css={tw`relative`}>
