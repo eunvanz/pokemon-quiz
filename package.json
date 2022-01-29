@@ -45,6 +45,8 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "jest": "^27.4.5",
     "postcss": "^7",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwind": "^2.2.12",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0",
