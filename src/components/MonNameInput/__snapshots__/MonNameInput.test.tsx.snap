@@ -35,7 +35,7 @@ exports[`MonNameInput Default matches with previous snapshot 1`] = `
       class="css-1al6zg1-MonNameInput"
     >
       <button
-        class="css-1y3y61p-Button-MonNameInput"
+        class="css-qvhk0g-Button-MonNameInput"
         type="button"
       >
         Skip (Space bar)

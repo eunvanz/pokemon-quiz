@@ -21,3 +21,10 @@ export const getPositionFrom2DArray: (
   const y = Math.floor(index / colSize);
   return { x, y };
 };
+
+export const getStackedSizeFromStackedMonImages: (
+  stackedMonImages: string[][],
+  colIndex: number,
+) => number = (stackedMonImages, colIndex) => {
+  return stackedMonImages[colIndex].length;
+};
