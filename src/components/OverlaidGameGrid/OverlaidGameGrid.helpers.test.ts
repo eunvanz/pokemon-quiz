@@ -55,6 +55,7 @@ describe("convertStackedMonImagesToArray", () => {
 describe("getPositionFrom2DArray", () => {
   it("returns position from an array by column size", () => {
     expect(getPositionFrom2DArray(6, 0)).toEqual({ x: 5, y: 0 });
+    expect(getPositionFrom2DArray(6, 5)).toEqual({ x: 0, y: 0 });
     expect(getPositionFrom2DArray(6, 1)).toEqual({ x: 4, y: 0 });
     expect(getPositionFrom2DArray(6, 10)).toEqual({ x: 1, y: 1 });
     expect(getPositionFrom2DArray(6, 20)).toEqual({ x: 3, y: 3 });

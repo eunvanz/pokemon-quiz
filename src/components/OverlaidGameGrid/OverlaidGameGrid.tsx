@@ -3,7 +3,7 @@ import { AnimatePresence, motion, useMotionValue } from "framer-motion";
 import tw from "twin.macro";
 import { burstStar } from "~/helpers/animations";
 import GameGrid from "../GameGrid";
-import { convertStackedMonImagesToArray } from "./OverlaidGameGrid.helpers";
+import { getPositionFrom2DArray } from "./OverlaidGameGrid.helpers";
 
 export interface OverlaidGameGridProps {
   currentMonImage?: string;
@@ -14,7 +14,9 @@ export interface OverlaidGameGridProps {
 
 const WIDTH = 300;
 const GRID_ITEM_SIZE = 6;
+const CELL_SIZE = WIDTH / GRID_ITEM_SIZE;
 const HEIGHT = WIDTH * 2;
+const TOTAL_GRID_COUNT = GRID_ITEM_SIZE ** 2 * 2;
 
 const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   currentMonImage,
@@ -22,10 +24,6 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   duration = 0,
   stackedMonImages,
 }) => {
-  const convertedStackedMonImages = useMemo(() => {
-    return convertStackedMonImagesToArray(stackedMonImages);
-  }, [stackedMonImages]);
-
   return (
     <div css={tw`relative`}>
       <div css={[tw`absolute flex h-full w-full`, { width: WIDTH }]}>
@@ -40,14 +38,16 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
         ))}
       </div>
       <div css={[tw`absolute grid grid-cols-6 h-full w-full`, { width: WIDTH }]}>
-        {Array.from({ length: GRID_ITEM_SIZE ** 2 * 2 }).map((_, idx) => {
-          const monImage = convertedStackedMonImages[GRID_ITEM_SIZE ** 2 * 2 - idx - 1];
+        {Array.from({ length: TOTAL_GRID_COUNT }).map((_, idx) => {
+          const { x, y } = getPositionFrom2DArray(
+            GRID_ITEM_SIZE,
+            TOTAL_GRID_COUNT - idx - 1,
+          );
+          const monImage = stackedMonImages[x]?.[y];
 
           return (
-            <div key={idx} css={tw`h-full`}>
-              {monImage && (
-                <img src={monImage} width={WIDTH / GRID_ITEM_SIZE} alt="mon image" />
-              )}
+            <div key={idx} css={{ height: CELL_SIZE }}>
+              {monImage && <img src={monImage} width={CELL_SIZE} alt="mon image" />}
             </div>
           );
         })}
@@ -125,7 +125,7 @@ const MonImg = ({ src, duration }: MonImgProps) => {
         duration: 0.2,
       }}
       css={tw`absolute transition-transform`}
-      width={WIDTH / GRID_ITEM_SIZE}
+      width={CELL_SIZE}
       ref={monImgRef}
       src={src}
       alt="mon image"
