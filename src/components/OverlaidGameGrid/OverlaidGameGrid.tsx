@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue } from "framer-motion";
 import tw from "twin.macro";
-import { burstStar } from "~/helpers/animmations";
+import { burstStar } from "~/helpers/animations";
 import GameGrid from "../GameGrid";
 
 export interface OverlaidGameGridProps {
