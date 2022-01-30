@@ -112,7 +112,7 @@ const MonImg = ({ src, duration, penalty }: MonImgProps) => {
   useEffect(() => {
     const $monImg = monImgRef.current;
     if ($monImg) {
-      leftRef.current = $monImg.getClientRects()[0].left;
+      leftRef.current = $monImg.getClientRects()[0]?.left;
       const interval = (duration * 1000) / (GRID_ITEM_SIZE * 2);
       let repeat = 0;
       intervalRef.current = window.setInterval(() => {
