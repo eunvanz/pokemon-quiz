@@ -3,7 +3,10 @@ import { AnimatePresence, motion, useMotionValue } from "framer-motion";
 import tw from "twin.macro";
 import { burstStar } from "~/helpers/animations";
 import GameGrid from "../GameGrid";
-import { getPositionFrom2DArray } from "./OverlaidGameGrid.helpers";
+import {
+  getPositionFrom2DArray,
+  getStackedSizeFromStackedMonImages,
+} from "./OverlaidGameGrid.helpers";
 
 export interface OverlaidGameGridProps {
   currentMonImage?: string;
@@ -31,7 +34,11 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
           <div key={idx} css={tw`h-full flex-1`}>
             <AnimatePresence>
               {currentMonImage && currentColumn === idx && (
-                <MonImg src={currentMonImage} duration={duration} />
+                <MonImg
+                  src={currentMonImage}
+                  duration={duration}
+                  penalty={getStackedSizeFromStackedMonImages(stackedMonImages, idx)}
+                />
               )}
             </AnimatePresence>
           </div>
@@ -60,11 +67,12 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
 interface MonImgProps {
   src: string;
   duration: number;
+  penalty: number;
 }
 
 const MOVE_UNIT = HEIGHT / (GRID_ITEM_SIZE * 2);
 
-const MonImg = ({ src, duration }: MonImgProps) => {
+const MonImg = ({ src, duration, penalty }: MonImgProps) => {
   const monImgRef = useRef<HTMLImageElement>(null);
   const intervalRef = useRef<number | null>(null);
   const leftRef = useRef<number>(0);
@@ -82,7 +90,7 @@ const MonImg = ({ src, duration }: MonImgProps) => {
       intervalRef.current = window.setInterval(() => {
         repeat++;
         y.set(MOVE_UNIT * repeat);
-        if (repeat + 1 === GRID_ITEM_SIZE * 2 && intervalRef.current !== null) {
+        if (repeat + 1 + penalty === GRID_ITEM_SIZE * 2 && intervalRef.current !== null) {
           setIsStacked(true);
           clearInterval(intervalRef.current);
         }
