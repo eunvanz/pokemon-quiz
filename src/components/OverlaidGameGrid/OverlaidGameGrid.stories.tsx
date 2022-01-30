@@ -9,7 +9,7 @@ export default {
     currentMonImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
     currentColumn: 3,
-    duration: 20,
+    duration: 10,
   },
 } as ComponentMeta<typeof OverlaidGameGrid>;
 
