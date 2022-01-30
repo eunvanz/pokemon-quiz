@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue } from "framer-motion";
 import tw from "twin.macro";
 import { burstStar } from "~/helpers/animmations";
@@ -51,6 +51,8 @@ const MonImg = ({ src, duration }: MonImgProps) => {
   const intervalRef = useRef<number | null>(null);
   const leftRef = useRef<number>(0);
 
+  const [isStacked, setIsStacked] = useState(false);
+
   const y = useMotionValue(0);
 
   useEffect(() => {
@@ -63,6 +65,7 @@ const MonImg = ({ src, duration }: MonImgProps) => {
         repeat++;
         y.set(MOVE_UNIT * repeat);
         if (repeat + 1 === GRID_ITEM_SIZE * 2 && intervalRef.current !== null) {
+          setIsStacked(true);
           clearInterval(intervalRef.current);
         }
       }, interval);
@@ -73,7 +76,7 @@ const MonImg = ({ src, duration }: MonImgProps) => {
   }, [src, duration]);
 
   const burst = useCallback(() => {
-    if (intervalRef.current !== null) {
+    if (intervalRef.current && !isStacked) {
       burstStar({
         top: y.get() + 40,
         left: leftRef.current,
@@ -84,7 +87,7 @@ const MonImg = ({ src, duration }: MonImgProps) => {
         opacity: { 1: 0 },
       });
     }
-  }, []);
+  }, [isStacked]);
 
   return (
     <motion.img
