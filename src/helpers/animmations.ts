@@ -74,6 +74,9 @@ const generateBurst = ({
     },
     isShowEnd: false,
     opacity,
+    onComplete: function () {
+      this.el.parentNode.removeChild(this.el);
+    },
   });
 };
 

@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { AnimatePresence, motion, useMotionValue } from "framer-motion";
 import tw from "twin.macro";
+import { burstStar } from "~/helpers/animmations";
 import GameGrid from "../GameGrid";
 
 export interface OverlaidGameGridProps {
@@ -43,21 +44,24 @@ interface MonImgProps {
   duration: number;
 }
 
+const MOVE_UNIT = HEIGHT / (GRID_ITEM_SIZE * 2);
+
 const MonImg = ({ src, duration }: MonImgProps) => {
   const monImgRef = useRef<HTMLImageElement>(null);
   const intervalRef = useRef<number | null>(null);
+  const leftRef = useRef<number>(0);
 
   const y = useMotionValue(0);
 
   useEffect(() => {
     const $monImg = monImgRef.current;
     if ($monImg) {
+      leftRef.current = $monImg.getClientRects()[0].left;
       const interval = (duration * 1000) / (GRID_ITEM_SIZE * 2);
-      const moveUnit = HEIGHT / (GRID_ITEM_SIZE * 2);
       let repeat = 0;
       intervalRef.current = window.setInterval(() => {
         repeat++;
-        y.set(moveUnit * repeat);
+        y.set(MOVE_UNIT * repeat);
         if (repeat + 1 === GRID_ITEM_SIZE * 2 && intervalRef.current !== null) {
           clearInterval(intervalRef.current);
         }
@@ -67,6 +71,20 @@ const MonImg = ({ src, duration }: MonImgProps) => {
       intervalRef.current !== null && clearInterval(intervalRef.current);
     };
   }, [src, duration]);
+
+  const burst = useCallback(() => {
+    if (intervalRef.current !== null) {
+      burstStar({
+        top: y.get() + 40,
+        left: leftRef.current,
+        color: ["#F59E0B", "#3B82F6", "#DB2777", "#7C3AED"],
+        count: 8,
+        radius: { 10: 30 },
+        degree: 360,
+        opacity: { 1: 0 },
+      });
+    }
+  }, []);
 
   return (
     <motion.img
@@ -79,6 +97,7 @@ const MonImg = ({ src, duration }: MonImgProps) => {
       exit={{
         opacity: 0,
       }}
+      onAnimationStart={burst}
       style={{ y }}
       transition={{
         ease: "linear",
