@@ -1,7 +1,14 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AnimatePresence, motion, useMotionValue } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  AnimatePresence,
+  AnimationControls,
+  motion,
+  useAnimation,
+  useMotionValue,
+} from "framer-motion";
 import tw from "twin.macro";
-import { burstStar } from "~/helpers/animations";
+import { motionVariants } from "~/helpers/framer";
+import { burstStar } from "~/helpers/mojs";
 import GameGrid from "../GameGrid";
 import {
   getPositionFrom2DArray,
@@ -27,8 +34,14 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   duration = 0,
   stackedMonImages,
 }) => {
+  const animation = useAnimation();
+
+  const vibrate = useCallback(() => {
+    animation.start("vibe");
+  }, []);
+
   return (
-    <div css={tw`relative`}>
+    <motion.div animate={animation} variants={motionVariants} css={tw`relative`}>
       <div css={[tw`absolute flex h-full w-full`, { width: WIDTH }]}>
         {Array.from({ length: GRID_ITEM_SIZE }).map((_, idx) => (
           <div key={idx} css={tw`h-full flex-1`}>
@@ -38,6 +51,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
                   src={currentMonImage}
                   duration={duration}
                   penalty={getStackedSizeFromStackedMonImages(stackedMonImages, idx)}
+                  onStack={vibrate}
                 />
               )}
             </AnimatePresence>
@@ -60,7 +74,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
         })}
       </div>
       <GameGrid gridItemSize={GRID_ITEM_SIZE} width={WIDTH} />
-    </div>
+    </motion.div>
   );
 };
 
@@ -68,13 +82,15 @@ interface MonImgProps {
   src: string;
   duration: number;
   penalty: number;
+  onStack: VoidFunction;
 }
 
 const MOVE_UNIT = HEIGHT / (GRID_ITEM_SIZE * 2);
 
-const MonImg = ({ src, duration, penalty }: MonImgProps) => {
+const MonImg = ({ src, duration, penalty, onStack }: MonImgProps) => {
   const monImgRef = useRef<HTMLImageElement>(null);
   const intervalRef = useRef<number | null>(null);
+  const timeoutRef = useRef<number | null>(null);
   const leftRef = useRef<number>(0);
 
   const [isStacked, setIsStacked] = useState(false);
@@ -90,16 +106,28 @@ const MonImg = ({ src, duration, penalty }: MonImgProps) => {
       intervalRef.current = window.setInterval(() => {
         repeat++;
         y.set(MOVE_UNIT * repeat);
-        if (repeat + 1 + penalty === GRID_ITEM_SIZE * 2 && intervalRef.current !== null) {
-          setIsStacked(true);
-          clearInterval(intervalRef.current);
-        }
+        timeoutRef.current = window.setTimeout(() => {
+          if (
+            repeat + 1 + penalty === GRID_ITEM_SIZE * 2 &&
+            intervalRef.current !== null
+          ) {
+            setIsStacked(true);
+            onStack();
+            clearInterval(intervalRef.current);
+          }
+        }, 100);
       }, interval);
     }
     return () => {
       intervalRef.current !== null && clearInterval(intervalRef.current);
     };
   }, [src, duration]);
+
+  useEffect(() => {
+    return () => {
+      timeoutRef.current && clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   const burst = useCallback(() => {
     if (intervalRef.current && !isStacked) {

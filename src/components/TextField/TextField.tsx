@@ -7,16 +7,7 @@ import {
 } from "react";
 import { motion, useAnimation, Variants } from "framer-motion";
 import tw from "twin.macro";
-
-const motionVariants: Variants = {
-  vibe: {
-    translateX: [0, -4, 0, 4, 0],
-    transition: {
-      repeat: 2,
-      duration: 0.1,
-    },
-  },
-};
+import { motionVariants } from "~/helpers/framer";
 
 export interface TextFieldProps
   extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
