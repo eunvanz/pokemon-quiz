@@ -14,6 +14,7 @@ export interface OverlaidGameGridProps {
   currentColumn?: number;
   duration?: number;
   stackedMonImages: string[][];
+  onStack: VoidFunction;
 }
 
 const WIDTH = 300;
@@ -27,13 +28,15 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   currentColumn,
   duration = 0,
   stackedMonImages,
+  onStack,
 }) => {
   const animation = useAnimation();
   const vibrationTimeout = useRef<number | null>();
 
-  const vibrate = useCallback(() => {
+  const stack = useCallback(() => {
     animation.start("vibe");
-  }, []);
+    onStack();
+  }, [onStack]);
 
   const stackedSize = useMemo(() => {
     if (currentColumn !== undefined) {
@@ -45,7 +48,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   useEffect(() => {
     if (currentMonImage && duration) {
       vibrationTimeout.current = window.setTimeout(
-        vibrate,
+        stack,
         duration * 1000 -
           ((duration * 1000) / (GRID_ITEM_SIZE * 2)) * (stackedSize + 1) +
           100,
@@ -54,7 +57,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
         vibrationTimeout.current && clearTimeout(vibrationTimeout.current);
       };
     }
-  }, [currentMonImage, duration, stackedSize]);
+  }, [currentMonImage, duration, stackedSize, stack]);
 
   return (
     <motion.div animate={animation} variants={motionVariants} css={tw`relative`}>
