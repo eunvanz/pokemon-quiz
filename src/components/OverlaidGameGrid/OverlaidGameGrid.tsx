@@ -1,11 +1,5 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import {
-  AnimatePresence,
-  AnimationControls,
-  motion,
-  useAnimation,
-  useMotionValue,
-} from "framer-motion";
+import { useCallback, useEffect, useMemo, useRef } from "react";
+import { AnimatePresence, motion, useAnimation, useMotionValue } from "framer-motion";
 import tw from "twin.macro";
 import { motionVariants } from "~/helpers/framer";
 import { burstStar } from "~/helpers/mojs";
