@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValue } from "framer-motion";
 import tw from "twin.macro";
 import { burstStar } from "~/helpers/animations";
 import GameGrid from "../GameGrid";
+import { convertStackedMonImagesToArray } from "./OverlaidGameGrid.helpers";
 
 export interface OverlaidGameGridProps {
   currentMonImage?: string;
@@ -21,6 +22,10 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   duration = 0,
   stackedMonImages,
 }) => {
+  const convertedStackedMonImages = useMemo(() => {
+    return convertStackedMonImagesToArray(stackedMonImages);
+  }, [stackedMonImages]);
+
   return (
     <div css={tw`relative`}>
       <div css={[tw`absolute flex h-full w-full`, { width: WIDTH }]}>
@@ -35,9 +40,17 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
         ))}
       </div>
       <div css={[tw`absolute grid grid-cols-6 h-full w-full`, { width: WIDTH }]}>
-        {Array.from({ length: GRID_ITEM_SIZE ** 2 * 2 }).map((_, idx) => (
-          <div key={idx} css={tw`h-full`}></div>
-        ))}
+        {Array.from({ length: GRID_ITEM_SIZE ** 2 * 2 }).map((_, idx) => {
+          const monImage = convertedStackedMonImages[GRID_ITEM_SIZE ** 2 * 2 - idx - 1];
+
+          return (
+            <div key={idx} css={tw`h-full`}>
+              {monImage && (
+                <img src={monImage} width={WIDTH / GRID_ITEM_SIZE} alt="mon image" />
+              )}
+            </div>
+          );
+        })}
       </div>
       <GameGrid gridItemSize={GRID_ITEM_SIZE} width={WIDTH} />
     </div>

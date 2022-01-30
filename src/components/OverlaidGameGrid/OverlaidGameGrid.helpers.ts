@@ -12,3 +12,12 @@ export const convertStackedMonImagesToArray: (
   });
   return result;
 };
+
+export const getPositionFrom2DArray: (
+  colSize: number,
+  index: number,
+) => { x: number; y: number } = (colSize, index) => {
+  const x = colSize - (index % colSize) - 1;
+  const y = Math.floor(index / colSize);
+  return { x, y };
+};
