@@ -34,6 +34,11 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
           </div>
         ))}
       </div>
+      <div css={[tw`absolute grid grid-cols-6 h-full w-full`, { width: WIDTH }]}>
+        {Array.from({ length: GRID_ITEM_SIZE ** 2 * 2 }).map((_, idx) => (
+          <div key={idx} css={tw`h-full`}></div>
+        ))}
+      </div>
       <GameGrid gridItemSize={GRID_ITEM_SIZE} width={WIDTH} />
     </div>
   );
