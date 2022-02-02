@@ -1,5 +1,6 @@
 import { act, renderHook } from "@testing-library/react-hooks";
-import useGameController from "./useGameController";
+import mockMons from "~/mocks/mons";
+import useGameController, { INITIAL_DURATION } from "./useGameController";
 import * as useMonImages from "./useMonImages";
 
 jest.mock("lodash-es", () => ({
@@ -21,6 +22,7 @@ const generateMockUseMonImages = (
     pushStackedMonImage,
     resetMonImages,
     stackedMonImages: [[], [], [], [], [], []],
+    allMons: mockMons.allMons,
     ...impl,
   }));
 };
@@ -63,6 +65,7 @@ describe("useGameController", () => {
       act(result.current.resetGame);
 
       expect(resetMonImages).toBeCalledTimes(1);
+      expect(result.current.duration).toBe(INITIAL_DURATION);
     });
   });
 });

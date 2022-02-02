@@ -64,6 +64,7 @@ const useMonImages = () => {
     pushAchievedMonImage,
     pushStackedMonImage,
     resetMonImages,
+    allMons,
   };
 };
 
