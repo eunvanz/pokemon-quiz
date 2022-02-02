@@ -1,32 +1,35 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo } from "react";
+import { useAtom } from "jotai";
 import { flatten, random } from "lodash-es";
+import {
+  achievedMonImagesAtom,
+  currentMonImageAtom,
+  stackedMonImagesAtom,
+} from "~/store/atoms";
 import useAllMons from "./useAllMons";
 
 const useMonImages = () => {
   const { allMons, isAllMonsLoading } = useAllMons();
 
-  const [stackedMonImages, setStackedMonImages] = useState<string[][]>([
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-  ]);
+  const [stackedMonImages, setStackedMonImages] = useAtom(stackedMonImagesAtom);
 
-  const [achievedMonImages, setAchievedMonImages] = useState<string[]>([]);
+  const [achievedMonImages, setAchievedMonImages] = useAtom(achievedMonImagesAtom);
+
+  const [currentMonImage, setCurrentMonImage] = useAtom(currentMonImageAtom);
 
   const flattenStackedMonImages = useMemo(() => {
     return flatten(stackedMonImages);
   }, [stackedMonImages]);
 
-  const currentMonImage = useMemo(() => {
+  useEffect(() => {
     const filteredMons = allMons
       ?.filter((mon) => !flattenStackedMonImages.includes(mon.image))
       .filter((mon) => !achievedMonImages.includes(mon.image));
     if (filteredMons) {
       const index = random(filteredMons.length);
-      return filteredMons[index].image;
+      setCurrentMonImage(filteredMons[index].image);
+    } else {
+      setCurrentMonImage(undefined);
     }
   }, [allMons, flattenStackedMonImages, achievedMonImages]);
 
