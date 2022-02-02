@@ -48,19 +48,19 @@ const useMonImages = () => {
     [achievedMonImages],
   );
 
-  const reset = useCallback(() => {
+  const resetMonImages = useCallback(() => {
     setStackedMonImages([[], [], [], [], [], []]);
     setAchievedMonImages([]);
   }, []);
 
   return {
     currentMonImage,
-    isMonGameInfoLoading: isAllMonsLoading,
+    isMonImagesLoading: isAllMonsLoading,
     stackedMonImages,
     achievedMonImages,
     pushAchievedMonImage,
     pushStackedMonImage,
-    reset,
+    resetMonImages,
   };
 };
 

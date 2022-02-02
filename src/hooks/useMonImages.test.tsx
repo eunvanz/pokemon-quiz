@@ -66,7 +66,7 @@ describe("useMonImages", () => {
     });
   });
 
-  describe("reset", () => {
+  describe("resetMonImages", () => {
     it("resets all state", async () => {
       const { result, waitFor } = setup();
 
@@ -76,7 +76,7 @@ describe("useMonImages", () => {
 
       act(() => result.current.pushAchievedMonImage("testMonImageUrl"));
       act(() => result.current.pushStackedMonImage("testMonImageUrl1", 1));
-      act(result.current.reset);
+      act(result.current.resetMonImages);
 
       expect(result.current.stackedMonImages).toEqual([[], [], [], [], [], []]);
       expect(result.current.achievedMonImages).toEqual([]);
