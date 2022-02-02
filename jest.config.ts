@@ -11,4 +11,7 @@ export default {
   coverageProvider: "v8",
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["./setupTests.ts"],
+  moduleNameMapper: {
+    "^lodash-es$": "lodash",
+  },
 };
