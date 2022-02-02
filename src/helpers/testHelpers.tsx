@@ -1,6 +1,7 @@
 import { Story } from "@storybook/react";
 import { render, RenderOptions } from "@testing-library/react";
 import { QueryClientProvider } from "react-query";
+import { RecoilRoot } from "recoil";
 import api from "~/api";
 import { ApiProvider } from "~/api/apiContext";
 import { queryClient } from "./reactQuery";
@@ -25,6 +26,8 @@ export interface TestProviderProps {
 
 export const TestProvider: React.FC<TestProviderProps> = ({ children, api = {} }) => (
   <ApiProvider api={api}>
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    <RecoilRoot>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    </RecoilRoot>
   </ApiProvider>
 );

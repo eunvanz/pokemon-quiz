@@ -1,21 +1,20 @@
 import { useCallback, useEffect, useMemo } from "react";
-import { useAtom } from "jotai";
 import { flatten, random } from "lodash-es";
-import {
-  achievedMonImagesAtom,
-  currentMonImageAtom,
-  stackedMonImagesAtom,
-} from "~/store/atoms";
+import { useRecoilState } from "recoil";
+import achievedMonImagesState from "~/store/achievedMonImagesState";
+import currentMonImageState from "~/store/currentMonImageState";
+import stackedMonImagesState from "~/store/stackedMonImagesState";
 import useAllMons from "./useAllMons";
 
 const useMonImages = () => {
   const { allMons, isAllMonsLoading } = useAllMons();
 
-  const [stackedMonImages, setStackedMonImages] = useAtom(stackedMonImagesAtom);
+  const [stackedMonImages, setStackedMonImages] = useRecoilState(stackedMonImagesState);
 
-  const [achievedMonImages, setAchievedMonImages] = useAtom(achievedMonImagesAtom);
+  const [achievedMonImages, setAchievedMonImages] =
+    useRecoilState(achievedMonImagesState);
 
-  const [currentMonImage, setCurrentMonImage] = useAtom(currentMonImageAtom);
+  const [currentMonImage, setCurrentMonImage] = useRecoilState(currentMonImageState);
 
   const flattenStackedMonImages = useMemo(() => {
     return flatten(stackedMonImages);

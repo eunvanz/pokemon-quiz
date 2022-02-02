@@ -1,4 +1,5 @@
 import { act, renderHook } from "@testing-library/react-hooks";
+import { TestProvider } from "~/helpers/testHelpers";
 import mockMons from "~/mocks/mons";
 import useGameController, { INITIAL_DURATION } from "./useGameController";
 import * as useMonImages from "./useMonImages";
@@ -29,7 +30,9 @@ const generateMockUseMonImages = (
 
 describe("useGameController", () => {
   const setup = () => {
-    return renderHook(() => useGameController());
+    return renderHook(() => useGameController(), {
+      wrapper: ({ children }) => <TestProvider>{children}</TestProvider>,
+    });
   };
 
   describe("onStack", () => {
