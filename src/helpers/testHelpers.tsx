@@ -20,10 +20,10 @@ export const renderStory = <T,>(
 };
 
 export interface TestProviderProps {
-  api: Partial<typeof api>;
+  api?: Partial<typeof api>;
 }
 
-export const TestProvider: React.FC<TestProviderProps> = ({ children, api }) => (
+export const TestProvider: React.FC<TestProviderProps> = ({ children, api = {} }) => (
   <ApiProvider api={api}>
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   </ApiProvider>

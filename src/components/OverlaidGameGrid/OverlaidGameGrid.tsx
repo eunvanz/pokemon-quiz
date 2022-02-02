@@ -122,8 +122,8 @@ const MonImg = ({ src, duration, penalty }: MonImgProps) => {
         repeat++;
         y.set(MOVE_UNIT * repeat);
         if (repeat + 1 + penalty === GRID_ITEM_SIZE * 2 && intervalRef.current !== null) {
-          isStackedRef.current = true;
           intervalRef.current && clearInterval(intervalRef.current);
+          isStackedRef.current = true;
         }
       }, interval);
     }
