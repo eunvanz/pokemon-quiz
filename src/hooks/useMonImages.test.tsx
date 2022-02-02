@@ -65,4 +65,21 @@ describe("useMonImages", () => {
       expect(result.current.achievedMonImages).toEqual(["testMonImageUrl"]);
     });
   });
+
+  describe("reset", () => {
+    it("resets all state", async () => {
+      const { result, waitFor } = setup();
+
+      await waitFor(() => {
+        expect(result.current.currentMonImage).toBeTruthy();
+      });
+
+      act(() => result.current.pushAchievedMonImage("testMonImageUrl"));
+      act(() => result.current.pushStackedMonImage("testMonImageUrl1", 1));
+      act(result.current.reset);
+
+      expect(result.current.stackedMonImages).toEqual([[], [], [], [], [], []]);
+      expect(result.current.achievedMonImages).toEqual([]);
+    });
+  });
 });
