@@ -36,7 +36,7 @@ const useGameController: () => GameController = () => {
 
   const { score, increaseScore, resetScore } = useScore();
 
-  const startTimeRef = useRef<number>(0);
+  const [startTime, setStartTime] = useState(0);
 
   const {
     currentMonImage,
@@ -55,13 +55,20 @@ const useGameController: () => GameController = () => {
   }, [allMons, currentMonImage]);
 
   const changeCurrentColumn = useCallback(() => {
-    setCurrentColumn(random(0, 5));
-  }, []);
+    const getDifferentColumn: () => number = () => {
+      const nextColumn = random(0, 5);
+      if (nextColumn === currentColumn) {
+        return getDifferentColumn();
+      }
+      return nextColumn;
+    };
+    setCurrentColumn(getDifferentColumn());
+  }, [currentColumn]);
 
   const changeDuration = useCallback(() => {
     if (allMons?.length && stage > 0) {
       const total = allMons.length;
-      const stageRatio = total / stage;
+      const stageRatio = stage / total;
       const durationInterval = INITIAL_DURATION - MIN_DURATION;
       const currentDuration = INITIAL_DURATION - durationInterval * stageRatio;
       setDuration(currentDuration);
@@ -78,8 +85,8 @@ const useGameController: () => GameController = () => {
   const onSuccess = useCallback(() => {
     if (currentMonImage) {
       pushAchievedMonImage(currentMonImage);
-      const wastedTime = Date.now() - startTimeRef.current;
-      increaseScore(wastedTime, combo + 1);
+      const wastedTime = Date.now() - startTime;
+      increaseScore(wastedTime, combo);
       incrementCombo();
     }
   }, [currentMonImage, combo]);
@@ -92,14 +99,13 @@ const useGameController: () => GameController = () => {
   }, []);
 
   const onSkip = useCallback(() => {
-    setDuration(0);
     onStack();
-  }, []);
+  }, [onStack]);
 
   useEffect(() => {
     changeCurrentColumn();
     changeDuration();
-    startTimeRef.current = Date.now();
+    setStartTime(Date.now());
   }, [currentMonImage]);
 
   return {

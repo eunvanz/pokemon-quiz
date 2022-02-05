@@ -6,11 +6,6 @@ import useGameController, { INITIAL_DURATION } from "./useGameController";
 import * as useMonImages from "./useMonImages";
 import * as useScore from "./useScore";
 
-jest.mock("lodash-es", () => ({
-  ...jest.requireActual("lodash-es"),
-  random: () => 1,
-}));
-
 const pushAchievedMonImage = jest.fn();
 const pushStackedMonImage = jest.fn();
 const resetMonImages = jest.fn();
@@ -69,7 +64,7 @@ describe("useGameController", () => {
 
       act(result.current.onStack);
 
-      expect(pushStackedMonImage).toBeCalledWith("currentMonImage", 1);
+      expect(pushStackedMonImage).toBeCalledTimes(1);
       expect(resetCombo).toBeCalledTimes(1);
     });
   });
@@ -108,7 +103,7 @@ describe("useGameController", () => {
   });
 
   describe("onSkip", () => {
-    it("stacks as [onStack], sets duration as 0", () => {
+    it("stacks as [onStack]", () => {
       generateMockUseMonImages();
       generateMockUseCombo();
 
@@ -116,9 +111,8 @@ describe("useGameController", () => {
 
       act(result.current.onStack);
 
-      expect(pushStackedMonImage).toBeCalledWith("currentMonImage", 1);
+      expect(pushStackedMonImage).toBeCalledTimes(1);
       expect(resetCombo).toBeCalledTimes(1);
-      expect(result.current.duration).toBe(0);
     });
   });
 });

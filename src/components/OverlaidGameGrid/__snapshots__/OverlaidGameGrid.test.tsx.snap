@@ -20,13 +20,15 @@ exports[`OverlaidGameGrid matches with previous snapshot. 1`] = `
       <div
         class="css-fqtnk-OverlaidGameGrid"
       >
-        <img
-          alt="mon image"
-          class="css-10yqwrw-MonImg"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
-          style="transform: translateY(0px) scale(0) translateZ(0);"
-          width="50"
-        />
+        <div>
+          <img
+            alt="mon image"
+            class="css-10yqwrw-MonImg"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+            style="transform: translateY(0px) scale(0) translateZ(0);"
+            width="50"
+          />
+        </div>
       </div>
       <div
         class="css-fqtnk-OverlaidGameGrid"

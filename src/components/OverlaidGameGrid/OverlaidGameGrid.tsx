@@ -1,8 +1,7 @@
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import { forwardRef, RefObject, useCallback, useEffect, useMemo, useRef } from "react";
 import { AnimatePresence, motion, useAnimation, useMotionValue } from "framer-motion";
 import tw from "twin.macro";
 import { motionVariants } from "~/helpers/framer";
-import { burstStar } from "~/helpers/mojs";
 import GameGrid from "../GameGrid";
 import {
   getPositionFrom2DArray,
@@ -15,6 +14,7 @@ export interface OverlaidGameGridProps {
   duration?: number;
   stackedMonImages: string[][];
   onStack: VoidFunction;
+  monImageRef: RefObject<HTMLImageElement>;
 }
 
 const WIDTH = 300;
@@ -29,6 +29,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   duration = 0,
   stackedMonImages,
   onStack,
+  monImageRef,
 }) => {
   const animation = useAnimation();
   const vibrationTimeout = useRef<number | null>();
@@ -70,6 +71,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
                   src={currentMonImage}
                   duration={duration}
                   penalty={getStackedSizeFromStackedMonImages(stackedMonImages, idx)}
+                  ref={monImageRef}
                 />
               )}
             </AnimatePresence>
@@ -104,72 +106,57 @@ interface MonImgProps {
 
 const MOVE_UNIT = HEIGHT / (GRID_ITEM_SIZE * 2);
 
-const MonImg = ({ src, duration, penalty }: MonImgProps) => {
-  const monImgRef = useRef<HTMLImageElement>(null);
-  const intervalRef = useRef<number | null>(null);
-  const leftRef = useRef<number>(0);
-  const isStackedRef = useRef<boolean>(false);
+const MonImg = forwardRef<HTMLImageElement, MonImgProps>(
+  ({ src, duration, penalty }, ref) => {
+    const monImgRef = useRef<HTMLImageElement | null>(null);
+    const intervalRef = useRef<number | null>(null);
 
-  const y = useMotionValue(0);
+    const y = useMotionValue(0);
 
-  useEffect(() => {
-    const $monImg = monImgRef.current;
-    if ($monImg) {
-      leftRef.current = $monImg.getClientRects()[0]?.left;
-      const interval = (duration * 1000) / (GRID_ITEM_SIZE * 2);
-      let repeat = 0;
-      intervalRef.current = window.setInterval(() => {
-        repeat++;
-        y.set(MOVE_UNIT * repeat);
-        if (repeat + 1 + penalty === GRID_ITEM_SIZE * 2 && intervalRef.current !== null) {
-          intervalRef.current && clearInterval(intervalRef.current);
-          isStackedRef.current = true;
-        }
-      }, interval);
-    }
-    return () => {
-      intervalRef.current !== null && clearInterval(intervalRef.current);
-    };
-  }, [src, duration]);
+    useEffect(() => {
+      const $monImg = monImgRef.current;
+      if ($monImg) {
+        const interval = (duration * 1000) / (GRID_ITEM_SIZE * 2);
+        let repeat = 0;
+        intervalRef.current = window.setInterval(() => {
+          repeat++;
+          y.set(MOVE_UNIT * repeat);
+          if (
+            repeat + 1 + penalty === GRID_ITEM_SIZE * 2 &&
+            intervalRef.current !== null
+          ) {
+            intervalRef.current && clearInterval(intervalRef.current);
+          }
+        }, interval);
+      }
+      return () => {
+        intervalRef.current !== null && clearInterval(intervalRef.current);
+      };
+    }, [src, duration]);
 
-  const burst = useCallback(() => {
-    if (intervalRef.current && !isStackedRef.current) {
-      burstStar({
-        top: y.get() + 40,
-        left: leftRef.current,
-        color: ["#F59E0B", "#3B82F6", "#DB2777", "#7C3AED"],
-        count: 8,
-        radius: { 10: 30 },
-        degree: 360,
-        opacity: { 1: 0 },
-      });
-    }
-  }, []);
-
-  return (
-    <motion.img
-      initial={{
-        scale: 0,
-      }}
-      animate={{
-        scale: 1,
-      }}
-      exit={{
-        opacity: 0,
-      }}
-      onAnimationStart={burst}
-      style={{ y }}
-      transition={{
-        ease: "linear",
-        duration: 0.2,
-      }}
-      css={tw`absolute transition-transform`}
-      width={CELL_SIZE}
-      ref={monImgRef}
-      src={src}
-      alt="mon image"
-    />
-  );
-};
+    return (
+      <div ref={monImgRef}>
+        <motion.img
+          initial={{
+            scale: 0,
+          }}
+          animate={{
+            scale: 1,
+          }}
+          style={{ y }}
+          transition={{
+            ease: "linear",
+            duration: 0.2,
+          }}
+          css={tw`absolute transition-transform`}
+          width={CELL_SIZE}
+          src={src}
+          alt="mon image"
+          ref={ref}
+        />
+      </div>
+    );
+  },
+);
 
 export default OverlaidGameGrid;

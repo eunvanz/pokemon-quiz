@@ -25,9 +25,9 @@ const useMonImages = () => {
   }, [allMons]);
 
   useEffect(() => {
-    if (stackedMonImages.length + achievedMonImages.length < shuffledMons.length) {
+    if (flattenStackedMonImages.length + achievedMonImages.length < shuffledMons.length) {
       setCurrentMonImage(
-        shuffledMons[stackedMonImages.length + achievedMonImages.length].image,
+        shuffledMons[flattenStackedMonImages.length + achievedMonImages.length]?.image,
       );
     } else {
       setCurrentMonImage(undefined);
@@ -35,8 +35,9 @@ const useMonImages = () => {
   }, [shuffledMons, flattenStackedMonImages, achievedMonImages]);
 
   const nextMonImage = useMemo(() => {
-    return shuffledMons[stackedMonImages.length + achievedMonImages.length + 1].image;
-  }, [shuffledMons, stackedMonImages, achievedMonImages]);
+    return shuffledMons[flattenStackedMonImages.length + achievedMonImages.length + 1]
+      ?.image;
+  }, [shuffledMons, flattenStackedMonImages, achievedMonImages]);
 
   const pushStackedMonImage = useCallback(
     (monImage: string, columnIndex: number) => {
