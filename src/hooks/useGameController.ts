@@ -1,6 +1,8 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { random } from "lodash-es";
+import useCombo from "./useCombo";
 import useMonImages from "./useMonImages";
+import useScore from "./useScore";
 import useStage from "./useStage";
 
 export interface GameController {
@@ -12,7 +14,6 @@ export interface GameController {
   currentMonImage?: string;
   currentColumn: number;
   stackedMonImages: string[][];
-  achievedMonImages: string[];
 }
 
 export const INITIAL_DURATION = 20;
@@ -25,9 +26,14 @@ const useGameController: () => GameController = () => {
 
   const { stage } = useStage();
 
+  const { combo, resetCombo, incrementCombo } = useCombo();
+
+  const { increaseScore, resetScore } = useScore();
+
+  const startTimeRef = useRef<number>(0);
+
   const {
     currentMonImage,
-    achievedMonImages,
     isMonImagesLoading,
     pushAchievedMonImage,
     pushStackedMonImage,
@@ -53,23 +59,30 @@ const useGameController: () => GameController = () => {
   const onStack = useCallback(() => {
     if (currentMonImage) {
       pushStackedMonImage(currentMonImage, currentColumn);
+      resetCombo();
     }
   }, [currentMonImage, currentColumn]);
 
   const onSuccess = useCallback(() => {
     if (currentMonImage) {
       pushAchievedMonImage(currentMonImage);
+      const wastedTime = Date.now() - startTimeRef.current;
+      increaseScore(wastedTime, combo + 1);
+      incrementCombo();
     }
-  }, [currentMonImage]);
+  }, [currentMonImage, combo]);
 
   const resetGame = useCallback(() => {
     resetMonImages();
     setDuration(INITIAL_DURATION);
+    resetCombo();
+    resetScore();
   }, []);
 
   useEffect(() => {
     changeCurrentColumn();
     changeDuration();
+    startTimeRef.current = Date.now();
   }, [currentMonImage]);
 
   return {
@@ -77,7 +90,6 @@ const useGameController: () => GameController = () => {
     currentColumn,
     currentMonImage,
     stackedMonImages,
-    achievedMonImages,
     onStack,
     onSuccess,
     isLoading: isMonImagesLoading,
