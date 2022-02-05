@@ -36,7 +36,11 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
 
   const handleOnSubmit = useCallback(
     ({ monName }) => {
-      if (correctAnswers.includes(monName)) {
+      if (
+        correctAnswers
+          .map((answer) => answer.toLowerCase())
+          .includes(monName.toLowerCase())
+      ) {
         onSubmit(monName);
         resetValue();
       } else {
