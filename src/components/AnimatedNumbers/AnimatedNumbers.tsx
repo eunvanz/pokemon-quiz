@@ -5,7 +5,7 @@ import AnimatedNumber from "../AnimatedNumber";
 export interface AnimatedNumbersProps {
   number: number;
   size: number;
-  hasComma: boolean;
+  hasComma?: boolean;
 }
 
 const AnimatedNumbers: React.FC<AnimatedNumbersProps> = ({ number, size, hasComma }) => {
@@ -14,18 +14,18 @@ const AnimatedNumbers: React.FC<AnimatedNumbersProps> = ({ number, size, hasComm
   }, [number]);
 
   return (
-    <div css={tw`inline-block`}>
+    <div css={[tw`inline-flex`, { height: size }]}>
       {numberArray.map((number, index) => (
         <Fragment key={index}>
           {hasComma && (numberArray.length - index) % 3 === 0 && index !== 0 && (
             <div
               css={[
+                tw`inline-block`,
                 {
                   fontSize: size,
-                  height: size * 1.5,
-                  transform: `translateY(${-size / 2}px)`,
+                  height: size,
+                  lineHeight: 1,
                 },
-                tw`inline-block`,
               ]}
             >
               ,

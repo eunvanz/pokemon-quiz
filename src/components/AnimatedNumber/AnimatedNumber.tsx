@@ -9,11 +9,7 @@ export interface AnimatedNumberProps {
 const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ number, size }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const [numberElementSize, setNumberElementSize] = useState(0);
-
   const numberWrapperRef = useRef<HTMLDivElement>(null);
-
-  const numberRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setCurrentIndex(number);
@@ -22,34 +18,24 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ number, size }) => {
   useEffect(() => {
     const $numberWrapper = numberWrapperRef.current;
     if ($numberWrapper) {
-      $numberWrapper.style.transform = `translateY(${
-        numberElementSize * currentIndex * -1
-      }px)`;
+      $numberWrapper.style.transform = `translateY(${size * currentIndex * -1}px)`;
     }
-  }, [currentIndex]);
-
-  useEffect(() => {
-    const $number = numberRef.current;
-    if ($number) {
-      setNumberElementSize($number.getClientRects()[0].height);
-    }
-  }, []);
+  }, [currentIndex, size]);
 
   return (
     <div
       css={[
         tw`overflow-hidden inline-block`,
         {
-          height: size * 1.5,
+          height: size,
         },
       ]}
     >
       <div ref={numberWrapperRef} css={{ transition: "transform ease-out 0.2s" }}>
         {Array.from({ length: 10 }).map((_, number) => (
           <div
-            ref={number === 0 ? numberRef : undefined}
             key={number}
-            css={[{ fontSize: size }]}
+            css={[tw`text-center`, { fontSize: size, height: size, lineHeight: 1 }]}
           >
             {number}
           </div>
