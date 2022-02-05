@@ -6,7 +6,7 @@ export default {
   title: "components/MonNameInput",
   component: MonNameInput,
   args: {
-    correctAnswer: "ditto",
+    correctAnswers: ["ditto", "메타몽"],
   },
 } as ComponentMeta<typeof MonNameInput>;
 

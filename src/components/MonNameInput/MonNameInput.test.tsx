@@ -8,7 +8,7 @@ import * as stories from "./MonNameInput.stories";
 const { Default } = composeStories(stories);
 
 describe("MonNameInput", () => {
-  const correctAnswer = "ditto";
+  const correctAnswers = ["ditto", "메타몽"];
   const onSubmit = jest.fn();
   const onSkip = jest.fn();
 
@@ -44,7 +44,7 @@ describe("MonNameInput", () => {
     });
 
     it("focuses input after click [Fire] button", async () => {
-      const { fireBtn, input } = setup({ correctAnswer });
+      const { fireBtn, input } = setup({ correctAnswers });
 
       userEvent.click(fireBtn);
 
@@ -56,7 +56,7 @@ describe("MonNameInput", () => {
     });
 
     it("focuses input and reset error after click [Skip] button", async () => {
-      const { input, fireBtn, skipBtn } = setup({ correctAnswer, onSkip });
+      const { input, fireBtn, skipBtn } = setup({ correctAnswers, onSkip });
 
       userEvent.click(fireBtn);
 
@@ -74,7 +74,7 @@ describe("MonNameInput", () => {
 
     describe("when input is empty", () => {
       it("shows error message", async () => {
-        const { fireBtn } = setup({ correctAnswer, onSubmit });
+        const { fireBtn } = setup({ correctAnswers, onSubmit });
 
         userEvent.click(fireBtn);
 
@@ -87,7 +87,7 @@ describe("MonNameInput", () => {
 
     describe("when wrong answer is submitted", () => {
       it("resets input and shows error message", async () => {
-        const { input, fireBtn } = setup({ correctAnswer, onSubmit });
+        const { input, fireBtn } = setup({ correctAnswers, onSubmit });
 
         userEvent.type(input, "pikachu");
 
@@ -102,7 +102,7 @@ describe("MonNameInput", () => {
 
     describe("when correct answer is submitted", () => {
       it("calls [onSubmit] and reset field", async () => {
-        const { input, fireBtn } = setup({ correctAnswer, onSubmit });
+        const { input, fireBtn } = setup({ correctAnswers, onSubmit });
 
         userEvent.type(input, "ditto");
 

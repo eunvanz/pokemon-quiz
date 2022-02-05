@@ -19,6 +19,7 @@ const generateMockUseMonImages = (
 ) => {
   jest.spyOn(useMonImages, "default").mockImplementation(() => ({
     currentMonImage: "currentMonImage",
+    nextMonImage: "nextMonImage",
     achievedMonImages: [],
     isMonImagesLoading: false,
     pushAchievedMonImage,
@@ -103,6 +104,21 @@ describe("useGameController", () => {
       expect(result.current.duration).toBe(INITIAL_DURATION);
       expect(resetCombo).toBeCalledTimes(1);
       expect(resetScore).toBeCalledTimes(1);
+    });
+  });
+
+  describe("onSkip", () => {
+    it("stacks as [onStack], sets duration as 0", () => {
+      generateMockUseMonImages();
+      generateMockUseCombo();
+
+      const { result } = setup();
+
+      act(result.current.onStack);
+
+      expect(pushStackedMonImage).toBeCalledWith("currentMonImage", 1);
+      expect(resetCombo).toBeCalledTimes(1);
+      expect(result.current.duration).toBe(0);
     });
   });
 });

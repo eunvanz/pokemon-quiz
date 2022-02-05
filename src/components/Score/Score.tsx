@@ -8,7 +8,7 @@ export interface ScoreProps {
 const Score: React.FC<ScoreProps> = ({ count }) => {
   return (
     <div css={tw`text-xl flex`}>
-      <div css={tw`mt-1 mr-1`}>Score</div>
+      <div css={tw`mt-0.5 mr-1`}>Score</div>
       <div css={tw`text-blue-600`}>
         <AnimatedNumbers hasComma number={count} size={28} />
       </div>

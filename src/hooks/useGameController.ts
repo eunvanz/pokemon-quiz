@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { random } from "lodash-es";
 import useCombo from "./useCombo";
 import useMonImages from "./useMonImages";
@@ -12,8 +12,14 @@ export interface GameController {
   isLoading: boolean;
   resetGame: VoidFunction;
   currentMonImage?: string;
+  nextMonImage?: string;
   currentColumn: number;
   stackedMonImages: string[][];
+  achievedMonImages: string[];
+  combo: number;
+  score: number;
+  answers: string[];
+  onSkip: VoidFunction;
 }
 
 export const INITIAL_DURATION = 20;
@@ -28,19 +34,25 @@ const useGameController: () => GameController = () => {
 
   const { combo, resetCombo, incrementCombo } = useCombo();
 
-  const { increaseScore, resetScore } = useScore();
+  const { score, increaseScore, resetScore } = useScore();
 
   const startTimeRef = useRef<number>(0);
 
   const {
     currentMonImage,
+    nextMonImage,
     isMonImagesLoading,
     pushAchievedMonImage,
     pushStackedMonImage,
+    achievedMonImages,
     resetMonImages,
     stackedMonImages,
     allMons,
   } = useMonImages();
+
+  const answers = useMemo(() => {
+    return allMons?.find((mon) => mon.image === currentMonImage)?.names.split(",") || [];
+  }, [allMons, currentMonImage]);
 
   const changeCurrentColumn = useCallback(() => {
     setCurrentColumn(random(0, 5));
@@ -79,6 +91,11 @@ const useGameController: () => GameController = () => {
     resetScore();
   }, []);
 
+  const onSkip = useCallback(() => {
+    setDuration(0);
+    onStack();
+  }, []);
+
   useEffect(() => {
     changeCurrentColumn();
     changeDuration();
@@ -90,10 +107,16 @@ const useGameController: () => GameController = () => {
     currentColumn,
     currentMonImage,
     stackedMonImages,
+    achievedMonImages,
     onStack,
     onSuccess,
     isLoading: isMonImagesLoading,
     resetGame,
+    score,
+    combo,
+    answers,
+    onSkip,
+    nextMonImage,
   };
 };
 

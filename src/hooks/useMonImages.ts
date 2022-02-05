@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo } from "react";
-import { flatten, random } from "lodash-es";
+import { flatten, shuffle } from "lodash-es";
 import { useRecoilState } from "recoil";
 import achievedMonImagesState from "~/store/achievedMonImagesState";
 import currentMonImageState from "~/store/currentMonImageState";
@@ -20,17 +20,23 @@ const useMonImages = () => {
     return flatten(stackedMonImages);
   }, [stackedMonImages]);
 
+  const shuffledMons = useMemo(() => {
+    return shuffle(allMons);
+  }, [allMons]);
+
   useEffect(() => {
-    const filteredMons = allMons
-      ?.filter((mon) => !flattenStackedMonImages.includes(mon.image))
-      .filter((mon) => !achievedMonImages.includes(mon.image));
-    if (filteredMons) {
-      const index = random(filteredMons.length);
-      setCurrentMonImage(filteredMons[index].image);
+    if (stackedMonImages.length + achievedMonImages.length < shuffledMons.length) {
+      setCurrentMonImage(
+        shuffledMons[stackedMonImages.length + achievedMonImages.length].image,
+      );
     } else {
       setCurrentMonImage(undefined);
     }
-  }, [allMons, flattenStackedMonImages, achievedMonImages]);
+  }, [shuffledMons, flattenStackedMonImages, achievedMonImages]);
+
+  const nextMonImage = useMemo(() => {
+    return shuffledMons[stackedMonImages.length + achievedMonImages.length + 1].image;
+  }, [shuffledMons, stackedMonImages, achievedMonImages]);
 
   const pushStackedMonImage = useCallback(
     (monImage: string, columnIndex: number) => {
@@ -56,6 +62,7 @@ const useMonImages = () => {
   }, []);
 
   return {
+    nextMonImage,
     currentMonImage,
     isMonImagesLoading: isAllMonsLoading,
     stackedMonImages,

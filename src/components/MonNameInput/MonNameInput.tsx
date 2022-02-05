@@ -6,13 +6,13 @@ import TextField from "../TextField";
 
 export interface MonNameInputProps {
   onSubmit: (name: string) => void;
-  correctAnswer: string;
+  correctAnswers: string[];
   onSkip: VoidFunction;
 }
 
 const MonNameInput: React.FC<MonNameInputProps> = ({
   onSubmit,
-  correctAnswer,
+  correctAnswers,
   onSkip,
 }) => {
   const {
@@ -36,7 +36,7 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
 
   const handleOnSubmit = useCallback(
     ({ monName }) => {
-      if (monName === correctAnswer) {
+      if (correctAnswers.includes(monName)) {
         onSubmit(monName);
         resetValue();
       } else {
@@ -44,7 +44,7 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
         resetValue();
       }
     },
-    [correctAnswer, onSubmit],
+    [correctAnswers, onSubmit],
   );
 
   const { ref: monNameInputFormRef, ...restTextFieldProps } = useMemo(() => {
