@@ -20,6 +20,7 @@ export interface GameController {
   score: number;
   answers: string[];
   onSkip: VoidFunction;
+  isGameOver: boolean;
 }
 
 export const INITIAL_DURATION = 20;
@@ -48,6 +49,7 @@ const useGameController: () => GameController = () => {
     resetMonImages,
     stackedMonImages,
     allMons,
+    isGameOver,
   } = useMonImages();
 
   const answers = useMemo(() => {
@@ -123,6 +125,7 @@ const useGameController: () => GameController = () => {
     answers,
     onSkip,
     nextMonImage,
+    isGameOver,
   };
 };
 

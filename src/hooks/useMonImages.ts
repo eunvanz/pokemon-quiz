@@ -16,6 +16,10 @@ const useMonImages = () => {
 
   const [currentMonImage, setCurrentMonImage] = useRecoilState(currentMonImageState);
 
+  const isGameOver = useMemo(() => {
+    return stackedMonImages.some((array) => array.length === 12);
+  }, [stackedMonImages]);
+
   const flattenStackedMonImages = useMemo(() => {
     return flatten(stackedMonImages);
   }, [stackedMonImages]);
@@ -25,7 +29,10 @@ const useMonImages = () => {
   }, [allMons]);
 
   useEffect(() => {
-    if (flattenStackedMonImages.length + achievedMonImages.length < shuffledMons.length) {
+    if (
+      !isGameOver &&
+      flattenStackedMonImages.length + achievedMonImages.length < shuffledMons.length
+    ) {
       setCurrentMonImage(
         shuffledMons[flattenStackedMonImages.length + achievedMonImages.length]?.image,
       );
@@ -72,6 +79,7 @@ const useMonImages = () => {
     pushStackedMonImage,
     resetMonImages,
     allMons,
+    isGameOver,
   };
 };
 

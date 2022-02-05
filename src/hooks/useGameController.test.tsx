@@ -22,6 +22,7 @@ const generateMockUseMonImages = (
     resetMonImages,
     stackedMonImages: [[], [], [], [], [], []],
     allMons: mockMons.allMons,
+    isGameOver: false,
     ...impl,
   }));
 };
