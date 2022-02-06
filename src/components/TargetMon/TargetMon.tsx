@@ -43,7 +43,7 @@ const TargetMon: React.FC<TargetMonProps> = ({ monImage, nextMonImage, monNames 
       </div>
       {splitMonNames && (
         <div css={tw`relative ml-4`}>
-          <AnimatePresence>
+          <AnimatePresence key={monNames}>
             <motion.div
               initial={{
                 opacity: 0,

@@ -22,6 +22,9 @@ const GamePanel: React.FC<GamePanelProps> = ({
   onSkip,
   onSuccess,
   nextMonImage,
+  isGameOver,
+  answerMon,
+  updateAnswerMon,
 }) => {
   const monImageRef = useRef<HTMLImageElement | null>(null);
 
@@ -51,6 +54,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
         currentMonImage={currentMonImage}
         onStack={onStack}
         monImageRef={monImageRef}
+        onClickMon={isGameOver ? updateAnswerMon : undefined}
       />
       <div css={tw`ml-4 flex flex-col justify-between`}>
         <div>
@@ -59,7 +63,11 @@ const GamePanel: React.FC<GamePanelProps> = ({
         </div>
         <div>
           <div css={tw`my-4`}>
-            <TargetMon monImage={currentMonImage} nextMonImage={nextMonImage} />
+            <TargetMon
+              monImage={isGameOver ? answerMon?.image : currentMonImage}
+              nextMonImage={nextMonImage}
+              monNames={isGameOver ? answerMon?.names : undefined}
+            />
           </div>
           <MonNameInput
             correctAnswers={answers}

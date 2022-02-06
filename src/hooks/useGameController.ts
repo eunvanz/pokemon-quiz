@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { random } from "lodash-es";
+import { Mon } from "~/types";
+import useAnswerMon from "./useAnswerMon";
 import useCombo from "./useCombo";
 import useMonImages from "./useMonImages";
 import useScore from "./useScore";
@@ -21,6 +23,8 @@ export interface GameController {
   answers: string[];
   onSkip: VoidFunction;
   isGameOver: boolean;
+  answerMon?: Mon;
+  updateAnswerMon: (monImage: string) => void;
 }
 
 export const INITIAL_DURATION = 20;
@@ -51,6 +55,8 @@ const useGameController: () => GameController = () => {
     allMons,
     isGameOver,
   } = useMonImages();
+
+  const { answerMon, setAnswerMon } = useAnswerMon();
 
   const answers = useMemo(() => {
     return allMons?.find((mon) => mon.image === currentMonImage)?.names.split(",") || [];
@@ -110,6 +116,14 @@ const useGameController: () => GameController = () => {
     setStartTime(Date.now());
   }, [currentMonImage]);
 
+  const updateAnswerMon = useCallback(
+    (monImage: string) => {
+      const mon = allMons?.find((mon) => mon.image === monImage);
+      setAnswerMon(mon);
+    },
+    [allMons],
+  );
+
   return {
     duration,
     currentColumn,
@@ -126,6 +140,8 @@ const useGameController: () => GameController = () => {
     onSkip,
     nextMonImage,
     isGameOver,
+    answerMon,
+    updateAnswerMon,
   };
 };
 
