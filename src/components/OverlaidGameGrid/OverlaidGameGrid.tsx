@@ -15,6 +15,7 @@ export interface OverlaidGameGridProps {
   stackedMonImages: string[][];
   onStack: VoidFunction;
   monImageRef: RefObject<HTMLImageElement>;
+  onClickMon?: (monImage: string) => void;
 }
 
 const WIDTH = 300;
@@ -30,6 +31,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   stackedMonImages,
   onStack,
   monImageRef,
+  onClickMon,
 }) => {
   const animation = useAnimation();
   const vibrationTimeout = useRef<number | null>();
@@ -88,7 +90,15 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
 
           return (
             <div key={idx} css={{ height: CELL_SIZE }}>
-              {monImage && <img src={monImage} width={CELL_SIZE} alt="mon image" />}
+              {monImage && (
+                <img
+                  css={onClickMon ? tw`cursor-pointer` : undefined}
+                  src={monImage}
+                  width={CELL_SIZE}
+                  alt="mon image"
+                  onClick={() => onClickMon?.(monImage)}
+                />
+              )}
             </div>
           );
         })}
