@@ -52,15 +52,21 @@ const GamePanel: React.FC<GamePanelProps> = ({
         onStack={onStack}
         monImageRef={monImageRef}
       />
-      <div css={tw`ml-4`}>
-        <Score count={score} />
-        <Combo count={combo} />
-        <TargetMon monImage={currentMonImage} nextMonImage={nextMonImage} />
-        <MonNameInput
-          correctAnswers={answers}
-          onSkip={onSkip}
-          onSubmit={handleOnSuccess}
-        />
+      <div css={tw`ml-4 flex flex-col justify-between`}>
+        <div>
+          <Score count={score} />
+          <Combo count={combo} />
+        </div>
+        <div>
+          <div css={tw`my-4`}>
+            <TargetMon monImage={currentMonImage} nextMonImage={nextMonImage} />
+          </div>
+          <MonNameInput
+            correctAnswers={answers}
+            onSkip={onSkip}
+            onSubmit={handleOnSuccess}
+          />
+        </div>
       </div>
     </div>
   );

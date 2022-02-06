@@ -16,3 +16,8 @@ export default {
 const Template: ComponentStory<typeof TargetMon> = (args) => <TargetMon {...args} />;
 
 export const Default = createStoryComponent(Template);
+
+export const WithNames = createStoryComponent(Template, {
+  monNames:
+    "メタモン,Metamon,메타몽,百變怪,Métamorph,Ditto,Ditto,Ditto,Ditto,メタモン,百变怪",
+});
