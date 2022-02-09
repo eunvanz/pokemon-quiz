@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { random } from "lodash-es";
 import { Mon } from "~/types";
 import useAnswerMon from "./useAnswerMon";
