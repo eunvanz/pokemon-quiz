@@ -1,8 +1,9 @@
-import { useCallback, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import tw from "twin.macro";
 import { burstStar } from "~/helpers/mojs";
 import { GameController } from "~/hooks/useGameController";
 import Combo from "../Combo";
+import GameOver from "../GameOver";
 import MonNameInput from "../MonNameInput/MonNameInput";
 import OverlaidGameGrid from "../OverlaidGameGrid";
 import Score from "../Score";
@@ -45,38 +46,52 @@ const GamePanel: React.FC<GamePanelProps> = ({
     onSuccess();
   }, [onSuccess]);
 
+  const [isGameOverScreenVisible, setIsGameOverScreenVisible] = useState(false);
+
+  useEffect(() => {
+    if (isGameOver) {
+      setIsGameOverScreenVisible(true);
+    }
+  }, [isGameOver]);
+
   return (
-    <div css={tw`flex`}>
-      <OverlaidGameGrid
-        currentColumn={currentColumn}
-        stackedMonImages={stackedMonImages}
-        duration={duration}
-        currentMonImage={currentMonImage}
-        onStack={onStack}
-        monImageRef={monImageRef}
-        onClickMon={isGameOver ? updateAnswerMon : undefined}
-      />
-      <div css={tw`ml-4 flex flex-col justify-between`}>
-        <div>
-          <Score count={score} />
-          <Combo count={combo} />
-        </div>
-        <div>
-          <div css={tw`my-4`}>
-            <TargetMon
-              monImage={isGameOver ? answerMon?.image : currentMonImage}
-              nextMonImage={nextMonImage}
-              monNames={isGameOver ? answerMon?.names : undefined}
+    <>
+      <div css={tw`flex justify-center`}>
+        <OverlaidGameGrid
+          currentColumn={currentColumn}
+          stackedMonImages={stackedMonImages}
+          duration={duration}
+          currentMonImage={currentMonImage}
+          onStack={onStack}
+          monImageRef={monImageRef}
+          onClickMon={isGameOver ? updateAnswerMon : undefined}
+        />
+        <div css={tw`ml-4 flex flex-col justify-between`}>
+          <div>
+            <Score count={score} />
+            <Combo count={combo} />
+          </div>
+          <div>
+            <div css={tw`my-4`}>
+              <TargetMon
+                monImage={isGameOver ? answerMon?.image : currentMonImage}
+                nextMonImage={nextMonImage}
+                monNames={isGameOver ? answerMon?.names : undefined}
+              />
+            </div>
+            <MonNameInput
+              correctAnswers={answers}
+              onSkip={onSkip}
+              onSubmit={handleOnSuccess}
             />
           </div>
-          <MonNameInput
-            correctAnswers={answers}
-            onSkip={onSkip}
-            onSubmit={handleOnSuccess}
-          />
         </div>
       </div>
-    </div>
+      <GameOver
+        isVisible={isGameOverScreenVisible}
+        onHide={() => setIsGameOverScreenVisible(false)}
+      />
+    </>
   );
 };
 

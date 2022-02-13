@@ -28,7 +28,7 @@ const GameOver: React.FC<GameOverProps> = ({ isVisible, onHide }) => {
           }}
           css={tw`absolute flex justify-center items-center w-full h-full flex-col z-10`}
         >
-          <motion.div
+          <motion.h1
             initial={{
               y: -100,
             }}
@@ -43,9 +43,10 @@ const GameOver: React.FC<GameOverProps> = ({ isVisible, onHide }) => {
                 },
               },
             }}
+            css={tw`text-blue-600 text-6xl z-10`}
           >
-            <h1 css={tw`text-blue-600 text-6xl z-10`}>GAME OVER</h1>
-          </motion.div>
+            GAME OVER
+          </motion.h1>
           <motion.div
             css={tw`mt-3 z-10`}
             initial={{
@@ -67,7 +68,7 @@ const GameOver: React.FC<GameOverProps> = ({ isVisible, onHide }) => {
               Check the wrong answers
             </Button>
           </motion.div>
-          <div css={tw`absolute w-full h-full opacity-50 z-0`} />
+          <div css={tw`absolute bg-white w-full h-full opacity-50 z-0`} />
         </motion.div>
       )}
     </AnimatePresence>
