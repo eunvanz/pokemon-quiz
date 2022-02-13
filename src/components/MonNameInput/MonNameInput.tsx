@@ -4,6 +4,8 @@ import tw from "twin.macro";
 import Button from "../Button";
 import TextField from "../TextField";
 
+const CHARACTERS_TO_IGNORE_REGEX = /♂|♀/;
+
 export interface MonNameInputProps {
   onSubmit: (name: string) => void;
   correctAnswers: string[];
@@ -38,7 +40,7 @@ const MonNameInput: React.FC<MonNameInputProps> = ({
     ({ monName }) => {
       if (
         correctAnswers
-          .map((answer) => answer.toLowerCase())
+          .map((answer) => answer.toLowerCase().replace(CHARACTERS_TO_IGNORE_REGEX, ""))
           .includes(monName.toLowerCase())
       ) {
         onSubmit(monName);

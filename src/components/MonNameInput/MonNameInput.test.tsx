@@ -131,5 +131,33 @@ describe("MonNameInput", () => {
         });
       });
     });
+
+    describe("when answer has special characters", () => {
+      it("ignore special characters", async () => {
+        const correctAnswers = [
+          "ニドラン♂",
+          "Nidoran♂",
+          "니드런♂",
+          "尼多朗",
+          "Nidoran♂",
+          "Nidoran♂",
+          "Nidoran♂",
+          "Nidoran♂",
+          "Nidoran♂",
+          "ニドラン♂",
+          "尼多朗",
+        ];
+        const { input, fireBtn } = setup({ correctAnswers, onSubmit });
+
+        userEvent.type(input, "nidoran");
+
+        userEvent.click(fireBtn);
+
+        await waitFor(() => {
+          expect(onSubmit).toBeCalledWith("nidoran");
+        });
+        expect(input).toHaveValue("");
+      });
+    });
   });
 });
