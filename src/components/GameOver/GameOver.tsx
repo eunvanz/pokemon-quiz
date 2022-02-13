@@ -68,7 +68,7 @@ const GameOver: React.FC<GameOverProps> = ({ isVisible, onHide }) => {
               Check the wrong answers
             </Button>
           </motion.div>
-          <div css={tw`absolute bg-white w-full h-full opacity-50 z-0`} />
+          <div css={tw`absolute bg-white w-full h-full opacity-80 z-0`} />
         </motion.div>
       )}
     </AnimatePresence>
