@@ -118,4 +118,8 @@ describe("useGameController", () => {
       expect(resetCombo).toBeCalledTimes(1);
     });
   });
+
+  describe("onCheckRank", () => {
+    it.todo("navigates to rank page");
+  });
 });
