@@ -5,7 +5,9 @@ exports[`GameOverNext matches with previous snapshot. 1`] = `
   <div
     class="css-1q8p9k4-GameOverNext"
   >
-    <h1>
+    <h1
+      class="css-332ums-GameOverNext"
+    >
       Click Pokémons to check the answers
     </h1>
     <h3
