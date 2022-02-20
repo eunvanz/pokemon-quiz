@@ -25,6 +25,7 @@ export interface GameController {
   isGameOver: boolean;
   answerMon?: Mon;
   updateAnswerMon: (monImage: string) => void;
+  onCheckRank: VoidFunction;
 }
 
 export const INITIAL_DURATION = 20;
@@ -124,6 +125,8 @@ const useGameController: () => GameController = () => {
     [allMons],
   );
 
+  const onCheckRank = useCallback(() => {}, []);
+
   return {
     duration,
     currentColumn,
@@ -142,6 +145,7 @@ const useGameController: () => GameController = () => {
     isGameOver,
     answerMon,
     updateAnswerMon,
+    onCheckRank,
   };
 };
 

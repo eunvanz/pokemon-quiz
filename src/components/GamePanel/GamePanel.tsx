@@ -4,6 +4,7 @@ import { burstStar } from "~/helpers/mojs";
 import { GameController } from "~/hooks/useGameController";
 import Combo from "../Combo";
 import GameOver from "../GameOver";
+import GameOverNext from "../GameOverNext";
 import MonNameInput from "../MonNameInput/MonNameInput";
 import OverlaidGameGrid from "../OverlaidGameGrid";
 import Score from "../Score";
@@ -26,6 +27,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
   isGameOver,
   answerMon,
   updateAnswerMon,
+  onCheckRank,
 }) => {
   const monImageRef = useRef<HTMLImageElement | null>(null);
 
@@ -79,11 +81,15 @@ const GamePanel: React.FC<GamePanelProps> = ({
                 monNames={isGameOver ? answerMon?.names : undefined}
               />
             </div>
-            <MonNameInput
-              correctAnswers={answers}
-              onSkip={onSkip}
-              onSubmit={handleOnSuccess}
-            />
+            {isGameOver ? (
+              <GameOverNext onNext={onCheckRank} />
+            ) : (
+              <MonNameInput
+                correctAnswers={answers}
+                onSkip={onSkip}
+                onSubmit={handleOnSuccess}
+              />
+            )}
           </div>
         </div>
       </div>
