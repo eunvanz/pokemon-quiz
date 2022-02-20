@@ -35,9 +35,8 @@ const useAllMons = () => {
   }, [allMons]);
 
   return {
-    allMons,
+    allMons: generationMons,
     isAllMonsLoading,
-    generationMons,
   };
 };
 
