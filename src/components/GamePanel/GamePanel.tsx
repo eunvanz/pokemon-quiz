@@ -27,7 +27,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
   isGameOver,
   answerMon,
   updateAnswerMon,
-  onCheckRank,
+  onNext,
 }) => {
   const monImageRef = useRef<HTMLImageElement | null>(null);
 
@@ -82,7 +82,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
               />
             </div>
             {isGameOver ? (
-              <GameOverNext onNext={onCheckRank} />
+              <GameOverNext onNext={onNext} />
             ) : (
               <MonNameInput
                 correctAnswers={answers}

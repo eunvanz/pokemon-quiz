@@ -119,7 +119,7 @@ describe("useGameController", () => {
     });
   });
 
-  describe("onCheckRank", () => {
+  describe("onNext", () => {
     it.todo("navigates to rank page");
   });
 });
