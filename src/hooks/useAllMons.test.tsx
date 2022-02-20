@@ -17,18 +17,35 @@ describe("useAllMons", () => {
   };
 
   describe("generationMons", () => {
-    it("returns mons of certain generation", async () => {
-      jest.spyOn(useGeneration, "default").mockImplementation(() => ({
-        generation: 2,
-        setGeneration: jest.fn(),
-      }));
+    describe("when generation is above 0", () => {
+      it("returns mons of certain generation", async () => {
+        jest.spyOn(useGeneration, "default").mockImplementation(() => ({
+          generation: 2,
+          setGeneration: jest.fn(),
+        }));
 
-      const { result, waitFor } = setup();
+        const { result, waitFor } = setup();
 
-      await waitFor(() => {
-        expect(result.current.generationMons).toEqual(
-          mockMons.allMons.filter((mon) => mon.id > 151 && mon.id <= 251),
-        );
+        await waitFor(() => {
+          expect(result.current.generationMons).toEqual(
+            mockMons.allMons.filter((mon) => mon.id > 151 && mon.id <= 251),
+          );
+        });
+      });
+    });
+
+    describe("when generation is 0", () => {
+      it("returns all mons", async () => {
+        jest.spyOn(useGeneration, "default").mockImplementation(() => ({
+          generation: 0,
+          setGeneration: jest.fn(),
+        }));
+
+        const { result, waitFor } = setup();
+
+        await waitFor(() => {
+          expect(result.current.generationMons).toEqual(mockMons.allMons);
+        });
       });
     });
   });
