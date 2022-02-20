@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameOverNext matches with previous snapshot. 1`] = `
+<div>
+  <div
+    class="css-1q8p9k4-GameOverNext"
+  >
+    <h1>
+      Click a Pokémon to check the answer
+    </h1>
+    <h3>
+      or
+    </h3>
+    <button
+      class="css-uxyg09-Button-GameOverNext"
+    >
+      Check your rank
+    </button>
+  </div>
+</div>
+`;
