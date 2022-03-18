@@ -23,3 +23,7 @@ export const Outlined = createStoryComponent(Template, {
 export const Disabled = createStoryComponent(Template, {
   disabled: true,
 });
+
+export const Block = createStoryComponent(Template, {
+  isBlock: true,
+});

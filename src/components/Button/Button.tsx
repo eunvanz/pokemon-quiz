@@ -5,11 +5,13 @@ export interface ButtonProps
   extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   variant?: "contained" | "outlined";
   color?: "primary" | "secondary";
+  isBlock?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
   variant = "contained",
   color = "primary",
+  isBlock,
   ...props
 }) => {
   const cssByVariant = useMemo(() => {
@@ -41,6 +43,10 @@ const Button: React.FC<ButtonProps> = ({
     return tw`opacity-50`;
   }, [props.disabled]);
 
+  const cssByIsBlock = useMemo(() => {
+    return isBlock ? tw`w-full` : undefined;
+  }, [isBlock]);
+
   return (
     <button
       css={[
@@ -52,6 +58,7 @@ const Button: React.FC<ButtonProps> = ({
         },
         cssByVariant,
         cssByDisabled,
+        cssByIsBlock,
       ]}
       {...props}
     />
