@@ -9,6 +9,7 @@ export default {
     achievedMonImages: [],
     answers: ["ditto", "메타몽"],
     combo: 4,
+    maxCombo: 10,
     currentColumn: 2,
     currentMonImage:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",

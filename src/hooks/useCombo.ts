@@ -30,6 +30,7 @@ const useCombo = () => {
     resetCombo,
     incrementCombo,
     resetMaxCombo,
+    maxCombo,
   };
 };
 

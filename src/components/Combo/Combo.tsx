@@ -30,7 +30,9 @@ const Combo: React.FC<ComboProps> = ({ count }) => {
       <span css={tw`text-3xl text-blue-600`}>{count}</span>
       <span css={tw`text-lg`}>combos</span>
     </div>
-  ) : null;
+  ) : (
+    <div css={tw`h-9`} />
+  );
 };
 
 export default Combo;

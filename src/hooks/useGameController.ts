@@ -26,6 +26,7 @@ export interface GameController {
   answerMon?: Mon;
   updateAnswerMon: (monImage: string) => void;
   onNext: VoidFunction;
+  maxCombo: number;
 }
 
 export const INITIAL_DURATION = 20;
@@ -38,7 +39,7 @@ const useGameController: () => GameController = () => {
 
   const { stage } = useStage();
 
-  const { combo, resetCombo, incrementCombo } = useCombo();
+  const { combo, resetCombo, incrementCombo, maxCombo, resetMaxCombo } = useCombo();
 
   const { score, increaseScore, resetScore } = useScore();
 
@@ -105,7 +106,8 @@ const useGameController: () => GameController = () => {
     setDuration(INITIAL_DURATION);
     resetCombo();
     resetScore();
-  }, []);
+    resetMaxCombo();
+  }, [resetMonImages, resetCombo, resetScore, resetMaxCombo]);
 
   const onSkip = useCallback(() => {
     onStack();
@@ -146,6 +148,7 @@ const useGameController: () => GameController = () => {
     answerMon,
     updateAnswerMon,
     onNext,
+    maxCombo,
   };
 };
 

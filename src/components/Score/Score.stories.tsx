@@ -6,6 +6,7 @@ export default {
   title: "components/Score",
   component: Score,
   args: {
+    label: "Score",
     count: 1234567,
   },
 } as ComponentMeta<typeof Score>;
