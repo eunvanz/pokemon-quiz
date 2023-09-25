@@ -98,7 +98,7 @@ const useGameController: () => GameController = () => {
       increaseScore(wastedTime, combo);
       incrementCombo();
     }
-  }, [currentMonImage, combo]);
+  }, [currentMonImage, combo, startTime]);
 
   const resetGame = useCallback(() => {
     resetMonImages();
