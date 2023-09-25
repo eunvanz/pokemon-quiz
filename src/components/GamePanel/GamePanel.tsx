@@ -29,6 +29,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
   updateAnswerMon,
   onNext,
   maxCombo,
+  achievedMonImages,
 }) => {
   const monImageRef = useRef<HTMLImageElement | null>(null);
 
@@ -72,6 +73,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
         <div css={tw`ml-4 flex flex-col justify-between gap-4`}>
           <div css={tw`flex flex-col gap-2`}>
             <Score label="Score" count={score} />
+            <Score label="Gotcha" count={achievedMonImages.length} />
             <Score label="Max Combos" count={maxCombo > 1 ? maxCombo : 0} />
           </div>
           <Combo count={combo} />
