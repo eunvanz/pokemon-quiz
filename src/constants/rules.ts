@@ -9,5 +9,5 @@ export const GENERATIONS = {
   6: 721,
   7: 809,
   8: 905,
-  9: 1017,
+  9: 1010,
 };
