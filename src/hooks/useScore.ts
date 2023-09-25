@@ -7,7 +7,7 @@ const useScore = () => {
 
   const increaseScore = useCallback((wastedTime: number, combo: number) => {
     const bonusScore =
-      Math.max(1000 - Math.floor(wastedTime / 1000) * 100, 100) + combo * 100;
+      Math.max(1000 - Math.floor(wastedTime / 2000) * 100, 100) + combo * 100;
     setScore((score) => score + bonusScore);
   }, []);
 
