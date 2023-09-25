@@ -12,10 +12,15 @@ import "swiper/swiper.min.css";
 
 export interface SelectGenerationProps {
   onStart: (generation: Generation) => void;
+  onNavigateToLeaderBoard: VoidFunction;
   mons: Mon[];
 }
 
-const SelectGeneration: React.FC<SelectGenerationProps> = ({ onStart, mons }) => {
+const SelectGeneration: React.FC<SelectGenerationProps> = ({
+  onStart,
+  onNavigateToLeaderBoard,
+  mons,
+}) => {
   const swiperRef = useRef<SwiperCore>();
 
   const [generation, setGeneration] = useState<Generation>(0);
@@ -125,6 +130,11 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({ onStart, mons }) =>
       <div css={tw`mx-auto w-1/2 mt-4`}>
         <Button isBlock onClick={() => onStart(generation)}>
           Start (Enter)
+        </Button>
+      </div>
+      <div css={tw`mx-auto w-1/2 mt-4`}>
+        <Button isBlock color="secondary" onClick={() => onNavigateToLeaderBoard()}>
+          Leader Board
         </Button>
       </div>
       <div key={generation}>{renderRainItems()}</div>
