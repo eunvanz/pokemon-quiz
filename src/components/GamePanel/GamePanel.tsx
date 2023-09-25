@@ -58,7 +58,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
 
   return (
     <>
-      <div css={tw`flex justify-center`}>
+      <div css={tw`flex justify-center items-center w-full h-screen`}>
         <OverlaidGameGrid
           currentColumn={currentColumn}
           stackedMonImages={stackedMonImages}

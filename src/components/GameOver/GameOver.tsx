@@ -26,7 +26,7 @@ const GameOver: React.FC<GameOverProps> = ({ isVisible, onHide }) => {
               },
             },
           }}
-          css={tw`absolute flex justify-center items-center w-full h-full flex-col z-10`}
+          css={tw`absolute flex justify-center items-center w-full h-full flex-col z-10 top-0`}
         >
           <motion.h1
             initial={{
