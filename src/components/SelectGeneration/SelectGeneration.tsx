@@ -92,8 +92,8 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           onSlideChange={(e) => {
             const activeIndex = e.activeIndex - 1;
             if (activeIndex === -1) {
-              setGeneration(generationTexts.length as Generation);
-            } else if (activeIndex === generationTexts.length + 1) {
+              setGeneration((generationTexts.length - 1) as Generation);
+            } else if (activeIndex === generationTexts.length) {
               setGeneration(0);
             } else {
               setGeneration(activeIndex as Generation);
@@ -149,11 +149,13 @@ interface RainItemProps {
 }
 
 const RainItem = ({ src }: RainItemProps) => {
-  const size = useMemo(() => random(100, 200), []);
+  const size = random(100, 200);
 
-  const delay = useMemo(() => random(0, 2_000), []);
+  const delay = random(0, 2_000);
 
-  const left = useMemo(() => random(0, window.innerWidth - size), [size]);
+  const left = random(0, window.innerWidth - size);
+
+  const zIndex = random(-10, 3);
 
   return createPortal(
     <motion.div
@@ -164,7 +166,7 @@ const RainItem = ({ src }: RainItemProps) => {
         translateY: "-50px",
         width: size,
         height: size,
-        zIndex: -1,
+        zIndex,
       }}
       animate={{
         translateY: `${window.innerHeight + size + 50}px`,
