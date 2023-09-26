@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { random, shuffle } from "lodash-es";
 import tw from "twin.macro";
 import { Mon } from "~/types";
@@ -12,11 +12,13 @@ export interface IntroProps {
 
 const Intro: React.FC<IntroProps> = ({ onStart, mons }) => {
   const [dropCount, setDropCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   const handleKeydown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Enter") {
         onStart();
+        setIsVisible(false);
       }
     },
     [onStart],
@@ -37,13 +39,18 @@ const Intro: React.FC<IntroProps> = ({ onStart, mons }) => {
   }, [handleKeydown]);
 
   return (
-    <div
-      css={tw`h-screen w-full flex justify-center items-center bg-primary flex-col gap-10`}
-    >
-      <h1 css={tw`text-8xl text-white font-bold`}>Pokédrops</h1>
-      <h2 css={tw`text-2xl text-white animate-pulse`}>Press Enter</h2>
-      <div key={dropCount}>{dropMon()}</div>
-    </div>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          css={tw`absolute h-screen w-full flex justify-center items-center bg-primary flex-col gap-10`}
+          exit={{ opacity: 0 }}
+        >
+          <h1 css={tw`text-8xl text-white font-bold`}>Pokédrops</h1>
+          <h2 css={tw`text-2xl text-white animate-pulse`}>Press Enter</h2>
+          <div key={dropCount}>{dropMon()}</div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
