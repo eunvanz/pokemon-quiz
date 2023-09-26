@@ -1,6 +1,7 @@
 export const GAME_GRID_SIZE = 6;
 
 export const GENERATIONS = {
+  0: 0,
   1: 151,
   2: 251,
   3: 386,

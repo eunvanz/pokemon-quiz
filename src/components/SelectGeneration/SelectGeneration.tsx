@@ -30,9 +30,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
       return mons;
     } else {
       return mons.slice(
-        // @ts-ignore
-        generation === 1 ? 0 : GENERATIONS[generation - 1] + 1,
-        // @ts-ignore
+        generation === 1 ? 0 : GENERATIONS[(generation - 1) as Generation] + 1,
         GENERATIONS[generation],
       );
     }
@@ -137,7 +135,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           Leader Board
         </Button>
       </div>
-      <div key={generation}>{renderRainItems()}</div>
+      <div>{renderRainItems()}</div>
     </div>
   );
 };
