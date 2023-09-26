@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { random, shuffle } from "lodash-es";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -135,7 +135,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           Leader Board
         </Button>
       </div>
-      <div>{renderRainItems()}</div>
+      <AnimatePresence>{renderRainItems()}</AnimatePresence>
     </div>
   );
 };
@@ -172,7 +172,13 @@ const RainItem = ({ src }: RainItemProps) => {
           display: "none",
         },
       }}
-      transition={{ ease: "easeIn", duration: 2, delay: delay / 1000 }}
+      transition={{
+        ease: "easeIn",
+        duration: 2,
+        delay: delay / 1000,
+        opacity: { duration: 0.5 },
+      }}
+      exit={{ opacity: 0 }}
     >
       <img src={src} width="100%" height="100%" />
     </motion.div>,
