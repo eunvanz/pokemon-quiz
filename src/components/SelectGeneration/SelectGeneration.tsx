@@ -132,7 +132,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
       </div>
       <div css={tw`mx-auto w-1/2 mt-4`}>
         <Button isBlock color="secondary" onClick={() => onNavigateToLeaderBoard()}>
-          Leader Board
+          Leaderboard
         </Button>
       </div>
       <AnimatePresence>{renderRainItems()}</AnimatePresence>
