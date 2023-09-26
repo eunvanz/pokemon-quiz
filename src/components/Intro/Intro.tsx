@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import { random, shuffle } from "lodash-es";
 import tw from "twin.macro";
 import { Mon } from "~/types";
@@ -30,6 +30,10 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter }) => {
     return <DropItem src={mon.image} />;
   }, [mons]);
 
+  const wordsDelays = useMemo(() => {
+    return Array.from({ length: 9 }).map(() => random(0.1, 2.0));
+  }, []);
+
   useEffect(() => {
     window.addEventListener("keydown", handleKeydown);
     const timer = setInterval(() => setDropCount((count) => ++count), 2000);
@@ -44,7 +48,17 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter }) => {
       css={tw`h-screen w-full flex justify-center items-center bg-primary flex-col gap-10 overflow-hidden`}
       onClick={start}
     >
-      <h1 css={tw`text-8xl text-white font-bold`}>Pokédrops</h1>
+      <h1 css={tw`flex text-8xl text-white font-bold`}>
+        <DropWord delay={wordsDelays[0]}>P</DropWord>
+        <DropWord delay={wordsDelays[1]}>o</DropWord>
+        <DropWord delay={wordsDelays[2]}>k</DropWord>
+        <DropWord delay={wordsDelays[3]}>é</DropWord>
+        <DropWord delay={wordsDelays[4]}>d</DropWord>
+        <DropWord delay={wordsDelays[5]}>r</DropWord>
+        <DropWord delay={wordsDelays[6]}>o</DropWord>
+        <DropWord delay={wordsDelays[7]}>p</DropWord>
+        <DropWord delay={wordsDelays[8]}>s</DropWord>
+      </h1>
       <h2 css={tw`text-2xl text-white animate-pulse`}>Press enter or click anywhere</h2>
       <div key={dropCount}>{dropMon()}</div>
     </div>
@@ -86,6 +100,33 @@ const DropItem = ({ src }: DropItemProps) => {
       }}
     >
       <img src={src} width="100%" height="100%" />
+    </motion.div>
+  );
+};
+
+interface DropWordProps {
+  delay: number;
+  children: string;
+}
+
+const DropWord = ({ delay, children }: DropWordProps) => {
+  return (
+    <motion.div
+      initial={{
+        y: "-50vh",
+      }}
+      animate={{
+        y: 0,
+      }}
+      transition={{
+        type: "spring",
+        damping: 15,
+        stiffness: 200,
+        duration: 0.5,
+        delay,
+      }}
+    >
+      {children}
     </motion.div>
   );
 };
