@@ -70,7 +70,10 @@ const GamePanel: React.FC<GamePanelProps> = ({
           inputRef.current?.focus();
         }}
       />
-      <div css={tw`flex justify-center items-center w-full h-screen`}>
+      <div
+        css={tw`flex justify-center items-center w-full h-screen`}
+        onClick={() => inputRef.current?.focus()}
+      >
         <OverlaidGameGrid
           currentColumn={currentColumn}
           stackedMonImages={stackedMonImages}

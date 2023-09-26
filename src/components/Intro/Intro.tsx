@@ -51,7 +51,7 @@ const Intro: React.FC<IntroProps> = ({ onStart, mons }) => {
         >
           <h1 css={tw`text-8xl text-white font-bold`}>Pokédrops</h1>
           <h2 css={tw`text-2xl text-white animate-pulse`}>
-            Press Enter or Click Anywhere
+            Press enter or click anywhere
           </h2>
           <div key={dropCount}>{dropMon()}</div>
         </motion.div>

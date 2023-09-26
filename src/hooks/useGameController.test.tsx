@@ -33,6 +33,7 @@ const resetMaxCombo = jest.fn();
 const generateMockUseCombo = (impl?: Partial<ReturnType<typeof useCombo.default>>) => {
   jest.spyOn(useCombo, "default").mockImplementation(() => ({
     combo: 0,
+    maxCombo: 0,
     resetCombo,
     incrementCombo,
     resetMaxCombo,
