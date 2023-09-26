@@ -22,7 +22,7 @@ const Ready: React.FC<ReadyProps> = ({ onStart }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          css={tw`absolute h-screen w-full bg-white flex justify-center items-center`}
+          css={tw`absolute h-screen w-full bg-white flex justify-center items-center z-10`}
           exit={{ opacity: 0 }}
         >
           <h1

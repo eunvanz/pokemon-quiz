@@ -7,6 +7,7 @@ import GameOver from "../GameOver";
 import GameOverNext from "../GameOverNext";
 import MonNameInput from "../MonNameInput/MonNameInput";
 import OverlaidGameGrid from "../OverlaidGameGrid";
+import Ready from "../Ready";
 import Score from "../Score";
 import TargetMon from "../TargetMon";
 
@@ -32,6 +33,9 @@ const GamePanel: React.FC<GamePanelProps> = ({
   achievedMonImages,
 }) => {
   const monImageRef = useRef<HTMLImageElement | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const [isStarted, setIsStarted] = useState(false);
 
   const handleOnSuccess = useCallback(() => {
     const $monImg = monImageRef.current;
@@ -60,12 +64,18 @@ const GamePanel: React.FC<GamePanelProps> = ({
 
   return (
     <>
+      <Ready
+        onStart={() => {
+          setIsStarted(true);
+          inputRef.current?.focus();
+        }}
+      />
       <div css={tw`flex justify-center items-center w-full h-screen`}>
         <OverlaidGameGrid
           currentColumn={currentColumn}
           stackedMonImages={stackedMonImages}
           duration={duration}
-          currentMonImage={currentMonImage}
+          currentMonImage={isStarted ? currentMonImage : undefined}
           onStack={onStack}
           monImageRef={monImageRef}
           onClickMon={isGameOver ? updateAnswerMon : undefined}
@@ -89,6 +99,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
               <GameOverNext onNext={onNext} />
             ) : (
               <MonNameInput
+                ref={inputRef}
                 correctAnswers={answers}
                 onSkip={onSkip}
                 onSubmit={handleOnSuccess}
