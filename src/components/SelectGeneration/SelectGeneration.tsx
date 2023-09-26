@@ -48,7 +48,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
         onStart(generation);
       }
     },
-    [onStart],
+    [onStart, generation],
   );
 
   const renderRainItems = useCallback(() => {
