@@ -5,18 +5,16 @@ import tw from "twin.macro";
 import { Mon } from "~/types";
 
 export interface IntroProps {
-  onStart: VoidFunction;
   mons: Mon[];
+  onEnter: VoidFunction;
 }
 
-const Intro: React.FC<IntroProps> = ({ onStart, mons }) => {
+const Intro: React.FC<IntroProps> = ({ mons, onEnter }) => {
   const [dropCount, setDropCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
 
   const start = useCallback(() => {
-    onStart();
-    setIsVisible(false);
-  }, [onStart]);
+    onEnter();
+  }, [onEnter]);
 
   const handleKeydown = useCallback(
     (e: KeyboardEvent) => {
@@ -42,21 +40,14 @@ const Intro: React.FC<IntroProps> = ({ onStart, mons }) => {
   }, [handleKeydown]);
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          css={tw`absolute h-screen w-full flex justify-center items-center bg-primary flex-col gap-10 overflow-hidden`}
-          exit={{ opacity: 0 }}
-          onClick={start}
-        >
-          <h1 css={tw`text-8xl text-white font-bold`}>Pokédrops</h1>
-          <h2 css={tw`text-2xl text-white animate-pulse`}>
-            Press enter or click anywhere
-          </h2>
-          <div key={dropCount}>{dropMon()}</div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div
+      css={tw`h-screen w-full flex justify-center items-center bg-primary flex-col gap-10 overflow-hidden`}
+      onClick={start}
+    >
+      <h1 css={tw`text-8xl text-white font-bold`}>Pokédrops</h1>
+      <h2 css={tw`text-2xl text-white animate-pulse`}>Press enter or click anywhere</h2>
+      <div key={dropCount}>{dropMon()}</div>
+    </div>
   );
 };
 
