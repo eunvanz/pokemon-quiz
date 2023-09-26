@@ -14,14 +14,18 @@ const Intro: React.FC<IntroProps> = ({ onStart, mons }) => {
   const [dropCount, setDropCount] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
+  const start = useCallback(() => {
+    onStart();
+    setIsVisible(false);
+  }, [onStart]);
+
   const handleKeydown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Enter") {
-        onStart();
-        setIsVisible(false);
+        start();
       }
     },
-    [onStart],
+    [start],
   );
 
   const dropMon = useCallback(() => {
@@ -44,9 +48,12 @@ const Intro: React.FC<IntroProps> = ({ onStart, mons }) => {
         <motion.div
           css={tw`absolute h-screen w-full flex justify-center items-center bg-primary flex-col gap-10`}
           exit={{ opacity: 0 }}
+          onClick={start}
         >
           <h1 css={tw`text-8xl text-white font-bold`}>Pokédrops</h1>
-          <h2 css={tw`text-2xl text-white animate-pulse`}>Press Enter</h2>
+          <h2 css={tw`text-2xl text-white animate-pulse`}>
+            Press Enter or Click To Start
+          </h2>
           <div key={dropCount}>{dropMon()}</div>
         </motion.div>
       )}
