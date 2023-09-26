@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["Leaderboard", "Swiper", "testid"],
+  "cSpell.words": ["Leaderboard", "Pokédrops", "Swiper", "testid"],
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
     "tw=\"([^\"]*)", // <div tw="..." />
