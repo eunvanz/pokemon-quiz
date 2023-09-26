@@ -67,15 +67,15 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
 
   const generationTexts = [
     "All Generations",
-    "Generation I",
-    "Generation II",
-    "Generation III",
-    "Generation IV",
-    "Generation V",
-    "Generation VI",
-    "Generation VII",
-    "Generation VIII",
-    "Generation IX",
+    "1st Generation",
+    "2nd Generation",
+    "3rd Generation",
+    "4th Generation",
+    "5th Generation",
+    "6th Generation",
+    "7th Generation",
+    "8th Generation",
+    "9th Generation",
   ];
 
   return (
