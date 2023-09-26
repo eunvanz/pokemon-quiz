@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from "react";
-import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { random, shuffle } from "lodash-es";
 import tw from "twin.macro";
@@ -46,7 +45,7 @@ const Intro: React.FC<IntroProps> = ({ onStart, mons }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          css={tw`absolute h-screen w-full flex justify-center items-center bg-primary flex-col gap-10`}
+          css={tw`absolute h-screen w-full flex justify-center items-center bg-primary flex-col gap-10 overflow-hidden`}
           exit={{ opacity: 0 }}
           onClick={start}
         >
@@ -72,7 +71,7 @@ const DropItem = ({ src }: DropItemProps) => {
 
   const delay = random(0, 500);
 
-  return createPortal(
+  return (
     <motion.div
       initial={{
         position: "absolute",
@@ -96,8 +95,7 @@ const DropItem = ({ src }: DropItemProps) => {
       }}
     >
       <img src={src} width="100%" height="100%" />
-    </motion.div>,
-    document.body,
+    </motion.div>
   );
 };
 

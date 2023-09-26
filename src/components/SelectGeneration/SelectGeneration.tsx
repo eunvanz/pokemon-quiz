@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { random, shuffle } from "lodash-es";
 import SwiperCore from "swiper";
@@ -155,7 +154,7 @@ const RainItem = ({ src }: RainItemProps) => {
 
   const zIndex = random(-10, 3);
 
-  return createPortal(
+  return (
     <motion.div
       initial={{
         position: "absolute",
@@ -174,14 +173,13 @@ const RainItem = ({ src }: RainItemProps) => {
       }}
       transition={{
         ease: "easeIn",
-        duration: 2,
+        duration: 1.5,
         delay: delay / 1000,
         opacity: { duration: 0.5 },
       }}
       exit={{ opacity: 0 }}
     >
       <img src={src} width="100%" height="100%" />
-    </motion.div>,
-    document.body,
+    </motion.div>
   );
 };
