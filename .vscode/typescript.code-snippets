@@ -1,0 +1,105 @@
+{
+  "Index Template": {
+    "prefix": "cidx",
+    "body": [
+      "export { default } from \"./${TM_DIRECTORY/^.+\\/(.*)$/$1/}\"",
+      "",
+      "export type { ${TM_DIRECTORY/^.+\\/(.*)$/${1:/capitalize}/}Props } from \"./${TM_DIRECTORY/^.+\\/(.*)$/$1/}\"",
+      ""
+    ]
+  },
+  "Test Template": {
+    "prefix": "test",
+    "body": [
+      "describe(\"$1\", () => {",
+      "  $2",
+      "  it(\"$3\", () => {",
+      "    $4",
+      "  });",
+      "})"
+    ]
+  },
+  "Use Effect": {
+    "prefix": "usef",
+    "body": ["useEffect$1(() => {", "  $2", "}, [$3]);"]
+  },
+  "Use State": {
+    "prefix": "usst",
+    "body": ["const [$1, $2] = useState$3($4);"]
+  },
+  "Use Callback": {
+    "prefix": "uscb",
+    "body": ["const $1 = useCallback$2(() => {", "  $3", "}, [$4]);"]
+  },
+  "Use Memo": {
+    "prefix": "usmm",
+    "body": ["const $1 = useMemo$2(() => {", "  $3", "}, [$4]);"]
+  },
+  "Use Ref": {
+    "prefix": "usrf",
+    "body": ["const $1 = useRef$2<$3 | null>(null);"]
+  },
+  "Hook Template": {
+    "prefix": "hookt",
+    "body": [
+      "import { ${TM_FILENAME_BASE/use//} } from \"./${TM_FILENAME_BASE/use|Props//g}\"",
+      "",
+      "const ${TM_FILENAME_BASE}: () => ${TM_FILENAME_BASE/use//} = () => {",
+      "  $2",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "description": "Hook Template"
+  },
+  "View Hook Template": {
+    "prefix": "viewhookt",
+    "body": [
+      "import { ${TM_FILENAME_BASE/use//} } from \"./${TM_FILENAME_BASE/use|Props//g}.view\"",
+      "",
+      "const ${TM_FILENAME_BASE}: () => ${TM_FILENAME_BASE/use//} = () => {",
+      "  $2",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "description": "View Hook Template"
+  },
+  "useQuery Template": {
+    "prefix": "uq",
+    "body": [
+      "import { useQuery, UseQueryOptions } from \"react-query\";",
+      "import api from \"../api\";",
+      "import { QUERY_KEY } from \"~/types\";",
+      "",
+      "const ${TM_FILENAME_BASE} = (queryOptions?: UseQueryOptions<$1>) => {",
+      "\tconst query = useQuery<$1>(QUERY_KEY.$2, $3, {$4...queryOptions});",
+      "\treturn query;",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "queries template"
+  },
+  "useMutation template": {
+    "prefix": "um",
+    "body": [
+      "import { useMutation, useQueryClient } from \"react-query\";",
+      "import api from \"~/api\";",
+      "",
+      "const ${TM_FILENAME_BASE} = () => {",
+      "  const queryClient = useQueryClient();",
+      "",
+      "  return useMutation(api.$1, {",
+      "    onSuccess: () => {",
+      "      $2",
+      "    },",
+      "  });",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};",
+      ""
+    ],
+    "description": "useMutation template"
+  }
+}

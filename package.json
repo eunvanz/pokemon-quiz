@@ -12,29 +12,23 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
+    "framer-motion": "^10.16.4",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
     "twin.macro": "^3.4.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.4.5",
-    "@storybook/addon-interactions": "^7.4.5",
-    "@storybook/addon-links": "^7.4.5",
-    "@storybook/addon-onboarding": "^1.0.8",
-    "@storybook/blocks": "^7.4.5",
-    "@storybook/react": "^7.4.5",
-    "@storybook/react-vite": "^7.4.5",
-    "@storybook/testing-library": "^0.2.1",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "eslint-plugin-storybook": "^0.6.14",
     "postcss": "latest",
-    "storybook": "^7.4.5",
     "tailwindcss": "latest",
     "typescript": "latest"
   }

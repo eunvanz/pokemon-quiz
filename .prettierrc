@@ -1,0 +1,23 @@
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "endOfLine": "auto",
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "requirePragma": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  "semi": false,
+  "importOrder": [
+    "^react$",
+    "^react-dom$",
+    "^(?!\\.).*(?<!.svg|.png|.css|.scss)$",
+    "^\\..*(?<!.svg|.png|.css|.scss)$",
+    "^(?!\\.).*.scss$",
+    "^\\..*.scss$",
+    ".*(.png|.svg)$",
+    ".*"
+  ]
+}
