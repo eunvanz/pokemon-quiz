@@ -5,11 +5,12 @@ import tw from "twin.macro";
 import { Mon } from "~/types";
 
 export interface IntroProps {
-  mons: Mon[];
+  mons?: Mon[];
   onEnter: VoidFunction;
+  isLoading: boolean;
 }
 
-const Intro: React.FC<IntroProps> = ({ mons, onEnter }) => {
+const Intro: React.FC<IntroProps> = ({ mons, onEnter, isLoading }) => {
   const [dropCount, setDropCount] = useState(0);
 
   const start = useCallback(() => {
@@ -60,7 +61,7 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter }) => {
         <DropWord delay={wordsDelays[8]}>s</DropWord>
       </h1>
       <h2 css={tw`sm:text-2xl text-white animate-pulse text-center`}>
-        Press enter or click anywhere
+        {isLoading ? "Loading..." : "Press enter or click anywhere"}
       </h2>
       <div key={dropCount}>{dropMon()}</div>
     </div>
@@ -101,7 +102,7 @@ const DropItem = ({ src }: DropItemProps) => {
       }}
       transition={{
         ease: "easeIn",
-        duration: 1.5,
+        duration: 1,
         delay: delay / 1000,
       }}
     >

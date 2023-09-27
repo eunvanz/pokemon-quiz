@@ -1,45 +1,48 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { QueryClientProvider } from "react-query";
+import {
+  BrowserRouter,
+  MemoryRouter,
+  MemoryRouterProps,
+  Route,
+  Routes,
+} from "react-router-dom";
+import { RecoilRoot } from "recoil";
+import api from "./api";
+import { ApiProvider } from "./api/apiContext";
+import GamePanelContainer from "./containers/GamePanelContainer";
+import MainContainer from "./containers/MainContainer/MainContainer";
+import { queryClient } from "./helpers/reactQuery";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+export interface CommonProviderProps {
+  api?: Partial<typeof api>;
+  router?: typeof MemoryRouter;
+  routerProps?: MemoryRouterProps;
 }
 
-export default App
+export const CommonProvider: React.FC<CommonProviderProps> = ({
+  api: apiProp = api,
+  router: Router = BrowserRouter,
+  routerProps,
+  children,
+}) => (
+  <ApiProvider api={apiProp}>
+    <RecoilRoot>
+      <QueryClientProvider client={queryClient}>
+        <Router {...routerProps}>{children}</Router>
+      </QueryClientProvider>
+    </RecoilRoot>
+  </ApiProvider>
+);
+
+function App() {
+  return (
+    <CommonProvider>
+      <Routes>
+        <Route path="/game-panel" element={<GamePanelContainer />} />
+        <Route path="/" element={<MainContainer />} />
+      </Routes>
+    </CommonProvider>
+  );
+}
+
+export default App;

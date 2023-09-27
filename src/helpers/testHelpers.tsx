@@ -1,10 +1,8 @@
 import { Story } from "@storybook/react";
 import { render, RenderOptions } from "@testing-library/react";
-import { QueryClientProvider } from "react-query";
-import { RecoilRoot } from "recoil";
+import { MemoryRouter, MemoryRouterProps } from "react-router";
+import { CommonProvider } from "~/App";
 import api from "~/api";
-import { ApiProvider } from "~/api/apiContext";
-import { queryClient } from "./reactQuery";
 
 /**
  * render storybook component in test code
@@ -22,12 +20,15 @@ export const renderStory = <T,>(
 
 export interface TestProviderProps {
   api?: Partial<typeof api>;
+  routerProps?: MemoryRouterProps;
 }
 
-export const TestProvider: React.FC<TestProviderProps> = ({ children, api = {} }) => (
-  <ApiProvider api={api}>
-    <RecoilRoot>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </RecoilRoot>
-  </ApiProvider>
+export const TestProvider: React.FC<TestProviderProps> = ({
+  children,
+  api = {},
+  routerProps,
+}) => (
+  <CommonProvider api={api} router={MemoryRouter} routerProps={routerProps}>
+    {children}
+  </CommonProvider>
 );

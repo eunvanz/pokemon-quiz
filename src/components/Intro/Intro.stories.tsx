@@ -14,3 +14,7 @@ export default {
 const Template: ComponentStory<typeof Intro> = (args) => <Intro {...args} />;
 
 export const Default = createStoryComponent(Template);
+
+export const Loading = createStoryComponent(Template, {
+  isLoading: true,
+});
