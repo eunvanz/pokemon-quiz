@@ -79,12 +79,12 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
 
   return (
     <div css={tw`relative flex flex-col h-screen w-full justify-center overflow-hidden`}>
-      <div css={tw`text-2xl text-center text-primary animate-pulse`}>
+      <div css={tw`sm:text-2xl text-xl text-center text-primary animate-pulse`}>
         CHOOSE A GENERATION TO CHALLENGE
       </div>
       <div>
         <Swiper
-          css={tw`text-center text-4xl my-20`}
+          css={tw`text-center sm:text-4xl text-2xl my-20`}
           navigation
           onSlideChange={(e) => {
             const activeIndex = e.activeIndex - 1;
@@ -106,7 +106,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           ))}
         </Swiper>
       </div>
-      <div css={tw`flex justify-between w-1/2 mx-auto`}>
+      <div css={tw`flex justify-between sm:w-1/2 w-4/5 mx-auto`}>
         <Button
           isBlock
           css={tw`mr-1`}
@@ -124,12 +124,12 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           Next (Right)
         </Button>
       </div>
-      <div css={tw`mx-auto w-1/2 mt-4`}>
+      <div css={tw`mx-auto sm:w-1/2 w-4/5 mt-4`}>
         <Button isBlock onClick={() => onStart(generation)}>
           Start (Enter)
         </Button>
       </div>
-      <div css={tw`mx-auto w-1/2 mt-4`}>
+      <div css={tw`mx-auto sm:w-1/2 w-4/5 mt-4`}>
         <Button isBlock color="secondary" onClick={() => onNavigateToLeaderBoard()}>
           Leaderboard
         </Button>
@@ -146,13 +146,17 @@ interface RainItemProps {
 }
 
 const RainItem = ({ src }: RainItemProps) => {
-  const size = random(100, 200);
+  const [delay, setDelay] = useState(100_000);
 
-  const delay = random(0, 2_000);
+  const size = random(100, 200);
 
   const left = random(0, window.innerWidth - size);
 
   const zIndex = random(-10, 3);
+
+  const handleOnImageLoad = useCallback(() => {
+    setDelay(random(0, 2_000));
+  }, []);
 
   return (
     <motion.div
@@ -179,7 +183,7 @@ const RainItem = ({ src }: RainItemProps) => {
       }}
       exit={{ opacity: 0 }}
     >
-      <img src={src} width="100%" height="100%" />
+      <img src={src} width="100%" height="100%" onLoad={handleOnImageLoad} />
     </motion.div>
   );
 };

@@ -15,7 +15,7 @@ const Ready: React.FC<ReadyProps> = ({ onStart }) => {
       setText("START");
       setIsVisible(false);
       setTimeout(onStart, 200);
-    }, 2000);
+    }, 1000);
   }, []);
 
   return (

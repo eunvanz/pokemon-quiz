@@ -48,7 +48,7 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter }) => {
       css={tw`relative h-screen w-full flex justify-center items-center bg-primary flex-col gap-10 overflow-hidden`}
       onClick={start}
     >
-      <h1 css={tw`flex text-8xl text-white font-bold`}>
+      <h1 css={tw`flex sm:text-8xl text-4xl text-white font-bold`}>
         <DropWord delay={wordsDelays[0]}>P</DropWord>
         <DropWord delay={wordsDelays[1]}>o</DropWord>
         <DropWord delay={wordsDelays[2]}>k</DropWord>
@@ -59,7 +59,9 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter }) => {
         <DropWord delay={wordsDelays[7]}>p</DropWord>
         <DropWord delay={wordsDelays[8]}>s</DropWord>
       </h1>
-      <h2 css={tw`text-2xl text-white animate-pulse`}>Press enter or click anywhere</h2>
+      <h2 css={tw`sm:text-2xl text-white animate-pulse text-center`}>
+        Press enter or click anywhere
+      </h2>
       <div key={dropCount}>{dropMon()}</div>
     </div>
   );
@@ -70,11 +72,15 @@ interface DropItemProps {
 }
 
 const DropItem = ({ src }: DropItemProps) => {
+  const [delay, setDelay] = useState(100_000);
+
   const size = random(100, 300);
 
   const left = random(0, window.innerWidth - size);
 
-  const delay = random(0, 500);
+  const handleOnImageLoad = useCallback(() => {
+    setDelay(random(0, 500));
+  }, []);
 
   return (
     <motion.div
@@ -99,7 +105,7 @@ const DropItem = ({ src }: DropItemProps) => {
         delay: delay / 1000,
       }}
     >
-      <img src={src} width="100%" height="100%" />
+      <img src={src} width="100%" height="100%" onLoad={handleOnImageLoad} />
     </motion.div>
   );
 };
