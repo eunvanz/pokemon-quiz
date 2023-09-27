@@ -11,9 +11,11 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "twin.macro": "^3.4.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.5",
