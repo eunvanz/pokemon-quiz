@@ -1,10 +1,4 @@
 {
-  "cSpell.words": ["Leaderboard", "Pokédrops", "Swiper", "tailwindcss", "testid"],
-  "tailwindCSS.experimental.classRegex": [
-    "tw`([^`]*)", // tw`...`
-    "tw=\"([^\"]*)", // <div tw="..." />
-    "tw={\"([^\"}]*)", // <div tw={"..."} />
-    "tw\\.\\w+`([^`]*)", // tw.xxx`...`
-    "tw\\(.*?\\)`([^`]*)" // tw(Component)`...`
-  ]
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.words": ["tailwindcss"]
 }
