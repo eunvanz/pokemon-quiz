@@ -71,7 +71,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
         }}
       />
       <div
-        css={tw`flex justify-center items-center w-full h-screen`}
+        css={tw`flex justify-center items-center w-full h-screen p-4`}
         onClick={() => inputRef.current?.focus()}
       >
         <OverlaidGameGrid

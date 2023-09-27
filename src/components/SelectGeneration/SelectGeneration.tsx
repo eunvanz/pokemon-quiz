@@ -78,7 +78,9 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
   ];
 
   return (
-    <div css={tw`relative flex flex-col h-screen w-full justify-center overflow-hidden`}>
+    <div
+      css={tw`relative flex flex-col h-screen w-full justify-center overflow-hidden p-4`}
+    >
       <div css={tw`sm:text-2xl text-xl text-center text-primary animate-pulse`}>
         CHOOSE A GENERATION TO CHALLENGE
       </div>
@@ -106,7 +108,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           ))}
         </Swiper>
       </div>
-      <div css={tw`flex justify-between sm:w-1/2 w-4/5 mx-auto`}>
+      <div css={tw`flex justify-between sm:w-1/2 w-full mx-auto`}>
         <Button
           isBlock
           css={tw`mr-1`}
@@ -124,12 +126,12 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           Next (Right)
         </Button>
       </div>
-      <div css={tw`mx-auto sm:w-1/2 w-4/5 mt-4`}>
+      <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>
         <Button isBlock onClick={() => onStart(generation)}>
           Start (Enter)
         </Button>
       </div>
-      <div css={tw`mx-auto sm:w-1/2 w-4/5 mt-4`}>
+      <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>
         <Button isBlock color="secondary" onClick={() => onNavigateToLeaderBoard()}>
           Leaderboard
         </Button>

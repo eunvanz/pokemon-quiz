@@ -45,7 +45,7 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter }) => {
 
   return (
     <div
-      css={tw`relative h-screen w-full flex justify-center items-center bg-primary flex-col gap-10 overflow-hidden`}
+      css={tw`relative h-screen w-full flex justify-center items-center bg-primary flex-col gap-10 overflow-hidden p-4`}
       onClick={start}
     >
       <h1 css={tw`flex sm:text-8xl text-4xl text-white font-bold`}>
