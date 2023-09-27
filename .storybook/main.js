@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
@@ -12,6 +13,11 @@ module.exports = {
         "~": path.resolve(__dirname, "../src"),
       },
     };
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        "import.meta.env": JSON.stringify(process.env),
+      }),
+    );
     return config;
   },
   babel: async (options) => ({

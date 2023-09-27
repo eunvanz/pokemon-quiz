@@ -9,9 +9,11 @@ import {
 import { RecoilRoot } from "recoil";
 import api from "./api";
 import { ApiProvider } from "./api/apiContext";
+import GlobalStyle from "./components/GlobalStyle";
 import GamePanelContainer from "./containers/GamePanelContainer";
 import MainContainer from "./containers/MainContainer/MainContainer";
 import { queryClient } from "./helpers/reactQuery";
+import "./styles/reset.css";
 
 export interface CommonProviderProps {
   api?: Partial<typeof api>;
@@ -36,12 +38,15 @@ export const CommonProvider: React.FC<CommonProviderProps> = ({
 
 function App() {
   return (
-    <CommonProvider>
-      <Routes>
-        <Route path="/game-panel" element={<GamePanelContainer />} />
-        <Route path="/" element={<MainContainer />} />
-      </Routes>
-    </CommonProvider>
+    <>
+      <GlobalStyle />
+      <CommonProvider>
+        <Routes>
+          <Route path="/game-panel" element={<GamePanelContainer />} />
+          <Route path="/" element={<MainContainer />} />
+        </Routes>
+      </CommonProvider>
+    </>
   );
 }
 
