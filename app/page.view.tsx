@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import Intro from '../intro'
-import SelectGeneration, { SelectGenerationProps } from '../select-generation'
+import SelectGeneration, {
+  SelectGenerationProps,
+} from './components/select-generation'
+import Intro from './components/intro'
 
-export interface MainProps extends Omit<SelectGenerationProps, 'mons'> {
+export interface HomeViewProps extends Omit<SelectGenerationProps, 'mons'> {
   isLoading: boolean
   mons?: SelectGenerationProps['mons']
 }
 
-const Main: React.FC<MainProps> = ({ mons, isLoading, ...restProps }) => {
+const HomeView: React.FC<HomeViewProps> = ({
+  mons,
+  isLoading,
+  ...restProps
+}) => {
   const [isIntroVisible, setIsIntroVisible] = useState(true)
 
   return (
@@ -40,4 +46,4 @@ const Main: React.FC<MainProps> = ({ mons, isLoading, ...restProps }) => {
   )
 }
 
-export default Main
+export default HomeView

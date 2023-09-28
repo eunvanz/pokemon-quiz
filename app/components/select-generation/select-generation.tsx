@@ -12,7 +12,7 @@ import SwiperCore from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import tw from 'twin.macro'
 import { GENERATIONS } from '@/app/lib/constants/rules'
-import { Generation, Mon } from '@/app/types'
+import { Generation, Mon } from '@/app/lib/types'
 import Button from '../button'
 import 'swiper/swiper.min.css'
 

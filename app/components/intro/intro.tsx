@@ -2,7 +2,7 @@ import { Fragment, useCallback, useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { random, shuffle } from 'lodash-es'
 import tw from 'twin.macro'
-import { Mon } from '@/app/types'
+import { Mon } from '@/app/lib/types'
 
 export interface IntroProps {
   mons?: Mon[]

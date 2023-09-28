@@ -1,15 +1,15 @@
 import mockMons from '@/app/mocks/mons'
 import type { Meta, StoryObj } from '@storybook/react'
-import Main from './main'
+import HomeView from './page.view'
 
 const meta = {
-  title: 'components/Main',
-  component: Main,
+  title: 'pages/HomeView',
+  component: HomeView,
   args: {
     mons: mockMons.allMons,
     isLoading: false,
   },
-} satisfies Meta<typeof Main>
+} satisfies Meta<typeof HomeView>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { random } from 'lodash-es'
-import { Mon } from '../../types'
+import { Mon } from '../types'
 import useAnswerMon from './use-answer-mon'
 import useCombo from './use-combo'
 import useMonImages from './use-mon-images'

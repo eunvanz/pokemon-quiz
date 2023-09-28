@@ -1,4 +1,4 @@
-import { Mon } from '@/app/types'
+import { Mon } from '@/app/lib/types'
 
 const allMons: Mon[] = [
   {
