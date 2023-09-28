@@ -29,7 +29,7 @@ export interface GameController {
 }
 
 export const INITIAL_DURATION = 20
-const MIN_DURATION = 5
+const MIN_DURATION = 2
 
 const useGameController: () => GameController = () => {
   const [duration, setDuration] = useState(INITIAL_DURATION)

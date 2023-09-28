@@ -75,7 +75,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
           <div css={tw`flex flex-col gap-2`}>
             <Score label="Score" count={score} />
             <Score label="Gotcha" count={achievedMonImages.length} />
-            <Score label="Max Combos" count={maxCombo > 1 ? maxCombo : 0} />
+            <Score label="Max Combo" count={maxCombo > 1 ? maxCombo : 0} />
           </div>
           <Combo count={combo} />
           <div>
