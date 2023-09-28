@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import Intro from './intro'
-import mockMons from '@/app/mocks/mons'
+import mockMons from '@/mocks/mons'
 
 const meta = {
   title: 'components/Intro',

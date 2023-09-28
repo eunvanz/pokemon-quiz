@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useQuery } from 'react-query'
-import { GENERATIONS } from '@/app/lib/constants/rules'
+import { GENERATIONS } from '@/lib/constants/rules'
 import useApi from './use-api'
 import useGeneration from './use-generation'
 

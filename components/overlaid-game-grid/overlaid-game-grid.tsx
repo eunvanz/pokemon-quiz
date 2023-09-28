@@ -15,7 +15,7 @@ import {
   useMotionValue,
 } from 'framer-motion'
 import tw from 'twin.macro'
-import { motionVariants } from '@/app/lib/helpers/framer'
+import { motionVariants } from '@/lib/helpers/framer'
 import GameGrid from '../game-grid'
 import {
   getPositionFrom2DArray,

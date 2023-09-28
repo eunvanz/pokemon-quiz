@@ -9,7 +9,7 @@ import {
 } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import tw from 'twin.macro'
-import { motionVariants } from '@/app/lib/helpers/framer'
+import { motionVariants } from '@/lib/helpers/framer'
 
 export interface TextFieldProps
   extends DetailedHTMLProps<

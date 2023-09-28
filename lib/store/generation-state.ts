@@ -1,5 +1,5 @@
 import { atom } from 'recoil'
-import { Generation } from '@/app/lib/types'
+import { Generation } from '@/lib/types'
 
 const generationState = atom<Generation>({
   key: 'generation',

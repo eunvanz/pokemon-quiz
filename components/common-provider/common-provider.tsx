@@ -1,8 +1,8 @@
 'use client'
 
-import api from '@/app/lib/api'
-import { ApiProvider } from '@/app/lib/api/api-context'
-import { queryClient } from '@/app/lib/helpers/react-query'
+import api from '@/lib/api'
+import { ApiProvider } from '@/lib/api/api-context'
+import { queryClient } from '@/lib/helpers/react-query'
 import { PropsWithChildren } from 'react'
 import { QueryClientProvider } from 'react-query'
 import { RecoilRoot } from 'recoil'

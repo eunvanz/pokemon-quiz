@@ -1,4 +1,4 @@
-import CommonProvider from '@/app/components/common-provider'
+import CommonProvider from '@/components/common-provider'
 import { PropsWithChildren } from 'react'
 import api from '../api'
 

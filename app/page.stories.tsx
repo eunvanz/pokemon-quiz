@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { TestProvider } from './lib/helpers/test'
-import mockMons from './mocks/mons'
+import { TestProvider } from '../lib/helpers/test'
+import mockMons from '../mocks/mons'
 import Home from './page'
 
 const meta = {

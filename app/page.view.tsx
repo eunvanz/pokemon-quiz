@@ -4,9 +4,9 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import SelectGeneration, {
   SelectGenerationProps,
-} from './components/select-generation'
-import Intro from './components/intro'
-import CommonProvider from './components/common-provider'
+} from '../components/select-generation'
+import Intro from '../components/intro'
+import CommonProvider from '../components/common-provider'
 
 export interface HomeViewProps extends Omit<SelectGenerationProps, 'mons'> {
   isLoading: boolean

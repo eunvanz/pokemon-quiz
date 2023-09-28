@@ -1,6 +1,6 @@
 'use client'
 
-import { GameController } from '@/app/lib/hooks/use-game-controller'
+import { GameController } from '@/lib/hooks/use-game-controller'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import tw from 'twin.macro'
 import Combo from '../combo'

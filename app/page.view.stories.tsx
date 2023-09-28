@@ -1,4 +1,4 @@
-import mockMons from '@/app/mocks/mons'
+import mockMons from '@/mocks/mons'
 import type { Meta, StoryObj } from '@storybook/react'
 import HomeView from './page.view'
 

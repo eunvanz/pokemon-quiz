@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import SelectGeneration from './select-generation'
-import mockMons from '@/app/mocks/mons'
+import mockMons from '@/mocks/mons'
 
 const meta = {
   title: 'components/SelectGeneration',

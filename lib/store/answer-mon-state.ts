@@ -1,5 +1,5 @@
 import { atom } from 'recoil'
-import { Mon } from '@/app/lib/types'
+import { Mon } from '@/lib/types'
 
 const answerMon = atom<Mon | undefined>({
   key: 'answerMon',
