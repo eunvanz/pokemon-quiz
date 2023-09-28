@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
+    "axios": "^1.5.1",
     "framer-motion": "^4",
     "lodash-es": "^4.17.21",
     "next": "latest",
@@ -21,6 +22,8 @@
     "react-awesome-animated-number": "^1.0.13",
     "react-dom": "latest",
     "react-hook-form": "^7.46.2",
+    "react-query": "^3.39.3",
+    "recoil": "^0.7.7",
     "swiper": "6.8.4",
     "twin.macro": "^3.4.0"
   },

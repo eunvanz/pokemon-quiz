@@ -84,7 +84,6 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
       <div css={[tw`absolute flex h-full w-full`, { width: WIDTH }]}>
         {Array.from({ length: GRID_ITEM_SIZE }).map((_, idx) => (
           <div key={idx} css={tw`h-full flex-1`}>
-            {/* @ts-ignore */}
             <AnimatePresence>
               {currentMonImage && currentColumn === idx && (
                 <MonImg

@@ -19,7 +19,6 @@ const Ready: React.FC<ReadyProps> = ({ onStart }) => {
   }, [onStart])
 
   return (
-    // @ts-ignore
     <AnimatePresence>
       {isVisible && (
         <motion.div

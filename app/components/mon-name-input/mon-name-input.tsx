@@ -61,7 +61,7 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
 
     const { ref: monNameInputFormRef, ...restTextFieldProps } = useMemo(() => {
       return register('monName', { required: 'Input the answer' })
-    }, [])
+    }, [register])
 
     const skip = useCallback(() => {
       onSkip()

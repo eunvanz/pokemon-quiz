@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { random, shuffle } from 'lodash-es'
 import tw from 'twin.macro'
 import { Mon } from '@/app/types'
-import Image from 'next/image'
 
 export interface IntroProps {
   mons?: Mon[]

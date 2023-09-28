@@ -138,7 +138,6 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           Leaderboard
         </Button>
       </div>
-      {/* @ts-ignore */}
       <AnimatePresence>
         <Fragment key={generation}>
           {shuffle(generationMons)
