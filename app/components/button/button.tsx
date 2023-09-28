@@ -1,3 +1,5 @@
+'use client'
+
 import { ButtonHTMLAttributes, DetailedHTMLProps, useMemo } from 'react'
 import tw from 'twin.macro'
 

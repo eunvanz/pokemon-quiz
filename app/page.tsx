@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import mockMons from './mocks/mons'
 import HomeView from './page.view'
 

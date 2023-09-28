@@ -1,3 +1,5 @@
+'use client'
+
 import AnimatedNumber from 'react-awesome-animated-number'
 import tw from 'twin.macro'
 

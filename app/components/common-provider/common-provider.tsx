@@ -1,3 +1,5 @@
+'use client'
+
 import api from '@/app/lib/api'
 import { ApiProvider } from '@/app/lib/api/api-context'
 import { queryClient } from '@/app/lib/helpers/react-query'

@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Fragment,
   useCallback,
@@ -130,11 +132,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
         </Button>
       </div>
       <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>
-        <Button
-          isBlock
-          color="secondary"
-          onClick={() => onNavigateToLeaderBoard()}
-        >
+        <Button isBlock color="secondary">
           Leaderboard
         </Button>
       </div>

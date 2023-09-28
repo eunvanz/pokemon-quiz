@@ -1,3 +1,5 @@
+'use client'
+
 import tw from 'twin.macro'
 import Button from '../button'
 

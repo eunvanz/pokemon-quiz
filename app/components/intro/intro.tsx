@@ -1,3 +1,5 @@
+'use client'
+
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { random, shuffle } from 'lodash-es'
