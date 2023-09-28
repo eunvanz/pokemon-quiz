@@ -139,6 +139,12 @@ const useGameController: () => GameController = () => {
 
   const onNext = useCallback(() => {}, [])
 
+  useEffect(() => {
+    return () => {
+      resetGame()
+    }
+  }, [resetGame])
+
   return {
     duration,
     currentColumn,

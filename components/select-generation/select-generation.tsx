@@ -22,12 +22,14 @@ export interface SelectGenerationProps {
   onStart: (generation: Generation) => void
   onNavigateToLeaderBoard: VoidFunction
   mons: Mon[]
+  onChangeGeneration: (generation: Generation) => void
 }
 
 const SelectGeneration: React.FC<SelectGenerationProps> = ({
   onStart,
   onNavigateToLeaderBoard,
   mons,
+  onChangeGeneration,
 }) => {
   const swiperRef = useRef<SwiperCore>()
 
@@ -63,6 +65,10 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
       window.removeEventListener('keydown', handleKeydown)
     }
   }, [handleKeydown])
+
+  useEffect(() => {
+    onChangeGeneration(generation)
+  }, [generation, onChangeGeneration])
 
   const generationTexts = [
     'All Generations',
@@ -132,7 +138,11 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
         </Button>
       </div>
       <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>
-        <Button isBlock color="secondary">
+        <Button
+          isBlock
+          color="secondary"
+          onClick={() => onNavigateToLeaderBoard()}
+        >
           Leaderboard
         </Button>
       </div>
