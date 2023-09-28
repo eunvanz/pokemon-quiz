@@ -152,7 +152,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
             .slice(0, 50)
             .map((mon, idx) => {
               const src = mon.image
-              return <RainItem key={idx} src={src} />
+              return <RainItem key={`${src}_${idx}`} src={src} />
             })}
         </Fragment>
       </AnimatePresence>
