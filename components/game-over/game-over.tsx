@@ -7,9 +7,18 @@ import Button from '../button'
 export interface GameOverProps {
   isVisible: boolean
   onHide: VoidFunction
+  isClear: boolean
+  hasWrongAnswers: boolean
+  onCheckRank: VoidFunction
 }
 
-const GameOver: React.FC<GameOverProps> = ({ isVisible, onHide }) => {
+const GameOver: React.FC<GameOverProps> = ({
+  isVisible,
+  isClear,
+  onHide,
+  hasWrongAnswers,
+  onCheckRank,
+}) => {
   return (
     <AnimatePresence>
       {isVisible && (
@@ -47,7 +56,7 @@ const GameOver: React.FC<GameOverProps> = ({ isVisible, onHide }) => {
             }}
             css={tw`text-blue-600 text-6xl z-10`}
           >
-            GAME OVER
+            {isClear ? 'GAME CLEAR' : 'GAME OVER'}
           </motion.h1>
           <motion.div
             css={tw`mt-3 z-10`}
@@ -66,8 +75,11 @@ const GameOver: React.FC<GameOverProps> = ({ isVisible, onHide }) => {
               opacity: 0,
             }}
           >
-            <Button variant="outlined" onClick={onHide}>
-              Check the wrong answers
+            <Button
+              variant="outlined"
+              onClick={hasWrongAnswers ? onHide : onCheckRank}
+            >
+              {hasWrongAnswers ? 'Check the wrong answers' : 'Check your rank'}
             </Button>
           </motion.div>
           <div css={tw`absolute bg-white w-full h-full opacity-80 z-0`} />

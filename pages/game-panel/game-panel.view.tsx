@@ -50,6 +50,12 @@ const GamePanel: React.FC<GamePanelProps> = ({
     }
   }, [isGameOver])
 
+  useEffect(() => {
+    if (!currentMonImage && achievedMonImages.length > 0) {
+      setIsGameOverScreenVisible(true)
+    }
+  }, [achievedMonImages.length, currentMonImage])
+
   return (
     <>
       <Ready
@@ -102,6 +108,9 @@ const GamePanel: React.FC<GamePanelProps> = ({
       <GameOver
         isVisible={isGameOverScreenVisible}
         onHide={() => setIsGameOverScreenVisible(false)}
+        onCheckRank={onNext}
+        hasWrongAnswers={stackedMonImages.length > 0}
+        isClear={!nextMonImage}
       />
     </>
   )

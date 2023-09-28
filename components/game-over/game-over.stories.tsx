@@ -12,4 +12,16 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {}
+export const Default: Story = {
+  args: {
+    isClear: false,
+    hasWrongAnswers: true,
+  },
+}
+
+export const Clear: Story = {
+  args: {
+    isClear: true,
+    hasWrongAnswers: false,
+  },
+}

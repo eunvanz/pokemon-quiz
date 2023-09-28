@@ -20,10 +20,6 @@ const useMonImages = () => {
   const [currentMonImage, setCurrentMonImage] =
     useRecoilState(currentMonImageState)
 
-  const isGameOver = useMemo(() => {
-    return stackedMonImages.some((array) => array.length === 12)
-  }, [stackedMonImages])
-
   const flattenStackedMonImages = useMemo(() => {
     return flatten(stackedMonImages)
   }, [stackedMonImages])
@@ -32,32 +28,17 @@ const useMonImages = () => {
     return shuffle(allMons)
   }, [allMons])
 
-  useEffect(() => {
-    if (
-      !isGameOver &&
-      flattenStackedMonImages.length + achievedMonImages.length <
-        shuffledMons.length
-    ) {
-      setCurrentMonImage(
-        shuffledMons[flattenStackedMonImages.length + achievedMonImages.length]
-          ?.image,
-      )
-    } else {
-      setCurrentMonImage(undefined)
-    }
-  }, [
-    shuffledMons,
-    flattenStackedMonImages,
-    achievedMonImages,
-    isGameOver,
-    setCurrentMonImage,
-  ])
-
   const nextMonImage = useMemo(() => {
     return shuffledMons[
       flattenStackedMonImages.length + achievedMonImages.length + 1
     ]?.image
   }, [shuffledMons, flattenStackedMonImages, achievedMonImages])
+
+  const isGameOver = useMemo(() => {
+    return (
+      stackedMonImages.some((array) => array.length === 12) || !nextMonImage
+    )
+  }, [nextMonImage, stackedMonImages])
 
   const pushStackedMonImage = useCallback(
     (monImage: string, columnIndex: number) => {
@@ -81,6 +62,27 @@ const useMonImages = () => {
     setStackedMonImages([[], [], [], [], [], []])
     setAchievedMonImages([])
   }, [setAchievedMonImages, setStackedMonImages])
+
+  useEffect(() => {
+    if (
+      !isGameOver &&
+      flattenStackedMonImages.length + achievedMonImages.length <
+        shuffledMons.length
+    ) {
+      setCurrentMonImage(
+        shuffledMons[flattenStackedMonImages.length + achievedMonImages.length]
+          ?.image,
+      )
+    } else {
+      setCurrentMonImage(undefined)
+    }
+  }, [
+    shuffledMons,
+    flattenStackedMonImages,
+    achievedMonImages,
+    isGameOver,
+    setCurrentMonImage,
+  ])
 
   return {
     nextMonImage,
