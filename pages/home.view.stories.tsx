@@ -1,6 +1,6 @@
 import mockMons from '@/mocks/mons'
 import type { Meta, StoryObj } from '@storybook/react'
-import HomeView from './page.view'
+import HomeView from './home.view'
 
 const meta = {
   title: 'pages/HomeView',

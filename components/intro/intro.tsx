@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import { random, shuffle } from 'lodash-es'
 import tw from 'twin.macro'
 import { Mon } from '@/lib/types'
+import dynamic from 'next/dynamic'
+import { DropItemProps } from './drop-item'
 
 export interface IntroProps {
   mons?: Mon[]
@@ -30,7 +32,7 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter, isLoading }) => {
 
   const dropMon = useCallback(() => {
     const mon = shuffle(mons)[0]
-    return <DropItem src={mon.image} />
+    return <DynamicDropItem src={mon.image} />
   }, [mons])
 
   const wordsDelays = useMemo(() => {
@@ -70,56 +72,6 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter, isLoading }) => {
   )
 }
 
-interface DropItemProps {
-  src: string
-}
-
-const DropItem = ({ src }: DropItemProps) => {
-  const [delay, setDelay] = useState(100_000)
-
-  const size = random(100, 300)
-
-  const left = random(0, window.innerWidth - size)
-
-  const handleOnImageLoad = useCallback(() => {
-    setDelay(random(0, 500))
-  }, [])
-
-  return (
-    <motion.div
-      initial={{
-        position: 'absolute',
-        left,
-        top: -size,
-        translateY: '-50px',
-        width: size,
-        height: size,
-        zIndex: 10,
-      }}
-      animate={{
-        translateY: `${window.innerHeight + size + 100}px`,
-        transitionEnd: {
-          display: 'none',
-        },
-      }}
-      transition={{
-        ease: 'easeIn',
-        duration: 1,
-        delay: delay / 1000,
-      }}
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        width={size}
-        height={size}
-        onLoad={handleOnImageLoad}
-        alt="drop item"
-      />
-    </motion.div>
-  )
-}
-
 interface DropWordProps {
   delay: number
   children: string
@@ -148,3 +100,7 @@ const DropWord = ({ delay, children }: DropWordProps) => {
 }
 
 export default Intro
+
+const DynamicDropItem = dynamic<DropItemProps>(() => import('./drop-item'), {
+  ssr: false,
+})
