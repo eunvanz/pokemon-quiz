@@ -3,14 +3,14 @@
 import { GameController } from '@/lib/hooks/use-game-controller'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import tw from 'twin.macro'
-import Combo from '../combo'
-import GameOver from '../game-over'
-import GameOverNext from '../game-over-next'
-import MonNameInput from '../mon-name-input'
-import OverlaidGameGrid from '../overlaid-game-grid'
-import Ready from '../ready'
-import Score from '../score'
-import TargetMon from '../target-mon'
+import Combo from '@/components/combo'
+import GameOver from '@/components/game-over'
+import GameOverNext from '@/components/game-over-next'
+import MonNameInput from '@/components/mon-name-input'
+import OverlaidGameGrid from '@/components/overlaid-game-grid'
+import Ready from '@/components/ready'
+import Score from '@/components/score'
+import TargetMon from '@/components/target-mon'
 
 export interface GamePanelProps extends GameController {}
 

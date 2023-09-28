@@ -7,7 +7,7 @@ import achievedMonImagesState from '../store/achieved-mon-images-state'
 import currentMonImageState from '../store/current-mon-image-state'
 
 const useMonImages = () => {
-  const { allMons, isAllMonsLoading } = useAllMons()
+  const { allMons } = useAllMons()
 
   const [stackedMonImages, setStackedMonImages] = useRecoilState(
     stackedMonImagesState,
@@ -85,7 +85,6 @@ const useMonImages = () => {
   return {
     nextMonImage,
     currentMonImage,
-    isMonImagesLoading: isAllMonsLoading,
     stackedMonImages,
     achievedMonImages,
     pushAchievedMonImage,

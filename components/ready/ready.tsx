@@ -15,8 +15,10 @@ const Ready: React.FC<ReadyProps> = ({ onStart }) => {
   useEffect(() => {
     setTimeout(() => {
       setText('START')
-      setIsVisible(false)
-      setTimeout(onStart, 200)
+      setTimeout(() => {
+        setIsVisible(false)
+        onStart()
+      }, 200)
     }, 1000)
   }, [onStart])
 

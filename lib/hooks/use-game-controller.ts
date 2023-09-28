@@ -11,7 +11,6 @@ export interface GameController {
   duration: number
   onStack: VoidFunction
   onSuccess: VoidFunction
-  isLoading: boolean
   resetGame: VoidFunction
   currentMonImage?: string
   nextMonImage?: string
@@ -49,7 +48,6 @@ const useGameController: () => GameController = () => {
   const {
     currentMonImage,
     nextMonImage,
-    isMonImagesLoading,
     pushAchievedMonImage,
     pushStackedMonImage,
     achievedMonImages,
@@ -128,7 +126,8 @@ const useGameController: () => GameController = () => {
     changeCurrentColumn()
     changeDuration()
     setStartTime(Date.now())
-  }, [changeCurrentColumn, changeDuration, currentMonImage])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentMonImage])
 
   const updateAnswerMon = useCallback(
     (monImage: string) => {
@@ -148,7 +147,6 @@ const useGameController: () => GameController = () => {
     achievedMonImages,
     onStack,
     onSuccess,
-    isLoading: isMonImagesLoading,
     resetGame,
     score,
     combo,

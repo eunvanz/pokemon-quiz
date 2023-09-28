@@ -89,6 +89,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
             <AnimatePresence>
               {currentMonImage && currentColumn === idx && (
                 <MonImg
+                  key={currentMonImage}
                   src={currentMonImage}
                   duration={duration}
                   penalty={getStackedSizeFromStackedMonImages(
@@ -115,7 +116,8 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
           return (
             <div key={idx} css={{ height: CELL_SIZE }}>
               {monImage && (
-                <Image
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
                   css={onClickMon ? tw`cursor-pointer` : undefined}
                   src={monImage}
                   width={CELL_SIZE}

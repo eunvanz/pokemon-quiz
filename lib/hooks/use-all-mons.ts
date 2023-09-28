@@ -1,20 +1,13 @@
 import { useMemo } from 'react'
-import { useQuery } from 'react-query'
 import { GENERATIONS } from '@/lib/constants/rules'
 import useApi from './use-api'
 import useGeneration from './use-generation'
+import mockMons from '@/mocks/mons'
 
 const useAllMons = () => {
   const api = useApi()
 
-  const { data: allMons, isLoading: isAllMonsLoading } = useQuery(
-    'allMons',
-    api.getAllMons,
-    {
-      staleTime: Infinity,
-      cacheTime: Infinity,
-    },
-  )
+  const allMons = mockMons.allMons
 
   const { generation } = useGeneration()
 
@@ -37,7 +30,6 @@ const useAllMons = () => {
 
   return {
     allMons: generationMons,
-    isAllMonsLoading,
   }
 }
 

@@ -26,7 +26,8 @@ const TargetMon: React.FC<TargetMonProps> = ({
       <div css={tw`w-40 h-40 overflow-hidden relative`}>
         {/* for caching */}
         {nextMonImage && (
-          <Image
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
             src={nextMonImage}
             alt="cache"
             width={160}

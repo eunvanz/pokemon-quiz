@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import GamePanel from './game-panel'
+import GamePanel from './game-panel.view'
 
 const meta = {
-  title: 'components/GamePanel',
+  title: 'pages/game-panel/GamePanelView',
   component: GamePanel,
   args: {
     achievedMonImages: [],
@@ -13,7 +13,6 @@ const meta = {
     currentMonImage:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png',
     duration: 10,
-    isLoading: false,
     nextMonImage:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png',
     score: 12345,
