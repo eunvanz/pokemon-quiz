@@ -1,4 +1,11 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["tailwindcss"]
+  "cSpell.words": [
+    "autodocs",
+    "jackspeak",
+    "nextjs",
+    "pokedrops",
+    "Pokémons",
+    "tailwindcss"
+  ]
 }

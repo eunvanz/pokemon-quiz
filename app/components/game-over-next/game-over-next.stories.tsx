@@ -1,13 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import Combo from './combo'
+import GameOverNext from './game-over-next'
 
 const meta = {
-  title: 'components/Combo',
-  component: Combo,
-  args: {
-    count: 2,
-  },
-} satisfies Meta<typeof Combo>
+  title: 'components/GameOverNext',
+  component: GameOverNext,
+  args: {},
+} satisfies Meta<typeof GameOverNext>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -4,7 +4,7 @@
     "body": [
       "export { default } from \"./${TM_DIRECTORY/^.+\\/(.*)$/$1/}\"",
       "",
-      "export type { ${TM_DIRECTORY/^.+\\/(.*)$/${1:/capitalize}/}Props } from \"./${TM_DIRECTORY/^.+\\/(.*)$/$1/}\"",
+      "export type { ${TM_DIRECTORY/^.+\\/(.*)$/${1:/pascalcase}/}Props } from \"./${TM_DIRECTORY/^.+\\/(.*)$/$1/}\"",
       ""
     ]
   },
