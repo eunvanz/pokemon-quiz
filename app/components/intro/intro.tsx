@@ -38,7 +38,7 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter, isLoading }) => {
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeydown)
-    const timer = setInterval(() => setDropCount((count) => ++count), 2500)
+    const timer = setInterval(() => setDropCount((count) => ++count), 2000)
     return () => {
       window.removeEventListener('keydown', handleKeydown)
       clearInterval(timer)
@@ -97,6 +97,9 @@ const DropItem = ({ src }: DropItemProps) => {
       }}
       animate={{
         translateY: `${window.innerHeight + size + 100}px`,
+        transitionEnd: {
+          display: 'none',
+        },
       }}
       transition={{
         ease: 'easeIn',
