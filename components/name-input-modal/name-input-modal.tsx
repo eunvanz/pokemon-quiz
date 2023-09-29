@@ -67,7 +67,7 @@ const NameInputModal: React.FC<NameInputModalProps> = ({
       title={
         <>
           Scored{' '}
-          <strong className="text-primary">{score.toLocaleString()}</strong>
+          <strong className="text-primary">{score.toLocaleString()}</strong>{' '}
           points!
         </>
       }
