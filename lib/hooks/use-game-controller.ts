@@ -6,6 +6,7 @@ import useCombo from './use-combo'
 import useMonImages from './use-mon-images'
 import useScore from './use-score'
 import useStage from './use-stage'
+import { AnimationControls, useAnimation } from 'framer-motion'
 
 export interface GameController {
   duration: number
@@ -26,12 +27,15 @@ export interface GameController {
   updateAnswerMon: (monImage: string) => void
   onNext: VoidFunction
   maxCombo: number
+  animation?: AnimationControls
 }
 
 export const INITIAL_DURATION = 20
 const MIN_DURATION = 2.5
 
 const useGameController: () => GameController = () => {
+  const animation = useAnimation()
+
   const [duration, setDuration] = useState(INITIAL_DURATION)
 
   const [currentColumn, setCurrentColumn] = useState(random(0, 5))
@@ -88,11 +92,18 @@ const useGameController: () => GameController = () => {
   }, [allMons?.length, stage])
 
   const onStack = useCallback(() => {
+    animation.start('vibe')
     if (currentMonImage) {
       pushStackedMonImage(currentMonImage, currentColumn)
       resetCombo()
     }
-  }, [currentMonImage, pushStackedMonImage, currentColumn, resetCombo])
+  }, [
+    animation,
+    currentMonImage,
+    pushStackedMonImage,
+    currentColumn,
+    resetCombo,
+  ])
 
   const onSuccess = useCallback(() => {
     if (currentMonImage) {
@@ -164,6 +175,7 @@ const useGameController: () => GameController = () => {
     updateAnswerMon,
     onNext,
     maxCombo,
+    animation,
   }
 }
 

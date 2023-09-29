@@ -10,6 +10,7 @@ import {
 } from 'react'
 import {
   AnimatePresence,
+  AnimationControls,
   motion,
   useAnimation,
   useMotionValue,
@@ -30,6 +31,7 @@ export interface OverlaidGameGridProps {
   onStack: VoidFunction
   monImageRef?: RefObject<HTMLImageElement>
   onClickMon?: (monImage: string) => void
+  animation?: AnimationControls
 }
 
 const WIDTH = 300
@@ -46,14 +48,13 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   onStack,
   monImageRef,
   onClickMon,
+  animation,
 }) => {
-  const animation = useAnimation()
   const vibrationTimeout = useRef<number | null>()
 
   const stack = useCallback(() => {
-    animation.start('vibe')
     onStack()
-  }, [animation, onStack])
+  }, [onStack])
 
   const stackedSize = useMemo(() => {
     if (currentColumn !== undefined) {

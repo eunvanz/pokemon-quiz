@@ -33,6 +33,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
   onNext,
   maxCombo,
   achievedMonImages,
+  animation,
 }) => {
   const monImageRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -89,6 +90,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
           currentMonImage={isStarted ? currentMonImage : undefined}
           onStack={onStack}
           onClickMon={isGameOver ? updateAnswerMon : undefined}
+          animation={animation}
         />
         <div css={tw`ml-4 flex flex-col justify-between gap-4`}>
           <div css={tw`flex flex-col gap-2`}>
