@@ -12,11 +12,9 @@ import {
   AnimatePresence,
   AnimationControls,
   motion,
-  useAnimation,
   useMotionValue,
 } from 'framer-motion'
 import tw from 'twin.macro'
-import { motionVariants } from '@/lib/helpers/framer'
 import GameGrid from '../game-grid'
 import {
   getPositionFrom2DArray,
@@ -48,7 +46,6 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   onStack,
   monImageRef,
   onClickMon,
-  animation,
 }) => {
   const vibrationTimeout = useRef<number | null>()
 
@@ -78,11 +75,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
   }, [currentMonImage, duration, stackedSize, stack])
 
   return (
-    <motion.div
-      animate={animation}
-      variants={motionVariants}
-      css={tw`relative`}
-    >
+    <div css={tw`relative`}>
       <div css={[tw`absolute flex h-full w-full`, { width: WIDTH }]}>
         {Array.from({ length: GRID_ITEM_SIZE }).map((_, idx) => (
           <div key={idx} css={tw`h-full flex-1`}>
@@ -131,7 +124,7 @@ const OverlaidGameGrid: React.FC<OverlaidGameGridProps> = ({
         })}
       </div>
       <GameGrid gridItemSize={GRID_ITEM_SIZE} width={WIDTH} />
-    </motion.div>
+    </div>
   )
 }
 

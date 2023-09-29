@@ -12,6 +12,8 @@ import Ready from '@/components/ready'
 import Score from '@/components/score'
 import TargetMon from '@/components/target-mon'
 import { burstStar } from '@/lib/helpers/mojs'
+import { motion } from 'framer-motion'
+import { motionVariants } from '@/lib/helpers/framer'
 
 export interface GamePanelProps extends GameController {}
 
@@ -79,9 +81,11 @@ const GamePanel: React.FC<GamePanelProps> = ({
           inputRef.current?.focus()
         }}
       />
-      <div
+      <motion.div
         css={tw`flex justify-center items-center w-full h-screen p-4`}
         onClick={() => inputRef.current?.focus()}
+        animate={animation}
+        variants={motionVariants}
       >
         <OverlaidGameGrid
           currentColumn={currentColumn}
@@ -90,7 +94,6 @@ const GamePanel: React.FC<GamePanelProps> = ({
           currentMonImage={isStarted ? currentMonImage : undefined}
           onStack={onStack}
           onClickMon={isGameOver ? updateAnswerMon : undefined}
-          animation={animation}
         />
         <div css={tw`ml-4 flex flex-col justify-between gap-4`}>
           <div css={tw`flex flex-col gap-2`}>
@@ -120,7 +123,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
             )}
           </div>
         </div>
-      </div>
+      </motion.div>
       <GameOver
         isVisible={isGameOverScreenVisible}
         onHide={() => setIsGameOverScreenVisible(false)}
