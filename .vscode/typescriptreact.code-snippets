@@ -105,17 +105,17 @@
   "Component Template": {
     "prefix": "compt",
     "body": [
-      "export interface ${TM_FILENAME_BASE}Props {",
+      "export interface ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props {",
       "  $1",
       "}",
       "",
-      "const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = ({",
+      "const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}: React.FC<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}Props> = ({",
       "  $1",
       "}) => {",
       "  return <>$2</>",
       "}",
       "",
-      "export default ${TM_FILENAME_BASE}"
+      "export default ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}"
     ],
     "description": "Component Template"
   },
@@ -154,27 +154,27 @@
     "description": "Container Template"
   },
   "Storybook Template": {
-  "prefix": "storyt",
-  "body": [
-    "import type { Meta, StoryObj } from '@storybook/react'",
-    "import $1 from './${TM_FILENAME_BASE/\\.stories//}'",
-    "",
-    "const meta = {",
-    "  title: 'components/$1',",
-    "  component: $1,",
-    "  args: {",
-    "    $2",
-    "  }",
-    "} satisfies Meta<typeof $1>",
-    "",
-    "export default meta",
-    "type Story = StoryObj<typeof meta>",
-    "",
-    "export const Default: Story = {}",
-    ""
-  ],
-  "description": "Storybook Template"
-},
+    "prefix": "storyt",
+    "body": [
+      "import type { Meta, StoryObj } from '@storybook/react'",
+      "import $1 from './${TM_FILENAME_BASE/\\.stories//}'",
+      "",
+      "const meta = {",
+      "  title: 'components/$1',",
+      "  component: $1,",
+      "  args: {",
+      "    $2",
+      "  }",
+      "} satisfies Meta<typeof $1>",
+      "",
+      "export default meta",
+      "type Story = StoryObj<typeof meta>",
+      "",
+      "export const Default: Story = {}",
+      ""
+    ],
+    "description": "Storybook Template"
+  },
   "View Storybook Template ": {
     "prefix": "viewstoryt",
     "body": [
