@@ -31,7 +31,7 @@ export interface GameController {
 }
 
 export const INITIAL_DURATION = 20
-const MIN_DURATION = 2.5
+const MIN_DURATION = 1
 
 const useGameController: () => GameController = () => {
   const animation = useAnimation()
