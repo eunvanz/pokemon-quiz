@@ -51,9 +51,10 @@ const GamePanel: React.FC<GamePanelProps> = ({
         left: clientRect.left + clientRect.width / 2,
         color: ['#F59E0B', '#3B82F6', '#DB2777', '#7C3AED'],
         count: 16,
-        radius: { 40: 80 },
+        radius: { [clientRect.width / 3]: clientRect.width },
         degree: 360,
         opacity: { 1: 0 },
+        itemRadius: 8,
       })
     }
     onSuccess()
