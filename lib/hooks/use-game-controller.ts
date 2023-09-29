@@ -7,6 +7,7 @@ import useMonImages from './use-mon-images'
 import useScore from './use-score'
 import useStage from './use-stage'
 import { AnimationControls, useAnimation } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 
 export interface GameController {
   duration: number
@@ -48,6 +49,8 @@ const useGameController: () => GameController = () => {
   const { score, increaseScore, resetScore } = useScore()
 
   const [startTime, setStartTime] = useState(0)
+
+  const router = useRouter()
 
   const {
     currentMonImage,
@@ -148,7 +151,9 @@ const useGameController: () => GameController = () => {
     [allMons, setAnswerMon],
   )
 
-  const onNext = useCallback(() => {}, [])
+  const onNext = useCallback(() => {
+    router.push('/leaderboard')
+  }, [router])
 
   useEffect(() => {
     return () => {
