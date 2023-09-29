@@ -11,6 +11,7 @@ import OverlaidGameGrid from '@/components/overlaid-game-grid'
 import Ready from '@/components/ready'
 import Score from '@/components/score'
 import TargetMon from '@/components/target-mon'
+import { burstStar } from '@/lib/helpers/mojs'
 
 export interface GamePanelProps extends GameController {}
 
@@ -33,12 +34,25 @@ const GamePanel: React.FC<GamePanelProps> = ({
   maxCombo,
   achievedMonImages,
 }) => {
-  const monImageRef = useRef<HTMLImageElement | null>(null)
+  const monImageRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
   const [isStarted, setIsStarted] = useState(false)
 
   const handleOnSuccess = useCallback(() => {
+    const $monImg = monImageRef.current
+    if ($monImg) {
+      const clientRect = $monImg.getClientRects()[0]
+      burstStar({
+        top: clientRect.top + clientRect.height / 2,
+        left: clientRect.left + clientRect.width / 2,
+        color: ['#F59E0B', '#3B82F6', '#DB2777', '#7C3AED'],
+        count: 16,
+        radius: { 40: 80 },
+        degree: 360,
+        opacity: { 1: 0 },
+      })
+    }
     onSuccess()
   }, [onSuccess])
 
@@ -74,7 +88,6 @@ const GamePanel: React.FC<GamePanelProps> = ({
           duration={duration}
           currentMonImage={isStarted ? currentMonImage : undefined}
           onStack={onStack}
-          monImageRef={monImageRef}
           onClickMon={isGameOver ? updateAnswerMon : undefined}
         />
         <div css={tw`ml-4 flex flex-col justify-between gap-4`}>
@@ -87,6 +100,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
           <div>
             <div css={tw`my-4`}>
               <TargetMon
+                ref={monImageRef}
                 monImage={isGameOver ? answerMon?.image : currentMonImage}
                 nextMonImage={nextMonImage}
                 monNames={isGameOver ? answerMon?.names : undefined}

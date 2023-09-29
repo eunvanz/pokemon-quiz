@@ -21,7 +21,6 @@ import {
   getPositionFrom2DArray,
   getStackedSizeFromStackedMonImages,
 } from './overlaid-game-grid.helpers'
-import Image from 'next/image'
 
 export interface OverlaidGameGridProps {
   currentMonImage?: string

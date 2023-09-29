@@ -29,7 +29,7 @@ export interface GameController {
 }
 
 export const INITIAL_DURATION = 20
-const MIN_DURATION = 2
+const MIN_DURATION = 2.5
 
 const useGameController: () => GameController = () => {
   const [duration, setDuration] = useState(INITIAL_DURATION)
@@ -80,7 +80,7 @@ const useGameController: () => GameController = () => {
   const changeDuration = useCallback(() => {
     if (allMons?.length && stage > 0) {
       const total = allMons.length
-      const stageRatio = Math.min(stage / Math.min(total, 200), 1)
+      const stageRatio = Math.min(stage / Math.min(total, 300), 1)
       const durationInterval = INITIAL_DURATION - MIN_DURATION
       const currentDuration = INITIAL_DURATION - durationInterval * stageRatio
       setDuration(currentDuration)
