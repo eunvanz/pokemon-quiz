@@ -14,6 +14,7 @@ export interface RankItem {
   country: string
   avgSpeed: number
   maxSpeed: number
+  accuracy: number
 }
 
 export interface RankTableProps {
@@ -39,8 +40,9 @@ const RankTable: React.FC<RankTableProps> = ({
       'w-1/12',
       'w-1/4',
       'w-1/6',
+      'w-1/12 justify-end',
       'w-1/6 justify-end',
-      'w-1/6 justify-end',
+      'w-1/12 justify-end',
       'w-1/12 justify-end',
       'w-1/12 justify-end',
       'w-1/12 justify-end',
@@ -73,8 +75,18 @@ const RankTable: React.FC<RankTableProps> = ({
               item.score.toLocaleString(),
               item.gotcha.toLocaleString(),
               item.maxCombo.toLocaleString(),
-              item.avgSpeed,
-              item.maxSpeed,
+              <>
+                <div>{item.avgSpeed}</div>
+                <div className="text-gray-400 text-xs">wpm</div>
+              </>,
+              <>
+                <div>{item.maxSpeed}</div>
+                <div className="text-gray-400 text-xs">wpm</div>
+              </>,
+              <>
+                <div>{item.accuracy}</div>
+                <div className="text-gray-400 text-xs">%</div>
+              </>,
             ]
             const additionalClassName = [
               'text-primary',
@@ -91,7 +103,7 @@ const RankTable: React.FC<RankTableProps> = ({
               <div
                 key={idx}
                 className={[
-                  `flex ${className}`,
+                  `flex items-center ${className}`,
                   `${additionalClassName[idx]}`,
                 ].join(' ')}
               >
@@ -129,6 +141,7 @@ const RankTable: React.FC<RankTableProps> = ({
               'MAX COMBO',
               'AVG SPEED',
               'MAX SPEED',
+              'ACCURACY',
             ]
             return (
               <div key={idx} className={`flex ${className}`}>

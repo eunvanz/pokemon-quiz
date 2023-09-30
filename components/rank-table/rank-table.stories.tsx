@@ -19,6 +19,7 @@ const meta = {
       country: 'South Korea',
       avgSpeed: 30,
       maxSpeed: 40,
+      accuracy: 66.7,
     })),
   },
 } satisfies Meta<typeof RankTable>
