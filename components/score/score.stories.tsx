@@ -13,7 +13,11 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {}
+export const Default: Story = {
+  args: {
+    diff: 200,
+  },
+}
 
 export const HasUnit: Story = {
   args: {

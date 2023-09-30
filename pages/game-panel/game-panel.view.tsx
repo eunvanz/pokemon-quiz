@@ -39,6 +39,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
   typingSpeed,
   accuracy,
   onFail,
+  bonusScore,
 }) => {
   const monImageRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -101,7 +102,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
         />
         <div css={tw`ml-4 flex flex-col justify-between gap-4`}>
           <div css={tw`flex flex-col gap-2`}>
-            <Score label="Score" count={score} />
+            <Score label="Score" count={score} diff={bonusScore} />
             <Score label="Gotcha" count={achievedMonImages.length} />
             <Score label="Max Combo" count={maxCombo > 1 ? maxCombo : 0} />
             <Score label="Avg. Speed" count={typingSpeed.avg} unit="wpm" />

@@ -23,7 +23,12 @@ const useAccuracy = () => {
     [setAccuracy, tryCnt],
   )
 
-  return { accuracy, updateAccuracy }
+  const resetAccuracy = useCallback(() => {
+    setAccuracy(100)
+    setTryCnt(0)
+  }, [setAccuracy])
+
+  return { accuracy, updateAccuracy, resetAccuracy }
 }
 
 export default useAccuracy

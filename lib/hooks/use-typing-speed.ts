@@ -40,7 +40,11 @@ const useTypingSpeed = () => {
     [setTypingSpeedRecords],
   )
 
-  return { updateTypingSpeed, typingSpeed }
+  const resetTypingSpeed = useCallback(() => {
+    setTypingSpeedRecords([])
+  }, [setTypingSpeedRecords])
+
+  return { updateTypingSpeed, typingSpeed, resetTypingSpeed }
 }
 
 export default useTypingSpeed

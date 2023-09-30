@@ -34,6 +34,7 @@ export interface GameController {
   typingSpeed: TypingSpeed
   accuracy: number
   onFail: VoidFunction
+  bonusScore?: number
 }
 
 export const INITIAL_DURATION = 20
@@ -51,11 +52,11 @@ const useGameController: () => GameController = () => {
   const { combo, resetCombo, incrementCombo, maxCombo, resetMaxCombo } =
     useCombo()
 
-  const { score, increaseScore, resetScore } = useScore()
+  const { score, increaseScore, resetScore, bonusScore } = useScore()
 
-  const { typingSpeed, updateTypingSpeed } = useTypingSpeed()
+  const { typingSpeed, updateTypingSpeed, resetTypingSpeed } = useTypingSpeed()
 
-  const { accuracy, updateAccuracy } = useAccuracy()
+  const { accuracy, updateAccuracy, resetAccuracy } = useAccuracy()
 
   const [startTime, setStartTime] = useState(0)
 
@@ -143,7 +144,16 @@ const useGameController: () => GameController = () => {
     resetCombo()
     resetScore()
     resetMaxCombo()
-  }, [resetMonImages, resetCombo, resetScore, resetMaxCombo])
+    resetAccuracy()
+    resetTypingSpeed()
+  }, [
+    resetMonImages,
+    resetCombo,
+    resetScore,
+    resetMaxCombo,
+    resetAccuracy,
+    resetTypingSpeed,
+  ])
 
   const onSkip = useCallback(() => {
     onStack()
@@ -188,6 +198,7 @@ const useGameController: () => GameController = () => {
     onSuccess,
     resetGame,
     score,
+    bonusScore,
     combo,
     answers,
     onSkip,
