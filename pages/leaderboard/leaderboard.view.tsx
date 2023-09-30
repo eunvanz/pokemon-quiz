@@ -23,6 +23,7 @@ const LeaderboardView: React.FC<LeaderboardViewProps> = ({
   onSkipName,
   onSubmitName,
   items,
+  myRank,
 }) => {
   const [isNameInputModalOpen, setIsNameInputModalOpen] = useState(
     score ? score > MIN_SCORE : false,
@@ -35,6 +36,7 @@ const LeaderboardView: React.FC<LeaderboardViewProps> = ({
         isLoadingNextPage={isLoadingNextPage}
         onLoadNextPage={onLoadNextPage}
         items={items}
+        myRank={myRank}
       />
       {score && (
         <NameInputModal

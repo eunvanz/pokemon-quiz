@@ -17,6 +17,8 @@ const meta = {
       gotcha: 4211,
       generation: idx % 10,
       country: 'South Korea',
+      avgSpeed: 30,
+      maxSpeed: 40,
     })),
   },
 } satisfies Meta<typeof LeaderboardView>
@@ -29,5 +31,17 @@ export const Default: Story = {}
 export const AfterGame: Story = {
   args: {
     score: 1231234,
+    myRank: {
+      id: 1,
+      seq: 10000,
+      name: 'Other side Koda Auzuki Elemental Opepen Edition',
+      score: 1241251,
+      maxCombo: 124,
+      gotcha: 4211,
+      generation: 1,
+      country: 'South Korea',
+      avgSpeed: 30,
+      maxSpeed: 40,
+    },
   },
 }
