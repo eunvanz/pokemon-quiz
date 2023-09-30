@@ -61,7 +61,8 @@ const useMonImages = () => {
   const resetMonImages = useCallback(() => {
     setStackedMonImages([[], [], [], [], [], []])
     setAchievedMonImages([])
-  }, [setAchievedMonImages, setStackedMonImages])
+    setCurrentMonImage(undefined)
+  }, [setAchievedMonImages, setCurrentMonImage, setStackedMonImages])
 
   useEffect(() => {
     if (

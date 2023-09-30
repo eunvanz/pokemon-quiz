@@ -10,6 +10,7 @@ import { AnimationControls, useAnimation } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import useTypingSpeed, { TypingSpeed } from './use-typing-speed'
 import useAccuracy from './use-accuracy'
+import useGeneration from './use-generation'
 
 export interface GameController {
   duration: number
@@ -35,6 +36,7 @@ export interface GameController {
   accuracy: number
   onFail: VoidFunction
   bonusScore?: number
+  generation: number
 }
 
 export const INITIAL_DURATION = 20
@@ -57,6 +59,8 @@ const useGameController: () => GameController = () => {
   const { typingSpeed, updateTypingSpeed, resetTypingSpeed } = useTypingSpeed()
 
   const { accuracy, updateAccuracy, resetAccuracy } = useAccuracy()
+
+  const { generation } = useGeneration()
 
   const [startTime, setStartTime] = useState(0)
 
@@ -141,6 +145,7 @@ const useGameController: () => GameController = () => {
   const resetGame = useCallback(() => {
     resetMonImages()
     setDuration(INITIAL_DURATION)
+    setAnswerMon(undefined)
     resetCombo()
     resetScore()
     resetMaxCombo()
@@ -148,6 +153,7 @@ const useGameController: () => GameController = () => {
     resetTypingSpeed()
   }, [
     resetMonImages,
+    setAnswerMon,
     resetCombo,
     resetScore,
     resetMaxCombo,
@@ -179,14 +185,8 @@ const useGameController: () => GameController = () => {
   )
 
   const onNext = useCallback(() => {
-    router.push('/leaderboard')
+    router.replace('/leaderboard')
   }, [router])
-
-  useEffect(() => {
-    return () => {
-      resetGame()
-    }
-  }, [resetGame])
 
   return {
     duration,
@@ -212,6 +212,7 @@ const useGameController: () => GameController = () => {
     typingSpeed,
     accuracy,
     onFail,
+    generation,
   }
 }
 

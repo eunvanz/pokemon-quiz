@@ -2,20 +2,9 @@ import { useIntersectionObserver } from '@uidotdev/usehooks'
 import Link from 'next/link'
 import { useCallback, useEffect, useMemo } from 'react'
 import classNames from 'classnames'
+import { Rank } from '@/lib/types'
 
-export interface RankItem {
-  id: number
-  seq: number
-  name: string
-  score: number
-  maxCombo: number
-  gotcha: number
-  generation: number
-  country: string
-  avgSpeed: number
-  maxSpeed: number
-  accuracy: number
-}
+export interface RankItem extends Rank {}
 
 export interface RankTableProps {
   items?: RankItem[]
@@ -155,7 +144,7 @@ const RankTable: React.FC<RankTableProps> = ({
       {hasNextPage && !isLoadingNextPage && (
         <div ref={ref} className="w-full h-4" />
       )}
-      {myRank && (
+      {!!myRank && (
         <div className="sticky bottom-0 w-full border-t border-gray-400 bg-blue-100">
           <Row item={myRank} />
         </div>

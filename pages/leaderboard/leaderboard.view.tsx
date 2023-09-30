@@ -6,7 +6,10 @@ import { useState } from 'react'
 
 export interface LeaderboardViewProps
   extends RankTableProps,
-    Omit<NameInputModalProps, 'isOpen' | 'onSkip' | 'onSubmit' | 'score'> {
+    Omit<
+      NameInputModalProps,
+      'isOpen' | 'onSkip' | 'onSubmit' | 'score' | 'onClose'
+    > {
   score?: number
   onSkipName: NameInputModalProps['onSkip']
   onSubmitName: NameInputModalProps['onSubmit']
@@ -38,7 +41,7 @@ const LeaderboardView: React.FC<LeaderboardViewProps> = ({
         items={items}
         myRank={myRank}
       />
-      {score && (
+      {!!score && (
         <NameInputModal
           isOpen={isNameInputModalOpen}
           onClose={() => setIsNameInputModalOpen(false)}

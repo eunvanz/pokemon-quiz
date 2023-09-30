@@ -40,6 +40,7 @@ const NameInputModal: React.FC<NameInputModalProps> = ({
   const handleKeydown = useCallback(
     (e: KeyboardEvent) => {
       if (e.code === 'Enter') {
+        restProps.onClose()
         submitForm()
       } else if (e.code === 'Escape') {
         restProps.onClose()

@@ -22,3 +22,33 @@ export interface UserLocation {
   as: string
   query: string
 }
+
+export interface Rank {
+  id: number
+  seq: number
+  name: string
+  country?: string
+  city?: string
+  countryCode?: string
+  ip?: string
+  generation: number
+  score: number
+  gotcha: number
+  maxCombo: number
+  avgSpeed: number
+  maxSpeed: number
+  accuracy: number
+}
+
+export type RankDto = Omit<Rank, 'id' | 'seq'>
+
+export interface Pageable<T> {
+  items: T[]
+  meta: {
+    itemCount: number
+    totalItems: number
+    itemsPerPage: number
+    totalPages: number
+    currentPage: number
+  }
+}
