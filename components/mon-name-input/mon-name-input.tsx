@@ -19,10 +19,11 @@ export interface MonNameInputProps {
   onSubmit: (name: string) => void
   correctAnswers: string[]
   onSkip: VoidFunction
+  onFail: VoidFunction
 }
 
 const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
-  ({ onSubmit, correctAnswers, onSkip }, ref) => {
+  ({ onSubmit, correctAnswers, onSkip, onFail }, ref) => {
     const {
       register,
       handleSubmit,
@@ -56,9 +57,10 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
         } else {
           setError('monName', { message: "It's wrong answer" })
           resetValue()
+          onFail()
         }
       },
-      [correctAnswers, onSubmit, resetValue, setError],
+      [correctAnswers, onFail, onSubmit, resetValue, setError],
     )
 
     const { ref: monNameInputFormRef, ...restTextFieldProps } = useMemo(() => {

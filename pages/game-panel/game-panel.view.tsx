@@ -37,6 +37,8 @@ const GamePanel: React.FC<GamePanelProps> = ({
   achievedMonImages,
   animation,
   typingSpeed,
+  accuracy,
+  onFail,
 }) => {
   const monImageRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -105,6 +107,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
             <Score label="Avg. Speed" count={typingSpeed.avg} unit="wpm" />
             <Score label="Max Speed" count={typingSpeed.max} unit="wpm" />
             <Score label="Last Speed" count={typingSpeed.last} unit="wpm" />
+            <Score label="Accuracy" count={accuracy} unit="%" />
           </div>
           <Combo count={combo} />
           <div>
@@ -124,6 +127,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
                 correctAnswers={answers}
                 onSkip={onSkip}
                 onSubmit={handleOnSuccess}
+                onFail={onFail}
               />
             )}
           </div>

@@ -45,6 +45,7 @@ const meta = {
       max: 42,
       totalCount: 3,
     },
+    accuracy: 55,
   },
 } satisfies Meta<typeof GamePanel>
 

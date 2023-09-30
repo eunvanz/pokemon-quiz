@@ -10,9 +10,10 @@ const useScore = () => {
 
   const increaseScore = useCallback(
     (wastedTime: number, combo: number) => {
-      const bonusScore =
+      const bonusScore = Math.round(
         Math.max(100 - Math.floor(wastedTime / 2000) * 10, 10) *
-        (1 + combo * 0.2 + stage * 0.3)
+          (1 + combo * 0.2 + stage * 0.3),
+      )
       setScore((score) => score + bonusScore)
     },
     [setScore, stage],

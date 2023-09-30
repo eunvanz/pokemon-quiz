@@ -9,6 +9,7 @@ import useStage from './use-stage'
 import { AnimationControls, useAnimation } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import useTypingSpeed, { TypingSpeed } from './use-typing-speed'
+import useAccuracy from './use-accuracy'
 
 export interface GameController {
   duration: number
@@ -31,6 +32,8 @@ export interface GameController {
   maxCombo: number
   animation?: AnimationControls
   typingSpeed: TypingSpeed
+  accuracy: number
+  onFail: VoidFunction
 }
 
 export const INITIAL_DURATION = 20
@@ -51,6 +54,8 @@ const useGameController: () => GameController = () => {
   const { score, increaseScore, resetScore } = useScore()
 
   const { typingSpeed, updateTypingSpeed } = useTypingSpeed()
+
+  const { accuracy, updateAccuracy } = useAccuracy()
 
   const [startTime, setStartTime] = useState(0)
 
@@ -119,6 +124,7 @@ const useGameController: () => GameController = () => {
       increaseScore(wastedTime, combo)
       incrementCombo()
       updateTypingSpeed({ wastedTime })
+      updateAccuracy(true)
     }
   }, [
     currentMonImage,
@@ -128,6 +134,7 @@ const useGameController: () => GameController = () => {
     combo,
     incrementCombo,
     updateTypingSpeed,
+    updateAccuracy,
   ])
 
   const resetGame = useCallback(() => {
@@ -141,6 +148,10 @@ const useGameController: () => GameController = () => {
   const onSkip = useCallback(() => {
     onStack()
   }, [onStack])
+
+  const onFail = useCallback(() => {
+    updateAccuracy(false)
+  }, [updateAccuracy])
 
   useEffect(() => {
     changeCurrentColumn()
@@ -188,6 +199,8 @@ const useGameController: () => GameController = () => {
     maxCombo,
     animation,
     typingSpeed,
+    accuracy,
+    onFail,
   }
 }
 
