@@ -12,7 +12,7 @@ const meta = {
     currentColumn: 2,
     currentMonImage:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png',
-    duration: 10,
+    duration: 1.5,
     nextMonImage:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png',
     score: 12345,
