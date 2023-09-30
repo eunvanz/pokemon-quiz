@@ -16,7 +16,7 @@ const useAccuracy = () => {
           (
             (oldAccuracy * tryCnt + (isSuccessful ? 100 : 0)) /
             newTryCnt
-          ).toFixed(1),
+          ).toFixed(2),
         )
       })
     },
