@@ -39,6 +39,12 @@ const meta = {
         'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png',
       ],
     ],
+    typingSpeed: {
+      avg: 23,
+      last: 13,
+      max: 42,
+      totalCount: 3,
+    },
   },
 } satisfies Meta<typeof GamePanel>
 

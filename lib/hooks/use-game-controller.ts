@@ -8,6 +8,7 @@ import useScore from './use-score'
 import useStage from './use-stage'
 import { AnimationControls, useAnimation } from 'framer-motion'
 import { useRouter } from 'next/navigation'
+import useTypingSpeed, { TypingSpeed } from './use-typing-speed'
 
 export interface GameController {
   duration: number
@@ -29,6 +30,7 @@ export interface GameController {
   onNext: VoidFunction
   maxCombo: number
   animation?: AnimationControls
+  typingSpeed: TypingSpeed
 }
 
 export const INITIAL_DURATION = 20
@@ -47,6 +49,8 @@ const useGameController: () => GameController = () => {
     useCombo()
 
   const { score, increaseScore, resetScore } = useScore()
+
+  const { typingSpeed, updateTypingSpeed } = useTypingSpeed()
 
   const [startTime, setStartTime] = useState(0)
 
@@ -114,6 +118,7 @@ const useGameController: () => GameController = () => {
       const wastedTime = Date.now() - startTime
       increaseScore(wastedTime, combo)
       incrementCombo()
+      updateTypingSpeed({ wastedTime })
     }
   }, [
     currentMonImage,
@@ -122,6 +127,7 @@ const useGameController: () => GameController = () => {
     increaseScore,
     combo,
     incrementCombo,
+    updateTypingSpeed,
   ])
 
   const resetGame = useCallback(() => {
@@ -181,6 +187,7 @@ const useGameController: () => GameController = () => {
     onNext,
     maxCombo,
     animation,
+    typingSpeed,
   }
 }
 

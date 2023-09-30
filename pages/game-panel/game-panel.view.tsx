@@ -36,6 +36,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
   maxCombo,
   achievedMonImages,
   animation,
+  typingSpeed,
 }) => {
   const monImageRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -101,6 +102,9 @@ const GamePanel: React.FC<GamePanelProps> = ({
             <Score label="Score" count={score} />
             <Score label="Gotcha" count={achievedMonImages.length} />
             <Score label="Max Combo" count={maxCombo > 1 ? maxCombo : 0} />
+            <Score label="Avg. Speed" count={typingSpeed.avg} unit="wpm" />
+            <Score label="Max Speed" count={typingSpeed.max} unit="wpm" />
+            <Score label="Last Speed" count={typingSpeed.last} unit="wpm" />
           </div>
           <Combo count={combo} />
           <div>

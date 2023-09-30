@@ -18,7 +18,7 @@ const Ready: React.FC<ReadyProps> = ({ onStart }) => {
       setTimeout(() => {
         setIsVisible(false)
         onStart()
-      }, 200)
+      }, 300)
     }, 1000)
   }, [onStart])
 
