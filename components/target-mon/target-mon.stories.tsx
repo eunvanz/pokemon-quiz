@@ -1,3 +1,4 @@
+import mockMons from '@/mocks/mons'
 import type { Meta, StoryObj } from '@storybook/react'
 import TargetMon from './target-mon'
 
@@ -5,8 +6,7 @@ const meta = {
   title: 'components/TargetMon',
   component: TargetMon,
   args: {
-    monImage:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png',
+    mon: mockMons.allMons[0],
     nextMonImage:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png',
   },

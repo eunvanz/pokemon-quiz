@@ -20,6 +20,7 @@ const meta = {
       avgSpeed: 30,
       maxSpeed: 40,
       accuracy: 66.7,
+      gotchaMons: [1, 2, 3, 4, 5, 6, 7, 8],
     })),
   },
 } satisfies Meta<typeof RankTable>

@@ -7,6 +7,8 @@ const allMons: Mon[] = [
       'フシギダネ,Fushigidane,이상해씨,妙蛙種子,Bulbizarre,Bisasam,Bulbasaur,Bulbasaur,Bulbasaur,フシギダネ,妙蛙种子',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
+    shownCnt: 3,
+    gottenCnt: 2,
   },
   {
     id: 2,
@@ -14,6 +16,8 @@ const allMons: Mon[] = [
       'フシギソウ,Fushigisou,이상해풀,妙蛙草,Herbizarre,Bisaknosp,Ivysaur,Ivysaur,Ivysaur,フシギソウ,妙蛙草',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 3,
@@ -21,6 +25,8 @@ const allMons: Mon[] = [
       'フシギバナ,Fushigibana,이상해꽃,妙蛙花,Florizarre,Bisaflor,Venusaur,Venusaur,Venusaur,フシギバナ,妙蛙花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 4,
@@ -28,6 +34,8 @@ const allMons: Mon[] = [
       'ヒトカゲ,Hitokage,파이리,小火龍,Salamèche,Glumanda,Charmander,Charmander,Charmander,ヒトカゲ,小火龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 5,
@@ -35,6 +43,8 @@ const allMons: Mon[] = [
       'リザード,Lizardo,리자드,火恐龍,Reptincel,Glutexo,Charmeleon,Charmeleon,Charmeleon,リザード,火恐龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 6,
@@ -42,6 +52,8 @@ const allMons: Mon[] = [
       'リザードン,Lizardon,리자몽,噴火龍,Dracaufeu,Glurak,Charizard,Charizard,Charizard,リザードン,喷火龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 7,
@@ -49,6 +61,8 @@ const allMons: Mon[] = [
       'ゼニガメ,Zenigame,꼬부기,傑尼龜,Carapuce,Schiggy,Squirtle,Squirtle,Squirtle,ゼニガメ,杰尼龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 8,
@@ -56,6 +70,8 @@ const allMons: Mon[] = [
       'カメール,Kameil,어니부기,卡咪龜,Carabaffe,Schillok,Wartortle,Wartortle,Wartortle,カメール,卡咪龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 9,
@@ -63,6 +79,8 @@ const allMons: Mon[] = [
       'カメックス,Kamex,거북왕,水箭龜,Tortank,Turtok,Blastoise,Blastoise,Blastoise,カメックス,水箭龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 10,
@@ -70,6 +88,8 @@ const allMons: Mon[] = [
       'キャタピー,Caterpie,캐터피,綠毛蟲,Chenipan,Raupy,Caterpie,Caterpie,Caterpie,キャタピー,绿毛虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png',
+    shownCnt: 2,
+    gottenCnt: 2,
   },
   {
     id: 11,
@@ -77,6 +97,8 @@ const allMons: Mon[] = [
       'トランセル,Trancell,단데기,鐵甲蛹,Chrysacier,Safcon,Metapod,Metapod,Metapod,トランセル,铁甲蛹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/11.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 12,
@@ -84,6 +106,8 @@ const allMons: Mon[] = [
       'バタフリー,Butterfree,버터플,巴大蝶,Papilusion,Smettbo,Butterfree,Butterfree,Butterfree,バタフリー,巴大蝶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png',
+    shownCnt: 2,
+    gottenCnt: 2,
   },
   {
     id: 13,
@@ -91,6 +115,8 @@ const allMons: Mon[] = [
       'ビードル,Beedle,뿔충이,獨角蟲,Aspicot,Hornliu,Weedle,Weedle,Weedle,ビードル,独角虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 14,
@@ -98,6 +124,8 @@ const allMons: Mon[] = [
       'コクーン,Cocoon,딱충이,鐵殼蛹,Coconfort,Kokuna,Kakuna,Kakuna,Kakuna,コクーン,铁壳蛹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 15,
@@ -105,6 +133,8 @@ const allMons: Mon[] = [
       'スピアー,Spear,독침붕,大針蜂,Dardargnan,Bibor,Beedrill,Beedrill,Beedrill,スピアー,大针蜂',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 16,
@@ -112,6 +142,8 @@ const allMons: Mon[] = [
       'ポッポ,Poppo,구구,波波,Roucool,Taubsi,Pidgey,Pidgey,Pidgey,ポッポ,波波',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 17,
@@ -119,6 +151,8 @@ const allMons: Mon[] = [
       'ピジョン,Pigeon,피죤,比比鳥,Roucoups,Tauboga,Pidgeotto,Pidgeotto,Pidgeotto,ピジョン,比比鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 18,
@@ -126,6 +160,8 @@ const allMons: Mon[] = [
       'ピジョット,Pigeot,피죤투,大比鳥,Roucarnage,Tauboss,Pidgeot,Pidgeot,Pidgeot,ピジョット,大比鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/18.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 19,
@@ -133,6 +169,8 @@ const allMons: Mon[] = [
       'コラッタ,Koratta,꼬렛,小拉達,Rattata,Rattfratz,Rattata,Rattata,Rattata,コラッタ,小拉达',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 20,
@@ -140,6 +178,8 @@ const allMons: Mon[] = [
       'ラッタ,Ratta,레트라,拉達,Rattatac,Rattikarl,Raticate,Raticate,Raticate,ラッタ,拉达',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/20.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 21,
@@ -147,6 +187,8 @@ const allMons: Mon[] = [
       'オニスズメ,Onisuzume,깨비참,烈雀,Piafabec,Habitak,Spearow,Spearow,Spearow,オニスズメ,烈雀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/21.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 22,
@@ -154,12 +196,16 @@ const allMons: Mon[] = [
       'オニドリル,Onidrill,깨비드릴조,大嘴雀,Rapasdepic,Ibitak,Fearow,Fearow,Fearow,オニドリル,大嘴雀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/22.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 23,
     names: 'アーボ,Arbo,아보,阿柏蛇,Abo,Rettan,Ekans,Ekans,Ekans,アーボ,阿柏蛇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/23.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 24,
@@ -167,6 +213,8 @@ const allMons: Mon[] = [
       'アーボック,Arbok,아보크,阿柏怪,Arbok,Arbok,Arbok,Arbok,Arbok,アーボック,阿柏怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 25,
@@ -174,6 +222,8 @@ const allMons: Mon[] = [
       'ピカチュウ,Pikachu,피카츄,皮卡丘,Pikachu,Pikachu,Pikachu,Pikachu,Pikachu,ピカチュウ,皮卡丘',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 26,
@@ -181,6 +231,8 @@ const allMons: Mon[] = [
       'ライチュウ,Raichu,라이츄,雷丘,Raichu,Raichu,Raichu,Raichu,Raichu,ライチュウ,雷丘',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 27,
@@ -188,6 +240,8 @@ const allMons: Mon[] = [
       'サンド,Sand,모래두지,穿山鼠,Sabelette,Sandan,Sandshrew,Sandshrew,Sandshrew,サンド,穿山鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/27.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 28,
@@ -195,6 +249,8 @@ const allMons: Mon[] = [
       'サンドパン,Sandpan,고지,穿山王,Sablaireau,Sandamer,Sandslash,Sandslash,Sandslash,サンドパン,穿山王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/28.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 29,
@@ -202,6 +258,8 @@ const allMons: Mon[] = [
       'ニドラン♀,Nidoran♀,니드런♀,尼多蘭,Nidoran♀,Nidoran♀,Nidoran♀,Nidoran♀,Nidoran♀,ニドラン♀,尼多兰',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/29.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 30,
@@ -209,6 +267,8 @@ const allMons: Mon[] = [
       'ニドリーナ,Nidorina,니드리나,尼多娜,Nidorina,Nidorina,Nidorina,Nidorina,Nidorina,ニドリーナ,尼多娜',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/30.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 31,
@@ -216,6 +276,8 @@ const allMons: Mon[] = [
       'ニドクイン,Nidoqueen,니드퀸,尼多后,Nidoqueen,Nidoqueen,Nidoqueen,Nidoqueen,Nidoqueen,ニドクイン,尼多后',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/31.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 32,
@@ -223,6 +285,8 @@ const allMons: Mon[] = [
       'ニドラン♂,Nidoran♂,니드런♂,尼多朗,Nidoran♂,Nidoran♂,Nidoran♂,Nidoran♂,Nidoran♂,ニドラン♂,尼多朗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/32.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 33,
@@ -230,6 +294,8 @@ const allMons: Mon[] = [
       'ニドリーノ,Nidorino,니드리노,尼多力諾,Nidorino,Nidorino,Nidorino,Nidorino,Nidorino,ニドリーノ,尼多力诺',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/33.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 34,
@@ -237,6 +303,8 @@ const allMons: Mon[] = [
       'ニドキング,Nidoking,니드킹,尼多王,Nidoking,Nidoking,Nidoking,Nidoking,Nidoking,ニドキング,尼多王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/34.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 35,
@@ -244,6 +312,8 @@ const allMons: Mon[] = [
       'ピッピ,Pippi,삐삐,皮皮,Mélofée,Piepi,Clefairy,Clefairy,Clefairy,ピッピ,皮皮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/35.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 36,
@@ -251,6 +321,8 @@ const allMons: Mon[] = [
       'ピクシー,Pixy,픽시,皮可西,Mélodelfe,Pixi,Clefable,Clefable,Clefable,ピクシー,皮可西',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/36.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 37,
@@ -258,6 +330,8 @@ const allMons: Mon[] = [
       'ロコン,Rokon,식스테일,六尾,Goupix,Vulpix,Vulpix,Vulpix,Vulpix,ロコン,六尾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/37.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 38,
@@ -265,6 +339,8 @@ const allMons: Mon[] = [
       'キュウコン,Kyukon,나인테일,九尾,Feunard,Vulnona,Ninetales,Ninetales,Ninetales,キュウコン,九尾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 39,
@@ -272,6 +348,8 @@ const allMons: Mon[] = [
       'プリン,Purin,푸린,胖丁,Rondoudou,Pummeluff,Jigglypuff,Jigglypuff,Jigglypuff,プリン,胖丁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 40,
@@ -279,6 +357,8 @@ const allMons: Mon[] = [
       'プクリン,Pukurin,푸크린,胖可丁,Grodoudou,Knuddeluff,Wigglytuff,Wigglytuff,Wigglytuff,プクリン,胖可丁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/40.png',
+    shownCnt: 2,
+    gottenCnt: 2,
   },
   {
     id: 41,
@@ -286,6 +366,8 @@ const allMons: Mon[] = [
       'ズバット,Zubat,주뱃,超音蝠,Nosferapti,Zubat,Zubat,Zubat,Zubat,ズバット,超音蝠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/41.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 42,
@@ -293,6 +375,8 @@ const allMons: Mon[] = [
       'ゴルバット,Golbat,골뱃,大嘴蝠,Nosferalto,Golbat,Golbat,Golbat,Golbat,ゴルバット,大嘴蝠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/42.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 43,
@@ -300,6 +384,8 @@ const allMons: Mon[] = [
       'ナゾノクサ,Nazonokusa,뚜벅쵸,走路草,Mystherbe,Myrapla,Oddish,Oddish,Oddish,ナゾノクサ,走路草',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/43.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 44,
@@ -307,6 +393,8 @@ const allMons: Mon[] = [
       'クサイハナ,Kusaihana,냄새꼬,臭臭花,Ortide,Duflor,Gloom,Gloom,Gloom,クサイハナ,臭臭花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/44.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 45,
@@ -314,6 +402,8 @@ const allMons: Mon[] = [
       'ラフレシア,Ruffresia,라플레시아,霸王花,Rafflesia,Giflor,Vileplume,Vileplume,Vileplume,ラフレシア,霸王花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/45.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 46,
@@ -321,6 +411,8 @@ const allMons: Mon[] = [
       'パラス,Paras,파라스,派拉斯,Paras,Paras,Paras,Paras,Paras,パラス,派拉斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/46.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 47,
@@ -328,6 +420,8 @@ const allMons: Mon[] = [
       'パラセクト,Parasect,파라섹트,派拉斯特,Parasect,Parasek,Parasect,Parasect,Parasect,パラセクト,派拉斯特',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/47.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 48,
@@ -335,6 +429,8 @@ const allMons: Mon[] = [
       'コンパン,Kongpang,콘팡,毛球,Mimitoss,Bluzuk,Venonat,Venonat,Venonat,コンパン,毛球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/48.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 49,
@@ -342,6 +438,8 @@ const allMons: Mon[] = [
       'モルフォン,Morphon,도나리,摩魯蛾,Aéromite,Omot,Venomoth,Venomoth,Venomoth,モルフォン,摩鲁蛾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/49.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 50,
@@ -349,6 +447,8 @@ const allMons: Mon[] = [
       'ディグダ,Digda,디그다,地鼠,Taupiqueur,Digda,Diglett,Diglett,Diglett,ディグダ,地鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/50.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 51,
@@ -356,6 +456,8 @@ const allMons: Mon[] = [
       'ダグトリオ,Dugtrio,닥트리오,三地鼠,Triopikeur,Digdri,Dugtrio,Dugtrio,Dugtrio,ダグトリオ,三地鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/51.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 52,
@@ -363,6 +465,8 @@ const allMons: Mon[] = [
       'ニャース,Nyarth,나옹,喵喵,Miaouss,Mauzi,Meowth,Meowth,Meowth,ニャース,喵喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 53,
@@ -370,6 +474,8 @@ const allMons: Mon[] = [
       'ペルシアン,Persian,페르시온,貓老大,Persian,Snobilikat,Persian,Persian,Persian,ペルシアン,猫老大',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/53.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 54,
@@ -377,6 +483,8 @@ const allMons: Mon[] = [
       'コダック,Koduck,고라파덕,可達鴨,Psykokwak,Enton,Psyduck,Psyduck,Psyduck,コダック,可达鸭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 55,
@@ -384,6 +492,8 @@ const allMons: Mon[] = [
       'ゴルダック,Golduck,골덕,哥達鴨,Akwakwak,Entoron,Golduck,Golduck,Golduck,ゴルダック,哥达鸭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/55.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 56,
@@ -391,6 +501,8 @@ const allMons: Mon[] = [
       'マンキー,Mankey,망키,猴怪,Férosinge,Menki,Mankey,Mankey,Mankey,マンキー,猴怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/56.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 57,
@@ -398,6 +510,8 @@ const allMons: Mon[] = [
       'オコリザル,Okorizaru,성원숭,火爆猴,Colossinge,Rasaff,Primeape,Primeape,Primeape,オコリザル,火暴猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/57.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 58,
@@ -405,6 +519,8 @@ const allMons: Mon[] = [
       'ガーディ,Gardie,가디,卡蒂狗,Caninos,Fukano,Growlithe,Growlithe,Growlithe,ガーディ,卡蒂狗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/58.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 59,
@@ -412,6 +528,8 @@ const allMons: Mon[] = [
       'ウインディ,Windie,윈디,風速狗,Arcanin,Arkani,Arcanine,Arcanine,Arcanine,ウインディ,风速狗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/59.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 60,
@@ -419,6 +537,8 @@ const allMons: Mon[] = [
       'ニョロモ,Nyoromo,발챙이,蚊香蝌蚪,Ptitard,Quapsel,Poliwag,Poliwag,Poliwag,ニョロモ,蚊香蝌蚪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/60.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 61,
@@ -426,6 +546,8 @@ const allMons: Mon[] = [
       'ニョロゾ,Nyorozo,슈륙챙이,蚊香君,Têtarte,Quaputzi,Poliwhirl,Poliwhirl,Poliwhirl,ニョロゾ,蚊香君',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/61.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 62,
@@ -433,12 +555,16 @@ const allMons: Mon[] = [
       'ニョロボン,Nyorobon,강챙이,蚊香泳士,Tartard,Quappo,Poliwrath,Poliwrath,Poliwrath,ニョロボン,蚊香泳士',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/62.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 63,
     names: 'ケーシィ,Casey,캐이시,凱西,Abra,Abra,Abra,Abra,Abra,ケーシィ,凯西',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/63.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 64,
@@ -446,6 +572,8 @@ const allMons: Mon[] = [
       'ユンゲラー,Yungerer,윤겔라,勇基拉,Kadabra,Kadabra,Kadabra,Kadabra,Kadabra,ユンゲラー,勇基拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/64.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 65,
@@ -453,6 +581,8 @@ const allMons: Mon[] = [
       'フーディン,Foodin,후딘,胡地,Alakazam,Simsala,Alakazam,Alakazam,Alakazam,フーディン,胡地',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/65.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 66,
@@ -460,6 +590,8 @@ const allMons: Mon[] = [
       'ワンリキー,Wanriky,알통몬,腕力,Machoc,Machollo,Machop,Machop,Machop,ワンリキー,腕力',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/66.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 67,
@@ -467,6 +599,8 @@ const allMons: Mon[] = [
       'ゴーリキー,Goriky,근육몬,豪力,Machopeur,Maschock,Machoke,Machoke,Machoke,ゴーリキー,豪力',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/67.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 68,
@@ -474,6 +608,8 @@ const allMons: Mon[] = [
       'カイリキー,Kairiky,괴력몬,怪力,Mackogneur,Machomei,Machamp,Machamp,Machamp,カイリキー,怪力',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/68.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 69,
@@ -481,6 +617,8 @@ const allMons: Mon[] = [
       'マダツボミ,Madatsubomi,모다피,喇叭芽,Chétiflor,Knofensa,Bellsprout,Bellsprout,Bellsprout,マダツボミ,喇叭芽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/69.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 70,
@@ -488,6 +626,8 @@ const allMons: Mon[] = [
       'ウツドン,Utsudon,우츠동,口呆花,Boustiflor,Ultrigaria,Weepinbell,Weepinbell,Weepinbell,ウツドン,口呆花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/70.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 71,
@@ -495,6 +635,8 @@ const allMons: Mon[] = [
       'ウツボット,Utsubot,우츠보트,大食花,Empiflor,Sarzenia,Victreebel,Victreebel,Victreebel,ウツボット,大食花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 72,
@@ -502,6 +644,8 @@ const allMons: Mon[] = [
       'メノクラゲ,Menokurage,왕눈해,瑪瑙水母,Tentacool,Tentacha,Tentacool,Tentacool,Tentacool,メノクラゲ,玛瑙水母',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/72.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 73,
@@ -509,6 +653,8 @@ const allMons: Mon[] = [
       'ドククラゲ,Dokukurage,독파리,毒刺水母,Tentacruel,Tentoxa,Tentacruel,Tentacruel,Tentacruel,ドククラゲ,毒刺水母',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/73.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 74,
@@ -516,6 +662,8 @@ const allMons: Mon[] = [
       'イシツブテ,Isitsubute,꼬마돌,小拳石,Racaillou,Kleinstein,Geodude,Geodude,Geodude,イシツブテ,小拳石',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 75,
@@ -523,6 +671,8 @@ const allMons: Mon[] = [
       'ゴローン,Golone,데구리,隆隆石,Gravalanch,Georok,Graveler,Graveler,Graveler,ゴローン,隆隆石',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/75.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 76,
@@ -530,6 +680,8 @@ const allMons: Mon[] = [
       'ゴローニャ,Golonya,딱구리,隆隆岩,Grolem,Geowaz,Golem,Golem,Golem,ゴローニャ,隆隆岩',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/76.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 77,
@@ -537,6 +689,8 @@ const allMons: Mon[] = [
       'ポニータ,Ponyta,포니타,小火馬,Ponyta,Ponita,Ponyta,Ponyta,Ponyta,ポニータ,小火马',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/77.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 78,
@@ -544,6 +698,8 @@ const allMons: Mon[] = [
       'ギャロップ,Gallop,날쌩마,烈焰馬,Galopa,Gallopa,Rapidash,Rapidash,Rapidash,ギャロップ,烈焰马',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/78.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 79,
@@ -551,6 +707,8 @@ const allMons: Mon[] = [
       'ヤドン,Yadon,야돈,呆呆獸,Ramoloss,Flegmon,Slowpoke,Slowpoke,Slowpoke,ヤドン,呆呆兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/79.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 80,
@@ -558,6 +716,8 @@ const allMons: Mon[] = [
       'ヤドラン,Yadoran,야도란,呆殼獸,Flagadoss,Lahmus,Slowbro,Slowbro,Slowbro,ヤドラン,呆壳兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/80.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 81,
@@ -565,6 +725,8 @@ const allMons: Mon[] = [
       'コイル,Coil,코일,小磁怪,Magnéti,Magnetilo,Magnemite,Magnemite,Magnemite,コイル,小磁怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/81.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 82,
@@ -572,6 +734,8 @@ const allMons: Mon[] = [
       'レアコイル,Rarecoil,레어코일,三合一磁怪,Magnéton,Magneton,Magneton,Magneton,Magneton,レアコイル,三合一磁怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/82.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 83,
@@ -579,12 +743,16 @@ const allMons: Mon[] = [
       'カモネギ,Kamonegi,파오리,大蔥鴨,Canarticho,Porenta,Farfetch’d,Farfetch’d,Farfetch’d,カモネギ,大葱鸭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/83.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 84,
     names: 'ドードー,Dodo,두두,嘟嘟,Doduo,Dodu,Doduo,Doduo,Doduo,ドードー,嘟嘟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/84.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 85,
@@ -592,6 +760,8 @@ const allMons: Mon[] = [
       'ドードリオ,Dodorio,두트리오,嘟嘟利,Dodrio,Dodri,Dodrio,Dodrio,Dodrio,ドードリオ,嘟嘟利',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/85.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 86,
@@ -599,6 +769,8 @@ const allMons: Mon[] = [
       'パウワウ,Pawou,쥬쥬,小海獅,Otaria,Jurob,Seel,Seel,Seel,パウワウ,小海狮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/86.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 87,
@@ -606,6 +778,8 @@ const allMons: Mon[] = [
       'ジュゴン,Jugon,쥬레곤,白海獅,Lamantine,Jugong,Dewgong,Dewgong,Dewgong,ジュゴン,白海狮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/87.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 88,
@@ -613,6 +787,8 @@ const allMons: Mon[] = [
       'ベトベター,Betbeter,질퍽이,臭泥,Tadmorv,Sleima,Grimer,Grimer,Grimer,ベトベター,臭泥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/88.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 89,
@@ -620,6 +796,8 @@ const allMons: Mon[] = [
       'ベトベトン,Betbeton,질뻐기,臭臭泥,Grotadmorv,Sleimok,Muk,Muk,Muk,ベトベトン,臭臭泥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/89.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 90,
@@ -627,6 +805,8 @@ const allMons: Mon[] = [
       'シェルダー,Shellder,셀러,大舌貝,Kokiyas,Muschas,Shellder,Shellder,Shellder,シェルダー,大舌贝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/90.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 91,
@@ -634,6 +814,8 @@ const allMons: Mon[] = [
       'パルシェン,Parshen,파르셀,刺甲貝,Crustabri,Austos,Cloyster,Cloyster,Cloyster,パルシェン,刺甲贝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/91.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 92,
@@ -641,6 +823,8 @@ const allMons: Mon[] = [
       'ゴース,Ghos,고오스,鬼斯,Fantominus,Nebulak,Gastly,Gastly,Gastly,ゴース,鬼斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/92.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 93,
@@ -648,6 +832,8 @@ const allMons: Mon[] = [
       'ゴースト,Ghost,고우스트,鬼斯通,Spectrum,Alpollo,Haunter,Haunter,Haunter,ゴースト,鬼斯通',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/93.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 94,
@@ -655,6 +841,8 @@ const allMons: Mon[] = [
       'ゲンガー,Gangar,팬텀,耿鬼,Ectoplasma,Gengar,Gengar,Gengar,Gengar,ゲンガー,耿鬼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 95,
@@ -662,6 +850,8 @@ const allMons: Mon[] = [
       'イワーク,Iwark,롱스톤,大岩蛇,Onix,Onix,Onix,Onix,Onix,イワーク,大岩蛇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/95.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 96,
@@ -669,6 +859,8 @@ const allMons: Mon[] = [
       'スリープ,Sleep,슬리프,催眠貘,Soporifik,Traumato,Drowzee,Drowzee,Drowzee,スリープ,催眠貘',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/96.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 97,
@@ -676,6 +868,8 @@ const allMons: Mon[] = [
       'スリーパー,Sleeper,슬리퍼,引夢貘人,Hypnomade,Hypno,Hypno,Hypno,Hypno,スリーパー,引梦貘人',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/97.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 98,
@@ -683,6 +877,8 @@ const allMons: Mon[] = [
       'クラブ,Crab,크랩,大鉗蟹,Krabby,Krabby,Krabby,Krabby,Krabby,クラブ,大钳蟹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/98.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 99,
@@ -690,6 +886,8 @@ const allMons: Mon[] = [
       'キングラー,Kingler,킹크랩,巨鉗蟹,Krabboss,Kingler,Kingler,Kingler,Kingler,キングラー,巨钳蟹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/99.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 100,
@@ -697,6 +895,8 @@ const allMons: Mon[] = [
       'ビリリダマ,Biriridama,찌리리공,霹靂電球,Voltorbe,Voltobal,Voltorb,Voltorb,Voltorb,ビリリダマ,霹雳电球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/100.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 101,
@@ -704,6 +904,8 @@ const allMons: Mon[] = [
       'マルマイン,Marumine,붐볼,頑皮雷彈,Électrode,Lektrobal,Electrode,Electrode,Electrode,マルマイン,顽皮雷弹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/101.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 102,
@@ -711,6 +913,8 @@ const allMons: Mon[] = [
       'タマタマ,Tamatama,아라리,蛋蛋,Noeunoeuf,Owei,Exeggcute,Exeggcute,Exeggcute,タマタマ,蛋蛋',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/102.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 103,
@@ -718,6 +922,8 @@ const allMons: Mon[] = [
       'ナッシー,Nassy,나시,椰蛋樹,Noadkoko,Kokowei,Exeggutor,Exeggutor,Exeggutor,ナッシー,椰蛋树',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/103.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 104,
@@ -725,6 +931,8 @@ const allMons: Mon[] = [
       'カラカラ,Karakara,탕구리,卡拉卡拉,Osselait,Tragosso,Cubone,Cubone,Cubone,カラカラ,卡拉卡拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/104.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 105,
@@ -732,6 +940,8 @@ const allMons: Mon[] = [
       'ガラガラ,Garagara,텅구리,嘎啦嘎啦,Ossatueur,Knogga,Marowak,Marowak,Marowak,ガラガラ,嘎啦嘎啦',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/105.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 106,
@@ -739,6 +949,8 @@ const allMons: Mon[] = [
       'サワムラー,Sawamular,시라소몬,飛腿郎,Kicklee,Kicklee,Hitmonlee,Hitmonlee,Hitmonlee,サワムラー,飞腿郎',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/106.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 107,
@@ -746,6 +958,8 @@ const allMons: Mon[] = [
       'エビワラー,Ebiwalar,홍수몬,快拳郎,Tygnon,Nockchan,Hitmonchan,Hitmonchan,Hitmonchan,エビワラー,快拳郎',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/107.png',
+    shownCnt: 2,
+    gottenCnt: 2,
   },
   {
     id: 108,
@@ -753,6 +967,8 @@ const allMons: Mon[] = [
       'ベロリンガ,Beroringa,내루미,大舌頭,Excelangue,Schlurp,Lickitung,Lickitung,Lickitung,ベロリンガ,大舌头',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/108.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 109,
@@ -760,6 +976,8 @@ const allMons: Mon[] = [
       'ドガース,Dogars,또가스,瓦斯彈,Smogo,Smogon,Koffing,Koffing,Koffing,ドガース,瓦斯弹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/109.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 110,
@@ -767,6 +985,8 @@ const allMons: Mon[] = [
       'マタドガス,Matadogas,또도가스,雙彈瓦斯,Smogogo,Smogmog,Weezing,Weezing,Weezing,マタドガス,双弹瓦斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/110.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 111,
@@ -774,6 +994,8 @@ const allMons: Mon[] = [
       'サイホーン,Sihorn,뿔카노,獨角犀牛,Rhinocorne,Rihorn,Rhyhorn,Rhyhorn,Rhyhorn,サイホーン,独角犀牛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/111.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 112,
@@ -781,6 +1003,8 @@ const allMons: Mon[] = [
       'サイドン,Sidon,코뿌리,鑽角犀獸,Rhinoféros,Rizeros,Rhydon,Rhydon,Rhydon,サイドン,钻角犀兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/112.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 113,
@@ -788,6 +1012,8 @@ const allMons: Mon[] = [
       'ラッキー,Lucky,럭키,吉利蛋,Leveinard,Chaneira,Chansey,Chansey,Chansey,ラッキー,吉利蛋',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/113.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 114,
@@ -795,6 +1021,8 @@ const allMons: Mon[] = [
       'モンジャラ,Monjara,덩쿠리,蔓藤怪,Saquedeneu,Tangela,Tangela,Tangela,Tangela,モンジャラ,蔓藤怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/114.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 115,
@@ -802,6 +1030,8 @@ const allMons: Mon[] = [
       'ガルーラ,Garura,캥카,袋獸,Kangourex,Kangama,Kangaskhan,Kangaskhan,Kangaskhan,ガルーラ,袋兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/115.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 116,
@@ -809,6 +1039,8 @@ const allMons: Mon[] = [
       'タッツー,Tattu,쏘드라,墨海馬,Hypotrempe,Seeper,Horsea,Horsea,Horsea,タッツー,墨海马',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/116.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 117,
@@ -816,6 +1048,8 @@ const allMons: Mon[] = [
       'シードラ,Seadra,시드라,海刺龍,Hypocéan,Seemon,Seadra,Seadra,Seadra,シードラ,海刺龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/117.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 118,
@@ -823,6 +1057,8 @@ const allMons: Mon[] = [
       'トサキント,Tosakinto,콘치,角金魚,Poissirène,Goldini,Goldeen,Goldeen,Goldeen,トサキント,角金鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/118.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 119,
@@ -830,6 +1066,8 @@ const allMons: Mon[] = [
       'アズマオウ,Azumao,왕콘치,金魚王,Poissoroy,Golking,Seaking,Seaking,Seaking,アズマオウ,金鱼王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/119.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 120,
@@ -837,6 +1075,8 @@ const allMons: Mon[] = [
       'ヒトデマン,Hitodeman,별가사리,海星星,Stari,Sterndu,Staryu,Staryu,Staryu,ヒトデマン,海星星',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/120.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 121,
@@ -844,6 +1084,8 @@ const allMons: Mon[] = [
       'スターミー,Starmie,아쿠스타,寶石海星,Staross,Starmie,Starmie,Starmie,Starmie,スターミー,宝石海星',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/121.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 122,
@@ -851,6 +1093,8 @@ const allMons: Mon[] = [
       'バリヤード,Barrierd,마임맨,魔牆人偶,M. Mime,Pantimos,Mr. Mime,Mr. Mime,Mr. Mime,バリヤード,魔墙人偶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/122.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 123,
@@ -858,6 +1102,8 @@ const allMons: Mon[] = [
       'ストライク,Strike,스라크,飛天螳螂,Insécateur,Sichlor,Scyther,Scyther,Scyther,ストライク,飞天螳螂',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/123.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 124,
@@ -865,6 +1111,8 @@ const allMons: Mon[] = [
       'ルージュラ,Rougela,루주라,迷唇姐,Lippoutou,Rossana,Jynx,Jynx,Jynx,ルージュラ,迷唇姐',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/124.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 125,
@@ -872,6 +1120,8 @@ const allMons: Mon[] = [
       'エレブー,Eleboo,에레브,電擊獸,Élektek,Elektek,Electabuzz,Electabuzz,Electabuzz,エレブー,电击兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/125.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 126,
@@ -879,6 +1129,8 @@ const allMons: Mon[] = [
       'ブーバー,Boober,마그마,鴨嘴火獸,Magmar,Magmar,Magmar,Magmar,Magmar,ブーバー,鸭嘴火兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/126.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 127,
@@ -886,6 +1138,8 @@ const allMons: Mon[] = [
       'カイロス,Kailios,쁘사이저,凱羅斯,Scarabrute,Pinsir,Pinsir,Pinsir,Pinsir,カイロス,凯罗斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/127.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 128,
@@ -893,6 +1147,8 @@ const allMons: Mon[] = [
       'ケンタロス,Kentauros,켄타로스,肯泰羅,Tauros,Tauros,Tauros,Tauros,Tauros,ケンタロス,肯泰罗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/128.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 129,
@@ -900,6 +1156,8 @@ const allMons: Mon[] = [
       'コイキング,Koiking,잉어킹,鯉魚王,Magicarpe,Karpador,Magikarp,Magikarp,Magikarp,コイキング,鲤鱼王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/129.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 130,
@@ -907,6 +1165,8 @@ const allMons: Mon[] = [
       'ギャラドス,Gyarados,갸라도스,暴鯉龍,Léviator,Garados,Gyarados,Gyarados,Gyarados,ギャラドス,暴鲤龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 131,
@@ -914,6 +1174,8 @@ const allMons: Mon[] = [
       'ラプラス,Laplace,라프라스,拉普拉斯,Lokhlass,Lapras,Lapras,Lapras,Lapras,ラプラス,拉普拉斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/131.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 132,
@@ -921,6 +1183,8 @@ const allMons: Mon[] = [
       'メタモン,Metamon,메타몽,百變怪,Métamorph,Ditto,Ditto,Ditto,Ditto,メタモン,百变怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 133,
@@ -928,6 +1192,8 @@ const allMons: Mon[] = [
       'イーブイ,Eievui,이브이,伊布,Évoli,Evoli,Eevee,Eevee,Eevee,イーブイ,伊布',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 134,
@@ -935,6 +1201,8 @@ const allMons: Mon[] = [
       'シャワーズ,Showers,샤미드,水伊布,Aquali,Aquana,Vaporeon,Vaporeon,Vaporeon,シャワーズ,水伊布',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 135,
@@ -942,6 +1210,8 @@ const allMons: Mon[] = [
       'サンダース,Thunders,쥬피썬더,雷伊布,Voltali,Blitza,Jolteon,Jolteon,Jolteon,サンダース,雷伊布',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 136,
@@ -949,6 +1219,8 @@ const allMons: Mon[] = [
       'ブースター,Booster,부스터,火伊布,Pyroli,Flamara,Flareon,Flareon,Flareon,ブースター,火伊布',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 137,
@@ -956,6 +1228,8 @@ const allMons: Mon[] = [
       'ポリゴン,Porygon,폴리곤,多邊獸,Porygon,Porygon,Porygon,Porygon,Porygon,ポリゴン,多边兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/137.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 138,
@@ -963,6 +1237,8 @@ const allMons: Mon[] = [
       'オムナイト,Omnite,암나이트,菊石獸,Amonita,Amonitas,Omanyte,Omanyte,Omanyte,オムナイト,菊石兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/138.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 139,
@@ -970,6 +1246,8 @@ const allMons: Mon[] = [
       'オムスター,Omstar,암스타,多刺菊石獸,Amonistar,Amoroso,Omastar,Omastar,Omastar,オムスター,多刺菊石兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/139.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 140,
@@ -977,6 +1255,8 @@ const allMons: Mon[] = [
       'カブト,Kabuto,투구,化石盔,Kabuto,Kabuto,Kabuto,Kabuto,Kabuto,カブト,化石盔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/140.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 141,
@@ -984,6 +1264,8 @@ const allMons: Mon[] = [
       'カブトプス,Kabutops,투구푸스,鐮刀盔,Kabutops,Kabutops,Kabutops,Kabutops,Kabutops,カブトプス,镰刀盔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/141.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 142,
@@ -991,6 +1273,8 @@ const allMons: Mon[] = [
       'プテラ,Ptera,프테라,化石翼龍,Ptéra,Aerodactyl,Aerodactyl,Aerodactyl,Aerodactyl,プテラ,化石翼龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/142.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 143,
@@ -998,6 +1282,8 @@ const allMons: Mon[] = [
       'カビゴン,Kabigon,잠만보,卡比獸,Ronflex,Relaxo,Snorlax,Snorlax,Snorlax,カビゴン,卡比兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 144,
@@ -1005,6 +1291,8 @@ const allMons: Mon[] = [
       'フリーザー,Freezer,프리져,急凍鳥,Artikodin,Arktos,Articuno,Articuno,Articuno,フリーザー,急冻鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/144.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 145,
@@ -1012,6 +1300,8 @@ const allMons: Mon[] = [
       'サンダー,Thunder,썬더,閃電鳥,Électhor,Zapdos,Zapdos,Zapdos,Zapdos,サンダー,闪电鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/145.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 146,
@@ -1019,6 +1309,8 @@ const allMons: Mon[] = [
       'ファイヤー,Fire,파이어,火焰鳥,Sulfura,Lavados,Moltres,Moltres,Moltres,ファイヤー,火焰鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/146.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 147,
@@ -1026,6 +1318,8 @@ const allMons: Mon[] = [
       'ミニリュウ,Miniryu,미뇽,迷你龍,Minidraco,Dratini,Dratini,Dratini,Dratini,ミニリュウ,迷你龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/147.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 148,
@@ -1033,6 +1327,8 @@ const allMons: Mon[] = [
       'ハクリュー,Hakuryu,신뇽,哈克龍,Draco,Dragonir,Dragonair,Dragonair,Dragonair,ハクリュー,哈克龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/148.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 149,
@@ -1040,6 +1336,8 @@ const allMons: Mon[] = [
       'カイリュー,Kairyu,망나뇽,快龍,Dracolosse,Dragoran,Dragonite,Dragonite,Dragonite,カイリュー,快龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 150,
@@ -1047,12 +1345,16 @@ const allMons: Mon[] = [
       'ミュウツー,Mewtwo,뮤츠,超夢,Mewtwo,Mewtu,Mewtwo,Mewtwo,Mewtwo,ミュウツー,超梦',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 151,
     names: 'ミュウ,Mew,뮤,夢幻,Mew,Mew,Mew,Mew,Mew,ミュウ,梦幻',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 152,
@@ -1060,6 +1362,8 @@ const allMons: Mon[] = [
       'チコリータ,Chicorita,치코리타,菊草葉,Germignon,Endivie,Chikorita,Chikorita,Chikorita,チコリータ,菊草叶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/152.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 153,
@@ -1067,6 +1371,8 @@ const allMons: Mon[] = [
       'ベイリーフ,Bayleaf,베이리프,月桂葉,Macronium,Lorblatt,Bayleef,Bayleef,Bayleef,ベイリーフ,月桂叶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/153.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 154,
@@ -1074,6 +1380,8 @@ const allMons: Mon[] = [
       'メガニウム,Meganium,메가니움,大竺葵,Méganium,Meganie,Meganium,Meganium,Meganium,メガニウム,大竺葵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 155,
@@ -1081,6 +1389,8 @@ const allMons: Mon[] = [
       'ヒノアラシ,Hinoarashi,브케인,火球鼠,Héricendre,Feurigel,Cyndaquil,Cyndaquil,Cyndaquil,ヒノアラシ,火球鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/155.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 156,
@@ -1088,6 +1398,8 @@ const allMons: Mon[] = [
       'マグマラシ,Magmarashi,마그케인,火岩鼠,Feurisson,Igelavar,Quilava,Quilava,Quilava,マグマラシ,火岩鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/156.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 157,
@@ -1095,6 +1407,8 @@ const allMons: Mon[] = [
       'バクフーン,Bakphoon,블레이범,火爆獸,Typhlosion,Tornupto,Typhlosion,Typhlosion,Typhlosion,バクフーン,火暴兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/157.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 158,
@@ -1102,6 +1416,8 @@ const allMons: Mon[] = [
       'ワニノコ,Waninoko,리아코,小鋸鱷,Kaiminus,Karnimani,Totodile,Totodile,Totodile,ワニノコ,小锯鳄',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/158.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 159,
@@ -1109,6 +1425,8 @@ const allMons: Mon[] = [
       'アリゲイツ,Alligates,엘리게이,藍鱷,Crocrodil,Tyracroc,Croconaw,Croconaw,Croconaw,アリゲイツ,蓝鳄',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/159.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 160,
@@ -1116,6 +1434,8 @@ const allMons: Mon[] = [
       'オーダイル,Ordile,장크로다일,大力鱷,Aligatueur,Impergator,Feraligatr,Feraligatr,Feraligatr,オーダイル,大力鳄',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/160.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 161,
@@ -1123,6 +1443,8 @@ const allMons: Mon[] = [
       'オタチ,Otachi,꼬리선,尾立,Fouinette,Wiesor,Sentret,Sentret,Sentret,オタチ,尾立',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/161.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 162,
@@ -1130,6 +1452,8 @@ const allMons: Mon[] = [
       'オオタチ,Ootachi,다꼬리,大尾立,Fouinar,Wiesenior,Furret,Furret,Furret,オオタチ,大尾立',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/162.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 163,
@@ -1137,6 +1461,8 @@ const allMons: Mon[] = [
       'ホーホー,Hoho,부우부,咕咕,Hoothoot,Hoothoot,Hoothoot,Hoothoot,Hoothoot,ホーホー,咕咕',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/163.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 164,
@@ -1144,6 +1470,8 @@ const allMons: Mon[] = [
       'ヨルノズク,Yorunozuku,야부엉,貓頭夜鷹,Noarfang,Noctuh,Noctowl,Noctowl,Noctowl,ヨルノズク,猫头夜鹰',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/164.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 165,
@@ -1151,6 +1479,8 @@ const allMons: Mon[] = [
       'レディバ,Rediba,레디바,芭瓢蟲,Coxy,Ledyba,Ledyba,Ledyba,Ledyba,レディバ,芭瓢虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/165.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 166,
@@ -1158,6 +1488,8 @@ const allMons: Mon[] = [
       'レディアン,Redian,레디안,安瓢蟲,Coxyclaque,Ledian,Ledian,Ledian,Ledian,レディアン,安瓢虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/166.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 167,
@@ -1165,6 +1497,8 @@ const allMons: Mon[] = [
       'イトマル,Itomaru,페이검,圓絲蛛,Mimigal,Webarak,Spinarak,Spinarak,Spinarak,イトマル,圆丝蛛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/167.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 168,
@@ -1172,6 +1506,8 @@ const allMons: Mon[] = [
       'アリアドス,Ariados,아리아도스,阿利多斯,Migalos,Ariados,Ariados,Ariados,Ariados,アリアドス,阿利多斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/168.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 169,
@@ -1179,6 +1515,8 @@ const allMons: Mon[] = [
       'クロバット,Crobat,크로뱃,叉字蝠,Nostenfer,Iksbat,Crobat,Crobat,Crobat,クロバット,叉字蝠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/169.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 170,
@@ -1186,6 +1524,8 @@ const allMons: Mon[] = [
       '초라기,チョンチー,Chonchie,燈籠魚,Loupio,Lampi,Chinchou,Chinchou,Chinchou,チョンチー,灯笼鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/170.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 171,
@@ -1193,6 +1533,8 @@ const allMons: Mon[] = [
       'ランターン,Lantern,랜턴,電燈怪,Lanturn,Lanturn,Lanturn,Lanturn,Lanturn,ランターン,电灯怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/171.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 172,
@@ -1200,12 +1542,16 @@ const allMons: Mon[] = [
       'ピチュー,Pichu,피츄,皮丘,Pichu,Pichu,Pichu,Pichu,Pichu,ピチュー,皮丘',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/172.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 173,
     names: 'ピィ,Py,삐,皮寶寶,Mélo,Pii,Cleffa,Cleffa,Cleffa,ピィ,皮宝宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/173.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 174,
@@ -1213,6 +1559,8 @@ const allMons: Mon[] = [
       'ププリン,Pupurin,푸푸린,寶寶丁,Toudoudou,Fluffeluff,Igglybuff,Igglybuff,Igglybuff,ププリン,宝宝丁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/174.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 175,
@@ -1220,6 +1568,8 @@ const allMons: Mon[] = [
       'トゲピー,Togepy,토게피,波克比,Togepi,Togepi,Togepi,Togepi,Togepi,トゲピー,波克比',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/175.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 176,
@@ -1227,6 +1577,8 @@ const allMons: Mon[] = [
       'トゲチック,Togechick,토게틱,波克基古,Togetic,Togetic,Togetic,Togetic,Togetic,トゲチック,波克基古',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/176.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 177,
@@ -1234,6 +1586,8 @@ const allMons: Mon[] = [
       'ネイティ,Naty,네이티,天然雀,Natu,Natu,Natu,Natu,Natu,ネイティ,天然雀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/177.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 178,
@@ -1241,6 +1595,8 @@ const allMons: Mon[] = [
       'ネイティオ,Natio,네이티오,天然鳥,Xatu,Xatu,Xatu,Xatu,Xatu,ネイティオ,天然鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/178.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 179,
@@ -1248,6 +1604,8 @@ const allMons: Mon[] = [
       'メリープ,Merriep,메리프,咩利羊,Wattouat,Voltilamm,Mareep,Mareep,Mareep,メリープ,咩利羊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/179.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 180,
@@ -1255,6 +1613,8 @@ const allMons: Mon[] = [
       'モココ,Mokoko,보송송,茸茸羊,Lainergie,Waaty,Flaaffy,Flaaffy,Flaaffy,モココ,茸茸羊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/180.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 181,
@@ -1262,6 +1622,8 @@ const allMons: Mon[] = [
       'デンリュウ,Denryu,전룡,電龍,Pharamp,Ampharos,Ampharos,Ampharos,Ampharos,デンリュウ,电龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/181.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 182,
@@ -1269,6 +1631,8 @@ const allMons: Mon[] = [
       'キレイハナ,Kireihana,아르코,美麗花,Joliflor,Blubella,Bellossom,Bellossom,Bellossom,キレイハナ,美丽花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/182.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 183,
@@ -1276,6 +1640,8 @@ const allMons: Mon[] = [
       'マリル,Maril,마릴,瑪力露,Marill,Marill,Marill,Marill,Marill,マリル,玛力露',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/183.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 184,
@@ -1283,6 +1649,8 @@ const allMons: Mon[] = [
       'マリルリ,Marilli,마릴리,瑪力露麗,Azumarill,Azumarill,Azumarill,Azumarill,Azumarill,マリルリ,玛力露丽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/184.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 185,
@@ -1290,6 +1658,8 @@ const allMons: Mon[] = [
       'ウソッキー,Usokkie,꼬지모,樹才怪,Simularbre,Mogelbaum,Sudowoodo,Sudowoodo,Sudowoodo,ウソッキー,树才怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/185.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 186,
@@ -1297,6 +1667,8 @@ const allMons: Mon[] = [
       'ニョロトノ,Nyorotono,왕구리,蚊香蛙皇,Tarpaud,Quaxo,Politoed,Politoed,Politoed,ニョロトノ,蚊香蛙皇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/186.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 187,
@@ -1304,6 +1676,8 @@ const allMons: Mon[] = [
       'ハネッコ,Hanecco,통통코,毽子草,Granivol,Hoppspross,Hoppip,Hoppip,Hoppip,ハネッコ,毽子草',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/187.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 188,
@@ -1311,6 +1685,8 @@ const allMons: Mon[] = [
       'ポポッコ,Popocco,두코,毽子花,Floravol,Hubelupf,Skiploom,Skiploom,Skiploom,ポポッコ,毽子花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/188.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 189,
@@ -1318,6 +1694,8 @@ const allMons: Mon[] = [
       'ワタッコ,Watacco,솜솜코,毽子棉,Cotovol,Papungha,Jumpluff,Jumpluff,Jumpluff,ワタッコ,毽子棉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/189.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 190,
@@ -1325,6 +1703,8 @@ const allMons: Mon[] = [
       'エイパム,Eipam,에이팜,長尾怪手,Capumain,Griffel,Aipom,Aipom,Aipom,エイパム,长尾怪手',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/190.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 191,
@@ -1332,6 +1712,8 @@ const allMons: Mon[] = [
       'ヒマナッツ,Himanuts,해너츠,向日種子,Tournegrin,Sonnkern,Sunkern,Sunkern,Sunkern,ヒマナッツ,向日种子',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/191.png',
+    shownCnt: 2,
+    gottenCnt: 2,
   },
   {
     id: 192,
@@ -1339,6 +1721,8 @@ const allMons: Mon[] = [
       'キマワリ,Kimawari,해루미,向日花怪,Héliatronc,Sonnflora,Sunflora,Sunflora,Sunflora,キマワリ,向日花怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/192.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 193,
@@ -1346,6 +1730,8 @@ const allMons: Mon[] = [
       'ヤンヤンマ,Yanyanma,왕자리,蜻蜻蜓,Yanma,Yanma,Yanma,Yanma,Yanma,ヤンヤンマ,蜻蜻蜓',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/193.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 194,
@@ -1353,6 +1739,8 @@ const allMons: Mon[] = [
       'ウパー,Upah,우파,烏波,Axoloto,Felino,Wooper,Wooper,Wooper,ウパー,乌波',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/194.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 195,
@@ -1360,6 +1748,8 @@ const allMons: Mon[] = [
       'ヌオー,Nuoh,누오,沼王,Maraiste,Morlord,Quagsire,Quagsire,Quagsire,ヌオー,沼王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/195.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 196,
@@ -1367,6 +1757,8 @@ const allMons: Mon[] = [
       'エーフィ,Eifie,에브이,太陽伊布,Mentali,Psiana,Espeon,Espeon,Espeon,エーフィ,太阳伊布',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 197,
@@ -1374,6 +1766,8 @@ const allMons: Mon[] = [
       'ブラッキー,Blacky,블래키,月亮伊布,Noctali,Nachtara,Umbreon,Umbreon,Umbreon,ブラッキー,月亮伊布',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 198,
@@ -1381,6 +1775,8 @@ const allMons: Mon[] = [
       'ヤミカラス,Yamikarasu,니로우,黑暗鴉,Cornèbre,Kramurx,Murkrow,Murkrow,Murkrow,ヤミカラス,黑暗鸦',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/198.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 199,
@@ -1388,6 +1784,8 @@ const allMons: Mon[] = [
       'ヤドキング,Yadoking,야도킹,呆呆王,Roigada,Laschoking,Slowking,Slowking,Slowking,ヤドキング,呆呆王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/199.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 200,
@@ -1395,6 +1793,8 @@ const allMons: Mon[] = [
       'ムウマ,Muma,무우마,夢妖,Feuforêve,Traunfugil,Misdreavus,Misdreavus,Misdreavus,ムウマ,梦妖',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/200.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 201,
@@ -1402,6 +1802,8 @@ const allMons: Mon[] = [
       'アンノーン,Unknown,안농,未知圖騰,Zarbi,Icognito,Unown,Unown,Unown,アンノーン,未知图腾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/201.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 202,
@@ -1409,6 +1811,8 @@ const allMons: Mon[] = [
       'ソーナンス,Sonans,마자용,果然翁,Qulbutoké,Woingenau,Wobbuffet,Wobbuffet,Wobbuffet,ソーナンス,果然翁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/202.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 203,
@@ -1416,6 +1820,8 @@ const allMons: Mon[] = [
       'キリンリキ,Kirinriki,키링키,麒麟奇,Girafarig,Girafarig,Girafarig,Girafarig,Girafarig,キリンリキ,麒麟奇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/203.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 204,
@@ -1423,6 +1829,8 @@ const allMons: Mon[] = [
       'クヌギダマ,Kunugidama,피콘,榛果球,Pomdepik,Tannza,Pineco,Pineco,Pineco,クヌギダマ,榛果球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/204.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 205,
@@ -1430,6 +1838,8 @@ const allMons: Mon[] = [
       'フォレトス,Foretos,쏘콘,佛烈托斯,Foretress,Forstellka,Forretress,Forretress,Forretress,フォレトス,佛烈托斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/205.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 206,
@@ -1437,6 +1847,8 @@ const allMons: Mon[] = [
       'ノコッチ,Nokocchi,노고치,土龍弟弟,Insolourdo,Dummisel,Dunsparce,Dunsparce,Dunsparce,ノコッチ,土龙弟弟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/206.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 207,
@@ -1444,6 +1856,8 @@ const allMons: Mon[] = [
       'グライガー,Gliger,글라이거,天蠍,Scorplane,Skorgla,Gligar,Gligar,Gligar,グライガー,天蝎',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/207.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 208,
@@ -1451,6 +1865,8 @@ const allMons: Mon[] = [
       'ハガネール,Haganeil,강철톤,大鋼蛇,Steelix,Stahlos,Steelix,Steelix,Steelix,ハガネール,大钢蛇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/208.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 209,
@@ -1458,6 +1874,8 @@ const allMons: Mon[] = [
       'ブルー,Bulu,블루,布魯,Snubbull,Snubbull,Snubbull,Snubbull,Snubbull,ブルー,布鲁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/209.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 210,
@@ -1465,6 +1883,8 @@ const allMons: Mon[] = [
       'グランブル,Granbulu,그랑블루,布魯皇,Granbull,Granbull,Granbull,Granbull,Granbull,グランブル,布鲁皇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/210.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 211,
@@ -1472,6 +1892,8 @@ const allMons: Mon[] = [
       'ハリーセン,Harysen,침바루,千針魚,Qwilfish,Baldorfish,Qwilfish,Qwilfish,Qwilfish,ハリーセン,千针鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/211.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 212,
@@ -1479,6 +1901,8 @@ const allMons: Mon[] = [
       'ハッサム,Hassam,핫삼,巨鉗螳螂,Cizayox,Scherox,Scizor,Scizor,Scizor,ハッサム,巨钳螳螂',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/212.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 213,
@@ -1486,6 +1910,8 @@ const allMons: Mon[] = [
       'ツボツボ,Tsubotsubo,단단지,壺壺,Caratroc,Pottrott,Shuckle,Shuckle,Shuckle,ツボツボ,壶壶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/213.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 214,
@@ -1493,6 +1919,8 @@ const allMons: Mon[] = [
       'ヘラクロス,Heracros,헤라크로스,赫拉克羅斯,Scarhino,Skaraborn,Heracross,Heracross,Heracross,ヘラクロス,赫拉克罗斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/214.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 215,
@@ -1500,6 +1928,8 @@ const allMons: Mon[] = [
       'ニューラ,Nyula,포푸니,狃拉,Farfuret,Sniebel,Sneasel,Sneasel,Sneasel,ニューラ,狃拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/215.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 216,
@@ -1507,6 +1937,8 @@ const allMons: Mon[] = [
       'ヒメグマ,Himeguma,깜지곰,熊寶寶,Teddiursa,Teddiursa,Teddiursa,Teddiursa,Teddiursa,ヒメグマ,熊宝宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/216.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 217,
@@ -1514,6 +1946,8 @@ const allMons: Mon[] = [
       'リングマ,Ringuma,링곰,圈圈熊,Ursaring,Ursaring,Ursaring,Ursaring,Ursaring,リングマ,圈圈熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/217.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 218,
@@ -1521,6 +1955,8 @@ const allMons: Mon[] = [
       'マグマッグ,Magmag,마그마그,熔岩蟲,Limagma,Schneckmag,Slugma,Slugma,Slugma,マグマッグ,熔岩虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/218.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 219,
@@ -1528,6 +1964,8 @@ const allMons: Mon[] = [
       'マグカルゴ,Magcargot,마그카르고,熔岩蝸牛,Volcaropod,Magcargo,Magcargo,Magcargo,Magcargo,マグカルゴ,熔岩蜗牛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/219.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 220,
@@ -1535,6 +1973,8 @@ const allMons: Mon[] = [
       'ウリムー,Urimoo,꾸꾸리,小山豬,Marcacrin,Quiekel,Swinub,Swinub,Swinub,ウリムー,小山猪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/220.png',
+    shownCnt: 2,
+    gottenCnt: 2,
   },
   {
     id: 221,
@@ -1542,6 +1982,8 @@ const allMons: Mon[] = [
       'イノムー,Inomoo,메꾸리,長毛豬,Cochignon,Keifel,Piloswine,Piloswine,Piloswine,イノムー,长毛猪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/221.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 222,
@@ -1549,6 +1991,8 @@ const allMons: Mon[] = [
       'サニーゴ,Sunnygo,코산호,太陽珊瑚,Corayon,Corasonn,Corsola,Corsola,Corsola,サニーゴ,太阳珊瑚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/222.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 223,
@@ -1556,6 +2000,8 @@ const allMons: Mon[] = [
       'テッポウオ,Teppouo,총어,鐵炮魚,Rémoraid,Remoraid,Remoraid,Remoraid,Remoraid,テッポウオ,铁炮鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/223.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 224,
@@ -1563,6 +2009,8 @@ const allMons: Mon[] = [
       'オクタン,Okutank,대포무노,章魚桶,Octillery,Octillery,Octillery,Octillery,Octillery,オクタン,章鱼桶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/224.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 225,
@@ -1570,6 +2018,8 @@ const allMons: Mon[] = [
       'デリバード,Delibird,딜리버드,信使鳥,Cadoizo,Botogel,Delibird,Delibird,Delibird,デリバード,信使鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/225.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 226,
@@ -1577,6 +2027,8 @@ const allMons: Mon[] = [
       'マンタイン,Mantain,만타인,巨翅飛魚,Démanta,Mantax,Mantine,Mantine,Mantine,マンタイン,巨翅飞鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/226.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 227,
@@ -1584,6 +2036,8 @@ const allMons: Mon[] = [
       'エアームド,Airmd,무장조,盔甲鳥,Airmure,Panzaeron,Skarmory,Skarmory,Skarmory,エアームド,盔甲鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/227.png',
+    shownCnt: 2,
+    gottenCnt: 2,
   },
   {
     id: 228,
@@ -1591,6 +2045,8 @@ const allMons: Mon[] = [
       'デルビル,Delvil,델빌,戴魯比,Malosse,Hunduster,Houndour,Houndour,Houndour,デルビル,戴鲁比',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/228.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 229,
@@ -1598,6 +2054,8 @@ const allMons: Mon[] = [
       'ヘルガー,Hellgar,헬가,黑魯加,Démolosse,Hundemon,Houndoom,Houndoom,Houndoom,ヘルガー,黑鲁加',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/229.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 230,
@@ -1605,6 +2063,8 @@ const allMons: Mon[] = [
       'キングドラ,Kingdra,킹드라,刺龍王,Hyporoi,Seedraking,Kingdra,Kingdra,Kingdra,キングドラ,刺龙王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/230.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 231,
@@ -1612,6 +2072,8 @@ const allMons: Mon[] = [
       'ゴマゾウ,Gomazou,코코리,小小象,Phanpy,Phanpy,Phanpy,Phanpy,Phanpy,ゴマゾウ,小小象',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/231.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 232,
@@ -1619,6 +2081,8 @@ const allMons: Mon[] = [
       'ドンファン,Donfan,코리갑,頓甲,Donphan,Donphan,Donphan,Donphan,Donphan,ドンファン,顿甲',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/232.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 233,
@@ -1626,6 +2090,8 @@ const allMons: Mon[] = [
       'ポリゴン２,Porygon2,폴리곤2,多邊獸Ⅱ,Porygon2,Porygon2,Porygon2,Porygon2,Porygon2,ポリゴン２,多边兽２型',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/233.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 234,
@@ -1633,6 +2099,8 @@ const allMons: Mon[] = [
       'オドシシ,Odoshishi,노라키,驚角鹿,Cerfrousse,Damhirplex,Stantler,Stantler,Stantler,オドシシ,惊角鹿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/234.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 235,
@@ -1640,6 +2108,8 @@ const allMons: Mon[] = [
       'ドーブル,Doble,루브도,圖圖犬,Queulorior,Farbeagle,Smeargle,Smeargle,Smeargle,ドーブル,图图犬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/235.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 236,
@@ -1647,6 +2117,8 @@ const allMons: Mon[] = [
       'バルキー,Balkie,배루키,無畏小子,Debugant,Rabauz,Tyrogue,Tyrogue,Tyrogue,バルキー,无畏小子',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/236.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 237,
@@ -1654,6 +2126,8 @@ const allMons: Mon[] = [
       'カポエラー,Kapoerer,카포에라,戰舞郎,Kapoera,Kapoera,Hitmontop,Hitmontop,Hitmontop,カポエラー,战舞郎',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/237.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 238,
@@ -1661,6 +2135,8 @@ const allMons: Mon[] = [
       'ムチュール,Muchul,뽀뽀라,迷唇娃,Lippouti,Kussilla,Smoochum,Smoochum,Smoochum,ムチュール,迷唇娃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/238.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 239,
@@ -1668,6 +2144,8 @@ const allMons: Mon[] = [
       'エレキッド,Elekid,에레키드,電擊怪,Élekid,Elekid,Elekid,Elekid,Elekid,エレキッド,电击怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/239.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 240,
@@ -1675,6 +2153,8 @@ const allMons: Mon[] = [
       'ブビィ,Buby,마그비,鴨嘴寶寶,Magby,Magby,Magby,Magby,Magby,ブビィ,鸭嘴宝宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/240.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 241,
@@ -1682,6 +2162,8 @@ const allMons: Mon[] = [
       'ミルタンク,Miltank,밀탱크,大奶罐,Écrémeuh,Miltank,Miltank,Miltank,Miltank,ミルタンク,大奶罐',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/241.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 242,
@@ -1689,6 +2171,8 @@ const allMons: Mon[] = [
       'ハピナス,Happinas,해피너스,幸福蛋,Leuphorie,Heiteira,Blissey,Blissey,Blissey,ハピナス,幸福蛋',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/242.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 243,
@@ -1696,6 +2180,8 @@ const allMons: Mon[] = [
       'ライコウ,Raikou,라이코,雷公,Raikou,Raikou,Raikou,Raikou,Raikou,ライコウ,雷公',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/243.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 244,
@@ -1703,6 +2189,8 @@ const allMons: Mon[] = [
       'エンテイ,Entei,앤테이,炎帝,Entei,Entei,Entei,Entei,Entei,エンテイ,炎帝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/244.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 245,
@@ -1710,6 +2198,8 @@ const allMons: Mon[] = [
       'スイクン,Suikun,스이쿤,水君,Suicune,Suicune,Suicune,Suicune,Suicune,スイクン,水君',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/245.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 246,
@@ -1717,6 +2207,8 @@ const allMons: Mon[] = [
       'ヨーギラス,Yogiras,애버라스,幼基拉斯,Embrylex,Larvitar,Larvitar,Larvitar,Larvitar,ヨーギラス,幼基拉斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/246.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 247,
@@ -1724,6 +2216,8 @@ const allMons: Mon[] = [
       'サナギラス,Sanagiras,데기라스,沙基拉斯,Ymphect,Pupitar,Pupitar,Pupitar,Pupitar,サナギラス,沙基拉斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/247.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 248,
@@ -1731,6 +2225,8 @@ const allMons: Mon[] = [
       'バンギラス,Bangiras,마기라스,班基拉斯,Tyranocif,Despotar,Tyranitar,Tyranitar,Tyranitar,バンギラス,班基拉斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/248.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 249,
@@ -1738,6 +2234,8 @@ const allMons: Mon[] = [
       'ルギア,Lugia,루기아,洛奇亞,Lugia,Lugia,Lugia,Lugia,Lugia,ルギア,洛奇亚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 250,
@@ -1745,6 +2243,8 @@ const allMons: Mon[] = [
       'ホウオウ,Houou,칠색조,鳳王,Ho-Oh,Ho-Oh,Ho-Oh,Ho-Oh,Ho-Oh,ホウオウ,凤王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 251,
@@ -1752,6 +2252,8 @@ const allMons: Mon[] = [
       'セレビィ,Celebi,세레비,時拉比,Celebi,Celebi,Celebi,Celebi,Celebi,セレビィ,时拉比',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/251.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 252,
@@ -1759,6 +2261,8 @@ const allMons: Mon[] = [
       'キモリ,Kimori,나무지기,木守宮,Arcko,Geckarbor,Treecko,Treecko,Treecko,キモリ,木守宫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/252.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 253,
@@ -1766,6 +2270,8 @@ const allMons: Mon[] = [
       'ジュプトル,Juptile,나무돌이,森林蜥蜴,Massko,Reptain,Grovyle,Grovyle,Grovyle,ジュプトル,森林蜥蜴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/253.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 254,
@@ -1773,6 +2279,8 @@ const allMons: Mon[] = [
       'ジュカイン,Jukain,나무킹,蜥蜴王,Jungko,Gewaldro,Sceptile,Sceptile,Sceptile,ジュカイン,蜥蜴王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/254.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 255,
@@ -1780,6 +2288,8 @@ const allMons: Mon[] = [
       'アチャモ,Achamo,아차모,火稚雞,Poussifeu,Flemmli,Torchic,Torchic,Torchic,アチャモ,火稚鸡',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/255.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 256,
@@ -1787,6 +2297,8 @@ const allMons: Mon[] = [
       'ワカシャモ,Wakasyamo,영치코,力壯雞,Galifeu,Jungglut,Combusken,Combusken,Combusken,ワカシャモ,力壮鸡',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/256.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 257,
@@ -1794,6 +2306,8 @@ const allMons: Mon[] = [
       'バシャーモ,Bursyamo,번치코,火焰雞,Braségali,Lohgock,Blaziken,Blaziken,Blaziken,バシャーモ,火焰鸡',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/257.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 258,
@@ -1801,6 +2315,8 @@ const allMons: Mon[] = [
       'ミズゴロウ,Mizugorou,물짱이,水躍魚,Gobou,Hydropi,Mudkip,Mudkip,Mudkip,ミズゴロウ,水跃鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/258.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 259,
@@ -1808,6 +2324,8 @@ const allMons: Mon[] = [
       'ヌマクロー,Numacraw,늪짱이,沼躍魚,Flobio,Moorabbel,Marshtomp,Marshtomp,Marshtomp,ヌマクロー,沼跃鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/259.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 260,
@@ -1815,6 +2333,8 @@ const allMons: Mon[] = [
       'ラグラージ,Laglarge,대짱이,巨沼怪,Laggron,Sumpex,Swampert,Swampert,Swampert,ラグラージ,巨沼怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/260.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 261,
@@ -1822,6 +2342,8 @@ const allMons: Mon[] = [
       'ポチエナ,Pochiena,포챠나,土狼犬,Medhyèna,Fiffyen,Poochyena,Poochyena,Poochyena,ポチエナ,土狼犬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/261.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 262,
@@ -1829,6 +2351,8 @@ const allMons: Mon[] = [
       'グラエナ,Guraena,그라에나,大狼犬,Grahyèna,Magnayen,Mightyena,Mightyena,Mightyena,グラエナ,大狼犬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/262.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 263,
@@ -1836,6 +2360,8 @@ const allMons: Mon[] = [
       'ジグザグマ,Ziguzaguma,지그제구리,蛇紋熊,Zigzaton,Zigzachs,Zigzagoon,Zigzagoon,Zigzagoon,ジグザグマ,蛇纹熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/263.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 264,
@@ -1843,6 +2369,8 @@ const allMons: Mon[] = [
       'マッスグマ,Massuguma,직구리,直衝熊,Linéon,Geradaks,Linoone,Linoone,Linoone,マッスグマ,直冲熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/264.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 265,
@@ -1850,6 +2378,8 @@ const allMons: Mon[] = [
       'ケムッソ,Kemusso,개무소,刺尾蟲,Chenipotte,Waumpel,Wurmple,Wurmple,Wurmple,ケムッソ,刺尾虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/265.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 266,
@@ -1857,6 +2387,8 @@ const allMons: Mon[] = [
       'カラサリス,Karasalis,실쿤,甲殼繭,Armulys,Schaloko,Silcoon,Silcoon,Silcoon,カラサリス,甲壳茧',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/266.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 267,
@@ -1864,6 +2396,8 @@ const allMons: Mon[] = [
       'アゲハント,Agehunt,뷰티플라이,狩獵鳳蝶,Charmillon,Papinella,Beautifly,Beautifly,Beautifly,アゲハント,狩猎凤蝶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/267.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 268,
@@ -1871,6 +2405,8 @@ const allMons: Mon[] = [
       'マユルド,Mayuld,카스쿤,盾甲繭,Blindalys,Panekon,Cascoon,Cascoon,Cascoon,マユルド,盾甲茧',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/268.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 269,
@@ -1878,6 +2414,8 @@ const allMons: Mon[] = [
       'ドクケイル,Dokucale,독케일,毒粉蛾,Papinox,Pudox,Dustox,Dustox,Dustox,ドクケイル,毒粉蛾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/269.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 270,
@@ -1885,6 +2423,8 @@ const allMons: Mon[] = [
       'ハスボー,Hassboh,연꽃몬,蓮葉童子,Nénupiot,Loturzel,Lotad,Lotad,Lotad,ハスボー,莲叶童子',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/270.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 271,
@@ -1892,6 +2432,8 @@ const allMons: Mon[] = [
       'ハスブレロ,Hasubrero,로토스,蓮帽小童,Lombre,Lombrero,Lombre,Lombre,Lombre,ハスブレロ,莲帽小童',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/271.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 272,
@@ -1899,6 +2441,8 @@ const allMons: Mon[] = [
       'ルンパッパ,Runpappa,로파파,樂天河童,Ludicolo,Kappalores,Ludicolo,Ludicolo,Ludicolo,ルンパッパ,乐天河童',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/272.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 273,
@@ -1906,6 +2450,8 @@ const allMons: Mon[] = [
       'タネボー,Taneboh,도토링,橡實果,Grainipiot,Samurzel,Seedot,Seedot,Seedot,タネボー,橡实果',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/273.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 274,
@@ -1913,6 +2459,8 @@ const allMons: Mon[] = [
       'コノハナ,Konohana,잎새코,長鼻葉,Pifeuil,Blanas,Nuzleaf,Nuzleaf,Nuzleaf,コノハナ,长鼻叶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/274.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 275,
@@ -1920,6 +2468,8 @@ const allMons: Mon[] = [
       'ダーテング,Dirteng,다탱구,狡猾天狗,Tengalice,Tengulist,Shiftry,Shiftry,Shiftry,ダーテング,狡猾天狗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/275.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 276,
@@ -1927,6 +2477,8 @@ const allMons: Mon[] = [
       'スバメ,Subame,테일로,傲骨燕,Nirondelle,Schwalbini,Taillow,Taillow,Taillow,スバメ,傲骨燕',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/276.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 277,
@@ -1934,6 +2486,8 @@ const allMons: Mon[] = [
       'オオスバメ,Ohsubame,스왈로,大王燕,Hélédelle,Schwalboss,Swellow,Swellow,Swellow,オオスバメ,大王燕',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/277.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 278,
@@ -1941,6 +2495,8 @@ const allMons: Mon[] = [
       'キャモメ,Camome,갈모매,長翅鷗,Goélise,Wingull,Wingull,Wingull,Wingull,キャモメ,长翅鸥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/278.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 279,
@@ -1948,6 +2504,8 @@ const allMons: Mon[] = [
       'ペリッパー,Pelipper,패리퍼,大嘴鷗,Bekipan,Pelipper,Pelipper,Pelipper,Pelipper,ペリッパー,大嘴鸥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/279.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 280,
@@ -1955,6 +2513,8 @@ const allMons: Mon[] = [
       'ラルトス,Ralts,랄토스,拉魯拉絲,Tarsal,Trasla,Ralts,Ralts,Ralts,ラルトス,拉鲁拉丝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/280.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 281,
@@ -1962,6 +2522,8 @@ const allMons: Mon[] = [
       'キルリア,Kirlia,킬리아,奇魯莉安,Kirlia,Kirlia,Kirlia,Kirlia,Kirlia,キルリア,奇鲁莉安',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/281.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 282,
@@ -1969,6 +2531,8 @@ const allMons: Mon[] = [
       'サーナイト,Sirnight,가디안,沙奈朵,Gardevoir,Guardevoir,Gardevoir,Gardevoir,Gardevoir,サーナイト,沙奈朵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 283,
@@ -1976,6 +2540,8 @@ const allMons: Mon[] = [
       'アメタマ,Ametama,비구술,溜溜糖球,Arakdo,Gehweiher,Surskit,Surskit,Surskit,アメタマ,溜溜糖球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/283.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 284,
@@ -1983,6 +2549,8 @@ const allMons: Mon[] = [
       'アメモース,Amemoth,비나방,雨翅蛾,Maskadra,Maskeregen,Masquerain,Masquerain,Masquerain,アメモース,雨翅蛾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/284.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 285,
@@ -1990,6 +2558,8 @@ const allMons: Mon[] = [
       'キノココ,Kinococo,버섯꼬,蘑蘑菇,Balignon,Knilz,Shroomish,Shroomish,Shroomish,キノココ,蘑蘑菇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/285.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 286,
@@ -1997,6 +2567,8 @@ const allMons: Mon[] = [
       'キノガッサ,Kinogassa,버섯모,斗笠菇,Chapignon,Kapilz,Breloom,Breloom,Breloom,キノガッサ,斗笠菇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/286.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 287,
@@ -2004,6 +2576,8 @@ const allMons: Mon[] = [
       'ナマケロ,Namakero,게을로,懶人獺,Parecool,Bummelz,Slakoth,Slakoth,Slakoth,ナマケロ,懒人獭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/287.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 288,
@@ -2011,6 +2585,8 @@ const allMons: Mon[] = [
       'ヤルキモノ,Yarukimono,발바로,過動猿,Vigoroth,Muntier,Vigoroth,Vigoroth,Vigoroth,ヤルキモノ,过动猿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/288.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 289,
@@ -2018,6 +2594,8 @@ const allMons: Mon[] = [
       'ケッキング,Kekking,게을킹,請假王,Monaflèmit,Letarking,Slaking,Slaking,Slaking,ケッキング,请假王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/289.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 290,
@@ -2025,6 +2603,8 @@ const allMons: Mon[] = [
       'ツチニン,Tutinin,토중몬,土居忍士,Ningale,Nincada,Nincada,Nincada,Nincada,ツチニン,土居忍士',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/290.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 291,
@@ -2032,6 +2612,8 @@ const allMons: Mon[] = [
       'テッカニン,Tekkanin,아이스크,鐵面忍者,Ninjask,Ninjask,Ninjask,Ninjask,Ninjask,テッカニン,铁面忍者',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/291.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 292,
@@ -2039,6 +2621,8 @@ const allMons: Mon[] = [
       'ヌケニン,Nukenin,껍질몬,脫殼忍者,Munja,Ninjatom,Shedinja,Shedinja,Shedinja,ヌケニン,脱壳忍者',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/292.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 293,
@@ -2046,6 +2630,8 @@ const allMons: Mon[] = [
       'ゴニョニョ,Gonyonyo,소곤룡,咕妞妞,Chuchmur,Flurmel,Whismur,Whismur,Whismur,ゴニョニョ,咕妞妞',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/293.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 294,
@@ -2053,6 +2639,8 @@ const allMons: Mon[] = [
       'ドゴーム,Dogohmb,노공룡,吼爆彈,Ramboum,Krakeelo,Loudred,Loudred,Loudred,ドゴーム,吼爆弹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/294.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 295,
@@ -2060,6 +2648,8 @@ const allMons: Mon[] = [
       'バクオング,Bakuong,폭음룡,爆音怪,Brouhabam,Krawumms,Exploud,Exploud,Exploud,バクオング,爆音怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/295.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 296,
@@ -2067,6 +2657,8 @@ const allMons: Mon[] = [
       'マクノシタ,Makunoshita,마크탕,幕下力士,Makuhita,Makuhita,Makuhita,Makuhita,Makuhita,マクノシタ,幕下力士',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/296.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 297,
@@ -2074,6 +2666,8 @@ const allMons: Mon[] = [
       'ハリテヤマ,Hariteyama,하리뭉,鐵掌力士,Hariyama,Hariyama,Hariyama,Hariyama,Hariyama,ハリテヤマ,铁掌力士',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/297.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 298,
@@ -2081,6 +2675,8 @@ const allMons: Mon[] = [
       'ルリリ,Ruriri,루리리,露力麗,Azurill,Azurill,Azurill,Azurill,Azurill,ルリリ,露力丽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/298.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 299,
@@ -2088,6 +2684,8 @@ const allMons: Mon[] = [
       'ノズパス,Nosepass,코코파스,朝北鼻,Tarinor,Nasgnet,Nosepass,Nosepass,Nosepass,ノズパス,朝北鼻',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/299.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 300,
@@ -2095,6 +2693,8 @@ const allMons: Mon[] = [
       'エネコ,Eneco,에나비,向尾喵,Skitty,Eneco,Skitty,Skitty,Skitty,エネコ,向尾喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/300.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 301,
@@ -2102,6 +2702,8 @@ const allMons: Mon[] = [
       'エネコロロ,Enekororo,델케티,優雅貓,Delcatty,Enekoro,Delcatty,Delcatty,Delcatty,エネコロロ,优雅猫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/301.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 302,
@@ -2109,6 +2711,8 @@ const allMons: Mon[] = [
       'ヤミラミ,Yamirami,깜까미,勾魂眼,Ténéfix,Zobiris,Sableye,Sableye,Sableye,ヤミラミ,勾魂眼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/302.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 303,
@@ -2116,6 +2720,8 @@ const allMons: Mon[] = [
       'クチート,Kucheat,입치트,大嘴娃,Mysdibule,Flunkifer,Mawile,Mawile,Mawile,クチート,大嘴娃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/303.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 304,
@@ -2123,6 +2729,8 @@ const allMons: Mon[] = [
       'ココドラ,Cokodora,가보리,可可多拉,Galekid,Stollunior,Aron,Aron,Aron,ココドラ,可可多拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/304.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 305,
@@ -2130,6 +2738,8 @@ const allMons: Mon[] = [
       'コドラ,Kodora,갱도라,可多拉,Galegon,Stollrak,Lairon,Lairon,Lairon,コドラ,可多拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/305.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 306,
@@ -2137,6 +2747,8 @@ const allMons: Mon[] = [
       'ボスゴドラ,Bossgodora,보스로라,波士可多拉,Galeking,Stolloss,Aggron,Aggron,Aggron,ボスゴドラ,波士可多拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/306.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 307,
@@ -2144,6 +2756,8 @@ const allMons: Mon[] = [
       'アサナン,Asanan,요가랑,瑪沙那,Méditikka,Meditie,Meditite,Meditite,Meditite,アサナン,玛沙那',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/307.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 308,
@@ -2151,6 +2765,8 @@ const allMons: Mon[] = [
       'チャーレム,Charem,요가램,恰雷姆,Charmina,Meditalis,Medicham,Medicham,Medicham,チャーレム,恰雷姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/308.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 309,
@@ -2158,6 +2774,8 @@ const allMons: Mon[] = [
       'ラクライ,Rakurai,썬더라이,落雷獸,Dynavolt,Frizelbliz,Electrike,Electrike,Electrike,ラクライ,落雷兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/309.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 310,
@@ -2165,6 +2783,8 @@ const allMons: Mon[] = [
       'ライボルト,Livolt,썬더볼트,雷電獸,Élecsprint,Voltenso,Manectric,Manectric,Manectric,ライボルト,雷电兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/310.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 311,
@@ -2172,6 +2792,8 @@ const allMons: Mon[] = [
       'プラスル,Prasle,플러시,正電拍拍,Posipi,Plusle,Plusle,Plusle,Plusle,プラスル,正电拍拍',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/311.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 312,
@@ -2179,6 +2801,8 @@ const allMons: Mon[] = [
       'マイナン,Minun,마이농,負電拍拍,Négapi,Minun,Minun,Minun,Minun,マイナン,負电拍拍',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/312.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 313,
@@ -2186,6 +2810,8 @@ const allMons: Mon[] = [
       'バルビート,Barubeat,볼비트,電螢蟲,Muciole,Volbeat,Volbeat,Volbeat,Volbeat,バルビート,电萤虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/313.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 314,
@@ -2193,6 +2819,8 @@ const allMons: Mon[] = [
       'イルミーゼ,Illumise,네오비트,甜甜螢,Lumivole,Illumise,Illumise,Illumise,Illumise,イルミーゼ,甜甜萤',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/314.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 315,
@@ -2200,6 +2828,8 @@ const allMons: Mon[] = [
       'ロゼリア,Roselia,로젤리아,毒薔薇,Rosélia,Roselia,Roselia,Roselia,Roselia,ロゼリア,毒蔷薇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/315.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 316,
@@ -2207,6 +2837,8 @@ const allMons: Mon[] = [
       'ゴクリン,Gokulin,꼴깍몬,溶食獸,Gloupti,Schluppuck,Gulpin,Gulpin,Gulpin,ゴクリン,溶食兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/316.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 317,
@@ -2214,6 +2846,8 @@ const allMons: Mon[] = [
       'マルノーム,Marunoom,꿀꺽몬,吞食獸,Avaltout,Schlukwech,Swalot,Swalot,Swalot,マルノーム,吞食兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/317.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 318,
@@ -2221,6 +2855,8 @@ const allMons: Mon[] = [
       'キバニア,Kibanha,샤프니아,利牙魚,Carvanha,Kanivanha,Carvanha,Carvanha,Carvanha,キバニア,利牙鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/318.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 319,
@@ -2228,6 +2864,8 @@ const allMons: Mon[] = [
       'サメハダー,Samehader,샤크니아,巨牙鯊,Sharpedo,Tohaido,Sharpedo,Sharpedo,Sharpedo,サメハダー,巨牙鲨',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/319.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 320,
@@ -2235,6 +2873,8 @@ const allMons: Mon[] = [
       'ホエルコ,Whalko,고래왕자,吼吼鯨,Wailmer,Wailmer,Wailmer,Wailmer,Wailmer,ホエルコ,吼吼鲸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/320.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 321,
@@ -2242,6 +2882,8 @@ const allMons: Mon[] = [
       'ホエルオー,Whaloh,고래왕,吼鯨王,Wailord,Wailord,Wailord,Wailord,Wailord,ホエルオー,吼鲸王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/321.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 322,
@@ -2249,6 +2891,8 @@ const allMons: Mon[] = [
       'ドンメル,Donmel,둔타,呆火駝,Chamallot,Camaub,Numel,Numel,Numel,ドンメル,呆火驼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/322.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 323,
@@ -2256,6 +2900,8 @@ const allMons: Mon[] = [
       'バクーダ,Bakuuda,폭타,噴火駝,Camérupt,Camerupt,Camerupt,Camerupt,Camerupt,バクーダ,喷火驼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/323.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 324,
@@ -2263,6 +2909,8 @@ const allMons: Mon[] = [
       'コータス,Cotoise,코터스,煤炭龜,Chartor,Qurtel,Torkoal,Torkoal,Torkoal,コータス,煤炭龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/324.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 325,
@@ -2270,6 +2918,8 @@ const allMons: Mon[] = [
       'バネブー,Baneboo,피그점프,跳跳豬,Spoink,Spoink,Spoink,Spoink,Spoink,バネブー,跳跳猪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/325.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 326,
@@ -2277,6 +2927,8 @@ const allMons: Mon[] = [
       'ブーピッグ,Boopig,피그킹,噗噗豬,Groret,Groink,Grumpig,Grumpig,Grumpig,ブーピッグ,噗噗猪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/326.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 327,
@@ -2284,6 +2936,8 @@ const allMons: Mon[] = [
       'パッチール,Patcheel,얼루기,晃晃斑,Spinda,Pandir,Spinda,Spinda,Spinda,パッチール,晃晃斑',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/327.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 328,
@@ -2291,6 +2945,8 @@ const allMons: Mon[] = [
       'ナックラー,Nuckrar,톱치,大顎蟻,Kraknoix,Knacklion,Trapinch,Trapinch,Trapinch,ナックラー,大颚蚁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/328.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 329,
@@ -2298,6 +2954,8 @@ const allMons: Mon[] = [
       'ビブラーバ,Vibrava,비브라바,超音波幼蟲,Vibraninf,Vibrava,Vibrava,Vibrava,Vibrava,ビブラーバ,超音波幼虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/329.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 330,
@@ -2305,6 +2963,8 @@ const allMons: Mon[] = [
       'フライゴン,Frygon,플라이곤,沙漠蜻蜓,Libégon,Libelldra,Flygon,Flygon,Flygon,フライゴン,沙漠蜻蜓',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/330.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 331,
@@ -2312,6 +2972,8 @@ const allMons: Mon[] = [
       'サボネア,Sabonea,선인왕,刺球仙人掌,Cacnea,Tuska,Cacnea,Cacnea,Cacnea,サボネア,刺球仙人掌',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/331.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 332,
@@ -2319,6 +2981,8 @@ const allMons: Mon[] = [
       'ノクタス,Noctus,밤선인,夢歌仙人掌,Cacturne,Noktuska,Cacturne,Cacturne,Cacturne,ノクタス,梦歌仙人掌',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/332.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 333,
@@ -2326,6 +2990,8 @@ const allMons: Mon[] = [
       'チルット,Tyltto,파비코,青綿鳥,Tylton,Wablu,Swablu,Swablu,Swablu,チルット,青绵鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/333.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 334,
@@ -2333,6 +2999,8 @@ const allMons: Mon[] = [
       'チルタリス,Tyltalis,파비코리,七夕青鳥,Altaria,Altaria,Altaria,Altaria,Altaria,チルタリス,七夕青鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/334.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 335,
@@ -2340,6 +3008,8 @@ const allMons: Mon[] = [
       'ザングース,Zangoose,쟝고,貓鼬斬,Mangriff,Sengo,Zangoose,Zangoose,Zangoose,ザングース,猫鼬斩',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/335.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 336,
@@ -2347,6 +3017,8 @@ const allMons: Mon[] = [
       'ハブネーク,Habunake,세비퍼,飯匙蛇,Séviper,Vipitis,Seviper,Seviper,Seviper,ハブネーク,饭匙蛇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/336.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 337,
@@ -2354,6 +3026,8 @@ const allMons: Mon[] = [
       'ルナトーン,Lunatone,루나톤,月石,Séléroc,Lunastein,Lunatone,Lunatone,Lunatone,ルナトーン,月石',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/337.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 338,
@@ -2361,6 +3035,8 @@ const allMons: Mon[] = [
       'ソルロック,Solrock,솔록,太陽岩,Solaroc,Sonnfel,Solrock,Solrock,Solrock,ソルロック,太阳岩',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/338.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 339,
@@ -2368,6 +3044,8 @@ const allMons: Mon[] = [
       'ドジョッチ,Dojoach,미꾸리,泥泥鰍,Barloche,Schmerbe,Barboach,Barboach,Barboach,ドジョッチ,泥泥鳅',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/339.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 340,
@@ -2375,6 +3053,8 @@ const allMons: Mon[] = [
       'ナマズン,Namazun,메깅,鯰魚王,Barbicha,Welsar,Whiscash,Whiscash,Whiscash,ナマズン,鲶鱼王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/340.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 341,
@@ -2382,6 +3062,8 @@ const allMons: Mon[] = [
       'ヘイガニ,Heigani,가재군,龍蝦小兵,Écrapince,Krebscorps,Corphish,Corphish,Corphish,ヘイガニ,龙虾小兵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/341.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 342,
@@ -2389,6 +3071,8 @@ const allMons: Mon[] = [
       'シザリガー,Shizariger,가재장군,鐵螯龍蝦,Colhomard,Krebutack,Crawdaunt,Crawdaunt,Crawdaunt,シザリガー,铁螯龙虾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/342.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 343,
@@ -2396,6 +3080,8 @@ const allMons: Mon[] = [
       'ヤジロン,Yajilon,오뚝군,天秤偶,Balbuto,Puppance,Baltoy,Baltoy,Baltoy,ヤジロン,天秤偶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/343.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 344,
@@ -2403,6 +3089,8 @@ const allMons: Mon[] = [
       'ネンドール,Nendoll,점토도리,念力土偶,Kaorine,Lepumentas,Claydol,Claydol,Claydol,ネンドール,念力土偶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/344.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 345,
@@ -2410,6 +3098,8 @@ const allMons: Mon[] = [
       'リリーラ,Lilyla,릴링,觸手百合,Lilia,Liliep,Lileep,Lileep,Lileep,リリーラ,触手百合',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/345.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 346,
@@ -2417,6 +3107,8 @@ const allMons: Mon[] = [
       'ユレイドル,Yuradle,릴리요,搖籃百合,Vacilys,Wielie,Cradily,Cradily,Cradily,ユレイドル,摇篮百合',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/346.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 347,
@@ -2424,6 +3116,8 @@ const allMons: Mon[] = [
       'アノプス,Anopth,아노딥스,太古羽蟲,Anorith,Anorith,Anorith,Anorith,Anorith,アノプス,太古羽虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/347.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 348,
@@ -2431,6 +3125,8 @@ const allMons: Mon[] = [
       'アーマルド,Armaldo,아말도,太古盔甲,Armaldo,Armaldo,Armaldo,Armaldo,Armaldo,アーマルド,太古盔甲',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/348.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 349,
@@ -2438,6 +3134,8 @@ const allMons: Mon[] = [
       'ヒンバス,Hinbass,빈티나,醜醜魚,Barpau,Barschwa,Feebas,Feebas,Feebas,ヒンバス,丑丑鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/349.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 350,
@@ -2445,6 +3143,8 @@ const allMons: Mon[] = [
       'ミロカロス,Milokaross,밀로틱,美納斯,Milobellus,Milotic,Milotic,Milotic,Milotic,ミロカロス,美纳斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 351,
@@ -2452,6 +3152,8 @@ const allMons: Mon[] = [
       'ポワルン,Powalen,캐스퐁,飄浮泡泡,Morphéo,Formeo,Castform,Castform,Castform,ポワルン,飘浮泡泡',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/351.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 352,
@@ -2459,6 +3161,8 @@ const allMons: Mon[] = [
       'カクレオン,Kakureon,켈리몬,變隱龍,Kecleon,Kecleon,Kecleon,Kecleon,Kecleon,カクレオン,变隐龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/352.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 353,
@@ -2466,6 +3170,8 @@ const allMons: Mon[] = [
       'カゲボウズ,Kagebouzu,어둠대신,怨影娃娃,Polichombr,Shuppet,Shuppet,Shuppet,Shuppet,カゲボウズ,怨影娃娃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/353.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 354,
@@ -2473,6 +3179,8 @@ const allMons: Mon[] = [
       'ジュペッタ,Juppeta,다크펫,詛咒娃娃,Branette,Banette,Banette,Banette,Banette,ジュペッタ,诅咒娃娃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/354.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 355,
@@ -2480,6 +3188,8 @@ const allMons: Mon[] = [
       'ヨマワル,Yomawaru,해골몽,夜巡靈,Skelénox,Zwirrlicht,Duskull,Duskull,Duskull,ヨマワル,夜巡灵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/355.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 356,
@@ -2487,6 +3197,8 @@ const allMons: Mon[] = [
       'サマヨール,Samayouru,미라몽,彷徨夜靈,Téraclope,Zwirrklop,Dusclops,Dusclops,Dusclops,サマヨール,彷徨夜灵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/356.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 357,
@@ -2494,6 +3206,8 @@ const allMons: Mon[] = [
       'トロピウス,Tropius,트로피우스,熱帶龍,Tropius,Tropius,Tropius,Tropius,Tropius,トロピウス,热带龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/357.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 358,
@@ -2501,6 +3215,8 @@ const allMons: Mon[] = [
       'チリーン,Chirean,치렁,風鈴鈴,Éoko,Palimpalim,Chimecho,Chimecho,Chimecho,チリーン,风铃铃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/358.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 359,
@@ -2508,6 +3224,8 @@ const allMons: Mon[] = [
       'アブソル,Absol,앱솔,阿勃梭魯,Absol,Absol,Absol,Absol,Absol,アブソル,阿勃梭鲁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/359.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 360,
@@ -2515,6 +3233,8 @@ const allMons: Mon[] = [
       'ソーナノ,Sohnano,마자,小果然,Okéoké,Isso,Wynaut,Wynaut,Wynaut,ソーナノ,小果然',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/360.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 361,
@@ -2522,6 +3242,8 @@ const allMons: Mon[] = [
       'ユキワラシ,Yukiwarashi,눈꼬마,雪童子,Stalgamin,Schneppke,Snorunt,Snorunt,Snorunt,ユキワラシ,雪童子',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/361.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 362,
@@ -2529,6 +3251,8 @@ const allMons: Mon[] = [
       'オニゴーリ,Onigohri,얼음귀신,冰鬼護,Oniglali,Firnontor,Glalie,Glalie,Glalie,オニゴーリ,冰鬼护',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/362.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 363,
@@ -2536,6 +3260,8 @@ const allMons: Mon[] = [
       'タマザラシ,Tamazarashi,대굴레오,海豹球,Obalie,Seemops,Spheal,Spheal,Spheal,タマザラシ,海豹球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/363.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 364,
@@ -2543,6 +3269,8 @@ const allMons: Mon[] = [
       'トドグラー,Todoggler,씨레오,海魔獅,Phogleur,Seejong,Sealeo,Sealeo,Sealeo,トドグラー,海魔狮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/364.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 365,
@@ -2550,6 +3278,8 @@ const allMons: Mon[] = [
       'トドゼルガ,Todoseruga,씨카이저,帝牙海獅,Kaimorse,Walraisa,Walrein,Walrein,Walrein,トドゼルガ,帝牙海狮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/365.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 366,
@@ -2557,6 +3287,8 @@ const allMons: Mon[] = [
       'パールル,Pearlulu,진주몽,珍珠貝,Coquiperl,Perlu,Clamperl,Clamperl,Clamperl,パールル,珍珠贝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/366.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 367,
@@ -2564,6 +3296,8 @@ const allMons: Mon[] = [
       'ハンテール,Huntail,헌테일,獵斑魚,Serpang,Aalabyss,Huntail,Huntail,Huntail,ハンテール,猎斑鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/367.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 368,
@@ -2571,6 +3305,8 @@ const allMons: Mon[] = [
       'サクラビス,Sakurabyss,분홍장이,櫻花魚,Rosabyss,Saganabyss,Gorebyss,Gorebyss,Gorebyss,サクラビス,樱花鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/368.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 369,
@@ -2578,6 +3314,8 @@ const allMons: Mon[] = [
       'ジーランス,Glanth,시라칸,古空棘魚,Relicanth,Relicanth,Relicanth,Relicanth,Relicanth,ジーランス,古空棘鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/369.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 370,
@@ -2585,6 +3323,8 @@ const allMons: Mon[] = [
       'ラブカス,Lovecus,사랑동이,愛心魚,Lovdisc,Liebiskus,Luvdisc,Luvdisc,Luvdisc,ラブカス,爱心鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/370.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 371,
@@ -2592,6 +3332,8 @@ const allMons: Mon[] = [
       'タツベイ,Tatsubay,아공이,寶貝龍,Draby,Kindwurm,Bagon,Bagon,Bagon,タツベイ,宝贝龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/371.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 372,
@@ -2599,6 +3341,8 @@ const allMons: Mon[] = [
       'コモルー,Komoruu,쉘곤,甲殼龍,Drackhaus,Draschel,Shelgon,Shelgon,Shelgon,コモルー,甲壳龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/372.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 373,
@@ -2606,6 +3350,8 @@ const allMons: Mon[] = [
       'ボーマンダ,Bohmander,보만다,暴飛龍,Drattak,Brutalanda,Salamence,Salamence,Salamence,ボーマンダ,暴飞龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/373.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 374,
@@ -2613,6 +3359,8 @@ const allMons: Mon[] = [
       'ダンバル,Dumbber,메탕,鐵啞鈴,Terhal,Tanhel,Beldum,Beldum,Beldum,ダンバル,铁哑铃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/374.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 375,
@@ -2620,6 +3368,8 @@ const allMons: Mon[] = [
       'メタング,Metang,메탕구,金屬怪,Métang,Metang,Metang,Metang,Metang,メタング,金属怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/375.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 376,
@@ -2627,6 +3377,8 @@ const allMons: Mon[] = [
       'メタグロス,Metagross,메타그로스,巨金怪,Métalosse,Metagross,Metagross,Metagross,Metagross,メタグロス,巨金怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/376.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 377,
@@ -2634,6 +3386,8 @@ const allMons: Mon[] = [
       'レジロック,Regirock,레지락,雷吉洛克,Regirock,Regirock,Regirock,Regirock,Regirock,レジロック,雷吉洛克',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/377.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 378,
@@ -2641,6 +3395,8 @@ const allMons: Mon[] = [
       'レジアイス,Regice,레지아이스,雷吉艾斯,Regice,Regice,Regice,Regice,Regice,レジアイス,雷吉艾斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/378.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 379,
@@ -2648,6 +3404,8 @@ const allMons: Mon[] = [
       'レジスチル,Registeel,레지스틸,雷吉斯奇魯,Registeel,Registeel,Registeel,Registeel,Registeel,レジスチル,雷吉斯奇鲁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/379.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 380,
@@ -2655,6 +3413,8 @@ const allMons: Mon[] = [
       'ラティアス,Latias,라티아스,拉帝亞斯,Latias,Latias,Latias,Latias,Latias,ラティアス,拉帝亚斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/380.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 381,
@@ -2662,6 +3422,8 @@ const allMons: Mon[] = [
       'ラティオス,Latios,라티오스,拉帝歐斯,Latios,Latios,Latios,Latios,Latios,ラティオス,拉帝欧斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/381.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 382,
@@ -2669,6 +3431,8 @@ const allMons: Mon[] = [
       'カイオーガ,Kyogre,가이오가,蓋歐卡,Kyogre,Kyogre,Kyogre,Kyogre,Kyogre,カイオーガ,盖欧卡',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/382.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 383,
@@ -2676,6 +3440,8 @@ const allMons: Mon[] = [
       'グラードン,Groudon,그란돈,固拉多,Groudon,Groudon,Groudon,Groudon,Groudon,グラードン,固拉多',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/383.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 384,
@@ -2683,6 +3449,8 @@ const allMons: Mon[] = [
       'レックウザ,Rayquaza,레쿠쟈,烈空坐,Rayquaza,Rayquaza,Rayquaza,Rayquaza,Rayquaza,レックウザ,烈空坐',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 385,
@@ -2690,6 +3458,8 @@ const allMons: Mon[] = [
       'ジラーチ,Jirachi,지라치,基拉祈,Jirachi,Jirachi,Jirachi,Jirachi,Jirachi,ジラーチ,基拉祈',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/385.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 386,
@@ -2697,6 +3467,8 @@ const allMons: Mon[] = [
       'デオキシス,Deoxys,테오키스,代歐奇希斯,Deoxys,Deoxys,Deoxys,Deoxys,Deoxys,デオキシス,代欧奇希斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/386.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 387,
@@ -2704,6 +3476,8 @@ const allMons: Mon[] = [
       'ナエトル,Naetle,모부기,草苗龜,Tortipouss,Chelast,Turtwig,Turtwig,Turtwig,ナエトル,草苗龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/387.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 388,
@@ -2711,6 +3485,8 @@ const allMons: Mon[] = [
       'ハヤシガメ,Hayashigame,수풀부기,樹林龜,Boskara,Chelcarain,Grotle,Grotle,Grotle,ハヤシガメ,树林龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/388.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 389,
@@ -2718,6 +3494,8 @@ const allMons: Mon[] = [
       'ドダイトス,Dodaitose,토대부기,土台龜,Torterra,Chelterrar,Torterra,Torterra,Torterra,ドダイトス,土台龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/389.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 390,
@@ -2725,6 +3503,8 @@ const allMons: Mon[] = [
       'ヒコザル,Hikozaru,불꽃숭이,小火焰猴,Ouisticram,Panflam,Chimchar,Chimchar,Chimchar,ヒコザル,小火焰猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/390.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 391,
@@ -2732,6 +3512,8 @@ const allMons: Mon[] = [
       'モウカザル,Mōkazaru,파이숭이,猛火猴,Chimpenfeu,Panpyro,Monferno,Monferno,Monferno,モウカザル,猛火猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/391.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 392,
@@ -2739,6 +3521,8 @@ const allMons: Mon[] = [
       'ゴウカザル,Gōkazaru,초염몽,烈焰猴,Simiabraz,Panferno,Infernape,Infernape,Infernape,ゴウカザル,烈焰猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/392.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 393,
@@ -2746,6 +3530,8 @@ const allMons: Mon[] = [
       'ポッチャマ,Pochama,팽도리,波加曼,Tiplouf,Plinfa,Piplup,Piplup,Piplup,ポッチャマ,波加曼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/393.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 394,
@@ -2753,6 +3539,8 @@ const allMons: Mon[] = [
       'ポッタイシ,Pottaishi,팽태자,波皇子,Prinplouf,Pliprin,Prinplup,Prinplup,Prinplup,ポッタイシ,波皇子',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/394.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 395,
@@ -2760,6 +3548,8 @@ const allMons: Mon[] = [
       'エンペルト,Emperte,엠페르트,帝王拿波,Pingoléon,Impoleon,Empoleon,Empoleon,Empoleon,エンペルト,帝王拿波',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/395.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 396,
@@ -2767,6 +3557,8 @@ const allMons: Mon[] = [
       'ムックル,Mukkuru,찌르꼬,姆克兒,Étourmi,Staralili,Starly,Starly,Starly,ムックル,姆克儿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/396.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 397,
@@ -2774,6 +3566,8 @@ const allMons: Mon[] = [
       'ムクバード,Mukubird,찌르버드,姆克鳥,Étourvol,Staravia,Staravia,Staravia,Staravia,ムクバード,姆克鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/397.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 398,
@@ -2781,6 +3575,8 @@ const allMons: Mon[] = [
       'ムクホーク,Mukuhawk,찌르호크,姆克鷹,Étouraptor,Staraptor,Staraptor,Staraptor,Staraptor,ムクホーク,姆克鹰',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/398.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 399,
@@ -2788,6 +3584,8 @@ const allMons: Mon[] = [
       'ビッパ,Bipper,비버니,大牙狸,Keunotor,Bidiza,Bidoof,Bidoof,Bidoof,ビッパ,大牙狸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/399.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 400,
@@ -2795,6 +3593,8 @@ const allMons: Mon[] = [
       'ビーダル,Beadull,비버통,大尾狸,Castorno,Bidifas,Bibarel,Bibarel,Bibarel,ビーダル,大尾狸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/400.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 401,
@@ -2802,6 +3602,8 @@ const allMons: Mon[] = [
       'コロボーシ,Korobohshi,귀뚤뚜기,圓法師,Crikzik,Zirpurze,Kricketot,Kricketot,Kricketot,コロボーシ,圆法师',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/401.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 402,
@@ -2809,6 +3611,8 @@ const allMons: Mon[] = [
       'コロトック,Korotok,귀뚤톡크,音箱蟀,Mélokrik,Zirpeise,Kricketune,Kricketune,Kricketune,コロトック,音箱蟀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/402.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 403,
@@ -2816,6 +3620,8 @@ const allMons: Mon[] = [
       'コリンク,Kolink,꼬링크,小貓怪,Lixy,Sheinux,Shinx,Shinx,Shinx,コリンク,小猫怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/403.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 404,
@@ -2823,6 +3629,8 @@ const allMons: Mon[] = [
       'ルクシオ,Luxio,럭시오,勒克貓,Luxio,Luxio,Luxio,Luxio,Luxio,ルクシオ,勒克猫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/404.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 405,
@@ -2830,6 +3638,8 @@ const allMons: Mon[] = [
       'レントラー,Rentorar,렌트라,倫琴貓,Luxray,Luxtra,Luxray,Luxray,Luxray,レントラー,伦琴猫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/405.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 406,
@@ -2837,6 +3647,8 @@ const allMons: Mon[] = [
       'スボミー,Subomie,꼬몽울,含羞苞,Rozbouton,Knospi,Budew,Budew,Budew,スボミー,含羞苞',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/406.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 407,
@@ -2844,6 +3656,8 @@ const allMons: Mon[] = [
       'ロズレイド,Roserade,로즈레이드,羅絲雷朵,Roserade,Roserade,Roserade,Roserade,Roserade,ロズレイド,罗丝雷朵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/407.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 408,
@@ -2851,6 +3665,8 @@ const allMons: Mon[] = [
       'ズガイドス,Zugaidos,두개도스,頭蓋龍,Kranidos,Koknodon,Cranidos,Cranidos,Cranidos,ズガイドス,头盖龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/408.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 409,
@@ -2858,6 +3674,8 @@ const allMons: Mon[] = [
       'ラムパルド,Rampard,램펄드,戰槌龍,Charkos,Rameidon,Rampardos,Rampardos,Rampardos,ラムパルド,战槌龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/409.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 410,
@@ -2865,6 +3683,8 @@ const allMons: Mon[] = [
       'タテトプス,Tatetops,방패톱스,盾甲龍,Dinoclier,Schilterus,Shieldon,Shieldon,Shieldon,タテトプス,盾甲龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/410.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 411,
@@ -2872,6 +3692,8 @@ const allMons: Mon[] = [
       'トリデプス,Trideps,바리톱스,護城龍,Bastiodon,Bollterus,Bastiodon,Bastiodon,Bastiodon,トリデプス,护城龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/411.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 412,
@@ -2879,6 +3701,8 @@ const allMons: Mon[] = [
       'ミノムッチ,Minomucchi,도롱충이,結草兒,Cheniti,Burmy,Burmy,Burmy,Burmy,ミノムッチ,结草儿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/412.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 413,
@@ -2886,6 +3710,8 @@ const allMons: Mon[] = [
       'ミノマダム,Minomadam,도롱마담,結草貴婦,Cheniselle,Burmadame,Wormadam,Wormadam,Wormadam,ミノマダム,结草贵妇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/413.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 414,
@@ -2893,6 +3719,8 @@ const allMons: Mon[] = [
       'ガーメイル,Garmeil,나메일,紳士蛾,Papilord,Moterpel,Mothim,Mothim,Mothim,ガーメイル,绅士蛾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/414.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 415,
@@ -2900,6 +3728,8 @@ const allMons: Mon[] = [
       'ミツハニー,Mitsuhoney,세꿀버리,三蜜蜂,Apitrini,Wadribie,Combee,Combee,Combee,ミツハニー,三蜜蜂',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/415.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 416,
@@ -2907,6 +3737,8 @@ const allMons: Mon[] = [
       'ビークイン,Beequeen,비퀸,蜂女王,Apireine,Honweisel,Vespiquen,Vespiquen,Vespiquen,ビークイン,蜂女王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/416.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 417,
@@ -2914,6 +3746,8 @@ const allMons: Mon[] = [
       'パチリス,Pachirisu,파치리스,帕奇利茲,Pachirisu,Pachirisu,Pachirisu,Pachirisu,Pachirisu,パチリス,帕奇利兹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/417.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 418,
@@ -2921,6 +3755,8 @@ const allMons: Mon[] = [
       'ブイゼル,Buoysel,브이젤,泳圈鼬,Mustébouée,Bamelin,Buizel,Buizel,Buizel,ブイゼル,泳圈鼬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/418.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 419,
@@ -2928,6 +3764,8 @@ const allMons: Mon[] = [
       'フローゼル,Flowsel,플로젤,浮潛鼬,Mustéflott,Bojelin,Floatzel,Floatzel,Floatzel,フローゼル,浮潜鼬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/419.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 420,
@@ -2935,6 +3773,8 @@ const allMons: Mon[] = [
       'チェリンボ,Cherinbo,체리버,櫻花寶,Ceribou,Kikugi,Cherubi,Cherubi,Cherubi,チェリンボ,樱花宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/420.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 421,
@@ -2942,6 +3782,8 @@ const allMons: Mon[] = [
       'チェリム,Cherrim,체리꼬,櫻花兒,Ceriflor,Kinoso,Cherrim,Cherrim,Cherrim,チェリム,樱花儿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/421.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 422,
@@ -2949,6 +3791,8 @@ const allMons: Mon[] = [
       'カラナクシ,Karanakushi,깝질무,無殼海兔,Sancoki,Schalellos,Shellos,Shellos,Shellos,カラナクシ,无壳海兔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/422.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 423,
@@ -2956,6 +3800,8 @@ const allMons: Mon[] = [
       'トリトドン,Toritodon,트리토돈,海兔獸,Tritosor,Gastrodon,Gastrodon,Gastrodon,Gastrodon,トリトドン,海兔兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/423.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 424,
@@ -2963,6 +3809,8 @@ const allMons: Mon[] = [
       'エテボース,Eteboth,겟핸보숭,雙尾怪手,Capidextre,Ambidiffel,Ambipom,Ambipom,Ambipom,エテボース,双尾怪手',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/424.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 425,
@@ -2970,6 +3818,8 @@ const allMons: Mon[] = [
       'フワンテ,Fuwante,흔들풍손,飄飄球,Baudrive,Driftlon,Drifloon,Drifloon,Drifloon,フワンテ,飘飘球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/425.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 426,
@@ -2977,6 +3827,8 @@ const allMons: Mon[] = [
       'フワライド,Fuwaride,둥실라이드,隨風球,Grodrive,Drifzepeli,Drifblim,Drifblim,Drifblim,フワライド,随风球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/426.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 427,
@@ -2984,6 +3836,8 @@ const allMons: Mon[] = [
       'ミミロル,Mimirol,이어롤,捲捲耳,Laporeille,Haspiror,Buneary,Buneary,Buneary,ミミロル,卷卷耳',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/427.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 428,
@@ -2991,6 +3845,8 @@ const allMons: Mon[] = [
       'ミミロップ,Mimilop,이어롭,長耳兔,Lockpin,Schlapor,Lopunny,Lopunny,Lopunny,ミミロップ,长耳兔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/428.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 429,
@@ -2998,6 +3854,8 @@ const allMons: Mon[] = [
       'ムウマージ,Mumage,무우마직,夢妖魔,Magirêve,Traunmagil,Mismagius,Mismagius,Mismagius,ムウマージ,梦妖魔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/429.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 430,
@@ -3005,6 +3863,8 @@ const allMons: Mon[] = [
       'ドンカラス,Donkarasu,돈크로우,烏鴉頭頭,Corboss,Kramshef,Honchkrow,Honchkrow,Honchkrow,ドンカラス,乌鸦头头',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/430.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 431,
@@ -3012,6 +3872,8 @@ const allMons: Mon[] = [
       'ニャルマー,Nyarmar,나옹마,魅力喵,Chaglam,Charmian,Glameow,Glameow,Glameow,ニャルマー,魅力喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/431.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 432,
@@ -3019,6 +3881,8 @@ const allMons: Mon[] = [
       'Purugly,ブニャット,Bunyat,몬냥이,東施喵,Chaffreux,Shnurgarst,Purugly,Purugly,ブニャット,东施喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/432.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 433,
@@ -3026,6 +3890,8 @@ const allMons: Mon[] = [
       'リーシャン,Lisyan,랑딸랑,鈴鐺響,Korillon,Klingplim,Chingling,Chingling,Chingling,リーシャン,铃铛响',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/433.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 434,
@@ -3033,6 +3899,8 @@ const allMons: Mon[] = [
       'スカンプー,Skunpoo,스컹뿡,臭鼬噗,Moufouette,Skunkapuh,Stunky,Stunky,Stunky,スカンプー,臭鼬噗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/434.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 435,
@@ -3040,6 +3908,8 @@ const allMons: Mon[] = [
       'スカタンク,Skutank,스컹탱크,坦克臭鼬,Moufflair,Skuntank,Skuntank,Skuntank,Skuntank,スカタンク,坦克臭鼬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/435.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 436,
@@ -3047,6 +3917,8 @@ const allMons: Mon[] = [
       'ドーミラー,Domirror,동미러,銅鏡怪,Archéomire,Bronzel,Bronzor,Bronzor,Bronzor,ドーミラー,铜镜怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/436.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 437,
@@ -3054,6 +3926,8 @@ const allMons: Mon[] = [
       'ドータクン,Dotakun,동탁군,青銅鐘,Archéodong,Bronzong,Bronzong,Bronzong,Bronzong,ドータクン,青铜钟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/437.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 438,
@@ -3061,6 +3935,8 @@ const allMons: Mon[] = [
       'ウソハチ,Usohachi,꼬지지,盆才怪,Manzaï,Mobai,Bonsly,Bonsly,Bonsly,ウソハチ,盆才怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/438.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 439,
@@ -3068,6 +3944,8 @@ const allMons: Mon[] = [
       'マネネ,Manene,흉내내,魔尼尼,Mime Jr.,Pantimimi,Mime Jr.,Mime Jr.,Mime Jr.,マネネ,魔尼尼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/439.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 440,
@@ -3075,6 +3953,8 @@ const allMons: Mon[] = [
       'ピンプク,Pinpuku,핑복,小福蛋,Ptiravi,Wonneira,Happiny,Happiny,Happiny,ピンプク,小福蛋',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/440.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 441,
@@ -3082,6 +3962,8 @@ const allMons: Mon[] = [
       'ペラップ,Perap,페라페,聒噪鳥,Pijako,Plaudagei,Chatot,Chatot,Chatot,ペラップ,聒噪鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/441.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 442,
@@ -3089,6 +3971,8 @@ const allMons: Mon[] = [
       'ミカルゲ,Mikaruge,화강돌,花岩怪,Spiritomb,Kryppuk,Spiritomb,Spiritomb,Spiritomb,ミカルゲ,花岩怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/442.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 443,
@@ -3096,6 +3980,8 @@ const allMons: Mon[] = [
       'フカマル,Fukamaru,딥상어동,圓陸鯊,Griknot,Kaumalat,Gible,Gible,Gible,フカマル,圆陆鲨',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/443.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 444,
@@ -3103,6 +3989,8 @@ const allMons: Mon[] = [
       'ガバイト,Gabite,한바이트,尖牙陸鯊,Carmache,Knarksel,Gabite,Gabite,Gabite,ガバイト,尖牙陆鲨',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/444.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 445,
@@ -3110,6 +3998,8 @@ const allMons: Mon[] = [
       'ガブリアス,Gablias,한카리아스,烈咬陸鯊,Carchacrok,Knakrack,Garchomp,Garchomp,Garchomp,ガブリアス,烈咬陆鲨',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 446,
@@ -3117,6 +4007,8 @@ const allMons: Mon[] = [
       'ゴンベ,Gonbe,먹고자,小卡比獸,Goinfrex,Mampfaxo,Munchlax,Munchlax,Munchlax,ゴンベ,小卡比兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/446.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 447,
@@ -3124,6 +4016,8 @@ const allMons: Mon[] = [
       'リオル,Riolu,리오르,利歐路,Riolu,Riolu,Riolu,Riolu,Riolu,リオル,利欧路',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/447.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 448,
@@ -3131,6 +4025,8 @@ const allMons: Mon[] = [
       'ルカリオ,Lucario,루카리오,路卡利歐,Lucario,Lucario,Lucario,Lucario,Lucario,ルカリオ,路卡利欧',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 449,
@@ -3138,6 +4034,8 @@ const allMons: Mon[] = [
       'ヒポポタス,Hipopotas,히포포타스,沙河馬,Hippopotas,Hippopotas,Hippopotas,Hippopotas,Hippopotas,ヒポポタス,沙河马',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/449.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 450,
@@ -3145,6 +4043,8 @@ const allMons: Mon[] = [
       'カバルドン,Kabarudon,하마돈,河馬獸,Hippodocus,Hippoterus,Hippowdon,Hippowdon,Hippowdon,カバルドン,河马兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/450.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 451,
@@ -3152,6 +4052,8 @@ const allMons: Mon[] = [
       'スコルピ,Scorpi,스콜피,鉗尾蠍,Rapion,Pionskora,Skorupi,Skorupi,Skorupi,スコルピ,钳尾蝎',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/451.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 452,
@@ -3159,6 +4061,8 @@ const allMons: Mon[] = [
       'ドラピオン,Dorapion,드래피온,龍王蠍,Drascore,Piondragi,Drapion,Drapion,Drapion,ドラピオン,龙王蝎',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/452.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 453,
@@ -3166,6 +4070,8 @@ const allMons: Mon[] = [
       'グレッグル,Gureggru,삐딱구리,不良蛙,Cradopaud,Glibunkel,Croagunk,Croagunk,Croagunk,グレッグル,不良蛙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/453.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 454,
@@ -3173,6 +4079,8 @@ const allMons: Mon[] = [
       'ドクロッグ,Dokurog,독개굴,毒骷蛙,Coatox,Toxiquak,Toxicroak,Toxicroak,Toxicroak,ドクロッグ,毒骷蛙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/454.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 455,
@@ -3180,6 +4088,8 @@ const allMons: Mon[] = [
       'マスキッパ,Muskippa,무스틈니,尖牙籠,Vortente,Venuflibis,Carnivine,Carnivine,Carnivine,マスキッパ,尖牙笼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/455.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 456,
@@ -3187,6 +4097,8 @@ const allMons: Mon[] = [
       'ケイコウオ,Keikouo,형광어,螢光魚,Écayon,Finneon,Finneon,Finneon,Finneon,ケイコウオ,荧光鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/456.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 457,
@@ -3194,6 +4106,8 @@ const allMons: Mon[] = [
       'ネオラント,Neolant,네오라이트,霓虹魚,Luminéon,Lumineon,Lumineon,Lumineon,Lumineon,ネオラント,霓虹鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/457.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 458,
@@ -3201,6 +4115,8 @@ const allMons: Mon[] = [
       'タマンタ,Tamanta,타만타,小球飛魚,Babimanta,Mantirps,Mantyke,Mantyke,Mantyke,タマンタ,小球飞鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/458.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 459,
@@ -3208,6 +4124,8 @@ const allMons: Mon[] = [
       'ユキカブリ,Yukikaburi,눈쓰개,雪笠怪,Blizzi,Shnebedeck,Snover,Snover,Snover,ユキカブリ,雪笠怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/459.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 460,
@@ -3215,6 +4133,8 @@ const allMons: Mon[] = [
       'ユキノオー,Yukinooh,눈설왕,暴雪王,Blizzaroi,Rexblisar,Abomasnow,Abomasnow,Abomasnow,ユキノオー,暴雪王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/460.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 461,
@@ -3222,6 +4142,8 @@ const allMons: Mon[] = [
       'マニューラ,Manyula,포푸니라,瑪狃拉,Dimoret,Snibunna,Weavile,Weavile,Weavile,マニューラ,玛狃拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/461.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 462,
@@ -3229,6 +4151,8 @@ const allMons: Mon[] = [
       'ジバコイル,Jibacoil,자포코일,自爆磁怪,Magnézone,Magnezone,Magnezone,Magnezone,Magnezone,ジバコイル,自爆磁怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/462.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 463,
@@ -3236,6 +4160,8 @@ const allMons: Mon[] = [
       'ベロベルト,Beroberto,내룸벨트,大舌舔,Coudlangue,Schlurplek,Lickilicky,Lickilicky,Lickilicky,ベロベルト,大舌舔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/463.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 464,
@@ -3243,6 +4169,8 @@ const allMons: Mon[] = [
       'ドサイドン,Dosydon,거대코뿌리,超甲狂犀,Rhinastoc,Rihornior,Rhyperior,Rhyperior,Rhyperior,ドサイドン,超甲狂犀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/464.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 465,
@@ -3250,6 +4178,8 @@ const allMons: Mon[] = [
       'モジャンボ,Mojumbo,덩쿠림보,巨蔓藤,Bouldeneu,Tangoloss,Tangrowth,Tangrowth,Tangrowth,モジャンボ,巨蔓藤',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/465.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 466,
@@ -3257,6 +4187,8 @@ const allMons: Mon[] = [
       'エレキブル,Elekible,에레키블,電擊魔獸,Élekable,Elevoltek,Electivire,Electivire,Electivire,エレキブル,电击魔兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/466.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 467,
@@ -3264,6 +4196,8 @@ const allMons: Mon[] = [
       'ブーバーン,Booburn,마그마번,鴨嘴炎獸,Maganon,Magbrant,Magmortar,Magmortar,Magmortar,ブーバーン,鸭嘴炎兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/467.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 468,
@@ -3271,6 +4205,8 @@ const allMons: Mon[] = [
       'トゲキッス,Togekiss,토게키스,波克基斯,Togekiss,Togekiss,Togekiss,Togekiss,Togekiss,トゲキッス,波克基斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/468.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 469,
@@ -3278,6 +4214,8 @@ const allMons: Mon[] = [
       'メガヤンマ,Megayanma,메가자리,遠古巨蜓,Yanmega,Yanmega,Yanmega,Yanmega,Yanmega,メガヤンマ,远古巨蜓',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/469.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 470,
@@ -3285,6 +4223,8 @@ const allMons: Mon[] = [
       'リーフィア,Leafia,리피아,葉伊布,Phyllali,Folipurba,Leafeon,Leafeon,Leafeon,リーフィア,叶伊布',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/470.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 471,
@@ -3292,6 +4232,8 @@ const allMons: Mon[] = [
       'グレイシア,Glacia,글레이시아,冰伊布,Givrali,Glaziola,Glaceon,Glaceon,Glaceon,グレイシア,冰伊布',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/471.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 472,
@@ -3299,6 +4241,8 @@ const allMons: Mon[] = [
       'グライオン,Glion,글라이온,天蠍王,Scorvol,Skorgro,Gliscor,Gliscor,Gliscor,グライオン,天蝎王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/472.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 473,
@@ -3306,6 +4250,8 @@ const allMons: Mon[] = [
       'マンムー,Mammoo,맘모꾸리,象牙豬,Mammochon,Mamutel,Mamoswine,Mamoswine,Mamoswine,マンムー,象牙猪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/473.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 474,
@@ -3313,6 +4259,8 @@ const allMons: Mon[] = [
       'ポリゴンＺ,PorygonZ,폴리곤Z,多邊獸Ｚ,Porygon-Z,Porygon-Z,Porygon-Z,Porygon-Z,Porygon-Z,ポリゴンＺ,多边兽乙型',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/474.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 475,
@@ -3320,6 +4268,8 @@ const allMons: Mon[] = [
       'エルレイド,Erlade,엘레이드,艾路雷朵,Gallame,Galagladi,Gallade,Gallade,Gallade,エルレイド,艾路雷朵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/475.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 476,
@@ -3327,6 +4277,8 @@ const allMons: Mon[] = [
       'ダイノーズ,Dainose,대코파스,大朝北鼻,Tarinorme,Voluminas,Probopass,Probopass,Probopass,ダイノーズ,大朝北鼻',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/476.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 477,
@@ -3334,6 +4286,8 @@ const allMons: Mon[] = [
       'ヨノワール,Yonoir,야느와르몽,黑夜魔靈,Noctunoir,Zwirrfinst,Dusknoir,Dusknoir,Dusknoir,ヨノワール,黑夜魔灵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/477.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 478,
@@ -3341,6 +4295,8 @@ const allMons: Mon[] = [
       'ユキメノコ,Yukimenoko,눈여아,雪妖女,Momartik,Frosdedje,Froslass,Froslass,Froslass,ユキメノコ,雪妖女',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/478.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 479,
@@ -3348,6 +4304,8 @@ const allMons: Mon[] = [
       'ロトム,Rotom,로토무,洛托姆,Motisma,Rotom,Rotom,Rotom,Rotom,ロトム,洛托姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 480,
@@ -3355,6 +4313,8 @@ const allMons: Mon[] = [
       'ユクシー,Yuxie,유크시,由克希,Créhelf,Selfe,Uxie,Uxie,Uxie,ユクシー,由克希',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/480.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 481,
@@ -3362,6 +4322,8 @@ const allMons: Mon[] = [
       'エムリット,Emrit,엠라이트,艾姆利多,Créfollet,Vesprit,Mesprit,Mesprit,Mesprit,エムリット,艾姆利多',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/481.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 482,
@@ -3369,6 +4331,8 @@ const allMons: Mon[] = [
       'アグノム,Agnome,아그놈,亞克諾姆,Créfadet,Tobutz,Azelf,Azelf,Azelf,アグノム,亚克诺姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/482.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 483,
@@ -3376,6 +4340,8 @@ const allMons: Mon[] = [
       'ディアルガ,Dialga,디아루가,帝牙盧卡,Dialga,Dialga,Dialga,Dialga,Dialga,ディアルガ,帝牙卢卡',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/483.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 484,
@@ -3383,6 +4349,8 @@ const allMons: Mon[] = [
       'パルキア,Palkia,펄기아,帕路奇亞,Palkia,Palkia,Palkia,Palkia,Palkia,パルキア,帕路奇亚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/484.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 485,
@@ -3390,6 +4358,8 @@ const allMons: Mon[] = [
       'ヒードラン,Heatran,히드런,席多藍恩,Heatran,Heatran,Heatran,Heatran,Heatran,ヒードラン,席多蓝恩',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/485.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 486,
@@ -3397,6 +4367,8 @@ const allMons: Mon[] = [
       'レジギガス,Regigigas,레지기가스,雷吉奇卡斯,Regigigas,Regigigas,Regigigas,Regigigas,Regigigas,レジギガス,雷吉奇卡斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/486.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 487,
@@ -3404,6 +4376,8 @@ const allMons: Mon[] = [
       'ギラティナ,Giratina,기라티나,騎拉帝納,Giratina,Giratina,Giratina,Giratina,Giratina,ギラティナ,骑拉帝纳',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 488,
@@ -3411,6 +4385,8 @@ const allMons: Mon[] = [
       'クレセリア,Crecelia,크레세리아,克雷色利亞,Cresselia,Cresselia,Cresselia,Cresselia,Cresselia,クレセリア,克雷色利亚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/488.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 489,
@@ -3418,6 +4394,8 @@ const allMons: Mon[] = [
       'フィオネ,Phione,피오네,霏歐納,Phione,Phione,Phione,Phione,Phione,フィオネ,霏欧纳',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/489.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 490,
@@ -3425,6 +4403,8 @@ const allMons: Mon[] = [
       'マナフィ,Manaphy,마나피,瑪納霏,Manaphy,Manaphy,Manaphy,Manaphy,Manaphy,マナフィ,玛纳霏',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/490.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 491,
@@ -3432,6 +4412,8 @@ const allMons: Mon[] = [
       'ダークライ,Darkrai,다크라이,達克萊伊,Darkrai,Darkrai,Darkrai,Darkrai,Darkrai,ダークライ,达克莱伊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/491.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 492,
@@ -3439,6 +4421,8 @@ const allMons: Mon[] = [
       'シェイミ,Shaymin,쉐이미,謝米,Shaymin,Shaymin,Shaymin,Shaymin,Shaymin,シェイミ,谢米',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/492.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 493,
@@ -3446,6 +4430,8 @@ const allMons: Mon[] = [
       'アルセウス,Arceus,아르세우스,阿爾宙斯,Arceus,Arceus,Arceus,Arceus,Arceus,アルセウス,阿尔宙斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 494,
@@ -3453,6 +4439,8 @@ const allMons: Mon[] = [
       'ビクティニ,Victini,비크티니,比克提尼,Victini,Victini,Victini,Victini,Victini,ビクティニ,比克提尼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/494.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 495,
@@ -3460,6 +4448,8 @@ const allMons: Mon[] = [
       'ツタージャ,Tsutarja,주리비얀,藤藤蛇,Vipélierre,Serpifeu,Snivy,Snivy,Snivy,ツタージャ,藤藤蛇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/495.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 496,
@@ -3467,6 +4457,8 @@ const allMons: Mon[] = [
       'ジャノビー,Janovy,샤비,青藤蛇,Lianaja,Efoserp,Servine,Servine,Servine,ジャノビー,青藤蛇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/496.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 497,
@@ -3474,6 +4466,8 @@ const allMons: Mon[] = [
       'ジャローダ,Jalorda,샤로다,君主蛇,Majaspic,Serpiroyal,Serperior,Serperior,Serperior,ジャローダ,君主蛇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/497.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 498,
@@ -3481,6 +4475,8 @@ const allMons: Mon[] = [
       'ポカブ,Pokabu,뚜꾸리,暖暖豬,Gruikui,Floink,Tepig,Tepig,Tepig,ポカブ,暖暖猪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/498.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 499,
@@ -3488,6 +4484,8 @@ const allMons: Mon[] = [
       'チャオブー,Chaoboo,차오꿀,炒炒豬,Grotichon,Ferkokel,Pignite,Pignite,Pignite,チャオブー,炒炒猪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/499.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 500,
@@ -3495,6 +4493,8 @@ const allMons: Mon[] = [
       'エンブオー,Enbuoh,염무왕,炎武王,Roitiflam,Flambirex,Emboar,Emboar,Emboar,エンブオー,炎武王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/500.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 501,
@@ -3502,6 +4502,8 @@ const allMons: Mon[] = [
       'ミジュマル,Mijumaru,수댕이,水水獺,Moustillon,Ottaro,Oshawott,Oshawott,Oshawott,ミジュマル,水水獭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/501.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 502,
@@ -3509,6 +4511,8 @@ const allMons: Mon[] = [
       'フタチマル,Futachimaru,쌍검자비,雙刃丸,Mateloutre,Zwottronin,Dewott,Dewott,Dewott,フタチマル,双刃丸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/502.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 503,
@@ -3516,6 +4520,8 @@ const allMons: Mon[] = [
       'ダイケンキ,Daikenki,대검귀,大劍鬼,Clamiral,Admurai,Samurott,Samurott,Samurott,ダイケンキ,大剑鬼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/503.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 504,
@@ -3523,6 +4529,8 @@ const allMons: Mon[] = [
       'ミネズミ,Minezumi,보르쥐,探探鼠,Ratentif,Nagelotz,Patrat,Patrat,Patrat,ミネズミ,探探鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/504.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 505,
@@ -3530,6 +4538,8 @@ const allMons: Mon[] = [
       'Watchog,ミルホッグ,Miruhog,보르그,步哨鼠,Miradar,Kukmarda,Watchog,Watchog,ミルホッグ,步哨鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/505.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 506,
@@ -3537,6 +4547,8 @@ const allMons: Mon[] = [
       'ヨーテリー,Yorterrie,요테리,小約克,Ponchiot,Yorkleff,Lillipup,Lillipup,Lillipup,ヨーテリー,小约克',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/506.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 507,
@@ -3544,6 +4556,8 @@ const allMons: Mon[] = [
       'ハーデリア,Herderrie,하데리어,哈約克,Ponchien,Terribark,Herdier,Herdier,Herdier,ハーデリア,哈约克',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/507.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 508,
@@ -3551,6 +4565,8 @@ const allMons: Mon[] = [
       'ムーランド,Mooland,바랜드,長毛狗,Mastouffe,Bissbark,Stoutland,Stoutland,Stoutland,ムーランド,长毛狗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/508.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 509,
@@ -3558,6 +4574,8 @@ const allMons: Mon[] = [
       'チョロネコ,Choroneko,쌔비냥,扒手貓,Chacripan,Felilou,Purrloin,Purrloin,Purrloin,チョロネコ,扒手猫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/509.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 510,
@@ -3565,6 +4583,8 @@ const allMons: Mon[] = [
       'レパルダス,Lepardas,레파르다스,酷豹,Léopardus,Kleoparda,Liepard,Liepard,Liepard,レパルダス,酷豹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/510.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 511,
@@ -3572,6 +4592,8 @@ const allMons: Mon[] = [
       'ヤナップ,Yanappu,야나프,花椰猴,Feuillajou,Vegimak,Pansage,Pansage,Pansage,ヤナップ,花椰猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/511.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 512,
@@ -3579,6 +4601,8 @@ const allMons: Mon[] = [
       'ヤナッキー,Yanakkie,야나키,花椰猿,Feuiloutan,Vegichita,Simisage,Simisage,Simisage,ヤナッキー,花椰猿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/512.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 513,
@@ -3586,6 +4610,8 @@ const allMons: Mon[] = [
       'バオップ,Baoppu,바오프,爆香猴,Flamajou,Grillmak,Pansear,Pansear,Pansear,バオップ,爆香猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/513.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 514,
@@ -3593,6 +4619,8 @@ const allMons: Mon[] = [
       'バオッキー,Baokkie,바오키,爆香猿,Flamoutan,Grillchita,Simisear,Simisear,Simisear,バオッキー,爆香猿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/514.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 515,
@@ -3600,6 +4628,8 @@ const allMons: Mon[] = [
       'ヒヤップ,Hiyappu,앗차프,冷水猴,Flotajou,Sodamak,Panpour,Panpour,Panpour,ヒヤップ,冷水猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/515.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 516,
@@ -3607,6 +4637,8 @@ const allMons: Mon[] = [
       'ヒヤッキー,Hiyakkie,앗차키,冷水猿,Flotoutan,Sodachita,Simipour,Simipour,Simipour,ヒヤッキー,冷水猿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/516.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 517,
@@ -3614,6 +4646,8 @@ const allMons: Mon[] = [
       'ムンナ,Munna,몽나,食夢夢,Munna,Somniam,Munna,Munna,Munna,ムンナ,食梦梦',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/517.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 518,
@@ -3621,6 +4655,8 @@ const allMons: Mon[] = [
       'ムシャーナ,Musharna,몽얌나,夢夢蝕,Mushana,Somnivora,Musharna,Musharna,Musharna,ムシャーナ,梦梦蚀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/518.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 519,
@@ -3628,6 +4664,8 @@ const allMons: Mon[] = [
       'マメパト,Mamepato,콩둘기,豆豆鴿,Poichigeon,Dusselgurr,Pidove,Pidove,Pidove,マメパト,豆豆鸽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/519.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 520,
@@ -3635,6 +4673,8 @@ const allMons: Mon[] = [
       'ハトーボー,Hatoboh,유토브,咕咕鴿,Colombeau,Navitaub,Tranquill,Tranquill,Tranquill,ハトーボー,咕咕鸽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/520.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 521,
@@ -3642,6 +4682,8 @@ const allMons: Mon[] = [
       'ケンホロウ,Kenhallow,켄호로우,高傲雉雞,Déflaisan,Fasasnob,Unfezant,Unfezant,Unfezant,ケンホロウ,高傲雉鸡',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/521.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 522,
@@ -3649,6 +4691,8 @@ const allMons: Mon[] = [
       'シママ,Shimama,줄뮤마,斑斑馬,Zébibron,Elezeba,Blitzle,Blitzle,Blitzle,シママ,斑斑马',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/522.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 523,
@@ -3656,6 +4700,8 @@ const allMons: Mon[] = [
       'ゼブライカ,Zebraika,제브라이카,雷電斑馬,Zéblitz,Zebritz,Zebstrika,Zebstrika,Zebstrika,ゼブライカ,雷电斑马',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/523.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 524,
@@ -3663,6 +4709,8 @@ const allMons: Mon[] = [
       'ダンゴロ,Dangoro,단굴,石丸子,Nodulithe,Kiesling,Roggenrola,Roggenrola,Roggenrola,ダンゴロ,石丸子',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/524.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 525,
@@ -3670,6 +4718,8 @@ const allMons: Mon[] = [
       'ガントル,Gantle,암트르,地幔岩,Géolithe,Sedimantur,Boldore,Boldore,Boldore,ガントル,地幔岩',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/525.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 526,
@@ -3677,6 +4727,8 @@ const allMons: Mon[] = [
       'ギガイアス,Gigaiath,기가이어스,龐岩怪,Gigalithe,Brockoloss,Gigalith,Gigalith,Gigalith,ギガイアス,庞岩怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/526.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 527,
@@ -3684,6 +4736,8 @@ const allMons: Mon[] = [
       'コロモリ,Koromori,또르박쥐,滾滾蝙蝠,Chovsourir,Fleknoil,Woobat,Woobat,Woobat,コロモリ,滚滚蝙蝠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/527.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 528,
@@ -3691,6 +4745,8 @@ const allMons: Mon[] = [
       'ココロモリ,Kokoromori,맘박쥐,心蝙蝠,Rhinolove,Fletiamo,Swoobat,Swoobat,Swoobat,ココロモリ,心蝙蝠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/528.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 529,
@@ -3698,6 +4754,8 @@ const allMons: Mon[] = [
       'モグリュー,Mogurew,두더류,螺釘地鼠,Rototaupe,Rotomurf,Drilbur,Drilbur,Drilbur,モグリュー,螺钉地鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/529.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 530,
@@ -3705,6 +4763,8 @@ const allMons: Mon[] = [
       'ドリュウズ,Doryuzu,몰드류,龍頭地鼠,Minotaupe,Stalobor,Excadrill,Excadrill,Excadrill,ドリュウズ,龙头地鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/530.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 531,
@@ -3712,6 +4772,8 @@ const allMons: Mon[] = [
       'タブンネ,Tabunne,다부니,差不多娃娃,Nanméouïe,Ohrdoch,Audino,Audino,Audino,タブンネ,差不多娃娃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/531.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 532,
@@ -3719,6 +4781,8 @@ const allMons: Mon[] = [
       'ドッコラー,Dokkorer,으랏차,搬運小匠,Charpenti,Praktibalk,Timburr,Timburr,Timburr,ドッコラー,搬运小匠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/532.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 533,
@@ -3726,6 +4790,8 @@ const allMons: Mon[] = [
       'ドテッコツ,Dotekkotsu,토쇠골,鐵骨土人,Ouvrifier,Strepoli,Gurdurr,Gurdurr,Gurdurr,ドテッコツ,铁骨土人',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/533.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 534,
@@ -3733,6 +4799,8 @@ const allMons: Mon[] = [
       'ローブシン,Roubushin,노보청,修建老匠,Bétochef,Meistagrif,Conkeldurr,Conkeldurr,Conkeldurr,ローブシン,修建老匠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/534.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 535,
@@ -3740,6 +4808,8 @@ const allMons: Mon[] = [
       'オタマロ,Otamaro,동챙이,圓蝌蚪,Tritonde,Schallquap,Tympole,Tympole,Tympole,オタマロ,圆蝌蚪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/535.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 536,
@@ -3747,6 +4817,8 @@ const allMons: Mon[] = [
       'ガマガル,Gamagaru,두까비,藍蟾蜍,Batracné,Mebrana,Palpitoad,Palpitoad,Palpitoad,ガマガル,蓝蟾蜍',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/536.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 537,
@@ -3754,6 +4826,8 @@ const allMons: Mon[] = [
       'ガマゲロゲ,Gamageroge,두빅굴,蟾蜍王,Crapustule,Branawarz,Seismitoad,Seismitoad,Seismitoad,ガマゲロゲ,蟾蜍王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/537.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 538,
@@ -3761,6 +4835,8 @@ const allMons: Mon[] = [
       'ナゲキ,Nageki,던지미,投摔鬼,Judokrak,Jiutesto,Throh,Throh,Throh,ナゲキ,投摔鬼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/538.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 539,
@@ -3768,6 +4844,8 @@ const allMons: Mon[] = [
       'ダゲキ,Dageki,타격귀,打擊鬼,Karaclée,Karadonis,Sawk,Sawk,Sawk,ダゲキ,打击鬼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/539.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 540,
@@ -3775,6 +4853,8 @@ const allMons: Mon[] = [
       'クルミル,Kurumiru,두르보,蟲寶包,Larveyette,Strawickl,Sewaddle,Sewaddle,Sewaddle,クルミル,虫宝包',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/540.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 541,
@@ -3782,6 +4862,8 @@ const allMons: Mon[] = [
       'クルマユ,Kurumayu,두르쿤,寶包繭,Couverdure,Folikon,Swadloon,Swadloon,Swadloon,クルマユ,宝包茧',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/541.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 542,
@@ -3789,6 +4871,8 @@ const allMons: Mon[] = [
       'ハハコモリ,Hahakomori,모아머,保母蟲,Manternel,Matrifol,Leavanny,Leavanny,Leavanny,ハハコモリ,保姆虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/542.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 543,
@@ -3796,6 +4880,8 @@ const allMons: Mon[] = [
       'フシデ,Fushide,마디네,百足蜈蚣,Venipatte,Toxiped,Venipede,Venipede,Venipede,フシデ,百足蜈蚣',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/543.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 544,
@@ -3803,6 +4889,8 @@ const allMons: Mon[] = [
       'ホイーガ,Wheega,휠구,車輪毬,Scobolide,Rollum,Whirlipede,Whirlipede,Whirlipede,ホイーガ,车轮球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/544.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 545,
@@ -3810,6 +4898,8 @@ const allMons: Mon[] = [
       'ペンドラー,Pendror,펜드라,蜈蚣王,Brutapode,Cerapendra,Scolipede,Scolipede,Scolipede,ペンドラー,蜈蚣王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/545.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 546,
@@ -3817,6 +4907,8 @@ const allMons: Mon[] = [
       'モンメン,Monmen,소미안,木棉球,Doudouvet,Waumboll,Cottonee,Cottonee,Cottonee,モンメン,木棉球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/546.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 547,
@@ -3824,6 +4916,8 @@ const allMons: Mon[] = [
       'エルフーン,Elfuun,엘풍,風妖精,Farfaduvet,Elfun,Whimsicott,Whimsicott,Whimsicott,エルフーン,风妖精',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/547.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 548,
@@ -3831,6 +4925,8 @@ const allMons: Mon[] = [
       'チュリネ,Churine,치릴리,百合根娃娃,Chlorobule,Lilminip,Petilil,Petilil,Petilil,チュリネ,百合根娃娃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/548.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 549,
@@ -3838,6 +4934,8 @@ const allMons: Mon[] = [
       'ドレディア,Dredear,드레디어,裙兒小姐,Fragilady,Dressella,Lilligant,Lilligant,Lilligant,ドレディア,裙儿小姐',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/549.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 550,
@@ -3845,6 +4943,8 @@ const allMons: Mon[] = [
       'バスラオ,Bassrao,배쓰나이,野蠻鱸魚,Bargantua,Barschuft,Basculin,Basculin,Basculin,バスラオ,野蛮鲈鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/550.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 551,
@@ -3852,6 +4952,8 @@ const allMons: Mon[] = [
       'メグロコ,Meguroco,깜눈크,黑眼鱷,Mascaïman,Ganovil,Sandile,Sandile,Sandile,メグロコ,黑眼鳄',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/551.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 552,
@@ -3859,6 +4961,8 @@ const allMons: Mon[] = [
       'ワルビル,Waruvile,악비르,混混鱷,Escroco,Rokkaiman,Krokorok,Krokorok,Krokorok,ワルビル,混混鳄',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/552.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 553,
@@ -3866,6 +4970,8 @@ const allMons: Mon[] = [
       'ワルビアル,Waruvial,악비아르,流氓鱷,Crocorible,Rabigator,Krookodile,Krookodile,Krookodile,ワルビアル,流氓鳄',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/553.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 554,
@@ -3873,6 +4979,8 @@ const allMons: Mon[] = [
       'ダルマッカ,Darumakka,달막화,火紅不倒翁,Darumarond,Flampion,Darumaka,Darumaka,Darumaka,ダルマッカ,火红不倒翁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/554.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 555,
@@ -3880,6 +4988,8 @@ const allMons: Mon[] = [
       'ヒヒダルマ,Hihidaruma,불비달마,達摩狒狒,Darumacho,Flampivian,Darmanitan,Darmanitan,Darmanitan,ヒヒダルマ,达摩狒狒',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/555.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 556,
@@ -3887,6 +4997,8 @@ const allMons: Mon[] = [
       'マラカッチ,Maracacchi,마라카치,沙鈴仙人掌,Maracachi,Maracamba,Maractus,Maractus,Maractus,マラカッチ,沙铃仙人掌',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/556.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 557,
@@ -3894,6 +5006,8 @@ const allMons: Mon[] = [
       'イシズマイ,Ishizumai,돌살이,石居蟹,Crabicoque,Lithomith,Dwebble,Dwebble,Dwebble,イシズマイ,石居蟹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/557.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 558,
@@ -3901,6 +5015,8 @@ const allMons: Mon[] = [
       'イワパレス,Iwapalace,암팰리스,岩殿居蟹,Crabaraque,Castellith,Crustle,Crustle,Crustle,イワパレス,岩殿居蟹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/558.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 559,
@@ -3908,6 +5024,8 @@ const allMons: Mon[] = [
       'ズルッグ,Zuruggu,곤율랭,滑滑小子,Baggiguane,Zurrokex,Scraggy,Scraggy,Scraggy,ズルッグ,滑滑小子',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/559.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 560,
@@ -3915,6 +5033,8 @@ const allMons: Mon[] = [
       'ズルズキン,Zuruzukin,곤율거니,頭巾混混,Baggaïd,Irokex,Scrafty,Scrafty,Scrafty,ズルズキン,头巾混混',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/560.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 561,
@@ -3922,6 +5042,8 @@ const allMons: Mon[] = [
       'シンボラー,Symboler,심보러,象徵鳥,Cryptéro,Symvolara,Sigilyph,Sigilyph,Sigilyph,シンボラー,象征鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/561.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 562,
@@ -3929,6 +5051,8 @@ const allMons: Mon[] = [
       'デスマス,Desumasu,데스마스,哭哭面具,Tutafeh,Makabaja,Yamask,Yamask,Yamask,デスマス,哭哭面具',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/562.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 563,
@@ -3936,6 +5060,8 @@ const allMons: Mon[] = [
       'デスカーン,Desukarn,데스니칸,死神棺,Tutankafer,Echnatoll,Cofagrigus,Cofagrigus,Cofagrigus,デスカーン,迭失棺',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/563.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 564,
@@ -3943,6 +5069,8 @@ const allMons: Mon[] = [
       'プロトーガ,Protoga,프로토가,原蓋海龜,Carapagos,Galapaflos,Tirtouga,Tirtouga,Tirtouga,プロトーガ,原盖海龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/564.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 565,
@@ -3950,6 +5078,8 @@ const allMons: Mon[] = [
       'アバゴーラ,Abagoura,늑골라,肋骨海龜,Mégapagos,Karippas,Carracosta,Carracosta,Carracosta,アバゴーラ,肋骨海龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/565.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 566,
@@ -3957,6 +5087,8 @@ const allMons: Mon[] = [
       'アーケン,Archen,아켄,始祖小鳥,Arkéapti,Flapteryx,Archen,Archen,Archen,アーケン,始祖小鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/566.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 567,
@@ -3964,6 +5096,8 @@ const allMons: Mon[] = [
       'アーケオス,Archeos,아케오스,始祖大鳥,Aéroptéryx,Aeropteryx,Archeops,Archeops,Archeops,アーケオス,始祖大鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/567.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 568,
@@ -3971,6 +5105,8 @@ const allMons: Mon[] = [
       'ヤブクロン,Yabukuron,깨봉이,破破袋,Miamiasme,Unratütox,Trubbish,Trubbish,Trubbish,ヤブクロン,破破袋',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/568.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 569,
@@ -3978,6 +5114,8 @@ const allMons: Mon[] = [
       'ダストダス,Dustdas,더스트나,灰塵山,Miasmax,Deponitox,Garbodor,Garbodor,Garbodor,ダストダス,灰尘山',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/569.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 570,
@@ -3985,6 +5123,8 @@ const allMons: Mon[] = [
       'ゾロア,Zorua,조로아,索羅亞,Zorua,Zorua,Zorua,Zorua,Zorua,ゾロア,索罗亚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/570.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 571,
@@ -3992,6 +5132,8 @@ const allMons: Mon[] = [
       'ゾロアーク,Zoroark,조로아크,索羅亞克,Zoroark,Zoroark,Zoroark,Zoroark,Zoroark,ゾロアーク,索罗亚克',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/571.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 572,
@@ -3999,6 +5141,8 @@ const allMons: Mon[] = [
       'チラーミィ,Chillarmy,치라미,泡沫栗鼠,Chinchidou,Picochilla,Minccino,Minccino,Minccino,チラーミィ,泡沫栗鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/572.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 573,
@@ -4006,6 +5150,8 @@ const allMons: Mon[] = [
       'チラチーノ,Chillaccino,치라치노,奇諾栗鼠,Pashmilla,Chillabell,Cinccino,Cinccino,Cinccino,チラチーノ,奇诺栗鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/573.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 574,
@@ -4013,6 +5159,8 @@ const allMons: Mon[] = [
       'ゴチム,Gothimu,고디탱,哥德寶寶,Scrutella,Mollimorba,Gothita,Gothita,Gothita,ゴチム,哥德宝宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/574.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 575,
@@ -4020,6 +5168,8 @@ const allMons: Mon[] = [
       'ゴチミル,Gothimiru,고디보미,哥德小童,Mesmérella,Hypnomorba,Gothorita,Gothorita,Gothorita,ゴチミル,哥德小童',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/575.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 576,
@@ -4027,6 +5177,8 @@ const allMons: Mon[] = [
       'ゴチルゼル,Gothiruselle,고디모아젤,哥德小姐,Sidérella,Morbitesse,Gothitelle,Gothitelle,Gothitelle,ゴチルゼル,哥德小姐',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/576.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 577,
@@ -4034,6 +5186,8 @@ const allMons: Mon[] = [
       'ユニラン,Uniran,유니란,單卵細胞球,Nucléos,Monozyto,Solosis,Solosis,Solosis,ユニラン,单卵细胞球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/577.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 578,
@@ -4041,6 +5195,8 @@ const allMons: Mon[] = [
       'ダブラン,Doublan,듀란,雙卵細胞球,Méios,Mitodos,Duosion,Duosion,Duosion,ダブラン,双卵细胞球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/578.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 579,
@@ -4048,6 +5204,8 @@ const allMons: Mon[] = [
       'ランクルス,Lanculus,란쿨루스,人造細胞卵,Symbios,Zytomega,Reuniclus,Reuniclus,Reuniclus,ランクルス,人造细胞卵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/579.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 580,
@@ -4055,6 +5213,8 @@ const allMons: Mon[] = [
       'コアルヒー,Koaruhie,꼬지보리,鴨寶寶,Couaneton,Piccolente,Ducklett,Ducklett,Ducklett,コアルヒー,鸭宝宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/580.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 581,
@@ -4062,6 +5222,8 @@ const allMons: Mon[] = [
       'スワンナ,Swanna,스완나,舞天鵝,Lakmécygne,Swaroness,Swanna,Swanna,Swanna,スワンナ,舞天鹅',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/581.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 582,
@@ -4069,6 +5231,8 @@ const allMons: Mon[] = [
       'バニプッチ,Vanipeti,바닐프티,迷你冰,Sorbébé,Gelatini,Vanillite,Vanillite,Vanillite,バニプッチ,迷你冰',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/582.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 583,
@@ -4076,6 +5240,8 @@ const allMons: Mon[] = [
       'バニリッチ,Vanirich,바닐리치,多多冰,Sorboul,Gelatroppo,Vanillish,Vanillish,Vanillish,バニリッチ,多多冰',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/583.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 584,
@@ -4083,6 +5249,8 @@ const allMons: Mon[] = [
       'バイバニラ,Baivanilla,배바닐라,雙倍多多冰,Sorbouboul,Gelatwino,Vanilluxe,Vanilluxe,Vanilluxe,バイバニラ,双倍多多冰',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/584.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 585,
@@ -4090,6 +5258,8 @@ const allMons: Mon[] = [
       'シキジカ,Shikijika,사철록,四季鹿,Vivaldaim,Sesokitz,Deerling,Deerling,Deerling,シキジカ,四季鹿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/585.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 586,
@@ -4097,6 +5267,8 @@ const allMons: Mon[] = [
       'メブキジカ,Mebukijika,바라철록,萌芽鹿,Haydaim,Kronjuwild,Sawsbuck,Sawsbuck,Sawsbuck,メブキジカ,萌芽鹿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/586.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 587,
@@ -4104,6 +5276,8 @@ const allMons: Mon[] = [
       'エモンガ,Emonga,에몽가,電飛鼠,Emolga,Emolga,Emolga,Emolga,Emolga,エモンガ,电飞鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/587.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 588,
@@ -4111,6 +5285,8 @@ const allMons: Mon[] = [
       'カブルモ,Kaburumo,딱정곤,蓋蓋蟲,Carabing,Laukaps,Karrablast,Karrablast,Karrablast,カブルモ,盖盖虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/588.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 589,
@@ -4118,6 +5294,8 @@ const allMons: Mon[] = [
       'シュバルゴ,Chevargo,슈바르고,騎士蝸牛,Lançargot,Cavalanzas,Escavalier,Escavalier,Escavalier,シュバルゴ,骑士蜗牛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/589.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 590,
@@ -4125,6 +5303,8 @@ const allMons: Mon[] = [
       'タマゲタケ,Tamagetake,깜놀버슬,哎呀球菇,Trompignon,Tarnpignon,Foongus,Foongus,Foongus,タマゲタケ,哎呀球菇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/590.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 591,
@@ -4132,6 +5312,8 @@ const allMons: Mon[] = [
       'モロバレル,Morobareru,뽀록나,敗露球菇,Gaulet,Hutsassa,Amoonguss,Amoonguss,Amoonguss,モロバレル,败露球菇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/591.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 592,
@@ -4139,6 +5321,8 @@ const allMons: Mon[] = [
       'プルリル,Pururill,탱그릴,輕飄飄,Viskuse,Quabbel,Frillish,Frillish,Frillish,プルリル,轻飘飘',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/592.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 593,
@@ -4146,6 +5330,8 @@ const allMons: Mon[] = [
       'ブルンゲル,Burungel,탱탱겔,胖嘟嘟,Moyade,Apoquallyp,Jellicent,Jellicent,Jellicent,ブルンゲル,胖嘟嘟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/593.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 594,
@@ -4153,6 +5339,8 @@ const allMons: Mon[] = [
       'ママンボウ,Mamanbou,맘복치,保母曼波,Mamanbo,Mamolida,Alomomola,Alomomola,Alomomola,ママンボウ,保姆曼波',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/594.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 595,
@@ -4160,6 +5348,8 @@ const allMons: Mon[] = [
       'バチュル,Bachuru,파쪼옥,電電蟲,Statitik,Wattzapf,Joltik,Joltik,Joltik,バチュル,电电虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/595.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 596,
@@ -4167,6 +5357,8 @@ const allMons: Mon[] = [
       'デンチュラ,Dentula,전툴라,電蜘蛛,Mygavolt,Voltula,Galvantula,Galvantula,Galvantula,デンチュラ,电蜘蛛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/596.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 597,
@@ -4174,6 +5366,8 @@ const allMons: Mon[] = [
       'テッシード,Tesseed,철시드,種子鐵球,Grindur,Kastadur,Ferroseed,Ferroseed,Ferroseed,テッシード,种子铁球',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/597.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 598,
@@ -4181,6 +5375,8 @@ const allMons: Mon[] = [
       'ナットレイ,Nutrey,너트령,堅果啞鈴,Noacier,Tentantel,Ferrothorn,Ferrothorn,Ferrothorn,ナットレイ,坚果哑铃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/598.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 599,
@@ -4188,6 +5384,8 @@ const allMons: Mon[] = [
       'ギアル,Giaru,기어르,齒輪兒,Tic,Klikk,Klink,Klink,Klink,ギアル,齿轮儿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/599.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 600,
@@ -4195,6 +5393,8 @@ const allMons: Mon[] = [
       'ギギアル,Gigiaru,기기어르,齒輪組,Clic,Kliklak,Klang,Klang,Klang,ギギアル,齿轮组',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/600.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 601,
@@ -4202,6 +5402,8 @@ const allMons: Mon[] = [
       'ギギギアル,Gigigiaru,기기기어르,齒輪怪,Cliticlic,Klikdiklak,Klinklang,Klinklang,Klinklang,ギギギアル,齿轮怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/601.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 602,
@@ -4209,6 +5411,8 @@ const allMons: Mon[] = [
       'シビシラス,Shibishirasu,저리어,麻麻小魚,Anchwatt,Zapplardin,Tynamo,Tynamo,Tynamo,シビシラス,麻麻小鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/602.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 603,
@@ -4216,6 +5420,8 @@ const allMons: Mon[] = [
       'シビビール,Shibibeel,저리릴,麻麻鰻,Lampéroie,Zapplalek,Eelektrik,Eelektrik,Eelektrik,シビビール,麻麻鳗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/603.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 604,
@@ -4223,6 +5429,8 @@ const allMons: Mon[] = [
       'シビルドン,Shibirudon,저리더프,麻麻鰻魚王,Ohmassacre,Zapplarang,Eelektross,Eelektross,Eelektross,シビルドン,麻麻鳗鱼王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/604.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 605,
@@ -4230,6 +5438,8 @@ const allMons: Mon[] = [
       'リグレー,Ligray,리그레,小灰怪,Lewsor,Pygraulon,Elgyem,Elgyem,Elgyem,リグレー,小灰怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/605.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 606,
@@ -4237,6 +5447,8 @@ const allMons: Mon[] = [
       'オーベム,Ohbem,벰크,大宇怪,Neitram,Megalon,Beheeyem,Beheeyem,Beheeyem,オーベム,大宇怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/606.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 607,
@@ -4244,6 +5456,8 @@ const allMons: Mon[] = [
       'ヒトモシ,Hitomoshi,불켜미,燭光靈,Funécire,Lichtel,Litwick,Litwick,Litwick,ヒトモシ,烛光灵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/607.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 608,
@@ -4251,6 +5465,8 @@ const allMons: Mon[] = [
       'ランプラー,Lampler,램프라,燈火幽靈,Mélancolux,Laternecto,Lampent,Lampent,Lampent,ランプラー,灯火幽灵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/608.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 609,
@@ -4258,6 +5474,8 @@ const allMons: Mon[] = [
       'シャンデラ,Chandela,샹델라,水晶燈火靈,Lugulabre,Skelabra,Chandelure,Chandelure,Chandelure,シャンデラ,水晶灯火灵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/609.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 610,
@@ -4265,6 +5483,8 @@ const allMons: Mon[] = [
       'キバゴ,Kibago,터검니,牙牙,Coupenotte,Milza,Axew,Axew,Axew,キバゴ,牙牙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/610.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 611,
@@ -4272,6 +5492,8 @@ const allMons: Mon[] = [
       'オノンド,Onondo,액슨도,斧牙龍,Incisache,Sharfax,Fraxure,Fraxure,Fraxure,オノンド,斧牙龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/611.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 612,
@@ -4279,6 +5501,8 @@ const allMons: Mon[] = [
       'オノノクス,Ononokus,액스라이즈,雙斧戰龍,Tranchodon,Maxax,Haxorus,Haxorus,Haxorus,オノノクス,双斧战龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/612.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 613,
@@ -4286,6 +5510,8 @@ const allMons: Mon[] = [
       'クマシュン,Kumasyun,코고미,噴嚏熊,Polarhume,Petznief,Cubchoo,Cubchoo,Cubchoo,クマシュン,喷嚏熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/613.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 614,
@@ -4293,6 +5519,8 @@ const allMons: Mon[] = [
       'ツンベアー,Tunbear,툰베어,凍原熊,Polagriffe,Siberio,Beartic,Beartic,Beartic,ツンベアー,冻原熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/614.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 615,
@@ -4300,6 +5528,8 @@ const allMons: Mon[] = [
       'フリージオ,Freegeo,프리지오,幾何雪花,Hexagel,Frigometri,Cryogonal,Cryogonal,Cryogonal,フリージオ,几何雪花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/615.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 616,
@@ -4307,6 +5537,8 @@ const allMons: Mon[] = [
       'チョボマキ,Chobomaki,쪼마리,小嘴蝸,Escargaume,Schnuthelm,Shelmet,Shelmet,Shelmet,チョボマキ,小嘴蜗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/616.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 617,
@@ -4314,6 +5546,8 @@ const allMons: Mon[] = [
       'アギルダー,Agilder,어지리더,敏捷蟲,Limaspeed,Hydragil,Accelgor,Accelgor,Accelgor,アギルダー,敏捷虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/617.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 618,
@@ -4321,6 +5555,8 @@ const allMons: Mon[] = [
       'マッギョ,Maggyo,메더,泥巴魚,Limonde,Flunschlik,Stunfisk,Stunfisk,Stunfisk,マッギョ,泥巴鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/618.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 619,
@@ -4328,6 +5564,8 @@ const allMons: Mon[] = [
       'コジョフー,Kojofu,비조푸,功夫鼬,Kungfouine,Lin-Fu,Mienfoo,Mienfoo,Mienfoo,コジョフー,功夫鼬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/619.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 620,
@@ -4335,6 +5573,8 @@ const allMons: Mon[] = [
       'コジョンド,Kojondo,비조도,師父鼬,Shaofouine,Wie-Shu,Mienshao,Mienshao,Mienshao,コジョンド,师父鼬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/620.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 621,
@@ -4342,6 +5582,8 @@ const allMons: Mon[] = [
       'クリムガン,Crimgan,크리만,赤面龍,Drakkarmin,Shardrago,Druddigon,Druddigon,Druddigon,クリムガン,赤面龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/621.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 622,
@@ -4349,6 +5591,8 @@ const allMons: Mon[] = [
       'ゴビット,Gobit,골비람,泥偶小人,Gringolem,Golbit,Golett,Golett,Golett,ゴビット,泥偶小人',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/622.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 623,
@@ -4356,6 +5600,8 @@ const allMons: Mon[] = [
       'ゴルーグ,Goloog,골루그,泥偶巨人,Golemastoc,Golgantes,Golurk,Golurk,Golurk,ゴルーグ,泥偶巨人',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/623.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 624,
@@ -4363,6 +5609,8 @@ const allMons: Mon[] = [
       'コマタナ,Komatana,자망칼,駒刀小兵,Scalpion,Gladiantri,Pawniard,Pawniard,Pawniard,コマタナ,驹刀小兵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/624.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 625,
@@ -4370,6 +5618,8 @@ const allMons: Mon[] = [
       'キリキザン,Kirikizan,절각참,劈斬司令,Scalproie,Caesurio,Bisharp,Bisharp,Bisharp,キリキザン,劈斩司令',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/625.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 626,
@@ -4377,6 +5627,8 @@ const allMons: Mon[] = [
       'バッフロン,Buffron,버프론,爆炸頭水牛,Frison,Bisofank,Bouffalant,Bouffalant,Bouffalant,バッフロン,爆炸头水牛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/626.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 627,
@@ -4384,6 +5636,8 @@ const allMons: Mon[] = [
       'ワシボン,Washibon,수리둥보,毛頭小鷹,Furaiglon,Geronimatz,Rufflet,Rufflet,Rufflet,ワシボン,毛头小鹰',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/627.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 628,
@@ -4391,6 +5645,8 @@ const allMons: Mon[] = [
       'ウォーグル,Warrgle,워글,勇士雄鷹,Gueriaigle,Washakwil,Braviary,Braviary,Braviary,ウォーグル,勇士雄鹰',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/628.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 629,
@@ -4398,6 +5654,8 @@ const allMons: Mon[] = [
       'バルチャイ,Valchai,벌차이,禿鷹丫頭,Vostourno,Skallyk,Vullaby,Vullaby,Vullaby,バルチャイ,秃鹰丫头',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/629.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 630,
@@ -4405,6 +5663,8 @@ const allMons: Mon[] = [
       'バルジーナ,Vulgina,버랜지나,禿鷹娜,Vaututrice,Grypheldis,Mandibuzz,Mandibuzz,Mandibuzz,バルジーナ,秃鹰娜',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/630.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 631,
@@ -4412,6 +5672,8 @@ const allMons: Mon[] = [
       'クイタラン,Kuitaran,앤티골,熔蟻獸,Aflamanoir,Furnifraß,Heatmor,Heatmor,Heatmor,クイタラン,熔蚁兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/631.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 632,
@@ -4419,6 +5681,8 @@ const allMons: Mon[] = [
       'アイアント,Aiant,아이앤트,鐵蟻,Fermite,Fermicula,Durant,Durant,Durant,アイアント,铁蚁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/632.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 633,
@@ -4426,6 +5690,8 @@ const allMons: Mon[] = [
       'モノズ,Monozu,모노두,單首龍,Solochi,Kapuno,Deino,Deino,Deino,モノズ,单首龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/633.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 634,
@@ -4433,6 +5699,8 @@ const allMons: Mon[] = [
       'ジヘッド,Dihead,디헤드,雙首暴龍,Diamat,Duodino,Zweilous,Zweilous,Zweilous,ジヘッド,双首暴龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/634.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 635,
@@ -4440,6 +5708,8 @@ const allMons: Mon[] = [
       'サザンドラ,Sazandora,삼삼드래,三首惡龍,Trioxhydre,Trikephalo,Hydreigon,Hydreigon,Hydreigon,サザンドラ,三首恶龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/635.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 636,
@@ -4447,6 +5717,8 @@ const allMons: Mon[] = [
       'メラルバ,Merlarva,활화르바,燃燒蟲,Pyronille,Ignivor,Larvesta,Larvesta,Larvesta,メラルバ,燃烧虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/636.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 637,
@@ -4454,6 +5726,8 @@ const allMons: Mon[] = [
       'ウルガモス,Ulgamoth,불카모스,火神蛾,Pyrax,Ramoth,Volcarona,Volcarona,Volcarona,ウルガモス,火神蛾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/637.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 638,
@@ -4461,6 +5735,8 @@ const allMons: Mon[] = [
       'コバルオン,Cobalon,코바르온,勾帕路翁,Cobaltium,Kobalium,Cobalion,Cobalion,Cobalion,コバルオン,勾帕路翁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/638.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 639,
@@ -4468,6 +5744,8 @@ const allMons: Mon[] = [
       'テラキオン,Terrakion,테라키온,代拉基翁,Terrakium,Terrakium,Terrakion,Terrakion,Terrakion,テラキオン,代拉基翁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/639.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 640,
@@ -4475,6 +5753,8 @@ const allMons: Mon[] = [
       'ビリジオン,Virizion,비리디온,畢力吉翁,Viridium,Viridium,Virizion,Virizion,Virizion,ビリジオン,毕力吉翁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/640.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 641,
@@ -4482,6 +5762,8 @@ const allMons: Mon[] = [
       'トルネロス,Tornelos,토네로스,龍捲雲,Boréas,Boreos,Tornadus,Tornadus,Tornadus,トルネロス,龙卷云',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/641.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 642,
@@ -4489,6 +5771,8 @@ const allMons: Mon[] = [
       'ボルトロス,Voltolos,볼트로스,雷電雲,Fulguris,Voltolos,Thundurus,Thundurus,Thundurus,ボルトロス,雷电云',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/642.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 643,
@@ -4496,6 +5780,8 @@ const allMons: Mon[] = [
       'レシラム,Reshiram,레시라무,萊希拉姆,Reshiram,Reshiram,Reshiram,Reshiram,Reshiram,レシラム,莱希拉姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/643.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 644,
@@ -4503,6 +5789,8 @@ const allMons: Mon[] = [
       'ゼクロム,Zekrom,제크로무,捷克羅姆,Zekrom,Zekrom,Zekrom,Zekrom,Zekrom,ゼクロム,捷克罗姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/644.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 645,
@@ -4510,6 +5798,8 @@ const allMons: Mon[] = [
       'ランドロス,Landlos,랜드로스,土地雲,Démétéros,Demeteros,Landorus,Landorus,Landorus,ランドロス,土地云',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/645.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 646,
@@ -4517,6 +5807,8 @@ const allMons: Mon[] = [
       'キュレム,Kyurem,큐레무,酋雷姆,Kyurem,Kyurem,Kyurem,Kyurem,Kyurem,キュレム,酋雷姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/646.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 647,
@@ -4524,6 +5816,8 @@ const allMons: Mon[] = [
       'ケルディオ,Keldeo,케르디오,凱路迪歐,Keldeo,Keldeo,Keldeo,Keldeo,Keldeo,ケルディオ,凯路迪欧',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/647.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 648,
@@ -4531,6 +5825,8 @@ const allMons: Mon[] = [
       'メロエッタ,Meloetta,메로엣타,美洛耶塔,Meloetta,Meloetta,Meloetta,Meloetta,Meloetta,メロエッタ,美洛耶塔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/648.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 649,
@@ -4538,6 +5834,8 @@ const allMons: Mon[] = [
       'ゲノセクト,Genesect,게노세크트,蓋諾賽克特,Genesect,Genesect,Genesect,Genesect,Genesect,ゲノセクト,盖诺赛克特',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/649.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 650,
@@ -4545,6 +5843,8 @@ const allMons: Mon[] = [
       'ハリマロン,Harimaron,도치마론,哈力栗,Marisson,Igamaro,Chespin,Chespin,Chespin,ハリマロン,哈力栗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/650.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 651,
@@ -4552,6 +5852,8 @@ const allMons: Mon[] = [
       'ハリボーグ,Hariborg,도치보구,胖胖哈力,Boguérisse,Igastarnish,Quilladin,Quilladin,Quilladin,ハリボーグ,胖胖哈力',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/651.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 652,
@@ -4559,6 +5861,8 @@ const allMons: Mon[] = [
       'ブリガロン,Brigarron,브리가론,布里卡隆,Blindépique,Brigaron,Chesnaught,Chesnaught,Chesnaught,ブリガロン,布里卡隆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/652.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 653,
@@ -4566,6 +5870,8 @@ const allMons: Mon[] = [
       'フォッコ,Fokko,푸호꼬,火狐狸,Feunnec,Fynx,Fennekin,Fennekin,Fennekin,フォッコ,火狐狸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/653.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 654,
@@ -4573,6 +5879,8 @@ const allMons: Mon[] = [
       'テールナー,Tairenar,테르나,長尾火狐,Roussil,Rutena,Braixen,Braixen,Braixen,テールナー,长尾火狐',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/654.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 655,
@@ -4580,6 +5888,8 @@ const allMons: Mon[] = [
       'マフォクシー,Mahoxy,마폭시,妖火紅狐,Goupelin,Fennexis,Delphox,Delphox,Delphox,マフォクシー,妖火红狐',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/655.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 656,
@@ -4587,6 +5897,8 @@ const allMons: Mon[] = [
       'ケロマツ,Keromatsu,개구마르,呱呱泡蛙,Grenousse,Froxy,Froakie,Froakie,Froakie,ケロマツ,呱呱泡蛙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/656.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 657,
@@ -4594,6 +5906,8 @@ const allMons: Mon[] = [
       'ゲコガシラ,Gekogashira,개굴반장,呱頭蛙,Croâporal,Amphizel,Frogadier,Frogadier,Frogadier,ゲコガシラ,呱头蛙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/657.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 658,
@@ -4601,6 +5915,8 @@ const allMons: Mon[] = [
       'ゲッコウガ,Gekkouga,개굴닌자,甲賀忍蛙,Amphinobi,Quajutsu,Greninja,Greninja,Greninja,ゲッコウガ,甲贺忍蛙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 659,
@@ -4608,6 +5924,8 @@ const allMons: Mon[] = [
       'ホルビー,Horubee,파르빗,掘掘兔,Sapereau,Scoppel,Bunnelby,Bunnelby,Bunnelby,ホルビー,掘掘兔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/659.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 660,
@@ -4615,6 +5933,8 @@ const allMons: Mon[] = [
       'ホルード,Horudo,파르토,掘地兔,Excavarenne,Grebbit,Diggersby,Diggersby,Diggersby,ホルード,掘地兔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/660.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 661,
@@ -4622,6 +5942,8 @@ const allMons: Mon[] = [
       'ヤヤコマ,Yayakoma,화살꼬빈,小箭雀,Passerouge,Dartiri,Fletchling,Fletchling,Fletchling,ヤヤコマ,小箭雀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/661.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 662,
@@ -4629,6 +5951,8 @@ const allMons: Mon[] = [
       'ヒノヤコマ,Hinoyakoma,불화살빈,火箭雀,Braisillon,Dartignis,Fletchinder,Fletchinder,Fletchinder,ヒノヤコマ,火箭雀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/662.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 663,
@@ -4636,6 +5960,8 @@ const allMons: Mon[] = [
       'ファイアロー,Fiarrow,파이어로,烈箭鷹,Flambusard,Fiaro,Talonflame,Talonflame,Talonflame,ファイアロー,烈箭鹰',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/663.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 664,
@@ -4643,6 +5969,8 @@ const allMons: Mon[] = [
       'コフキムシ,Kofukimushi,분이벌레,粉蝶蟲,Lépidonille,Purmel,Scatterbug,Scatterbug,Scatterbug,コフキムシ,粉蝶虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/664.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 665,
@@ -4650,6 +5978,8 @@ const allMons: Mon[] = [
       'コフーライ,Kofuurai,분떠도리,粉蝶蛹,Pérégrain,Puponcho,Spewpa,Spewpa,Spewpa,コフーライ,粉蝶蛹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/665.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 666,
@@ -4657,6 +5987,8 @@ const allMons: Mon[] = [
       'ビビヨン,Viviyon,비비용,彩粉蝶,Prismillon,Vivillon,Vivillon,Vivillon,Vivillon,ビビヨン,彩粉蝶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/666.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 667,
@@ -4664,6 +5996,8 @@ const allMons: Mon[] = [
       'シシコ,Shishiko,레오꼬,小獅獅,Hélionceau,Leufeo,Litleo,Litleo,Litleo,シシコ,小狮狮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/667.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 668,
@@ -4671,6 +6005,8 @@ const allMons: Mon[] = [
       'カエンジシ,Kaenjishi,화염레오,火炎獅,Némélios,Pyroleo,Pyroar,Pyroar,Pyroar,カエンジシ,火炎狮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/668.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 669,
@@ -4678,6 +6014,8 @@ const allMons: Mon[] = [
       'フラベベ,Flabebe,플라베베,花蓓蓓,Flabébé,Flabébé,Flabébé,Flabébé,Flabébé,フラベベ,花蓓蓓',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/669.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 670,
@@ -4685,6 +6023,8 @@ const allMons: Mon[] = [
       'フラエッテ,Floette,플라엣테,花葉蒂,Floette,Floette,Floette,Floette,Floette,フラエッテ,花叶蒂',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/670.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 671,
@@ -4692,6 +6032,8 @@ const allMons: Mon[] = [
       'フラージェス,Florges,플라제스,花潔夫人,Florges,Florges,Florges,Florges,Florges,フラージェス,花洁夫人',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 672,
@@ -4699,6 +6041,8 @@ const allMons: Mon[] = [
       'メェークル,Meecle,메이클,坐騎小羊,Cabriolaine,Mähikel,Skiddo,Skiddo,Skiddo,メェークル,坐骑小羊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/672.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 673,
@@ -4706,6 +6050,8 @@ const allMons: Mon[] = [
       'ゴーゴート,Gogoat,고고트,坐騎山羊,Chevroum,Chevrumm,Gogoat,Gogoat,Gogoat,ゴーゴート,坐骑山羊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/673.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 674,
@@ -4713,6 +6059,8 @@ const allMons: Mon[] = [
       'ヤンチャム,Yancham,판짱,頑皮熊貓,Pandespiègle,Pam-Pam,Pancham,Pancham,Pancham,ヤンチャム,顽皮熊猫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/674.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 675,
@@ -4720,6 +6068,8 @@ const allMons: Mon[] = [
       'ゴロンダ,Goronda,부란다,流氓熊貓,Pandarbare,Pandagro,Pangoro,Pangoro,Pangoro,ゴロンダ,霸道熊猫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/675.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 676,
@@ -4727,6 +6077,8 @@ const allMons: Mon[] = [
       'トリミアン,Trimmien,트리미앙,多麗米亞,Couafarel,Coiffwaff,Furfrou,Furfrou,Furfrou,トリミアン,多丽米亚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 677,
@@ -4734,6 +6086,8 @@ const allMons: Mon[] = [
       'ニャスパー,Nyasper,냐스퍼,妙喵,Psystigri,Psiau,Espurr,Espurr,Espurr,ニャスパー,妙喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/677.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 678,
@@ -4741,6 +6095,8 @@ const allMons: Mon[] = [
       'ニャオニクス,Nyaonix,냐오닉스,超能妙喵,Mistigrix,Psiaugon,Meowstic,Meowstic,Meowstic,ニャオニクス,超能妙喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/678.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 679,
@@ -4748,6 +6104,8 @@ const allMons: Mon[] = [
       'ヒトツキ,Hitotsuki,단칼빙,獨劍鞘,Monorpale,Gramokles,Honedge,Honedge,Honedge,ヒトツキ,独剑鞘',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/679.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 680,
@@ -4755,6 +6113,8 @@ const allMons: Mon[] = [
       'ニダンギル,Nidangill,쌍검킬,雙劍鞘,Dimoclès,Duokles,Doublade,Doublade,Doublade,ニダンギル,双剑鞘',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/680.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 681,
@@ -4762,6 +6122,8 @@ const allMons: Mon[] = [
       'ギルガルド,Gillgard,킬가르도,堅盾劍怪,Exagide,Durengard,Aegislash,Aegislash,Aegislash,ギルガルド,坚盾剑怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 682,
@@ -4769,6 +6131,8 @@ const allMons: Mon[] = [
       'シュシュプ,Shushupu,슈쁘,粉香香,Fluvetin,Parfi,Spritzee,Spritzee,Spritzee,シュシュプ,粉香香',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/682.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 683,
@@ -4776,6 +6140,8 @@ const allMons: Mon[] = [
       'フレフワン,Frefuwan,프레프티르,芳香精,Cocotine,Parfinesse,Aromatisse,Aromatisse,Aromatisse,フレフワン,芳香精',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/683.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 684,
@@ -4783,6 +6149,8 @@ const allMons: Mon[] = [
       'ペロッパフ,Peroppafu,나룸퍼프,綿綿泡芙,Sucroquin,Flauschling,Swirlix,Swirlix,Swirlix,ペロッパフ,绵绵泡芙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/684.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 685,
@@ -4790,6 +6158,8 @@ const allMons: Mon[] = [
       'ペロリーム,Peroream,나루림,胖甜妮,Cupcanaille,Sabbaione,Slurpuff,Slurpuff,Slurpuff,ペロリーム,胖甜妮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/685.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 686,
@@ -4797,6 +6167,8 @@ const allMons: Mon[] = [
       'マーイーカ,Maaiika,오케이징,好啦魷,Sepiatop,Iscalar,Inkay,Inkay,Inkay,マーイーカ,好啦鱿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/686.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 687,
@@ -4804,6 +6176,8 @@ const allMons: Mon[] = [
       'カラマネロ,Calamanero,칼라마네로,烏賊王,Sepiatroce,Calamanero,Malamar,Malamar,Malamar,カラマネロ,乌贼王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/687.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 688,
@@ -4811,6 +6185,8 @@ const allMons: Mon[] = [
       'カメテテ,Kametete,거북손손,龜腳腳,Opermine,Bithora,Binacle,Binacle,Binacle,カメテテ,龟脚脚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/688.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 689,
@@ -4818,6 +6194,8 @@ const allMons: Mon[] = [
       'ガメノデス,Gamenodes,거북손데스,龜足巨鎧,Golgopathe,Thanathora,Barbaracle,Barbaracle,Barbaracle,ガメノデス,龟足巨铠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/689.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 690,
@@ -4825,6 +6203,8 @@ const allMons: Mon[] = [
       'クズモー,Kuzumo,수레기,垃垃藻,Venalgue,Algitt,Skrelp,Skrelp,Skrelp,クズモー,垃垃藻',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/690.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 691,
@@ -4832,6 +6212,8 @@ const allMons: Mon[] = [
       'ドラミドロ,Dramidoro,드래캄,毒藻龍,Kravarech,Tandrak,Dragalge,Dragalge,Dragalge,ドラミドロ,毒藻龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/691.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 692,
@@ -4839,6 +6221,8 @@ const allMons: Mon[] = [
       'ウデッポウ,Udeppou,완철포,鐵臂槍蝦,Flingouste,Scampisto,Clauncher,Clauncher,Clauncher,ウデッポウ,铁臂枪虾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/692.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 693,
@@ -4846,6 +6230,8 @@ const allMons: Mon[] = [
       'ブロスター,Bloster,블로스터,鋼炮臂蝦,Gamblast,Wummer,Clawitzer,Clawitzer,Clawitzer,ブロスター,钢炮臂虾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/693.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 694,
@@ -4853,6 +6239,8 @@ const allMons: Mon[] = [
       'エリキテル,Erikiteru,목도리키텔,傘電蜥,Galvaran,Eguana,Helioptile,Helioptile,Helioptile,エリキテル,伞电蜥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/694.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 695,
@@ -4860,6 +6248,8 @@ const allMons: Mon[] = [
       'エレザード,Elezard,일레도리자드,光電傘蜥,Iguolta,Elezard,Heliolisk,Heliolisk,Heliolisk,エレザード,光电伞蜥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/695.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 696,
@@ -4867,6 +6257,8 @@ const allMons: Mon[] = [
       'チゴラス,Chigoras,티고라스,寶寶暴龍,Ptyranidur,Balgoras,Tyrunt,Tyrunt,Tyrunt,チゴラス,宝宝暴龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/696.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 697,
@@ -4874,6 +6266,8 @@ const allMons: Mon[] = [
       'ガチゴラス,Gachigoras,견고라스,怪顎龍,Rexillius,Monargoras,Tyrantrum,Tyrantrum,Tyrantrum,ガチゴラス,怪颚龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/697.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 698,
@@ -4881,6 +6275,8 @@ const allMons: Mon[] = [
       'アマルス,Amarus,아마루스,冰雪龍,Amagara,Amarino,Amaura,Amaura,Amaura,アマルス,冰雪龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/698.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 699,
@@ -4888,6 +6284,8 @@ const allMons: Mon[] = [
       'アマルルガ,Amaruruga,아마루르가,冰雪巨龍,Dragmara,Amagarga,Aurorus,Aurorus,Aurorus,アマルルガ,冰雪巨龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/699.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 700,
@@ -4895,6 +6293,8 @@ const allMons: Mon[] = [
       'ニンフィア,Nymphia,님피아,仙子伊布,Nymphali,Feelinara,Sylveon,Sylveon,Sylveon,ニンフィア,仙子伊布',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 701,
@@ -4902,6 +6302,8 @@ const allMons: Mon[] = [
       'ルチャブル,Luchabull,루차불,摔角鷹人,Brutalibré,Resladero,Hawlucha,Hawlucha,Hawlucha,ルチャブル,摔角鹰人',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/701.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 702,
@@ -4909,6 +6311,8 @@ const allMons: Mon[] = [
       'デデンネ,Dedenne,데덴네,咚咚鼠,Dedenne,Dedenne,Dedenne,Dedenne,Dedenne,デデンネ,咚咚鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/702.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 703,
@@ -4916,6 +6320,8 @@ const allMons: Mon[] = [
       'メレシー,Melecie,멜리시,小碎鑽,Strassie,Rocara,Carbink,Carbink,Carbink,メレシー,小碎钻',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/703.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 704,
@@ -4923,6 +6329,8 @@ const allMons: Mon[] = [
       'ヌメラ,Numera,미끄메라,黏黏寶,Mucuscule,Viscora,Goomy,Goomy,Goomy,ヌメラ,黏黏宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/704.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 705,
@@ -4930,6 +6338,8 @@ const allMons: Mon[] = [
       'ヌメイル,Numeil,미끄네일,黏美兒,Colimucus,Viscargot,Sliggoo,Sliggoo,Sliggoo,ヌメイル,黏美儿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/705.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 706,
@@ -4937,6 +6347,8 @@ const allMons: Mon[] = [
       'ヌメルゴン,Numelgon,미끄래곤,黏美龍,Muplodocus,Viscogon,Goodra,Goodra,Goodra,ヌメルゴン,黏美龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/706.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 707,
@@ -4944,6 +6356,8 @@ const allMons: Mon[] = [
       'クレッフィ,Cleffy,클레피,鑰圈兒,Trousselin,Clavion,Klefki,Klefki,Klefki,クレッフィ,钥圈儿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/707.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 708,
@@ -4951,6 +6365,8 @@ const allMons: Mon[] = [
       'ボクレー,Bokurei,나목령,小木靈,Brocélôme,Paragoni,Phantump,Phantump,Phantump,ボクレー,小木灵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/708.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 709,
@@ -4958,6 +6374,8 @@ const allMons: Mon[] = [
       'オーロット,Ohrot,대로트,朽木妖,Desséliande,Trombork,Trevenant,Trevenant,Trevenant,オーロット,朽木妖',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/709.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 710,
@@ -4965,6 +6383,8 @@ const allMons: Mon[] = [
       'バケッチャ,Bakeccha,호바귀,南瓜精,Pitrouille,Irrbis,Pumpkaboo,Pumpkaboo,Pumpkaboo,バケッチャ,南瓜精',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/710.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 711,
@@ -4972,6 +6392,8 @@ const allMons: Mon[] = [
       'パンプジン,Pumpjin,펌킨인,南瓜怪人,Banshitrouye,Pumpdjinn,Gourgeist,Gourgeist,Gourgeist,パンプジン,南瓜怪人',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/711.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 712,
@@ -4979,6 +6401,8 @@ const allMons: Mon[] = [
       'カチコール,Kachikohru,꽁어름,冰寶,Grelaçon,Arktip,Bergmite,Bergmite,Bergmite,カチコール,冰宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/712.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 713,
@@ -4986,6 +6410,8 @@ const allMons: Mon[] = [
       'クレベース,Crebase,크레베이스,冰岩怪,Séracrawl,Arktilas,Avalugg,Avalugg,Avalugg,クレベース,冰岩怪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/713.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 714,
@@ -4993,6 +6419,8 @@ const allMons: Mon[] = [
       'オンバット,Onbat,음뱃,嗡蝠,Sonistrelle,eF-eM,Noibat,Noibat,Noibat,オンバット,嗡蝠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/714.png',
+    shownCnt: 1,
+    gottenCnt: 1,
   },
   {
     id: 715,
@@ -5000,6 +6428,8 @@ const allMons: Mon[] = [
       'オンバーン,Onvern,음번,音波龍,Bruyverne,UHaFnir,Noivern,Noivern,Noivern,オンバーン,音波龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/715.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 716,
@@ -5007,6 +6437,8 @@ const allMons: Mon[] = [
       'ゼルネアス,Xerneas,제르네아스,哲爾尼亞斯,Xerneas,Xerneas,Xerneas,Xerneas,Xerneas,ゼルネアス,哲尔尼亚斯',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/716.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 717,
@@ -5014,6 +6446,8 @@ const allMons: Mon[] = [
       'イベルタル,Yveltal,이벨타르,伊裴爾塔爾,Yveltal,Yveltal,Yveltal,Yveltal,Yveltal,イベルタル,伊裴尔塔尔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/717.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 718,
@@ -5021,6 +6455,8 @@ const allMons: Mon[] = [
       'ジガルデ,Zygarde,지가르데,基格爾德,Zygarde,Zygarde,Zygarde,Zygarde,Zygarde,ジガルデ,基格尔德',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/718.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 719,
@@ -5028,12 +6464,16 @@ const allMons: Mon[] = [
       'ディアンシー,Diancie,디안시,蒂安希,Diancie,Diancie,Diancie,Diancie,Diancie,ディアンシー,蒂安希',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/719.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 720,
     names: 'フーパ,Hoopa,후파,胡帕,Hoopa,Hoopa,Hoopa,Hoopa,Hoopa,フーパ,胡帕',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/720.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 721,
@@ -5041,6 +6481,8 @@ const allMons: Mon[] = [
       'ボルケニオン,Volcanion,볼케니온,波爾凱尼恩,Volcanion,Volcanion,Volcanion,Volcanion,Volcanion,ボルケニオン,波尔凯尼恩',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/721.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 722,
@@ -5048,6 +6490,8 @@ const allMons: Mon[] = [
       'モクロー,Mokuroh,나몰빼미,木木梟,Brindibou,Bauz,Rowlet,Rowlet,Rowlet,モクロー,木木枭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/722.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 723,
@@ -5055,6 +6499,8 @@ const allMons: Mon[] = [
       'フクスロー,Fukuthrow,빼미스로우,投羽梟,Efflèche,Arboretoss,Dartrix,Dartrix,Dartrix,フクスロー,投羽枭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/723.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 724,
@@ -5062,6 +6508,8 @@ const allMons: Mon[] = [
       'ジュナイパー,Junaiper,모크나이퍼,狙射樹梟,Archéduc,Silvarro,Decidueye,Decidueye,Decidueye,ジュナイパー,狙射树枭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/724.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 725,
@@ -5069,6 +6517,8 @@ const allMons: Mon[] = [
       'ニャビー,Nyabby,냐오불,火斑喵,Flamiaou,Flamiau,Litten,Litten,Litten,ニャビー,火斑喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/725.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 726,
@@ -5076,6 +6526,8 @@ const allMons: Mon[] = [
       'ニャヒート,Nyaheat,냐오히트,炎熱喵,Matoufeu,Miezunder,Torracat,Torracat,Torracat,ニャヒート,炎热喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/726.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 727,
@@ -5083,6 +6535,8 @@ const allMons: Mon[] = [
       'ガオガエン,Gaogaen,어흥염,熾焰咆哮虎,Félinferno,Fuegro,Incineroar,Incineroar,Incineroar,ガオガエン,炽焰咆哮虎',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/727.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 728,
@@ -5090,6 +6544,8 @@ const allMons: Mon[] = [
       'アシマリ,Ashimari,누리공,球球海獅,Otaquin,Robball,Popplio,Popplio,Popplio,アシマリ,球球海狮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/728.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 729,
@@ -5097,6 +6553,8 @@ const allMons: Mon[] = [
       'オシャマリ,Osyamari,키요공,花漾海獅,Otarlette,Marikeck,Brionne,Brionne,Brionne,オシャマリ,花漾海狮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/729.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 730,
@@ -5104,6 +6562,8 @@ const allMons: Mon[] = [
       'アシレーヌ,Ashirene,누리레느,西獅海壬,Oratoria,Primarene,Primarina,Primarina,Primarina,アシレーヌ,西狮海壬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/730.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 731,
@@ -5111,6 +6571,8 @@ const allMons: Mon[] = [
       'ツツケラ,Tsutsukera,콕코구리,小篤兒,Picassaut,Peppeck,Pikipek,Pikipek,Pikipek,ツツケラ,小笃儿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/731.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 732,
@@ -5118,6 +6580,8 @@ const allMons: Mon[] = [
       'ケララッパ,Kerarappa,크라파,喇叭啄鳥,Piclairon,Trompeck,Trumbeak,Trumbeak,Trumbeak,ケララッパ,喇叭啄鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/732.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 733,
@@ -5125,6 +6589,8 @@ const allMons: Mon[] = [
       'ドデカバシ,Dodekabashi,왕큰부리,銃嘴大鳥,Bazoucan,Tukanon,Toucannon,Toucannon,Toucannon,ドデカバシ,铳嘴大鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/733.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 734,
@@ -5132,6 +6598,8 @@ const allMons: Mon[] = [
       'ヤングース,Youngoose,영구스,貓鼬少,Manglouton,Mangunior,Yungoos,Yungoos,Yungoos,ヤングース,猫鼬少',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/734.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 735,
@@ -5139,6 +6607,8 @@ const allMons: Mon[] = [
       'デカグース,Dekagoose,형사구스,貓鼬探長,Argouste,Manguspektor,Gumshoos,Gumshoos,Gumshoos,デカグース,猫鼬探长',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/735.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 736,
@@ -5146,6 +6616,8 @@ const allMons: Mon[] = [
       'アゴジムシ,Agojimushi,턱지충이,強顎雞母蟲,Larvibule,Mabula,Grubbin,Grubbin,Grubbin,アゴジムシ,强颚鸡母虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/736.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 737,
@@ -5153,6 +6625,8 @@ const allMons: Mon[] = [
       'デンヂムシ,Dendimushi,전지충이,蟲電寶,Chrysapile,Akkup,Charjabug,Charjabug,Charjabug,デンヂムシ,虫电宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/737.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 738,
@@ -5160,6 +6634,8 @@ const allMons: Mon[] = [
       'クワガノン,Kuwagannon,투구뿌논,鍬農炮蟲,Lucanon,Donarion,Vikavolt,Vikavolt,Vikavolt,クワガノン,锹农炮虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/738.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 739,
@@ -5167,6 +6643,8 @@ const allMons: Mon[] = [
       'マケンカニ,Makenkani,오기지게,好勝蟹,Crabagarre,Krabbox,Crabrawler,Crabrawler,Crabrawler,マケンカニ,好胜蟹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/739.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 740,
@@ -5174,6 +6652,8 @@ const allMons: Mon[] = [
       'ケケンカニ,Kekenkani,모단단게,好勝毛蟹,Crabominable,Krawell,Crabominable,Crabominable,Crabominable,ケケンカニ,好胜毛蟹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/740.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 741,
@@ -5181,6 +6661,8 @@ const allMons: Mon[] = [
       'オドリドリ,Odoridori,춤추새,花舞鳥,Plumeline,Choreogel,Oricorio,Oricorio,Oricorio,オドリドリ,花舞鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/741.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 742,
@@ -5188,6 +6670,8 @@ const allMons: Mon[] = [
       'アブリー,Abuly,에블리,萌虻,Bombydou,Wommel,Cutiefly,Cutiefly,Cutiefly,アブリー,萌虻',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/742.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 743,
@@ -5195,6 +6679,8 @@ const allMons: Mon[] = [
       'アブリボン,Aburibbon,에리본,蝶結萌虻,Rubombelle,Bandelby,Ribombee,Ribombee,Ribombee,アブリボン,蝶结萌虻',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/743.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 744,
@@ -5202,6 +6688,8 @@ const allMons: Mon[] = [
       'イワンコ,Iwanko,암멍이,岩狗狗,Rocabot,Wuffels,Rockruff,Rockruff,Rockruff,イワンコ,岩狗狗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/744.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 745,
@@ -5209,6 +6697,8 @@ const allMons: Mon[] = [
       'ルガルガン,Lugarugan,루가루암,鬃岩狼人,Lougaroc,Wolwerock,Lycanroc,Lycanroc,Lycanroc,ルガルガン,鬃岩狼人',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 746,
@@ -5216,6 +6706,8 @@ const allMons: Mon[] = [
       'ヨワシ,Yowashi,약어리,弱丁魚,Froussardine,Lusardin,Wishiwashi,Wishiwashi,Wishiwashi,ヨワシ,弱丁鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/746.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 747,
@@ -5223,6 +6715,8 @@ const allMons: Mon[] = [
       'ヒドイデ,Hidoide,시마사리,好壞星,Vorastérie,Garstella,Mareanie,Mareanie,Mareanie,ヒドイデ,好坏星',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/747.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 748,
@@ -5230,6 +6724,8 @@ const allMons: Mon[] = [
       'ドヒドイデ,Dohidoide,더시마사리,超壞星,Prédastérie,Aggrostella,Toxapex,Toxapex,Toxapex,ドヒドイデ,超坏星',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/748.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 749,
@@ -5237,6 +6733,8 @@ const allMons: Mon[] = [
       'ドロバンコ,Dorobanko,머드나기,泥驢仔,Tiboudet,Pampuli,Mudbray,Mudbray,Mudbray,ドロバンコ,泥驴仔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/749.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 750,
@@ -5244,6 +6742,8 @@ const allMons: Mon[] = [
       'バンバドロ,Banbadoro,만마드,重泥挽馬,Bourrinos,Pampross,Mudsdale,Mudsdale,Mudsdale,バンバドロ,重泥挽马',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/750.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 751,
@@ -5251,6 +6751,8 @@ const allMons: Mon[] = [
       'シズクモ,Shizukumo,물거미,滴蛛,Araqua,Araqua,Dewpider,Dewpider,Dewpider,シズクモ,滴蛛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/751.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 752,
@@ -5258,6 +6760,8 @@ const allMons: Mon[] = [
       'オニシズクモ,Onishizukumo,깨비물거미,滴蛛霸,Tarenbulle,Aranestro,Araquanid,Araquanid,Araquanid,オニシズクモ,滴蛛霸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/752.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 753,
@@ -5265,6 +6769,8 @@ const allMons: Mon[] = [
       'カリキリ,Karikiri,짜랑랑,偽螳草,Mimantis,Imantis,Fomantis,Fomantis,Fomantis,カリキリ,伪螳草',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/753.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 754,
@@ -5272,6 +6778,8 @@ const allMons: Mon[] = [
       'ラランテス,Lalantes,라란티스,蘭螳花,Floramantis,Mantidea,Lurantis,Lurantis,Lurantis,ラランテス,兰螳花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/754.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 755,
@@ -5279,6 +6787,8 @@ const allMons: Mon[] = [
       'ネマシュ,Nemasyu,자마슈,睡睡菇,Spododo,Bubungus,Morelull,Morelull,Morelull,ネマシュ,睡睡菇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/755.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 756,
@@ -5286,6 +6796,8 @@ const allMons: Mon[] = [
       'マシェード,Mashade,마셰이드,燈罩夜菇,Lampignon,Lamellux,Shiinotic,Shiinotic,Shiinotic,マシェード,灯罩夜菇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/756.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 757,
@@ -5293,6 +6805,8 @@ const allMons: Mon[] = [
       'ヤトウモリ,Yatoumori,야도뇽,夜盜火蜥,Tritox,Molunk,Salandit,Salandit,Salandit,ヤトウモリ,夜盗火蜥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/757.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 758,
@@ -5300,6 +6814,8 @@ const allMons: Mon[] = [
       'エンニュート,Ennewt,염뉴트,焰后蜥,Malamandre,Amfira,Salazzle,Salazzle,Salazzle,エンニュート,焰后蜥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 759,
@@ -5307,6 +6823,8 @@ const allMons: Mon[] = [
       'ヌイコグマ,Nuikoguma,포곰곰,童偶熊,Nounourson,Velursi,Stufful,Stufful,Stufful,ヌイコグマ,童偶熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/759.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 760,
@@ -5314,6 +6832,8 @@ const allMons: Mon[] = [
       'キテルグマ,Kiteruguma,이븐곰,穿著熊,Chelours,Kosturso,Bewear,Bewear,Bewear,キテルグマ,穿着熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/760.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 761,
@@ -5321,6 +6841,8 @@ const allMons: Mon[] = [
       'アマカジ,Amakaji,달콤아,甜竹竹,Croquine,Frubberl,Bounsweet,Bounsweet,Bounsweet,アマカジ,甜竹竹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/761.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 762,
@@ -5328,6 +6850,8 @@ const allMons: Mon[] = [
       'Steenee,アママイコ,Amamaiko,달무리나,甜舞妮,Candine,Frubaila,Steenee,Steenee,アママイコ,甜舞妮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/762.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 763,
@@ -5335,6 +6859,8 @@ const allMons: Mon[] = [
       'アマージョ,Amajo,달코퀸,甜冷美后,Sucreine,Fruyal,Tsareena,Tsareena,Tsareena,アマージョ,甜冷美后',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/763.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 764,
@@ -5342,6 +6868,8 @@ const allMons: Mon[] = [
       'キュワワー,Cuwawa,큐아링,花療環環,Guérilande,Curelei,Comfey,Comfey,Comfey,キュワワー,花疗环环',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/764.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 765,
@@ -5349,6 +6877,8 @@ const allMons: Mon[] = [
       'ヤレユータン,Yareyuutan,하랑우탄,智揮猩,Gouroutan,Kommandutan,Oranguru,Oranguru,Oranguru,ヤレユータン,智挥猩',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/765.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 766,
@@ -5356,6 +6886,8 @@ const allMons: Mon[] = [
       'ナゲツケサル,Nagetukesaru,내던숭이,投擲猴,Quartermac,Quartermak,Passimian,Passimian,Passimian,ナゲツケサル,投掷猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/766.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 767,
@@ -5363,6 +6895,8 @@ const allMons: Mon[] = [
       'コソクムシ,Kosokumushi,꼬시레,膽小蟲,Sovkipou,Reißlaus,Wimpod,Wimpod,Wimpod,コソクムシ,胆小虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/767.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 768,
@@ -5370,6 +6904,8 @@ const allMons: Mon[] = [
       'グソクムシャ,Gusokumusha,갑주무사,具甲武者,Sarmuraï,Tectass,Golisopod,Golisopod,Golisopod,グソクムシャ,具甲武者',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/768.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 769,
@@ -5377,6 +6913,8 @@ const allMons: Mon[] = [
       'スナバァ,Sunaba,모래꿍,沙丘娃,Bacabouh,Sankabuh,Sandygast,Sandygast,Sandygast,スナバァ,沙丘娃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/769.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 770,
@@ -5384,6 +6922,8 @@ const allMons: Mon[] = [
       'シロデスナ,Sirodethna,모래성이당,噬沙堡爺,Trépassable,Colossand,Palossand,Palossand,Palossand,シロデスナ,噬沙堡爷',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/770.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 771,
@@ -5391,6 +6931,8 @@ const allMons: Mon[] = [
       'ナマコブシ,Namakobushi,해무기,拳海參,Concombaffe,Gufa,Pyukumuku,Pyukumuku,Pyukumuku,ナマコブシ,拳海参',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/771.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 772,
@@ -5398,6 +6940,8 @@ const allMons: Mon[] = [
       'タイプ：ヌル,Null,타입:널,屬性：空,Type:0,Typ:Null,Código Cero,Tipo Zero,Type: Null,タイプ：ヌル,属性：空',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/772.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 773,
@@ -5405,6 +6949,8 @@ const allMons: Mon[] = [
       'シルヴァディ,Silvady,실버디,銀伴戰獸,Silvallié,Amigento,Silvally,Silvally,Silvally,シルヴァディ,银伴战兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/773.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 774,
@@ -5412,6 +6958,8 @@ const allMons: Mon[] = [
       'メテノ,Meteno,메테노,小隕星,Météno,Meteno,Minior,Minior,Minior,メテノ,小陨星',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/774.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 775,
@@ -5419,6 +6967,8 @@ const allMons: Mon[] = [
       'ネッコアラ,Nekkoara,자말라,樹枕尾熊,Dodoala,Koalelu,Komala,Komala,Komala,ネッコアラ,树枕尾熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/775.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 776,
@@ -5426,6 +6976,8 @@ const allMons: Mon[] = [
       'バクガメス,Bakugames,폭거북스,爆焰龜獸,Boumata,Tortunator,Turtonator,Turtonator,Turtonator,バクガメス,爆焰龟兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/776.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 777,
@@ -5433,6 +6985,8 @@ const allMons: Mon[] = [
       'トゲデマル,Togedemaru,토게데마루,托戈德瑪爾,Togedemaru,Togedemaru,Togedemaru,Togedemaru,Togedemaru,トゲデマル,托戈德玛尔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/777.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 778,
@@ -5440,6 +6994,8 @@ const allMons: Mon[] = [
       'ミミッキュ,Mimikkyu,따라큐,謎擬Ｑ,Mimiqui,Mimigma,Mimikyu,Mimikyu,Mimikyu,ミミッキュ,谜拟丘',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/778.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 779,
@@ -5447,6 +7003,8 @@ const allMons: Mon[] = [
       'ハギギシリ,Hagigishiri,치갈기,磨牙彩皮魚,Denticrisse,Knirfish,Bruxish,Bruxish,Bruxish,ハギギシリ,磨牙彩皮鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/779.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 780,
@@ -5454,6 +7012,8 @@ const allMons: Mon[] = [
       'ジジーロン,Jijilong,할비롱,老翁龍,Draïeul,Sen-Long,Drampa,Drampa,Drampa,ジジーロン,老翁龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/780.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 781,
@@ -5461,6 +7021,8 @@ const allMons: Mon[] = [
       'ダダリン,Dadarin,타타륜,破破舵輪,Sinistrail,Moruda,Dhelmise,Dhelmise,Dhelmise,ダダリン,破破舵轮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/781.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 782,
@@ -5468,6 +7030,8 @@ const allMons: Mon[] = [
       'ジャラコ,Jyarako,짜랑꼬,心鱗寶,Bébécaille,Miniras,Jangmo-o,Jangmo-o,Jangmo-o,ジャラコ,心鳞宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/782.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 783,
@@ -5475,6 +7039,8 @@ const allMons: Mon[] = [
       'ジャランゴ,Jyarango,짜랑고우,鱗甲龍,Écaïd,Mediras,Hakamo-o,Hakamo-o,Hakamo-o,ジャランゴ,鳞甲龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/783.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 784,
@@ -5482,6 +7048,8 @@ const allMons: Mon[] = [
       'ジャラランガ,Jyararanga,짜랑고우거,杖尾鱗甲龍,Ékaïser,Grandiras,Kommo-o,Kommo-o,Kommo-o,ジャラランガ,杖尾鳞甲龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/784.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 785,
@@ -5489,6 +7057,8 @@ const allMons: Mon[] = [
       'カプ・コケコ,Kokeko,카푸꼬꼬꼭,卡璞・鳴鳴,Tokorico,Kapu-Riki,Tapu Koko,Tapu Koko,Tapu Koko,カプ・コケコ,卡璞・鸣鸣',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/785.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 786,
@@ -5496,6 +7066,8 @@ const allMons: Mon[] = [
       'カプ・テテフ,Tetefu,카푸나비나,卡璞・蝶蝶,Tokopiyon,Kapu-Fala,Tapu Lele,Tapu Lele,Tapu Lele,カプ・テテフ,卡璞・蝶蝶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/786.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 787,
@@ -5503,6 +7075,8 @@ const allMons: Mon[] = [
       'カプ・ブルル,Bulul,카푸브루루,卡璞・哞哞,Tokotoro,Kapu-Toro,Tapu Bulu,Tapu Bulu,Tapu Bulu,カプ・ブルル,卡璞・哞哞',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/787.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 788,
@@ -5510,6 +7084,8 @@ const allMons: Mon[] = [
       'カプ・レヒレ,Rehire,카푸느지느,卡璞・鰭鰭,Tokopisco,Kapu-Kime,Tapu Fini,Tapu Fini,Tapu Fini,カプ・レヒレ,卡璞・鳍鳍',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/788.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 789,
@@ -5517,6 +7093,8 @@ const allMons: Mon[] = [
       'コスモッグ,Cosmog,코스모그,科斯莫古,Cosmog,Cosmog,Cosmog,Cosmog,Cosmog,コスモッグ,科斯莫古',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/789.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 790,
@@ -5524,6 +7102,8 @@ const allMons: Mon[] = [
       'コスモウム,Cosmovum,코스모움,科斯莫姆,Cosmovum,Cosmovum,Cosmoem,Cosmoem,Cosmoem,コスモウム,科斯莫姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/790.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 791,
@@ -5531,6 +7111,8 @@ const allMons: Mon[] = [
       'ソルガレオ,Solgaleo,솔가레오,索爾迦雷歐,Solgaleo,Solgaleo,Solgaleo,Solgaleo,Solgaleo,ソルガレオ,索尔迦雷欧',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/791.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 792,
@@ -5538,6 +7120,8 @@ const allMons: Mon[] = [
       'ルナアーラ,Lunala,루나아라,露奈雅拉,Lunala,Lunala,Lunala,Lunala,Lunala,ルナアーラ,露奈雅拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/792.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 793,
@@ -5545,6 +7129,8 @@ const allMons: Mon[] = [
       'ウツロイド,Uturoid,텅비드,虛吾伊德,Zéroïd,Anego,Nihilego,Nihilego,Nihilego,ウツロイド,虚吾伊德',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/793.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 794,
@@ -5552,6 +7138,8 @@ const allMons: Mon[] = [
       'マッシブーン,Massivoon,매시붕,爆肌蚊,Mouscoto,Masskito,Buzzwole,Buzzwole,Buzzwole,マッシブーン,爆肌蚊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/794.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 795,
@@ -5559,6 +7147,8 @@ const allMons: Mon[] = [
       'フェローチェ,Pheroache,페로코체,費洛美螂,Cancrelove,Schabelle,Pheromosa,Pheromosa,Pheromosa,フェローチェ,费洛美螂',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/795.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 796,
@@ -5566,6 +7156,8 @@ const allMons: Mon[] = [
       'デンジュモク,Denjyumoku,전수목,電束木,Câblifère,Voltriant,Xurkitree,Xurkitree,Xurkitree,デンジュモク,电束木',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/796.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 797,
@@ -5573,6 +7165,8 @@ const allMons: Mon[] = [
       'テッカグヤ,Tekkaguya,철화구야,鐵火輝夜,Bamboiselle,Kaguron,Celesteela,Celesteela,Celesteela,テッカグヤ,铁火辉夜',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/797.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 798,
@@ -5580,6 +7174,8 @@ const allMons: Mon[] = [
       'カミツルギ,Kamiturugi,종이신도,紙御劍,Katagami,Katagami,Kartana,Kartana,Kartana,カミツルギ,纸御剑',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/798.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 799,
@@ -5587,6 +7183,8 @@ const allMons: Mon[] = [
       'アクジキング,Akuziking,악식킹,惡食大王,Engloutyran,Schlingking,Guzzlord,Guzzlord,Guzzlord,アクジキング,恶食大王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/799.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 800,
@@ -5594,6 +7192,8 @@ const allMons: Mon[] = [
       'ネクロズマ,Necrozma,네크로즈마,奈克洛茲瑪,Necrozma,Necrozma,Necrozma,Necrozma,Necrozma,ネクロズマ,奈克洛兹玛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/800.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 801,
@@ -5601,6 +7201,8 @@ const allMons: Mon[] = [
       'マギアナ,Magearna,마기아나,瑪機雅娜,Magearna,Magearna,Magearna,Magearna,Magearna,マギアナ,玛机雅娜',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/801.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 802,
@@ -5608,6 +7210,8 @@ const allMons: Mon[] = [
       'マーシャドー,Marshadow,마샤도,瑪夏多,Marshadow,Marshadow,Marshadow,Marshadow,Marshadow,マーシャドー,玛夏多',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/802.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 803,
@@ -5615,6 +7219,8 @@ const allMons: Mon[] = [
       'ベベノム,Bevenom,베베놈,毒貝比,Vémini,Venicro,Poipole,Poipole,Poipole,ベベノム,毒贝比',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/803.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 804,
@@ -5622,6 +7228,8 @@ const allMons: Mon[] = [
       'アーゴヨン,Agoyon,아고용,四顎針龍,Mandrillon,Agoyon,Naganadel,Naganadel,Naganadel,アーゴヨン,四颚针龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/804.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 805,
@@ -5629,6 +7237,8 @@ const allMons: Mon[] = [
       'ツンデツンデ,Tundetunde,차곡차곡,壘磊石,Ama-Ama,Muramura,Stakataka,Stakataka,Stakataka,ツンデツンデ,垒磊石',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/805.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 806,
@@ -5636,6 +7246,8 @@ const allMons: Mon[] = [
       'ズガドーン,Zugadoon,두파팡,砰頭小丑,Pierroteknik,Kopplosio,Blacephalon,Blacephalon,Blacephalon,ズガドーン,砰头小丑',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/806.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 807,
@@ -5643,6 +7255,8 @@ const allMons: Mon[] = [
       'ゼラオラ,Zeraora,제라오라,捷拉奧拉,Zeraora,Zeraora,Zeraora,Zeraora,Zeraora,ゼラオラ,捷拉奥拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/807.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 808,
@@ -5650,6 +7264,8 @@ const allMons: Mon[] = [
       'メルタン,Meltan,멜탄,美錄坦,Meltan,Meltan,Meltan,Meltan,Meltan,メルタン,美录坦',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/808.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 809,
@@ -5657,6 +7273,8 @@ const allMons: Mon[] = [
       'メルメタル,Melmetal,멜메탈,美錄梅塔,Melmetal,Melmetal,Melmetal,Melmetal,Melmetal,メルメタル,美录梅塔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/809.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 810,
@@ -5664,6 +7282,8 @@ const allMons: Mon[] = [
       'サルノリ,Sarunori,흥나숭,敲音猴,Ouistempo,Chimpep,Grookey,Grookey,Grookey,サルノリ,敲音猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/810.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 811,
@@ -5671,6 +7291,8 @@ const allMons: Mon[] = [
       'バチンキー,Bachinkey,채키몽,啪咚猴,Badabouin,Chimstix,Thwackey,Thwackey,Thwackey,バチンキー,啪咚猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/811.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 812,
@@ -5678,6 +7300,8 @@ const allMons: Mon[] = [
       'ゴリランダー,Gorirander,고릴타,轟擂金剛猩,Gorythmic,Gortrom,Rillaboom,Rillaboom,Rillaboom,ゴリランダー,轰擂金刚猩',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/812.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 813,
@@ -5685,6 +7309,8 @@ const allMons: Mon[] = [
       'ヒバニー,Hibanny,염버니,炎兔兒,Flambino,Hopplo,Scorbunny,Scorbunny,Scorbunny,ヒバニー,炎兔儿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/813.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 814,
@@ -5692,6 +7318,8 @@ const allMons: Mon[] = [
       'ラビフット,Rabbifuto,래비풋,騰蹴小將,Lapyro,Kickerlo,Raboot,Raboot,Raboot,ラビフット,腾蹴小将',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/814.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 815,
@@ -5699,6 +7327,8 @@ const allMons: Mon[] = [
       'エースバーン,Aceburn,에이스번,閃焰王牌,Pyrobut,Liberlo,Cinderace,Cinderace,Cinderace,エースバーン,闪焰王牌',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/815.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 816,
@@ -5706,6 +7336,8 @@ const allMons: Mon[] = [
       'メッソン,Messon,울머기,淚眼蜥,Larméléon,Memmeon,Sobble,Sobble,Sobble,メッソン,泪眼蜥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/816.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 817,
@@ -5713,6 +7345,8 @@ const allMons: Mon[] = [
       'ジメレオン,Jimereon,누겔레온,變澀蜥,Arrozard,Phlegleon,Drizzile,Drizzile,Drizzile,ジメレオン,变涩蜥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/817.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 818,
@@ -5720,6 +7354,8 @@ const allMons: Mon[] = [
       'インテレオン,Intereon,인텔리레온,千面避役,Lézargus,Intelleon,Inteleon,Inteleon,Inteleon,インテレオン,千面避役',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/818.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 819,
@@ -5727,6 +7363,8 @@ const allMons: Mon[] = [
       'ホシガリス,Hoshigarisu,탐리스,貪心栗鼠,Rongourmand,Raffel,Skwovet,Skwovet,Skwovet,ホシガリス,贪心栗鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/819.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 820,
@@ -5734,6 +7372,8 @@ const allMons: Mon[] = [
       'ヨクバリス,Yokubarisu,요씽리스,藏飽栗鼠,Rongrigou,Schlaraffel,Greedent,Greedent,Greedent,ヨクバリス,藏饱栗鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/820.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 821,
@@ -5741,6 +7381,8 @@ const allMons: Mon[] = [
       'ココガラ,Kokogara,파라꼬,稚山雀,Minisange,Meikro,Rookidee,Rookidee,Rookidee,ココガラ,稚山雀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/821.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 822,
@@ -5748,6 +7390,8 @@ const allMons: Mon[] = [
       'アオガラス,Aogarasu,파크로우,藍鴉,Bleuseille,Kranoviz,Corvisquire,Corvisquire,Corvisquire,アオガラス,蓝鸦',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/822.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 823,
@@ -5755,6 +7399,8 @@ const allMons: Mon[] = [
       'アーマーガア,Armorga,아머까오,鋼鎧鴉,Corvaillus,Krarmor,Corviknight,Corviknight,Corviknight,アーマーガア,钢铠鸦',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/823.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 824,
@@ -5762,6 +7408,8 @@ const allMons: Mon[] = [
       'サッチムシ,Sacchimushi,두루지벌레,索偵蟲,Larvadar,Sensect,Blipbug,Blipbug,Blipbug,サッチムシ,索侦虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/824.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 825,
@@ -5769,6 +7417,8 @@ const allMons: Mon[] = [
       'レドームシ,Redomushi,레돔벌레,天罩蟲,Coléodôme,Keradar,Dottler,Dottler,Dottler,レドームシ,天罩虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/825.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 826,
@@ -5776,6 +7426,8 @@ const allMons: Mon[] = [
       'イオルブ,Eolb,이올브,以歐路普,Astronelle,Maritellit,Orbeetle,Orbeetle,Orbeetle,イオルブ,以欧路普',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/826.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 827,
@@ -5783,6 +7435,8 @@ const allMons: Mon[] = [
       'クスネ,Kusune,훔처우,偷兒狐,Goupilou,Kleptifux,Nickit,Nickit,Nickit,クスネ,狡小狐',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/827.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 828,
@@ -5790,6 +7444,8 @@ const allMons: Mon[] = [
       'フォクスライ,Foxly,폭슬라이,狐大盜,Roublenard,Gaunux,Thievul,Thievul,Thievul,フォクスライ,猾大狐',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/828.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 829,
@@ -5797,6 +7453,8 @@ const allMons: Mon[] = [
       'ヒメンカ,Himenka,꼬모카,幼棉棉,Tournicoton,Cottini,Gossifleur,Gossifleur,Gossifleur,ヒメンカ,幼棉棉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/829.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 830,
@@ -5804,6 +7462,8 @@ const allMons: Mon[] = [
       'ワタシラガ,Watashiraga,백솜모카,白蓬蓬,Blancoton,Cottomi,Eldegoss,Eldegoss,Eldegoss,ワタシラガ,白蓬蓬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/830.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 831,
@@ -5811,6 +7471,8 @@ const allMons: Mon[] = [
       'ウールー,Wooluu,우르,毛辮羊,Moumouton,Wolly,Wooloo,Wooloo,Wooloo,ウールー,毛辫羊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/831.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 832,
@@ -5818,6 +7480,8 @@ const allMons: Mon[] = [
       'バイウールー,Baiwooluu,배우르,毛毛角羊,Moumouflon,Zwollock,Dubwool,Dubwool,Dubwool,バイウールー,毛毛角羊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/832.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 833,
@@ -5825,6 +7489,8 @@ const allMons: Mon[] = [
       'カムカメ,Kamukame,깨물부기,咬咬龜,Khélocrok,Kamehaps,Chewtle,Chewtle,Chewtle,カムカメ,咬咬龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/833.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 834,
@@ -5832,6 +7498,8 @@ const allMons: Mon[] = [
       'カジリガメ,Kajirigame,갈가부기,暴噬龜,Torgamord,Kamalm,Drednaw,Drednaw,Drednaw,カジリガメ,暴噬龟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/834.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 835,
@@ -5839,6 +7507,8 @@ const allMons: Mon[] = [
       'ワンパチ,Wanpachi,멍파치,來電汪,Voltoutou,Voldi,Yamper,Yamper,Yamper,ワンパチ,来电汪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/835.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 836,
@@ -5846,6 +7516,8 @@ const allMons: Mon[] = [
       'パルスワン,Pulsewan,펄스멍,逐電犬,Fulgudog,Bellektro,Boltund,Boltund,Boltund,パルスワン,逐电犬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/836.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 837,
@@ -5853,6 +7525,8 @@ const allMons: Mon[] = [
       'タンドン,Tandon,탄동,小炭仔,Charbi,Klonkett,Rolycoly,Rolycoly,Rolycoly,タンドン,小炭仔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/837.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 838,
@@ -5860,6 +7534,8 @@ const allMons: Mon[] = [
       'トロッゴン,Toroggon,탄차곤,大炭車,Wagomine,Wagong,Carkol,Carkol,Carkol,トロッゴン,大炭车',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/838.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 839,
@@ -5867,6 +7543,8 @@ const allMons: Mon[] = [
       'セキタンザン,Sekitanzan,석탄산,巨炭山,Monthracite,Montecarbo,Coalossal,Coalossal,Coalossal,セキタンザン,巨炭山',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/839.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 840,
@@ -5874,6 +7552,8 @@ const allMons: Mon[] = [
       'カジッチュ,Kajicchu,과사삭벌레,啃果蟲,Verpom,Knapfel,Applin,Applin,Applin,カジッチュ,啃果虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/840.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 841,
@@ -5881,6 +7561,8 @@ const allMons: Mon[] = [
       'アップリュー,Appryu,애프룡,蘋裹龍,Pomdrapi,Drapfel,Flapple,Flapple,Flapple,アップリュー,苹裹龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/841.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 842,
@@ -5888,6 +7570,8 @@ const allMons: Mon[] = [
       'タルップル,Tarupple,단지래플,豐蜜龍,Dratatin,Schlapfel,Appletun,Appletun,Appletun,タルップル,丰蜜龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/842.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 843,
@@ -5895,6 +7579,8 @@ const allMons: Mon[] = [
       'スナヘビ,Sunahebi,모래뱀,沙包蛇,Dunaja,Salanga,Silicobra,Silicobra,Silicobra,スナヘビ,沙包蛇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/843.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 844,
@@ -5902,6 +7588,8 @@ const allMons: Mon[] = [
       'サダイジャ,Sadaija,사다이사,沙螺蟒,Dunaconda,Sanaconda,Sandaconda,Sandaconda,Sandaconda,サダイジャ,沙螺蟒',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/844.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 845,
@@ -5909,6 +7597,8 @@ const allMons: Mon[] = [
       'ウッウ,Uu,윽우지,古月鳥,Nigosier,Urgl,Cramorant,Cramorant,Cramorant,ウッウ,古月鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/845.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 846,
@@ -5916,6 +7606,8 @@ const allMons: Mon[] = [
       'サシカマス,Sasikamasu,찌로꼬치,刺梭魚,Embrochet,Pikuda,Arrokuda,Arrokuda,Arrokuda,サシカマス,刺梭鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/846.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 847,
@@ -5923,6 +7615,8 @@ const allMons: Mon[] = [
       'カマスジョー,Kamasujaw,꼬치조,戽斗尖梭,Hastacuda,Barrakiefa,Barraskewda,Barraskewda,Barraskewda,カマスジョー,戽斗尖梭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/847.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 848,
@@ -5930,6 +7624,8 @@ const allMons: Mon[] = [
       'エレズン,Eleson,일레즌,毒電嬰,Toxizap,Toxel,Toxel,Toxel,Toxel,エレズン,电音婴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/848.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 849,
@@ -5937,6 +7633,8 @@ const allMons: Mon[] = [
       'ストリンダー,Strinder,스트린더,顫弦蠑螈,Salarsen,Riffex,Toxtricity,Toxtricity,Toxtricity,ストリンダー,颤弦蝾螈',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/849.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 850,
@@ -5944,6 +7642,8 @@ const allMons: Mon[] = [
       'ヤクデ,Yakude,태우지네,燒火蚣,Grillepattes,Thermopod,Sizzlipede,Sizzlipede,Sizzlipede,ヤクデ,烧火蚣',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/850.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 851,
@@ -5951,6 +7651,8 @@ const allMons: Mon[] = [
       'マルヤクデ,Maruyakude,다태우지네,焚焰蚣,Scolocendre,Infernopod,Centiskorch,Centiskorch,Centiskorch,マルヤクデ,焚焰蚣',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/851.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 852,
@@ -5958,6 +7660,8 @@ const allMons: Mon[] = [
       'タタッコ,Tatakko,때때무노,拳拳蛸,Poulpaf,Klopptopus,Clobbopus,Clobbopus,Clobbopus,タタッコ,拳拳蛸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/852.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 853,
@@ -5965,6 +7669,8 @@ const allMons: Mon[] = [
       'オトスパス,Otosupus,케오퍼스,八爪武師,Krakos,Kaocto,Grapploct,Grapploct,Grapploct,オトスパス,八爪武师',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/853.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 854,
@@ -5972,6 +7678,8 @@ const allMons: Mon[] = [
       'ヤバチャ,Yabacha,데인차,來悲茶,Théffroi,Fatalitee,Sinistea,Sinistea,Sinistea,ヤバチャ,来悲茶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/854.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 855,
@@ -5979,6 +7687,8 @@ const allMons: Mon[] = [
       'ポットデス,Potdeath,포트데스,怖思壺,Polthégeist,Mortipot,Polteageist,Polteageist,Polteageist,ポットデス,怖思壶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/855.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 856,
@@ -5986,6 +7696,8 @@ const allMons: Mon[] = [
       'ミブリム,Mibrim,몸지브림,迷布莉姆,Bibichut,Brimova,Hatenna,Hatenna,Hatenna,ミブリム,迷布莉姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/856.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 857,
@@ -5993,6 +7705,8 @@ const allMons: Mon[] = [
       'テブリム,Tebrim,손지브림,提布莉姆,Chapotus,Brimano,Hattrem,Hattrem,Hattrem,テブリム,提布莉姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/857.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 858,
@@ -6000,6 +7714,8 @@ const allMons: Mon[] = [
       'ブリムオン,Brimuon,브리무음,布莉姆溫,Sorcilence,Silembrim,Hatterene,Hatterene,Hatterene,ブリムオン,布莉姆温',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/858.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 859,
@@ -6007,6 +7723,8 @@ const allMons: Mon[] = [
       'ベロバー,Beroba,메롱꿍,搗蛋小妖,Grimalin,Bähmon,Impidimp,Impidimp,Impidimp,ベロバー,捣蛋小妖',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/859.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 860,
@@ -6014,6 +7732,8 @@ const allMons: Mon[] = [
       'ギモー,Gimoh,쏘겨모,詐唬魔,Fourbelin,Pelzebub,Morgrem,Morgrem,Morgrem,ギモー,诈唬魔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/860.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 861,
@@ -6021,6 +7741,8 @@ const allMons: Mon[] = [
       'オーロンゲ,Ohlonge,오롱털,長毛巨魔,Angoliath,Olangaar,Grimmsnarl,Grimmsnarl,Grimmsnarl,オーロンゲ,长毛巨魔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/861.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 862,
@@ -6028,6 +7750,8 @@ const allMons: Mon[] = [
       'タチフサグマ,Tachifusaguma,가로막구리,堵攔熊,Ixon,Barrikadax,Obstagoon,Obstagoon,Obstagoon,タチフサグマ,堵拦熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/862.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 863,
@@ -6035,6 +7759,8 @@ const allMons: Mon[] = [
       'ニャイキング,Nyaiking,나이킹,喵頭目,Berserkatt,Mauzinger,Perrserker,Perrserker,Perrserker,ニャイキング,喵头目',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/863.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 864,
@@ -6042,6 +7768,8 @@ const allMons: Mon[] = [
       'サニゴーン,Sunigoon,산호르곤,魔靈珊瑚,Corayôme,Gorgasonn,Cursola,Cursola,Cursola,サニゴーン,魔灵珊瑚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/864.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 865,
@@ -6049,6 +7777,8 @@ const allMons: Mon[] = [
       'ネギガナイト,Negigaknight,창파나이트,蔥遊兵,Palarticho,Lauchzelot,Sirfetch’d,Sirfetch’d,Sirfetch’d,ネギガナイト,葱游兵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/865.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 866,
@@ -6056,6 +7786,8 @@ const allMons: Mon[] = [
       'バリコオル,Barrikohru,마임꽁꽁,踏冰人偶,M. Glaquette,Pantifrost,Mr. Rime,Mr. Rime,Mr. Rime,バリコオル,踏冰人偶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/866.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 867,
@@ -6063,6 +7795,8 @@ const allMons: Mon[] = [
       'デスバーン,Deathbarn,데스판,死神板,Tutétékri,Oghnatoll,Runerigus,Runerigus,Runerigus,デスバーン,迭失板',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/867.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 868,
@@ -6070,6 +7804,8 @@ const allMons: Mon[] = [
       'マホミル,Mahomil,마빌크,小仙奶,Crèmy,Hokumil,Milcery,Milcery,Milcery,マホミル,小仙奶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/868.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 869,
@@ -6077,6 +7813,8 @@ const allMons: Mon[] = [
       'マホイップ,Mawhip,마휘핑,霜奶仙,Charmilly,Pokusan,Alcremie,Alcremie,Alcremie,マホイップ,霜奶仙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/869.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 870,
@@ -6084,6 +7822,8 @@ const allMons: Mon[] = [
       'タイレーツ,Tairetsu,대여르,列陣兵,Hexadron,Legios,Falinks,Falinks,Falinks,タイレーツ,列阵兵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/870.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 871,
@@ -6091,6 +7831,8 @@ const allMons: Mon[] = [
       'バチンウニ,Bachinuni,찌르성게,啪嚓海膽,Wattapik,Britzigel,Pincurchin,Pincurchin,Pincurchin,バチンウニ,啪嚓海胆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/871.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 872,
@@ -6098,6 +7840,8 @@ const allMons: Mon[] = [
       'ユキハミ,Yukihami,누니머기,雪吞蟲,Frissonille,Snomnom,Snom,Snom,Snom,ユキハミ,雪吞虫',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/872.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 873,
@@ -6105,6 +7849,8 @@ const allMons: Mon[] = [
       'モスノウ,Mothnow,모스노우,雪絨蛾,Beldeneige,Mottineva,Frosmoth,Frosmoth,Frosmoth,モスノウ,雪绒蛾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/873.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 874,
@@ -6112,6 +7858,8 @@ const allMons: Mon[] = [
       'イシヘンジン,Ishihengin,돌헨진,巨石丁,Dolman,Humanolith,Stonjourner,Stonjourner,Stonjourner,イシヘンジン,巨石丁',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/874.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 875,
@@ -6119,6 +7867,8 @@ const allMons: Mon[] = [
       'コオリッポ,Korippo,빙큐보,冰砌鵝,Bekaglaçon,Kubuin,Eiscue,Eiscue,Eiscue,コオリッポ,冰砌鹅',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/875.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 876,
@@ -6126,6 +7876,8 @@ const allMons: Mon[] = [
       'イエッサン,Yessan,에써르,愛管侍,Wimessir,Servol,Indeedee,Indeedee,Indeedee,イエッサン,爱管侍',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/876.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 877,
@@ -6133,6 +7885,8 @@ const allMons: Mon[] = [
       'モルペコ,Morpeko,모르페코,莫魯貝可,Morpeko,Morpeko,Morpeko,Morpeko,Morpeko,モルペコ,莫鲁贝可',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 878,
@@ -6140,6 +7894,8 @@ const allMons: Mon[] = [
       'ゾウドウ,Zoudou,끼리동,銅象,Charibari,Kupfanti,Cufant,Cufant,Cufant,ゾウドウ,铜象',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/878.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 879,
@@ -6147,6 +7903,8 @@ const allMons: Mon[] = [
       'ダイオウドウ,Daioudou,대왕끼리동,大王銅象,Pachyradjah,Patinaraja,Copperajah,Copperajah,Copperajah,ダイオウドウ,大王铜象',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/879.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 880,
@@ -6154,6 +7912,8 @@ const allMons: Mon[] = [
       'パッチラゴン,Patchiragon,파치래곤,雷鳥龍,Galvagon,Lectragon,Dracozolt,Dracozolt,Dracozolt,パッチラゴン,雷鸟龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/880.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 881,
@@ -6161,6 +7921,8 @@ const allMons: Mon[] = [
       'パッチルドン,Patchilldon,파치르돈,雷鳥海獸,Galvagla,Lecryodon,Arctozolt,Arctozolt,Arctozolt,パッチルドン,雷鸟海兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/881.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 882,
@@ -6168,6 +7930,8 @@ const allMons: Mon[] = [
       'ウオノラゴン,Uonoragon,어래곤,鰓魚龍,Hydragon,Pescragon,Dracovish,Dracovish,Dracovish,ウオノラゴン,鳃鱼龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/882.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 883,
@@ -6175,6 +7939,8 @@ const allMons: Mon[] = [
       'ウオチルドン,Uochilldon,어치르돈,鰓魚海獸,Hydragla,Pescryodon,Arctovish,Arctovish,Arctovish,ウオチルドン,鳃鱼海兽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/883.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 884,
@@ -6182,6 +7948,8 @@ const allMons: Mon[] = [
       'ジュラルドン,Duraludon,두랄루돈,鋁鋼龍,Duralugon,Duraludon,Duraludon,Duraludon,Duraludon,ジュラルドン,铝钢龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/884.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 885,
@@ -6189,6 +7957,8 @@ const allMons: Mon[] = [
       'ドラメシヤ,Dorameshiya,드라꼰,多龍梅西亞,Fantyrm,Grolldra,Dreepy,Dreepy,Dreepy,ドラメシヤ,多龙梅西亚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/885.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 886,
@@ -6196,6 +7966,8 @@ const allMons: Mon[] = [
       'ドロンチ,Doronch,드래런치,多龍奇,Dispareptil,Phandra,Drakloak,Drakloak,Drakloak,ドロンチ,多龙奇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/886.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 887,
@@ -6203,6 +7975,8 @@ const allMons: Mon[] = [
       'ドラパルト,Dorapult,드래펄트,多龍巴魯托,Lanssorien,Katapuldra,Dragapult,Dragapult,Dragapult,ドラパルト,多龙巴鲁托',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/887.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 888,
@@ -6210,6 +7984,8 @@ const allMons: Mon[] = [
       'ザシアン,Zacian,자시안,蒼響,Zacian,Zacian,Zacian,Zacian,Zacian,ザシアン,苍响',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 889,
@@ -6217,6 +7993,8 @@ const allMons: Mon[] = [
       'ザマゼンタ,Zamazenta,자마젠타,藏瑪然特,Zamazenta,Zamazenta,Zamazenta,Zamazenta,Zamazenta,ザマゼンタ,藏玛然特',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 890,
@@ -6224,6 +8002,8 @@ const allMons: Mon[] = [
       'ムゲンダイナ,Mugendina,무한다이노,無極汰那,Éthernatos,Endynalos,Eternatus,Eternatus,Eternatus,ムゲンダイナ,无极汰那',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/890.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 891,
@@ -6231,6 +8011,8 @@ const allMons: Mon[] = [
       'ダクマ,Dakuma,치고마,熊徒弟,Wushours,Dakuma,Kubfu,Kubfu,Kubfu,ダクマ,熊徒弟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/891.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 892,
@@ -6238,6 +8020,8 @@ const allMons: Mon[] = [
       'ウーラオス,Wulaosu,우라오스,武道熊師,Shifours,Wulaosu,Urshifu,Urshifu,Urshifu,ウーラオス,武道熊师',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/892.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 893,
@@ -6245,6 +8029,8 @@ const allMons: Mon[] = [
       'ザルード,Zarude,자루도,薩戮德,Zarude,Zarude,Zarude,Zarude,Zarude,ザルード,萨戮德',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/893.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 894,
@@ -6252,6 +8038,8 @@ const allMons: Mon[] = [
       'レジエレキ,Regieleki,레지에레키,雷吉艾勒奇,Regieleki,Regieleki,Regieleki,Regieleki,Regieleki,レジエレキ,雷吉艾勒奇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/894.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 895,
@@ -6259,6 +8047,8 @@ const allMons: Mon[] = [
       'レジドラゴ,Regidorago,레지드래고,雷吉鐸拉戈,Regidrago,Regidrago,Regidrago,Regidrago,Regidrago,レジドラゴ,雷吉铎拉戈',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/895.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 896,
@@ -6266,6 +8056,8 @@ const allMons: Mon[] = [
       'ブリザポス,Blizzapos,블리자포스,雪暴馬,Blizzeval,Polaross,Glastrier,Glastrier,Glastrier,ブリザポス,雪暴马',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/896.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 897,
@@ -6273,6 +8065,8 @@ const allMons: Mon[] = [
       'レイスポス,Wraithpos,레이스포스,靈幽馬,Spectreval,Phantoross,Spectrier,Spectrier,Spectrier,レイスポス,灵幽马',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/897.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 898,
@@ -6280,6 +8074,8 @@ const allMons: Mon[] = [
       'バドレックス,Budrex,버드렉스,蕾冠王,Sylveroy,Coronospa,Calyrex,Calyrex,Calyrex,バドレックス,蕾冠王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/898.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 899,
@@ -6287,6 +8083,8 @@ const allMons: Mon[] = [
       'アヤシシ,Ayashishi,신비록,詭角鹿,Cerbyllin,Damythir,Wyrdeer,Wyrdeer,アヤシシ,诡角鹿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/899.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 900,
@@ -6294,6 +8092,8 @@ const allMons: Mon[] = [
       'バサギリ,Basagiri,사마자르,劈斧螳螂,Hachécateur,Axantor,Kleavor,Kleavor,バサギリ,劈斧螳螂',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/900.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 901,
@@ -6301,6 +8101,8 @@ const allMons: Mon[] = [
       'ガチグマ,Gachiguma,다투곰,月月熊,Ursaking,Ursaluna,Ursaluna,Ursaluna,ガチグマ,月月熊',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/901.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 902,
@@ -6308,6 +8110,8 @@ const allMons: Mon[] = [
       'イダイトウ,Idaitou,대쓰여너,幽尾玄魚,Paragruel,Salmagnis,Basculegion,Basculegion,イダイトウ,幽尾玄鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/902.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 903,
@@ -6315,6 +8119,8 @@ const allMons: Mon[] = [
       'オオニューラ,Oonyura,포푸니크,大狃拉,Farfurex,Snieboss,Sneasler,Sneasler,オオニューラ,大狃拉',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/903.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 904,
@@ -6322,6 +8128,8 @@ const allMons: Mon[] = [
       'ハリーマン,Hariman,장침바루,萬針魚,Qwilpik,Myriador,Overqwil,Overqwil,ハリーマン,万针鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/904.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 905,
@@ -6329,6 +8137,8 @@ const allMons: Mon[] = [
       'ラブトロス,Lovetolos,러브로스,眷戀雲,Amovénus,Cupidos,Enamorus,Enamorus,ラブトロス,眷恋云',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/905.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 906,
@@ -6336,6 +8146,8 @@ const allMons: Mon[] = [
       '新叶喵,ニャオハ,Nyahoja,나오하,新葉喵,Poussacha,Felori,Sprigatito,ニャオハ',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/906.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 907,
@@ -6343,6 +8155,8 @@ const allMons: Mon[] = [
       'ニャローテ,Nyarote,나로테,蒂蕾喵,Matourgeon,Feliospa,Floragato,ニャローテ,蒂蕾喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/907.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 908,
@@ -6350,6 +8164,8 @@ const allMons: Mon[] = [
       'マスカーニャ,Masquernya,마스카나,魔幻假面喵,Miascarade,Maskagato,Meowscarada,マスカーニャ,魔幻假面喵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/908.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 909,
@@ -6357,6 +8173,8 @@ const allMons: Mon[] = [
       'ホゲータ,Hogator,뜨아거,呆火鱷,Chochodile,Krokel,Fuecoco,ホゲータ,呆火鳄',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/909.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 910,
@@ -6364,6 +8182,8 @@ const allMons: Mon[] = [
       'アチゲータ,Achigator,악뜨거,炙燙鱷,Crocogril,Lokroko,Crocalor,アチゲータ,炙烫鳄',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/910.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 911,
@@ -6371,6 +8191,8 @@ const allMons: Mon[] = [
       'ラウドボーン,Laudbon,라우드본,骨紋巨聲鱷,Flâmigator,Skelokrok,Skeledirge,ラウドボーン,骨纹巨声鳄',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/911.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 912,
@@ -6378,6 +8200,8 @@ const allMons: Mon[] = [
       'クワッス,Kuwassu,꾸왁스,潤水鴨,Coiffeton,Kwaks,Quaxly,クワッス,润水鸭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/912.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 913,
@@ -6385,6 +8209,8 @@ const allMons: Mon[] = [
       'ウェルカモ,Welkamo,아꾸왁,湧躍鴨,Canarbello,Fuentente,Quaxwell,ウェルカモ,涌跃鸭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/913.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 914,
@@ -6392,6 +8218,8 @@ const allMons: Mon[] = [
       'ウェーニバル,Wanival,웨이니발,狂歡浪舞鴨,Palmaval,Bailonda,Quaquaval,ウェーニバル,狂欢浪舞鸭',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/914.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 915,
@@ -6399,6 +8227,8 @@ const allMons: Mon[] = [
       'グルトン,Gourton,맛보돈,愛吃豚,Gourmelet,Ferkuli,Lechonk,グルトン,爱吃豚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/915.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 916,
@@ -6406,6 +8236,8 @@ const allMons: Mon[] = [
       'パフュートン,Perfuton,퍼퓨돈,飄香豚,Fragroin,Fragrunz,Oinkologne,パフュートン,飘香豚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/916.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 917,
@@ -6413,6 +8245,8 @@ const allMons: Mon[] = [
       'タマンチュラ,Tamantula,타랜툴라,團珠蛛,Tissenboule,Tarundel,Tarountula,タマンチュラ,团珠蛛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/917.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 918,
@@ -6420,6 +8254,8 @@ const allMons: Mon[] = [
       'ワナイダー,Wanaider,트래피더,操陷蛛,Filentrappe,Spinsidias,Spidops,ワナイダー,操陷蛛',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/918.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 919,
@@ -6427,6 +8263,8 @@ const allMons: Mon[] = [
       'マメバッタ,Mamebatta,콩알뚜기,豆蟋蟀,Lilliterelle,Micrick,Nymble,マメバッタ,豆蟋蟀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/919.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 920,
@@ -6434,18 +8272,24 @@ const allMons: Mon[] = [
       'エクスレッグ,Exleg,엑스레그,烈腿蝗,Gambex,Lextremo,Lokix,エクスレッグ,烈腿蝗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/920.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 921,
     names: 'パモ,Pamo,빠모,布撥,Pohm,Pamo,Pawmi,パモ,布拨',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/921.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 922,
     names: 'パモット,Pamot,빠모트,布土撥,Pohmotte,Pamamo,Pawmo,パモット,布土拨',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/922.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 923,
@@ -6453,6 +8297,8 @@ const allMons: Mon[] = [
       'パーモット,Parmot,빠르모트,巴布土撥,Pohmarmotte,Pamomamo,Pawmot,パーモット,巴布土拨',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/923.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 924,
@@ -6460,6 +8306,8 @@ const allMons: Mon[] = [
       'ワッカネズミ,Wakkanezumi,두리쥐,一對鼠,Compagnol,Zwieps,Tandemaus,ワッカネズミ,一对鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/924.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 925,
@@ -6467,6 +8315,8 @@ const allMons: Mon[] = [
       'イッカネズミ,Ikkanezumi,파밀리쥐,一家鼠,Famignol,Famieps,Maushold,イッカネズミ,一家鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 926,
@@ -6474,6 +8324,8 @@ const allMons: Mon[] = [
       'パピモッチ,Pupimocchi,쫀도기,狗仔包,Pâtachiot,Hefel,Fidough,パピモッチ,狗仔包',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/926.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 927,
@@ -6481,12 +8333,16 @@ const allMons: Mon[] = [
       'バウッツェル,Bowtzel,바우첼,麻花犬,Briochien,Backel,Dachsbun,バウッツェル,麻花犬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/927.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 928,
     names: 'ミニーブ,Minive,미니브,迷你芙,Olivini,Olini,Smoliv,ミニーブ,迷你芙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/928.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 929,
@@ -6494,6 +8350,8 @@ const allMons: Mon[] = [
       'オリーニョ,Olinyo,올리뇨,奧利紐,Olivado,Olivinio,Dolliv,オリーニョ,奥利纽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/929.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 930,
@@ -6501,6 +8359,8 @@ const allMons: Mon[] = [
       'オリーヴァ,Oliva,올리르바,奧利瓦,Arboliva,Olithena,Arboliva,オリーヴァ,奥利瓦',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/930.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 931,
@@ -6508,12 +8368,16 @@ const allMons: Mon[] = [
       'イキリンコ,Ikirinko,시비꼬,怒鸚哥,Tapatoès,Krawalloro,Squawkabilly,イキリンコ,怒鹦哥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/931.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 932,
     names: 'コジオ,Kojio,베베솔트,鹽石寶,Selutin,Geosali,Nacli,コジオ,盐石宝',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/932.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 933,
@@ -6521,6 +8385,8 @@ const allMons: Mon[] = [
       'ジオヅム,Jiodumu,스태솔트,鹽石壘,Amassel,Sedisal,Naclstack,ジオヅム,盐石垒',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/933.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 934,
@@ -6528,6 +8394,8 @@ const allMons: Mon[] = [
       'キョジオーン,Kyojiohn,콜로솔트,鹽石巨靈,Gigansel,Saltigant,Garganacl,キョジオーン,盐石巨灵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/934.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 935,
@@ -6535,6 +8403,8 @@ const allMons: Mon[] = [
       'カルボウ,Carbou,카르본,炭小侍,Charbambin,Knarbon,Charcadet,カルボウ,炭小侍',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/935.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 936,
@@ -6542,6 +8412,8 @@ const allMons: Mon[] = [
       'グレンアルマ,Gurenarma,카디나르마,紅蓮鎧騎,Carmadura,Crimanzo,Armarouge,グレンアルマ,红莲铠骑',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/936.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 937,
@@ -6549,12 +8421,16 @@ const allMons: Mon[] = [
       'ソウブレイズ,Soublades,파라블레이즈,蒼炎刃鬼,Malvalame,Azugladis,Ceruledge,ソウブレイズ,苍炎刃鬼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/937.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 938,
     names: 'ズピカ,Zupika,빈나두,光蚪仔,Têtampoule,Blipp,Tadbulb,ズピカ,光蚪仔',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/938.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 939,
@@ -6562,6 +8438,8 @@ const allMons: Mon[] = [
       'ハラバリー,Harabarie,찌리배리,電肚蛙,Ampibidou,Wampitz,Bellibolt,ハラバリー,电肚蛙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/939.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 940,
@@ -6569,6 +8447,8 @@ const allMons: Mon[] = [
       'カイデン,Kaiden,찌리비,電海燕,Zapétrel,Voltrel,Wattrel,カイデン,电海燕',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/940.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 941,
@@ -6576,6 +8456,8 @@ const allMons: Mon[] = [
       'タイカイデン,Taikaiden,찌리비크,大電海燕,Fulgulairo,Voltrean,Kilowattrel,タイカイデン,大电海燕',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/941.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 942,
@@ -6583,6 +8465,8 @@ const allMons: Mon[] = [
       'オラチフ,Orachifu,오라티프,偶叫獒,Grondogue,Mobtiff,Maschiff,オラチフ,偶叫獒',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/942.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 943,
@@ -6590,6 +8474,8 @@ const allMons: Mon[] = [
       'マフィティフ,Mafitiff,마피티프,獒教父,Dogrino,Mastifioso,Mabosstiff,マフィティフ,獒教父',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/943.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 944,
@@ -6597,6 +8483,8 @@ const allMons: Mon[] = [
       'シルシュルー,Shirushrew,땃쭈르,滋汁鼴,Gribouraigne,Sproxi,Shroodle,シルシュルー,滋汁鼹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/944.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 945,
@@ -6604,6 +8492,8 @@ const allMons: Mon[] = [
       'タギングル,Taggingru,태깅구르,塗標客,Tag-Tag,Affiti,Grafaiai,タギングル,涂标客',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/945.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 946,
@@ -6611,6 +8501,8 @@ const allMons: Mon[] = [
       'アノクサ,Anokusa,그푸리,納噬草,Virovent,Weherba,Bramblin,アノクサ,纳噬草',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/946.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 947,
@@ -6618,6 +8510,8 @@ const allMons: Mon[] = [
       'アノホラグサ,Anohoragusa,공푸리,怖納噬草,Virevorreur,Horrerba,Brambleghast,アノホラグサ,怖纳噬草',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/947.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 948,
@@ -6625,6 +8519,8 @@ const allMons: Mon[] = [
       'ノノクラゲ,Nonokurage,들눈해,原野水母,Terracool,Tentagra,Toedscool,ノノクラゲ,原野水母',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/948.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 949,
@@ -6632,6 +8528,8 @@ const allMons: Mon[] = [
       'リククラゲ,Rikukurage,육파리,陸地水母,Terracruel,Tenterra,Toedscruel,リククラゲ,陆地水母',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/949.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 950,
@@ -6639,6 +8537,8 @@ const allMons: Mon[] = [
       'ガケガニ,Gakegani,절벼게,毛崖蟹,Craparoi,Klibbe,Klawf,ガケガニ,毛崖蟹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/950.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 951,
@@ -6646,6 +8546,8 @@ const allMons: Mon[] = [
       'カプサイジ,Capsaiji,캡싸이,熱辣娃,Pimito,Chilingel,Capsakid,カプサイジ,热辣娃',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/951.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 952,
@@ -6653,6 +8555,8 @@ const allMons: Mon[] = [
       'スコヴィラン,Scovillain,스코빌런,狠辣椒,Scovilain,Halupenjo,Scovillain,スコヴィラン,狠辣椒',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/952.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 953,
@@ -6660,6 +8564,8 @@ const allMons: Mon[] = [
       'シガロコ,Shigaroko,구르데,蟲滾泥,Léboulérou,Relluk,Rellor,シガロコ,虫滚泥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/953.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 954,
@@ -6667,6 +8573,8 @@ const allMons: Mon[] = [
       'ベラカス,Beracas,베라카스,蟲甲聖,Bérasca,Skarabaks,Rabsca,ベラカス,虫甲圣',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/954.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 955,
@@ -6674,6 +8582,8 @@ const allMons: Mon[] = [
       'ヒラヒナ,Hirahina,하느라기,飄飄雛,Flotillon,Flattutu,Flittle,ヒラヒナ,飘飘雏',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/955.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 956,
@@ -6681,6 +8591,8 @@ const allMons: Mon[] = [
       'クエスパトラ,Cuespatra,클레스퍼트라,超能艷鴕,Cléopsytra,Psiopatra,Espathra,クエスパトラ,超能艳鸵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/956.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 957,
@@ -6688,6 +8600,8 @@ const allMons: Mon[] = [
       'カヌチャン,Kanuchan,어리짱,小鍛匠,Forgerette,Forgita,Tinkatink,カヌチャン,小锻匠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/957.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 958,
@@ -6695,6 +8609,8 @@ const allMons: Mon[] = [
       'ナカヌチャン,Nakanuchan,벼리짱,巧鍛匠,Forgella,Tafforgita,Tinkatuff,ナカヌチャン,巧锻匠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/958.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 959,
@@ -6702,6 +8618,8 @@ const allMons: Mon[] = [
       'デカヌチャン,Dekanuchan,두드리짱,巨鍛匠,Forgelina,Granforgita,Tinkaton,デカヌチャン,巨锻匠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/959.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 960,
@@ -6709,6 +8627,8 @@ const allMons: Mon[] = [
       'ウミディグダ,Umidigda,바다그다,海地鼠,Taupikeau,Schligda,Wiglett,ウミディグダ,海地鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/960.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 961,
@@ -6716,6 +8636,8 @@ const allMons: Mon[] = [
       'ウミトリオ,Umitrio,바닥트리오,三海地鼠,Triopikeau,Schligdri,Wugtrio,ウミトリオ,三海地鼠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/961.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 962,
@@ -6723,6 +8645,8 @@ const allMons: Mon[] = [
       'オトシドリ,Otoshidori,떨구새,下石鳥,Lestombaile,Adebom,Bombirdier,オトシドリ,下石鸟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/962.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 963,
@@ -6730,6 +8654,8 @@ const allMons: Mon[] = [
       'ナミイルカ,Namiiruka,맨돌핀,波普海豚,Dofin,Normifin,Finizen,ナミイルカ,波普海豚',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/963.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 964,
@@ -6737,6 +8663,8 @@ const allMons: Mon[] = [
       'イルカマン,Irukaman,돌핀맨,海豚俠,Superdofin,Delfinator,Palafin,イルカマン,海豚侠',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/964.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 965,
@@ -6744,6 +8672,8 @@ const allMons: Mon[] = [
       'ブロロン,Buroron,부르롱,噗隆隆,Vrombi,Knattox,Varoom,ブロロン,噗隆隆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/965.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 966,
@@ -6751,6 +8681,8 @@ const allMons: Mon[] = [
       'ブロロローム,Burororoom,부르르룸,普隆隆姆,Vrombotor,Knattatox,Revavroom,ブロロローム,普隆隆姆',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/966.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 967,
@@ -6758,6 +8690,8 @@ const allMons: Mon[] = [
       'モトトカゲ,Mototokage,모토마,摩托蜥,Motorizard,Mopex,Cyclizar,モトトカゲ,摩托蜥',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/967.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 968,
@@ -6765,6 +8699,8 @@ const allMons: Mon[] = [
       'ミミズズ,Mimizuzu,꿈트렁,拖拖蚓,Ferdeter,Schlurm,Orthworm,ミミズズ,拖拖蚓',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/968.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 969,
@@ -6772,6 +8708,8 @@ const allMons: Mon[] = [
       'キラーメ,Kirame,초롱순,晶光芽,Germéclat,Lumispross,Glimmet,キラーメ,晶光芽',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/969.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 970,
@@ -6779,12 +8717,16 @@ const allMons: Mon[] = [
       'キラフロル,Kiraflor,킬라플로르,晶光花,Floréclat,Lumiflora,Glimmora,キラフロル,晶光花',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/970.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 971,
     names: 'ボチ,Bochi,망망이,墓仔狗,Toutombe,Gruff,Greavard,ボチ,墓仔狗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/971.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 972,
@@ -6792,6 +8734,8 @@ const allMons: Mon[] = [
       'ハカドッグ,Hakadog,묘두기,墓揚犬,Tomberro,Friedwuff,Houndstone,ハカドッグ,墓扬犬',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/972.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 973,
@@ -6799,6 +8743,8 @@ const allMons: Mon[] = [
       'カラミンゴ,Karamingo,꼬이밍고,纏紅鶴,Flamenroule,Flaminkno,Flamigo,カラミンゴ,纏红鹤',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/973.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 974,
@@ -6806,6 +8752,8 @@ const allMons: Mon[] = [
       'アルクジラ,Arukujira,터벅고래,走鯨,Piétacé,Flaniwal,Cetoddle,アルクジラ,走鲸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/974.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 975,
@@ -6813,6 +8761,8 @@ const allMons: Mon[] = [
       'ハルクジラ,Hulkujira,우락고래,浩大鯨,Balbalèze,Kolowal,Cetitan,ハルクジラ,浩大鲸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/975.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 976,
@@ -6820,6 +8770,8 @@ const allMons: Mon[] = [
       'ミガルーサ,Migalusa,가비루사,輕身鱈,Délestin,Agiluza,Veluza,ミガルーサ,轻身鳕',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/976.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 977,
@@ -6827,6 +8779,8 @@ const allMons: Mon[] = [
       'ヘイラッシャ,Heyrusher,어써러셔,吃吼霸,Oyacata,Heerashai,Dondozo,ヘイラッシャ,吃吼霸',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/977.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 978,
@@ -6834,6 +8788,8 @@ const allMons: Mon[] = [
       'シャリタツ,Syaritatsu,싸리용,米立龍,Nigirigon,Nigiragi,Tatsugiri,シャリタツ,米立龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/978.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 979,
@@ -6841,12 +8797,16 @@ const allMons: Mon[] = [
       'コノヨザル,Konoyozaru,저승갓숭,棄世猴,Courrousinge,Epitaff,Annihilape,コノヨザル,弃世猴',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/979.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 980,
     names: 'ドオー,Dooh,토오,土王,Terraiste,Suelord,Clodsire,ドオー,土王',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/980.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 981,
@@ -6854,6 +8814,8 @@ const allMons: Mon[] = [
       'リキキリン,Rikikirin,키키링,奇麒麟,Farigiraf,Farigiraf,Farigiraf,リキキリン,奇麒麟',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/981.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 982,
@@ -6861,6 +8823,8 @@ const allMons: Mon[] = [
       'ノココッチ,Nokokocchi,노고고치,土龍節節,Deusolourdo,Dummimisel,Dudunsparce,ノココッチ,土龙节节',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/982.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 983,
@@ -6868,6 +8832,8 @@ const allMons: Mon[] = [
       'ドドゲザン,Dodogezan,대도각참,仆刀將軍,Scalpereur,Gladimperio,Kingambit,ドドゲザン,仆刀将军',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/983.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 984,
@@ -6875,6 +8841,8 @@ const allMons: Mon[] = [
       'イダイナキバ,Idainakiba,위대한엄니,雄偉牙,Fort-Ivoire,Riesenzahn,Great Tusk,イダイナキバ,雄伟牙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/984.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 985,
@@ -6882,6 +8850,8 @@ const allMons: Mon[] = [
       'サケブシッポ,Sakebushippo,우렁찬꼬리,吼叫尾,Hurle-Queue,Brüllschweif,Scream Tail,サケブシッポ,吼叫尾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/985.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 986,
@@ -6889,6 +8859,8 @@ const allMons: Mon[] = [
       'アラブルタケ,Araburutake,사나운버섯,猛惡菇,Fongus-Furie,Wutpilz,Brute Bonnet,アラブルタケ,猛恶菇',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/986.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 987,
@@ -6896,6 +8868,8 @@ const allMons: Mon[] = [
       'ハバタクカミ,Habatakukami,날개치는머리,振翼髮,Flotte-Mèche,Flatterhaar,Flutter Mane,ハバタクカミ,振翼发',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/987.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 988,
@@ -6903,6 +8877,8 @@ const allMons: Mon[] = [
       'チヲハウハネ,Chiwohauhane,땅을기는날개,爬地翅,Rampe-Ailes,Kriechflügel,Slither Wing,チヲハウハネ,爬地翅',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/988.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 989,
@@ -6910,6 +8886,8 @@ const allMons: Mon[] = [
       'スナノケガワ,Sunanokegawa,모래털가죽,沙鐵皮,Pelage-Sablé,Sandfell,Sandy Shocks,スナノケガワ,沙铁皮',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/989.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 990,
@@ -6917,6 +8895,8 @@ const allMons: Mon[] = [
       'テツノワダチ,Tetsunowadachi,무쇠바퀴,鐵轍跡,Roue-de-Fer,Eisenrad,Iron Treads,テツノワダチ,铁轍迹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/990.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 991,
@@ -6924,6 +8904,8 @@ const allMons: Mon[] = [
       'テツノツツミ,Tetsunotsutsumi,무쇠보따리,鐵包袱,Hotte-de-Fer,Eisenbündel,Iron Bundle,テツノツツミ,铁包袱',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/991.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 992,
@@ -6931,6 +8913,8 @@ const allMons: Mon[] = [
       'テツノカイナ,Tetsunokaina,무쇠손,鐵臂膀,Paume-de-Fer,Eisenhand,Iron Hands,テツノカイナ,铁臂膀',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/992.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 993,
@@ -6938,6 +8922,8 @@ const allMons: Mon[] = [
       'テツノコウベ,Tetsunokoube,무쇠머리,鐵脖頸,Têtes-de-Fer,Eisenhals,Iron Jugulis,テツノコウベ,铁脖颈',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/993.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 994,
@@ -6945,6 +8931,8 @@ const allMons: Mon[] = [
       'テツノドクガ,Tetsunodokuga,무쇠독나방,鐵毒蛾,Mite-de-Fer,Eisenfalter,Iron Moth,テツノドクガ,铁毒蛾',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/994.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 995,
@@ -6952,12 +8940,16 @@ const allMons: Mon[] = [
       'テツノイバラ,Tetsunoibara,무쇠가시,鐵荊棘,Épine-de-Fer,Eisendorn,Iron Thorns,テツノイバラ,铁荆棘',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/995.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 996,
     names: 'セビエ,Sebie,드니차,涼脊龍,Frigodo,Frospino,Frigibax,セビエ,凉脊龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/996.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 997,
@@ -6965,6 +8957,8 @@ const allMons: Mon[] = [
       'セゴール,Segohru,드니꽁,凍脊龍,Cryodo,Cryospino,Arctibax,セゴール,冻脊龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/997.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 998,
@@ -6972,6 +8966,8 @@ const allMons: Mon[] = [
       'セグレイブ,Seglaive,드닐레이브,戟脊龍,Glaivodo,Espinodon,Baxcalibur,セグレイブ,戟脊龙',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/998.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 999,
@@ -6979,6 +8975,8 @@ const allMons: Mon[] = [
       'コレクレー,Collecurei,모으령,索財靈,Mordudor,Gierspenst,Gimmighoul,コレクレー,索财灵',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/999.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1000,
@@ -6986,6 +8984,8 @@ const allMons: Mon[] = [
       'サーフゴー,Surfugo,타부자고,賽富豪,Gromago,Monetigo,Gholdengo,サーフゴー,赛富豪',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1001,
@@ -6993,6 +8993,8 @@ const allMons: Mon[] = [
       'チオンジェン,Chionjen,총지엔,古簡蝸,Chongjian,Chongjian,Wo-Chien,チオンジェン,古简蜗',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1001.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1002,
@@ -7000,6 +9002,8 @@ const allMons: Mon[] = [
       'パオジアン,Paojian,파오젠,古劍豹,Baojian,Baojian,Chien-Pao,パオジアン,古剑豹',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1002.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1003,
@@ -7007,12 +9011,16 @@ const allMons: Mon[] = [
       'ディンルー,Dinlu,딩루,古鼎鹿,Dinglu,Dinglu,Ting-Lu,ディンルー,古鼎鹿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1003.png',
+    shownCnt: 1,
+    gottenCnt: 0,
   },
   {
     id: 1004,
     names: 'イーユイ,Yiyui,위유이,古玉魚,Yuyu,Yuyu,Chi-Yu,イーユイ,古玉鱼',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1004.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1005,
@@ -7020,6 +9028,8 @@ const allMons: Mon[] = [
       'トドロクツキ,Todorokutsuki,고동치는달,轟鳴月,Rugit-Lune,Donnersichel,Roaring Moon,トドロクツキ,轰鸣月',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1005.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1006,
@@ -7027,6 +9037,8 @@ const allMons: Mon[] = [
       'テツノブジン,Tetsunobujin,무쇠무인,鐵武者,Garde-de-Fer,Eisenkrieger,Iron Valiant,テツノブジン,铁武者',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1006.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1007,
@@ -7034,6 +9046,8 @@ const allMons: Mon[] = [
       'コライドン,Koraidon,코라이돈,故勒頓,Koraidon,Koraidon,Koraidon,コライドン,故勒顿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1007.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1008,
@@ -7041,6 +9055,8 @@ const allMons: Mon[] = [
       'ミライドン,Miraidon,미라이돈,密勒頓,Miraidon,Miraidon,Miraidon,ミライドン,密勒顿',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1008.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1009,
@@ -7048,6 +9064,8 @@ const allMons: Mon[] = [
       'ウネルミナモ,Uneruminamo,굽이치는물결,波盪水,Serpente-Eau,Windewoge,Walking Wake,ウネルミナモ,波荡水',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1009.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
   {
     id: 1010,
@@ -7055,6 +9073,8 @@ const allMons: Mon[] = [
       'テツノイサハ,Tetsunoisaha,무쇠잎새,鐵斑葉,Vert-de-Fer,Eisenblatt,Iron Leaves,テツノイサハ,铁斑叶',
     image:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1010.png',
+    shownCnt: 0,
+    gottenCnt: 0,
   },
 ]
 

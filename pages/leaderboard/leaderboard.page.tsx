@@ -13,7 +13,7 @@ export default function LeaderBoardPage() {
   const { score, achievedMons, maxCombo, typingSpeed, generation, accuracy } =
     useGameController()
 
-  const { resetMons } = useMons()
+  const { resetMons, flattenStackedMons } = useMons()
 
   const [myRank, setMyRank] = useState<Rank | undefined>(undefined)
   const [isRankListQueryEnabled, setIsRankListQueryEnabled] = useState(
@@ -29,6 +29,8 @@ export default function LeaderBoardPage() {
       },
     },
   )
+
+  const { mutateAsync: patchMonCount } = useMutation(api.patchMonCount)
 
   const {
     data: rankListData,
@@ -66,12 +68,13 @@ export default function LeaderBoardPage() {
           country: userLocation?.country,
           countryCode: userLocation?.countryCode,
           ip: userLocation?.query,
+          gotchaMons: achievedMons.map((mon) => mon.id),
         })
       }
     },
     [
       accuracy,
-      achievedMons.length,
+      achievedMons,
       generation,
       isPostingRank,
       maxCombo,
@@ -91,8 +94,17 @@ export default function LeaderBoardPage() {
   }, [])
 
   useEffect(() => {
-    resetMons()
-  }, [resetMons])
+    if (score) {
+      patchMonCount({
+        result: [
+          ...achievedMons.map((mon) => ({ id: mon.id, isGotten: true })),
+          ...flattenStackedMons.map((mon) => ({ id: mon.id, isGotten: false })),
+        ],
+      })
+    }
+    return resetMons
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <LeaderboardView

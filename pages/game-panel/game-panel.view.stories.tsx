@@ -1,3 +1,4 @@
+import mockMons from '@/mocks/mons'
 import type { Meta, StoryObj } from '@storybook/react'
 import GamePanel from './game-panel.view'
 
@@ -10,8 +11,7 @@ const meta = {
     combo: 4,
     maxCombo: 10,
     currentColumn: 2,
-    currentMonImage:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png',
+    currentMon: mockMons.allMons[0],
     duration: 1.5,
     nextMonImage:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png',

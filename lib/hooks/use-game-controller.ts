@@ -17,7 +17,7 @@ export interface GameController {
   onStack: VoidFunction
   onSuccess: VoidFunction
   resetGame: VoidFunction
-  currentMonImage?: string
+  currentMon?: Mon
   nextMonImage?: string
   currentColumn: number
   stackedMonImages: string[][]
@@ -70,7 +70,7 @@ const useGameController: () => GameController = () => {
     currentMon,
     nextMonImage,
     pushAchievedMon,
-    pushStackedMonImage,
+    pushStackedMon,
     achievedMons,
     resetMons,
     stackedMonImages,
@@ -114,10 +114,10 @@ const useGameController: () => GameController = () => {
   const onStack = useCallback(() => {
     animation.start('vibe')
     if (currentMon) {
-      pushStackedMonImage(currentMon.image, currentColumn)
+      pushStackedMon(currentMon, currentColumn)
       resetCombo()
     }
-  }, [animation, currentMon, pushStackedMonImage, currentColumn, resetCombo])
+  }, [animation, currentMon, pushStackedMon, currentColumn, resetCombo])
 
   const onSuccess = useCallback(() => {
     if (currentMon) {
@@ -188,7 +188,7 @@ const useGameController: () => GameController = () => {
   return {
     duration,
     currentColumn,
-    currentMonImage,
+    currentMon,
     stackedMonImages,
     achievedMons,
     onStack,

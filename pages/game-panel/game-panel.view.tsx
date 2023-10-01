@@ -18,7 +18,7 @@ import { motionVariants } from '@/lib/helpers/framer'
 export interface GamePanelProps extends GameController {}
 
 const GamePanel: React.FC<GamePanelProps> = ({
-  currentMonImage,
+  currentMon,
   currentColumn,
   duration,
   stackedMonImages,
@@ -72,6 +72,8 @@ const GamePanel: React.FC<GamePanelProps> = ({
     }
   }, [isGameOver])
 
+  const currentMonImage = currentMon?.image
+
   useEffect(() => {
     if (!currentMonImage && achievedMons.length > 0) {
       setIsGameOverScreenVisible(true)
@@ -115,7 +117,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
             <div css={tw`my-4`}>
               <TargetMon
                 ref={monImageRef}
-                monImage={isGameOver ? answerMon?.image : currentMonImage}
+                mon={isGameOver ? answerMon : currentMon}
                 nextMonImage={nextMonImage}
                 monNames={isGameOver ? answerMon?.names : undefined}
               />

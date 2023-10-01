@@ -40,6 +40,7 @@ export interface Rank {
   avgSpeed: number
   maxSpeed: number
   accuracy: number
+  gotchaMons: number[]
 }
 
 export type RankDto = Omit<Rank, 'id' | 'seq'>
@@ -53,4 +54,11 @@ export interface Pageable<T> {
     totalPages: number
     currentPage: number
   }
+}
+
+export interface UpdateMonCountDto {
+  result: {
+    id: number
+    isGotten: boolean
+  }[]
 }

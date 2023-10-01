@@ -1,4 +1,10 @@
-import { Mon, Rank, RankDto, UserLocation } from '@/lib/types'
+import {
+  Mon,
+  Rank,
+  RankDto,
+  UpdateMonCountDto,
+  UserLocation,
+} from '@/lib/types'
 import requester from './requester'
 
 const getAllMons = async () => {
@@ -27,11 +33,17 @@ const getRankList = async (page: number) => {
   return data
 }
 
+const patchMonCount = async (dto: UpdateMonCountDto) => {
+  const { data } = await requester.patch<void>('/mons/count', dto)
+  return data
+}
+
 const api = {
   getAllMons,
   getUserLocation,
   postRank,
   getRankList,
+  patchMonCount,
 }
 
 export default api
