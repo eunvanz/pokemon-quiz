@@ -74,7 +74,7 @@ const useGameController: () => GameController = () => {
     achievedMons,
     resetMons,
     stackedMonImages,
-    allMons,
+    generationMons,
     isGameOver,
   } = useMons()
 
@@ -82,9 +82,11 @@ const useGameController: () => GameController = () => {
 
   const answers = useMemo(() => {
     return (
-      allMons?.find((mon) => mon.id === currentMon?.id)?.names.split(',') || []
+      generationMons
+        ?.find((mon) => mon.id === currentMon?.id)
+        ?.names.split(',') || []
     )
-  }, [allMons, currentMon?.id])
+  }, [generationMons, currentMon?.id])
 
   const currentMonImage = currentMon?.image
 
@@ -100,14 +102,14 @@ const useGameController: () => GameController = () => {
   }, [currentColumn])
 
   const changeDuration = useCallback(() => {
-    if (allMons?.length && stage > 0) {
-      const total = allMons.length
+    if (generationMons?.length && stage > 0) {
+      const total = generationMons.length
       const stageRatio = Math.min(stage / Math.min(total, 300), 1)
       const durationInterval = INITIAL_DURATION - MIN_DURATION
       const currentDuration = INITIAL_DURATION - durationInterval * stageRatio
       setDuration(currentDuration)
     }
-  }, [allMons?.length, stage])
+  }, [generationMons?.length, stage])
 
   const onStack = useCallback(() => {
     animation.start('vibe')
@@ -173,10 +175,10 @@ const useGameController: () => GameController = () => {
 
   const updateAnswerMon = useCallback(
     (monImage: string) => {
-      const mon = allMons?.find((mon) => mon.image === monImage)
+      const mon = generationMons?.find((mon) => mon.image === monImage)
       setAnswerMon(mon)
     },
-    [allMons, setAnswerMon],
+    [generationMons, setAnswerMon],
   )
 
   const onNext = useCallback(() => {

@@ -26,7 +26,8 @@ const useAllMons = () => {
   }, [allMons, generation])
 
   return {
-    allMons: generationMons,
+    generationMons,
+    allMons,
   }
 }
 

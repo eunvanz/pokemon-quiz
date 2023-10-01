@@ -8,7 +8,7 @@ import achievedMonsState from '../store/achieved-mons-state'
 import { Mon } from '../types'
 
 const useMons = () => {
-  const { allMons } = useAllMons()
+  const { generationMons } = useAllMons()
 
   const [stackedMonImages, setStackedMonImages] = useRecoilState(
     stackedMonImagesState,
@@ -23,8 +23,8 @@ const useMons = () => {
   }, [stackedMonImages])
 
   const shuffledMons = useMemo(() => {
-    return shuffle(allMons)
-  }, [allMons])
+    return shuffle(generationMons)
+  }, [generationMons])
 
   const nextMonImage = useMemo(() => {
     return shuffledMons[
@@ -53,10 +53,10 @@ const useMons = () => {
     (monParam: Mon) => {
       setAchievedMons((oldAchievedMons) => [
         ...oldAchievedMons,
-        allMons.find((mon) => mon.id === monParam.id) as Mon,
+        generationMons.find((mon) => mon.id === monParam.id) as Mon,
       ])
     },
-    [allMons, setAchievedMons],
+    [generationMons, setAchievedMons],
   )
 
   const resetMons = useCallback(() => {
@@ -92,7 +92,7 @@ const useMons = () => {
     pushAchievedMon,
     pushStackedMonImage,
     resetMons,
-    allMons,
+    generationMons,
     isGameOver,
   }
 }
