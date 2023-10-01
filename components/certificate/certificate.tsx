@@ -2,6 +2,7 @@ import { Mon, Rank } from '@/lib/types'
 import { AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { Fragment, PropsWithChildren, useMemo, useState } from 'react'
+import { createPortal } from 'react-dom'
 import RainItem from '../rain-item'
 
 export interface CertificateProps {
@@ -17,17 +18,17 @@ const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
   }, [allMons, rank.gotchaMons])
 
   return (
-    <div
-      className="w-full max-w-sm"
-      onClick={() => setDropCount((count) => ++count)}
-    >
-      <h1 className="text-4xl text-center">
-        <Link href="/" className="text-primary">
+    <div className="w-full max-w-sm">
+      <h1 className="text-4xl text-center text-black">
+        <Link href="/" className="text-primary hover:text-blue-400">
           Pokédrops
         </Link>{' '}
         Certificate
       </h1>
-      <div className="flex flex-col gap-2 justify-center mt-4">
+      <div
+        className="flex flex-col gap-2 justify-center mt-4"
+        onClick={() => setDropCount((count) => ++count)}
+      >
         <div className="text-center text-secondary mb-4">
           Pokédrops certifies that you have:
         </div>
@@ -53,13 +54,16 @@ const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
           <span className="text-secondary text-xs">%</span>
         </Row>
       </div>
-      <AnimatePresence>
-        <Fragment key={dropCount}>
-          {gotchaMons.map((mon, idx) => (
-            <RainItem key={idx} src={mon.image} />
-          ))}
-        </Fragment>
-      </AnimatePresence>
+      {createPortal(
+        <AnimatePresence>
+          <Fragment key={dropCount}>
+            {gotchaMons.map((mon, idx) => (
+              <RainItem key={idx} src={mon.image} zIndexRange={[10, 60]} />
+            ))}
+          </Fragment>
+        </AnimatePresence>,
+        document.body,
+      )}
     </div>
   )
 }

@@ -4,16 +4,17 @@ import { useCallback, useState } from 'react'
 
 export interface RainItemProps {
   src: string
+  zIndexRange?: [number, number]
 }
 
-const RainItem = ({ src }: RainItemProps) => {
+const RainItem = ({ src, zIndexRange = [-10, 3] }: RainItemProps) => {
   const [delay, setDelay] = useState(100_000)
 
   const size = random(100, 200)
 
   const left = random(0, window.innerWidth - size)
 
-  const zIndex = random(-10, 3)
+  const zIndex = random(...zIndexRange)
 
   const handleOnImageLoad = useCallback(() => {
     setDelay(random(0, 2_000))

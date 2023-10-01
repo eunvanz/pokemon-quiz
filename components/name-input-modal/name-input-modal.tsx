@@ -34,20 +34,26 @@ const NameInputModal: React.FC<NameInputModalProps> = ({
   }, [register])
 
   const submitForm = useCallback(() => {
-    handleSubmit(({ name }) => onSubmit(name))()
-  }, [handleSubmit, onSubmit])
+    handleSubmit(({ name }) => {
+      onSubmit(name)
+      restProps.onClose()
+    })()
+  }, [handleSubmit, onSubmit, restProps])
+
+  const skip = useCallback(() => {
+    restProps.onClose()
+    onSkip()
+  }, [onSkip, restProps])
 
   const handleKeydown = useCallback(
     (e: KeyboardEvent) => {
       if (e.code === 'Enter') {
-        restProps.onClose()
         submitForm()
       } else if (e.code === 'Escape') {
-        restProps.onClose()
-        onSkip()
+        skip()
       }
     },
-    [onSkip, restProps, submitForm],
+    [skip, submitForm],
   )
 
   useEffect(() => {
@@ -75,7 +81,7 @@ const NameInputModal: React.FC<NameInputModalProps> = ({
       okText="Enter"
       cancelText="Skip"
       onOk={submitForm}
-      onCancel={onSkip}
+      onCancel={skip}
       hasCancel
       {...restProps}
     >

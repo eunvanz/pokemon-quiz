@@ -66,8 +66,11 @@ const Modal: React.FC<PropsWithChildren<ModalProps>> = ({
                 <Button
                   variant="contained"
                   onClick={() => {
-                    onClose()
-                    onOk?.()
+                    if (onOk) {
+                      onOk()
+                    } else {
+                      onClose()
+                    }
                   }}
                   isBlock
                 >
@@ -77,8 +80,11 @@ const Modal: React.FC<PropsWithChildren<ModalProps>> = ({
                   <Button
                     variant="outlined"
                     onClick={() => {
-                      onClose()
-                      onCancel?.()
+                      if (onCancel) {
+                        onCancel()
+                      } else {
+                        onClose()
+                      }
                     }}
                     isBlock
                   >
