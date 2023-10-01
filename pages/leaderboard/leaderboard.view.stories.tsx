@@ -1,3 +1,4 @@
+import mockMons from '@/mocks/mons'
 import type { Meta, StoryObj } from '@storybook/react'
 import LeaderboardView from './leaderboard.view'
 
@@ -22,6 +23,7 @@ const meta = {
       accuracy: 66.7,
       gotchaMons: [1, 2, 3, 4, 5, 6, 7, 8],
     })),
+    allMons: mockMons.allMons,
   },
 } satisfies Meta<typeof LeaderboardView>
 

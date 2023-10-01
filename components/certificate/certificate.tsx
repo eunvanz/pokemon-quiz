@@ -20,7 +20,7 @@ const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
   return (
     <div className="w-full max-w-sm">
       <h1 className="text-4xl text-center text-black">
-        <Link href="/" className="text-primary hover:text-blue-400">
+        <Link href="/" className="text-primary hover:text-blue-600">
           Pokédrops
         </Link>{' '}
         Certificate

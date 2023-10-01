@@ -1,5 +1,6 @@
 import api from '@/lib/api'
 import { getMergedPageData } from '@/lib/helpers/react-query'
+import useAllMons from '@/lib/hooks/use-all-mons'
 import useGameController from '@/lib/hooks/use-game-controller'
 import useMons from '@/lib/hooks/use-mons'
 import useUserLocation from '@/lib/hooks/use-user-location'
@@ -14,6 +15,8 @@ export default function LeaderBoardPage() {
     useGameController()
 
   const { resetMons, flattenStackedMons } = useMons()
+
+  const { allMons } = useAllMons()
 
   const [myRank, setMyRank] = useState<Rank | undefined>(undefined)
   const [isRankListQueryEnabled, setIsRankListQueryEnabled] = useState(
@@ -117,6 +120,7 @@ export default function LeaderBoardPage() {
       onLoadNextPage={fetchNextPage}
       onSkipName={onSkipName}
       score={score}
+      allMons={allMons}
     />
   )
 }

@@ -1,8 +1,10 @@
+import CertificateModal from '@/components/certificate-modal'
 import NameInputModal, {
   NameInputModalProps,
 } from '@/components/name-input-modal'
 import RankTable, { RankTableProps } from '@/components/rank-table'
-import { useState } from 'react'
+import { Mon } from '@/lib/types'
+import { useEffect, useState } from 'react'
 
 export interface LeaderboardViewProps
   extends RankTableProps,
@@ -13,6 +15,7 @@ export interface LeaderboardViewProps
   score?: number
   onSkipName: NameInputModalProps['onSkip']
   onSubmitName: NameInputModalProps['onSubmit']
+  allMons?: Mon[]
 }
 
 const MIN_SCORE = 0
@@ -27,10 +30,20 @@ const LeaderboardView: React.FC<LeaderboardViewProps> = ({
   onSubmitName,
   items,
   myRank,
+  allMons,
 }) => {
   const [isNameInputModalOpen, setIsNameInputModalOpen] = useState(
     score ? score > MIN_SCORE : false,
   )
+
+  const [isCertificateModalOpen, setIsCertificateModalOpen] = useState(false)
+
+  useEffect(() => {
+    if (myRank) {
+      setIsCertificateModalOpen(true)
+    }
+  }, [myRank])
+
   return (
     <div className="flex w-full justify-center">
       <RankTable
@@ -48,6 +61,14 @@ const LeaderboardView: React.FC<LeaderboardViewProps> = ({
           onSkip={onSkipName}
           onSubmit={onSubmitName}
           score={score}
+        />
+      )}
+      {myRank && allMons && (
+        <CertificateModal
+          isOpen={isCertificateModalOpen}
+          rank={myRank}
+          allMons={allMons}
+          onClose={() => setIsCertificateModalOpen(false)}
         />
       )}
     </div>
