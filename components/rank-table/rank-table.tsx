@@ -62,7 +62,7 @@ const RankTable: React.FC<RankTableProps> = ({
               item.seq.toLocaleString(),
               item.name,
               item.generation === 0 ? 'All' : item.generation,
-              <div key="score" css={{ zIndex: 0 }}>
+              <div key="score" css={{ zIndex: -1 }}>
                 <AnimatedNumber value={item.score} hasComma size={16} />
               </div>,
               item.gotcha.toLocaleString(),
