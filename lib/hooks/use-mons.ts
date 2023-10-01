@@ -53,7 +53,7 @@ const useMons = () => {
     (monParam: Mon) => {
       setAchievedMons((oldAchievedMons) => [
         ...oldAchievedMons,
-        generationMons.find((mon) => mon.id === monParam.id) as Mon,
+        generationMons?.find((mon) => mon.id === monParam.id) as Mon,
       ])
     },
     [generationMons, setAchievedMons],

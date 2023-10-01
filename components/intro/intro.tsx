@@ -14,12 +14,12 @@ export interface IntroProps {
   isLoading: boolean
 }
 
-const Intro: React.FC<IntroProps> = ({ mons, onEnter, isLoading }) => {
+const Intro: React.FC<IntroProps> = ({ mons = [], onEnter, isLoading }) => {
   const [dropCount, setDropCount] = useState(0)
 
   const start = useCallback(() => {
-    onEnter()
-  }, [onEnter])
+    !isLoading && onEnter()
+  }, [isLoading, onEnter])
 
   const handleKeydown = useCallback(
     (e: KeyboardEvent) => {
@@ -32,7 +32,9 @@ const Intro: React.FC<IntroProps> = ({ mons, onEnter, isLoading }) => {
 
   const dropMon = useCallback(() => {
     const mon = shuffle(mons)[0]
-    return <DynamicDropItem src={mon.image} />
+    if (mon) {
+      return <DynamicDropItem src={mon.image} />
+    }
   }, [mons])
 
   const wordsDelays = useMemo(() => {

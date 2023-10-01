@@ -10,9 +10,14 @@ import CommonProvider from '../components/common-provider'
 
 export interface HomeViewProps extends Omit<SelectGenerationProps, 'mons'> {
   mons?: SelectGenerationProps['mons']
+  isLoading: boolean
 }
 
-const HomeView: React.FC<HomeViewProps> = ({ mons, ...restProps }) => {
+const HomeView: React.FC<HomeViewProps> = ({
+  mons,
+  isLoading,
+  ...restProps
+}) => {
   const [isIntroVisible, setIsIntroVisible] = useState(true)
 
   return (
@@ -28,7 +33,7 @@ const HomeView: React.FC<HomeViewProps> = ({ mons, ...restProps }) => {
             <Intro
               mons={mons}
               onEnter={() => setIsIntroVisible(false)}
-              isLoading={false}
+              isLoading={isLoading}
             />
           </motion.div>
         ) : (
