@@ -1,6 +1,6 @@
-import { useIntersectionObserver } from '@uidotdev/usehooks'
+import { useIntersectionObserver } from 'usehooks-ts'
 import Link from 'next/link'
-import { useCallback, useEffect, useMemo } from 'react'
+import { useCallback, useEffect, useMemo, useRef } from 'react'
 import classNames from 'classnames'
 import { Rank } from '@/lib/types'
 import AnimatedNumber from 'react-awesome-animated-number'
@@ -23,7 +23,9 @@ const RankTable: React.FC<RankTableProps> = ({
   hasNextPage,
   myRank,
 }) => {
-  const [ref, entry] = useIntersectionObserver<HTMLDivElement>()
+  const endRef = useRef<HTMLDivElement | null>(null)
+
+  const entry = useIntersectionObserver(endRef, {})
 
   const ROW_CLASSNAMES = useMemo(() => {
     return [
@@ -148,7 +150,7 @@ const RankTable: React.FC<RankTableProps> = ({
       </div>
       {items?.map((item) => <Row key={item.id} item={item} />)}
       {hasNextPage && !isLoadingNextPage && (
-        <div ref={ref} className="w-full h-4" />
+        <div ref={endRef} className="w-full h-4" />
       )}
       {!!myRank && (
         <div className="sticky bottom-0 w-full border-t border-gray-400 bg-blue-100">
