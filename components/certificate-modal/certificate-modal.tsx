@@ -21,7 +21,7 @@ const CertificateModal: React.FC<CertificateModalProps> = ({
       onClose={onClose}
       onOk={onOk}
       okText={okText}
-      cancelText="Copy Share Link"
+      cancelText="Copy Certificate Link"
       hasCancel
       onCancel={() => {
         copy(`https://pokedrops.io/certificate/${rank.id}`)

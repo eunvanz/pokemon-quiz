@@ -6,6 +6,7 @@ import useMons from '@/lib/hooks/use-mons'
 import { Pageable, Rank } from '@/lib/types'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useInfiniteQuery, useMutation } from 'react-query'
+import { useLocalStorage } from 'usehooks-ts'
 import LeaderboardView from './leaderboard.view'
 
 export default function LeaderBoardPage() {
@@ -18,6 +19,8 @@ export default function LeaderBoardPage() {
     accuracy,
     resetGame,
   } = useGameController()
+
+  const [defaultName, setDefaultName] = useLocalStorage('name', '')
 
   const { flattenStackedMons } = useMons()
 
@@ -62,6 +65,7 @@ export default function LeaderBoardPage() {
 
   const onSubmitName = useCallback(
     async (name: string) => {
+      setDefaultName(name)
       if (!isPostingRank) {
         await postRank({
           score,
@@ -84,6 +88,7 @@ export default function LeaderBoardPage() {
       maxCombo,
       postRank,
       score,
+      setDefaultName,
       typingSpeed.avg,
       typingSpeed.max,
     ],
@@ -120,6 +125,7 @@ export default function LeaderBoardPage() {
       onSkipName={onSkipName}
       score={score}
       allMons={allMons}
+      defaultName={defaultName}
     />
   )
 }

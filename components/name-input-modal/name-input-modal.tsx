@@ -7,12 +7,14 @@ export interface NameInputModalProps extends ModalProps {
   onSubmit: (name: string) => void
   onSkip: VoidFunction
   score: number
+  defaultName?: string
 }
 
 const NameInputModal: React.FC<NameInputModalProps> = ({
   onSubmit,
   onSkip,
   score,
+  defaultName,
   ...restProps
 }) => {
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -21,7 +23,10 @@ const NameInputModal: React.FC<NameInputModalProps> = ({
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<{ name: string }>({ mode: 'all' })
+  } = useForm<{ name: string }>({
+    mode: 'all',
+    defaultValues: { name: defaultName },
+  })
 
   const { ref: inputFormRef, ...restInputProps } = useMemo(() => {
     return register('name', {
