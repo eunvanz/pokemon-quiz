@@ -5,7 +5,7 @@ const meta = {
   title: 'pages/game-panel/GamePanelView',
   component: GamePanel,
   args: {
-    achievedMonImages: [],
+    achievedMons: [],
     answers: ['ditto', '메타몽'],
     combo: 4,
     maxCombo: 10,

@@ -3,22 +3,20 @@ import { flatten, shuffle } from 'lodash-es'
 import { useRecoilState } from 'recoil'
 import useAllMons from './use-all-mons'
 import stackedMonImagesState from '../store/stacked-mon-images-state'
-import achievedMonImagesState from '../store/achieved-mon-images-state'
-import currentMonImageState from '../store/current-mon-image-state'
+import currentMonState from '../store/current-mon-state'
+import achievedMonsState from '../store/achieved-mons-state'
+import { Mon } from '../types'
 
-const useMonImages = () => {
+const useMons = () => {
   const { allMons } = useAllMons()
 
   const [stackedMonImages, setStackedMonImages] = useRecoilState(
     stackedMonImagesState,
   )
 
-  const [achievedMonImages, setAchievedMonImages] = useRecoilState(
-    achievedMonImagesState,
-  )
+  const [achievedMons, setAchievedMons] = useRecoilState(achievedMonsState)
 
-  const [currentMonImage, setCurrentMonImage] =
-    useRecoilState(currentMonImageState)
+  const [currentMon, setCurrentMon] = useRecoilState(currentMonState)
 
   const flattenStackedMonImages = useMemo(() => {
     return flatten(stackedMonImages)
@@ -30,9 +28,9 @@ const useMonImages = () => {
 
   const nextMonImage = useMemo(() => {
     return shuffledMons[
-      flattenStackedMonImages.length + achievedMonImages.length + 1
+      flattenStackedMonImages.length + achievedMons.length + 1
     ]?.image
-  }, [shuffledMons, flattenStackedMonImages, achievedMonImages])
+  }, [shuffledMons, flattenStackedMonImages, achievedMons])
 
   const isGameOver = useMemo(() => {
     return (
@@ -51,51 +49,52 @@ const useMonImages = () => {
     [setStackedMonImages, stackedMonImages],
   )
 
-  const pushAchievedMonImage = useCallback(
-    (monImage: string) => {
-      setAchievedMonImages([...achievedMonImages, monImage])
+  const pushAchievedMon = useCallback(
+    (monParam: Mon) => {
+      setAchievedMons((oldAchievedMons) => [
+        ...oldAchievedMons,
+        allMons.find((mon) => mon.id === monParam.id) as Mon,
+      ])
     },
-    [achievedMonImages, setAchievedMonImages],
+    [allMons, setAchievedMons],
   )
 
-  const resetMonImages = useCallback(() => {
+  const resetMons = useCallback(() => {
     setStackedMonImages([[], [], [], [], [], []])
-    setAchievedMonImages([])
-    setCurrentMonImage(undefined)
-  }, [setAchievedMonImages, setCurrentMonImage, setStackedMonImages])
+    setAchievedMons([])
+    setCurrentMon(undefined)
+  }, [setAchievedMons, setCurrentMon, setStackedMonImages])
 
   useEffect(() => {
     if (
       !isGameOver &&
-      flattenStackedMonImages.length + achievedMonImages.length <
-        shuffledMons.length
+      flattenStackedMonImages.length + achievedMons.length < shuffledMons.length
     ) {
-      setCurrentMonImage(
-        shuffledMons[flattenStackedMonImages.length + achievedMonImages.length]
-          ?.image,
+      setCurrentMon(
+        shuffledMons[flattenStackedMonImages.length + achievedMons.length],
       )
     } else {
-      setCurrentMonImage(undefined)
+      setCurrentMon(undefined)
     }
   }, [
     shuffledMons,
     flattenStackedMonImages,
-    achievedMonImages,
     isGameOver,
-    setCurrentMonImage,
+    setCurrentMon,
+    achievedMons.length,
   ])
 
   return {
     nextMonImage,
-    currentMonImage,
+    currentMon,
     stackedMonImages,
-    achievedMonImages,
-    pushAchievedMonImage,
+    achievedMons,
+    pushAchievedMon,
     pushStackedMonImage,
-    resetMonImages,
+    resetMons,
     allMons,
     isGameOver,
   }
 }
 
-export default useMonImages
+export default useMons

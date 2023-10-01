@@ -1,5 +1,5 @@
 import { useRecoilValue } from 'recoil'
-import achievedMonImagesState from '../store/achieved-mon-images-state'
+import achievedMonImagesState from '../store/achieved-mons-state'
 
 const useAchievedMonImages = () => {
   const achievedMonImages = useRecoilValue(achievedMonImagesState)

@@ -3,7 +3,7 @@ import { random } from 'lodash-es'
 import { Mon } from '../types'
 import useAnswerMon from './use-answer-mon'
 import useCombo from './use-combo'
-import useMonImages from './use-mon-images'
+import useMons from './use-mons'
 import useScore from './use-score'
 import useStage from './use-stage'
 import { AnimationControls, useAnimation } from 'framer-motion'
@@ -21,7 +21,7 @@ export interface GameController {
   nextMonImage?: string
   currentColumn: number
   stackedMonImages: string[][]
-  achievedMonImages: string[]
+  achievedMons: Mon[]
   combo: number
   score: number
   answers: string[]
@@ -67,25 +67,26 @@ const useGameController: () => GameController = () => {
   const router = useRouter()
 
   const {
-    currentMonImage,
+    currentMon,
     nextMonImage,
-    pushAchievedMonImage,
+    pushAchievedMon,
     pushStackedMonImage,
-    achievedMonImages,
-    resetMonImages,
+    achievedMons,
+    resetMons,
     stackedMonImages,
     allMons,
     isGameOver,
-  } = useMonImages()
+  } = useMons()
 
   const { answerMon, setAnswerMon } = useAnswerMon()
 
   const answers = useMemo(() => {
     return (
-      allMons?.find((mon) => mon.image === currentMonImage)?.names.split(',') ||
-      []
+      allMons?.find((mon) => mon.id === currentMon?.id)?.names.split(',') || []
     )
-  }, [allMons, currentMonImage])
+  }, [allMons, currentMon?.id])
+
+  const currentMonImage = currentMon?.image
 
   const changeCurrentColumn = useCallback(() => {
     const getDifferentColumn: () => number = () => {
@@ -110,21 +111,15 @@ const useGameController: () => GameController = () => {
 
   const onStack = useCallback(() => {
     animation.start('vibe')
-    if (currentMonImage) {
-      pushStackedMonImage(currentMonImage, currentColumn)
+    if (currentMon) {
+      pushStackedMonImage(currentMon.image, currentColumn)
       resetCombo()
     }
-  }, [
-    animation,
-    currentMonImage,
-    pushStackedMonImage,
-    currentColumn,
-    resetCombo,
-  ])
+  }, [animation, currentMon, pushStackedMonImage, currentColumn, resetCombo])
 
   const onSuccess = useCallback(() => {
-    if (currentMonImage) {
-      pushAchievedMonImage(currentMonImage)
+    if (currentMon) {
+      pushAchievedMon(currentMon)
       const wastedTime = Date.now() - startTime
       increaseScore(wastedTime, combo)
       incrementCombo()
@@ -132,8 +127,8 @@ const useGameController: () => GameController = () => {
       updateAccuracy(true)
     }
   }, [
-    currentMonImage,
-    pushAchievedMonImage,
+    currentMon,
+    pushAchievedMon,
     startTime,
     increaseScore,
     combo,
@@ -143,7 +138,7 @@ const useGameController: () => GameController = () => {
   ])
 
   const resetGame = useCallback(() => {
-    resetMonImages()
+    resetMons()
     setDuration(INITIAL_DURATION)
     setAnswerMon(undefined)
     resetCombo()
@@ -152,7 +147,7 @@ const useGameController: () => GameController = () => {
     resetAccuracy()
     resetTypingSpeed()
   }, [
-    resetMonImages,
+    resetMons,
     setAnswerMon,
     resetCombo,
     resetScore,
@@ -174,7 +169,7 @@ const useGameController: () => GameController = () => {
     changeDuration()
     setStartTime(Date.now())
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentMonImage])
+  }, [currentMon])
 
   const updateAnswerMon = useCallback(
     (monImage: string) => {
@@ -193,7 +188,7 @@ const useGameController: () => GameController = () => {
     currentColumn,
     currentMonImage,
     stackedMonImages,
-    achievedMonImages,
+    achievedMons,
     onStack,
     onSuccess,
     resetGame,

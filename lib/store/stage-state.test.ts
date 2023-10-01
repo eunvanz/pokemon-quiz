@@ -1,5 +1,5 @@
 import { snapshot_UNSTABLE } from 'recoil'
-import achievedMonImagesAtom from './achieved-mon-images-state'
+import achievedMonImagesAtom from './achieved-mons-state'
 import stackedMonImagesAtom from './stacked-mon-images-state'
 import stageState from './stage-state'
 

@@ -34,7 +34,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
   updateAnswerMon,
   onNext,
   maxCombo,
-  achievedMonImages,
+  achievedMons,
   animation,
   typingSpeed,
   accuracy,
@@ -73,10 +73,10 @@ const GamePanel: React.FC<GamePanelProps> = ({
   }, [isGameOver])
 
   useEffect(() => {
-    if (!currentMonImage && achievedMonImages.length > 0) {
+    if (!currentMonImage && achievedMons.length > 0) {
       setIsGameOverScreenVisible(true)
     }
-  }, [achievedMonImages.length, currentMonImage])
+  }, [achievedMons.length, currentMonImage])
 
   return (
     <>
@@ -103,7 +103,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
         <div css={tw`ml-4 flex flex-col justify-between gap-4`}>
           <div css={tw`flex flex-col gap-2`}>
             <Score label="Score" count={score} diff={bonusScore} />
-            <Score label="Gotcha" count={achievedMonImages.length} />
+            <Score label="Gotcha" count={achievedMons.length} />
             <Score label="Max Combo" count={maxCombo > 1 ? maxCombo : 0} />
             <Score label="Avg. Speed" count={typingSpeed.avg} unit="wpm" />
             <Score label="Max Speed" count={typingSpeed.max} unit="wpm" />

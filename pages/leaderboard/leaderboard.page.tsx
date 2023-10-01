@@ -1,7 +1,7 @@
 import api from '@/lib/api'
 import { getMergedPageData } from '@/lib/helpers/react-query'
 import useGameController from '@/lib/hooks/use-game-controller'
-import useMonImages from '@/lib/hooks/use-mon-images'
+import useMons from '@/lib/hooks/use-mons'
 import useUserLocation from '@/lib/hooks/use-user-location'
 import { Pageable, Rank } from '@/lib/types'
 import { useCallback, useEffect, useMemo, useState } from 'react'
@@ -10,16 +10,10 @@ import LeaderboardView from './leaderboard.view'
 
 export default function LeaderBoardPage() {
   const userLocation = useUserLocation()
-  const {
-    score,
-    achievedMonImages,
-    maxCombo,
-    typingSpeed,
-    generation,
-    accuracy,
-  } = useGameController()
+  const { score, achievedMons, maxCombo, typingSpeed, generation, accuracy } =
+    useGameController()
 
-  const { resetMonImages } = useMonImages()
+  const { resetMons } = useMons()
 
   const [myRank, setMyRank] = useState<Rank | undefined>(undefined)
   const [isRankListQueryEnabled, setIsRankListQueryEnabled] = useState(
@@ -66,7 +60,7 @@ export default function LeaderBoardPage() {
           avgSpeed: typingSpeed.avg,
           accuracy,
           generation,
-          gotcha: achievedMonImages.length,
+          gotcha: achievedMons.length,
           name,
           city: userLocation?.city,
           country: userLocation?.country,
@@ -77,7 +71,7 @@ export default function LeaderBoardPage() {
     },
     [
       accuracy,
-      achievedMonImages.length,
+      achievedMons.length,
       generation,
       isPostingRank,
       maxCombo,
@@ -97,8 +91,8 @@ export default function LeaderBoardPage() {
   }, [])
 
   useEffect(() => {
-    resetMonImages()
-  }, [resetMonImages])
+    resetMons()
+  }, [resetMons])
 
   return (
     <LeaderboardView
