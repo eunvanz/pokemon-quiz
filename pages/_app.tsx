@@ -1,11 +1,27 @@
 import CommonProvider from '@/components/common-provider'
 import { AppProps } from 'next/app'
+import Head from 'next/head'
 import './globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <CommonProvider>
-      <Component {...pageProps} />
-    </CommonProvider>
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,user-scalable=no"
+        />
+        <meta charSet="utf-8" />
+        <meta property="og:url" content="https://pokedrops.io" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Pokédrops" />
+        <meta property="og:description" content="Typing game with Pokémon" />
+        <link rel="icon" href="/favicon.ico" />
+        <title>Pokédrops</title>
+      </Head>
+      <CommonProvider>
+        <Component {...pageProps} />
+      </CommonProvider>
+    </>
   )
 }
