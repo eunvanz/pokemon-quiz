@@ -33,7 +33,6 @@ const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
           Pokédrops certifies that you have:
         </div>
         <Row label="Name">{rank.name}</Row>
-        <Row label="Country">{rank.country}</Row>
         <Row label="Rank">{rank.seq}</Row>
         <Row label="Score">{rank.score.toLocaleString()}</Row>
         <Row label="Generation">

@@ -31,7 +31,6 @@ const RankTable: React.FC<RankTableProps> = ({
     return [
       'w-1/12',
       'w-1/4',
-      'w-1/6',
       'w-1/12 justify-end',
       'w-1/6 justify-end',
       'w-1/12 justify-end',
@@ -62,14 +61,10 @@ const RankTable: React.FC<RankTableProps> = ({
             const records = [
               item.seq.toLocaleString(),
               item.name,
-              item.country,
               item.generation === 0 ? 'All' : item.generation,
-              <AnimatedNumber
-                key="score"
-                value={item.score}
-                hasComma
-                size={16}
-              />,
+              <div key="score" css={{ zIndex: 0 }}>
+                <AnimatedNumber value={item.score} hasComma size={16} />
+              </div>,
               item.gotcha.toLocaleString(),
               item.maxCombo.toLocaleString(),
               <>
@@ -87,7 +82,6 @@ const RankTable: React.FC<RankTableProps> = ({
             ]
             const additionalClassName = [
               'text-primary',
-              'text-sm',
               'text-sm',
               '',
               'text-primary',
@@ -131,7 +125,6 @@ const RankTable: React.FC<RankTableProps> = ({
             const labels = [
               'RANK',
               'NAME',
-              'COUNTRY',
               'GENERATION',
               'SCORE',
               'GOTCHA',

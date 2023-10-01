@@ -3,14 +3,12 @@ import { getMergedPageData } from '@/lib/helpers/react-query'
 import useAllMons from '@/lib/hooks/use-all-mons'
 import useGameController from '@/lib/hooks/use-game-controller'
 import useMons from '@/lib/hooks/use-mons'
-import useUserLocation from '@/lib/hooks/use-user-location'
 import { Pageable, Rank } from '@/lib/types'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useInfiniteQuery, useMutation } from 'react-query'
 import LeaderboardView from './leaderboard.view'
 
 export default function LeaderBoardPage() {
-  const userLocation = useUserLocation()
   const {
     score,
     achievedMons,
@@ -74,10 +72,6 @@ export default function LeaderBoardPage() {
           generation,
           gotcha: achievedMons.length,
           name,
-          city: userLocation?.city,
-          country: userLocation?.country,
-          countryCode: userLocation?.countryCode,
-          ip: userLocation?.query,
           gotchaMons: achievedMons.map((mon) => mon.id),
         })
       }
@@ -92,10 +86,6 @@ export default function LeaderBoardPage() {
       score,
       typingSpeed.avg,
       typingSpeed.max,
-      userLocation?.city,
-      userLocation?.country,
-      userLocation?.countryCode,
-      userLocation?.query,
     ],
   )
 
