@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useCallback, useEffect, useMemo } from 'react'
 import classNames from 'classnames'
 import { Rank } from '@/lib/types'
+import AnimatedNumber from 'react-awesome-animated-number'
 
 export interface RankItem extends Rank {}
 
@@ -61,7 +62,12 @@ const RankTable: React.FC<RankTableProps> = ({
               item.name,
               item.country,
               item.generation === 0 ? 'All' : item.generation,
-              item.score.toLocaleString(),
+              <AnimatedNumber
+                key="score"
+                value={item.score}
+                hasComma
+                size={16}
+              />,
               item.gotcha.toLocaleString(),
               item.maxCombo.toLocaleString(),
               <>

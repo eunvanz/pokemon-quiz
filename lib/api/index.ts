@@ -38,12 +38,18 @@ const patchMonCount = async (dto: UpdateMonCountDto) => {
   return data
 }
 
+const getRank = async (rankId: number) => {
+  const { data } = await requester.get<Rank>(`/rank/${rankId}`)
+  return data
+}
+
 const api = {
   getAllMons,
   getUserLocation,
   postRank,
   getRankList,
   patchMonCount,
+  getRank,
 }
 
 export default api

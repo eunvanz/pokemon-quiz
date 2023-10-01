@@ -11,10 +11,17 @@ import LeaderboardView from './leaderboard.view'
 
 export default function LeaderBoardPage() {
   const userLocation = useUserLocation()
-  const { score, achievedMons, maxCombo, typingSpeed, generation, accuracy } =
-    useGameController()
+  const {
+    score,
+    achievedMons,
+    maxCombo,
+    typingSpeed,
+    generation,
+    accuracy,
+    resetGame,
+  } = useGameController()
 
-  const { resetMons, flattenStackedMons } = useMons()
+  const { flattenStackedMons } = useMons()
 
   const { allMons } = useAllMons()
 
@@ -105,7 +112,9 @@ export default function LeaderBoardPage() {
         ],
       })
     }
-    return resetMons
+    return () => {
+      resetGame()
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
