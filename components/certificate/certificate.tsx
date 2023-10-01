@@ -26,7 +26,7 @@ const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
         Certificate
       </h1>
       <div
-        className="flex flex-col gap-2 justify-center mt-4"
+        className="flex flex-col gap-2 justify-center mt-4 cursor-pointer"
         onClick={() => setDropCount((count) => ++count)}
       >
         <div className="text-center text-secondary mb-4">
