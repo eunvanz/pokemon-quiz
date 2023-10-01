@@ -8,8 +8,8 @@ import {
   useRef,
   useState,
 } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
-import { random, shuffle } from 'lodash-es'
+import { AnimatePresence } from 'framer-motion'
+import { shuffle } from 'lodash-es'
 import SwiperCore from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import tw from 'twin.macro'
@@ -17,6 +17,7 @@ import { GENERATIONS } from '@/lib/constants/rules'
 import { Generation, Mon } from '@/lib/types'
 import Button from '../button'
 import 'swiper/swiper.min.css'
+import RainItem from '../rain-item'
 
 export interface SelectGenerationProps {
   onStart: (generation: Generation) => void
@@ -161,57 +162,3 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
 }
 
 export default SelectGeneration
-
-interface RainItemProps {
-  src: string
-}
-
-const RainItem = ({ src }: RainItemProps) => {
-  const [delay, setDelay] = useState(100_000)
-
-  const size = random(100, 200)
-
-  const left = random(0, window.innerWidth - size)
-
-  const zIndex = random(-10, 3)
-
-  const handleOnImageLoad = useCallback(() => {
-    setDelay(random(0, 2_000))
-  }, [])
-
-  return (
-    <motion.div
-      initial={{
-        position: 'absolute',
-        left,
-        top: -size,
-        translateY: '-50px',
-        width: size,
-        height: size,
-        zIndex,
-      }}
-      animate={{
-        translateY: `${window.innerHeight + size + 100}px`,
-        transitionEnd: {
-          display: 'none',
-        },
-      }}
-      transition={{
-        ease: 'easeIn',
-        duration: 1.5,
-        delay: delay / 1000,
-        opacity: { duration: 0.5 },
-      }}
-      exit={{ opacity: 0 }}
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        width="100%"
-        height="100%"
-        onLoad={handleOnImageLoad}
-        alt="mon image"
-      />
-    </motion.div>
-  )
-}
