@@ -5,7 +5,7 @@ const meta = {
   title: 'components/Ready',
   component: Ready,
   args: {},
-} satisfies Meta<typeof Ready>
+} as Meta<typeof Ready>
 
 export default meta
 type Story = StoryObj<typeof meta>

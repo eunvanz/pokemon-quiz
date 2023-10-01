@@ -23,7 +23,7 @@ const meta = {
       gotchaMons: [1, 2, 3, 4, 5, 6, 7, 8],
     })),
   },
-} satisfies Meta<typeof RankTable>
+} as Meta<typeof RankTable>
 
 export default meta
 type Story = StoryObj<typeof meta>

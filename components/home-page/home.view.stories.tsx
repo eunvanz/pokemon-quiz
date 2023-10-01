@@ -9,7 +9,7 @@ const meta = {
     mons: mockMons.allMons,
     isLoading: false,
   },
-} satisfies Meta<typeof HomeView>
+} as Meta<typeof HomeView>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -1,1 +1,1 @@
-export { default } from './game-panel.page'
+export { default } from '../../components/game-panel-page/game-panel.page'

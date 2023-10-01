@@ -3126,10 +3126,6 @@
   resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.4.3.tgz#af975e367743fa91989cd666666aec31a8f50591"
   integrity sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==
 
-"@types/@uidotdev/usehooks":
-  version "2.3.1"
-  resolved "https://codeload.github.com/uidotdev/usehooks/tar.gz/546df269e31a9ba10e0f6902fbda66d5eab7caa7"
-
 "@types/aria-query@^5.0.1":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@types/aria-query/-/aria-query-5.0.2.tgz#6f1225829d89794fd9f891989c9ce667422d7f64"

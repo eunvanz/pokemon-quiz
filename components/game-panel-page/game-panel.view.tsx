@@ -11,9 +11,9 @@ import OverlaidGameGrid from '@/components/overlaid-game-grid'
 import Ready from '@/components/ready'
 import Score from '@/components/score'
 import TargetMon from '@/components/target-mon'
-import { burstStar } from '@/lib/helpers/mojs'
 import { motion } from 'framer-motion'
 import { motionVariants } from '@/lib/helpers/framer'
+import { checkIsSSR } from '@/lib/helpers/common'
 
 export interface GamePanelProps extends GameController {}
 
@@ -46,10 +46,11 @@ const GamePanel: React.FC<GamePanelProps> = ({
 
   const [isStarted, setIsStarted] = useState(false)
 
-  const handleOnSuccess = useCallback(() => {
+  const handleOnSuccess = useCallback(async () => {
     const $monImg = monImageRef.current
-    if ($monImg) {
+    if (!checkIsSSR() && $monImg) {
       const clientRect = $monImg.getClientRects()[0]
+      const { burstStar } = await import('@/lib/helpers/mojs')
       burstStar({
         top: clientRect.top + clientRect.height / 2,
         left: clientRect.left + clientRect.width / 2,

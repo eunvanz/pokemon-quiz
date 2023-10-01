@@ -7,7 +7,7 @@ const meta = {
   args: {
     correctAnswers: ['ditto', '메타몽'],
   },
-} satisfies Meta<typeof MonNameInput>
+} as Meta<typeof MonNameInput>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -10,7 +10,7 @@ const meta = {
     nextMonImage:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png',
   },
-} satisfies Meta<typeof TargetMon>
+} as Meta<typeof TargetMon>
 
 export default meta
 type Story = StoryObj<typeof meta>

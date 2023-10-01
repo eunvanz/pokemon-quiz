@@ -48,7 +48,7 @@ const meta = {
     accuracy: 55,
     generation: 0,
   },
-} satisfies Meta<typeof GamePanel>
+} as Meta<typeof GamePanel>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -8,7 +8,7 @@ const meta = {
     label: 'Score',
     count: 1234567,
   },
-} satisfies Meta<typeof Score>
+} as Meta<typeof Score>
 
 export default meta
 type Story = StoryObj<typeof meta>

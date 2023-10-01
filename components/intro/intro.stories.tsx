@@ -8,7 +8,7 @@ const meta = {
   args: {
     mons: mockMons.allMons,
   },
-} satisfies Meta<typeof Intro>
+} as Meta<typeof Intro>
 
 export default meta
 type Story = StoryObj<typeof meta>

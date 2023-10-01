@@ -7,7 +7,7 @@ const meta = {
   args: {
     isVisible: true,
   },
-} satisfies Meta<typeof GameOver>
+} as Meta<typeof GameOver>
 
 export default meta
 type Story = StoryObj<typeof meta>

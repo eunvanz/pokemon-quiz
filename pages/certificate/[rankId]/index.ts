@@ -1,1 +1,4 @@
-export { default, getServerSideProps } from './certificate.page'
+export {
+  default,
+  getServerSideProps,
+} from '../../../components/certificate-page/certificate.page'

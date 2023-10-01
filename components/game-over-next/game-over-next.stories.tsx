@@ -5,7 +5,7 @@ const meta = {
   title: 'components/GameOverNext',
   component: GameOverNext,
   args: {},
-} satisfies Meta<typeof GameOverNext>
+} as Meta<typeof GameOverNext>
 
 export default meta
 type Story = StoryObj<typeof meta>

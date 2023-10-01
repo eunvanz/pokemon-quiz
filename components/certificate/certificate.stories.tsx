@@ -10,7 +10,7 @@ const meta = {
     rank: mockRanks.rank,
     allMons: mockMons.allMons,
   },
-} satisfies Meta<typeof Certificate>
+} as Meta<typeof Certificate>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -7,7 +7,7 @@ const meta = {
   args: {
     count: 2,
   },
-} satisfies Meta<typeof Combo>
+} as Meta<typeof Combo>
 
 export default meta
 type Story = StoryObj<typeof meta>

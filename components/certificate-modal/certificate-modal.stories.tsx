@@ -11,7 +11,7 @@ const meta = {
     rank: mockRanks.rank,
     isOpen: true,
   },
-} satisfies Meta<typeof CertificateModal>
+} as Meta<typeof CertificateModal>
 
 export default meta
 type Story = StoryObj<typeof meta>

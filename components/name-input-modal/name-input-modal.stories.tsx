@@ -8,7 +8,7 @@ const meta = {
     isOpen: true,
     score: 9128571,
   },
-} satisfies Meta<typeof NameInputModal>
+} as Meta<typeof NameInputModal>
 
 export default meta
 type Story = StoryObj<typeof meta>

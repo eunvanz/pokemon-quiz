@@ -1,18 +1,18 @@
+import { TestProvider } from '@/lib/helpers/test'
+import mockMons from '@/mocks/mons'
 import type { Meta, StoryObj } from '@storybook/react'
-import { TestProvider } from '../lib/helpers/test'
-import mockMons from '../mocks/mons'
-import Home from './home.page'
+import GamePanelPage from './game-panel.page'
 
 const meta = {
-  title: 'pages/HomePage',
-  component: Home,
+  title: 'pages/game-panel/GamePanelPage',
+  component: GamePanelPage,
   args: {},
   render: () => (
     <TestProvider api={{ getAllMons: () => Promise.resolve(mockMons.allMons) }}>
-      <Home />
+      <GamePanelPage />
     </TestProvider>
   ),
-} satisfies Meta<typeof Home>
+} as Meta<typeof GamePanelPage>
 
 export default meta
 type Story = StoryObj<typeof meta>

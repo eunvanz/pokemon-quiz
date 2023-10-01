@@ -7,7 +7,7 @@ const meta = {
   args: {
     placeholder: 'Placeholder',
   },
-} satisfies Meta<typeof TextField>
+} as Meta<typeof TextField>
 
 export default meta
 type Story = StoryObj<typeof meta>

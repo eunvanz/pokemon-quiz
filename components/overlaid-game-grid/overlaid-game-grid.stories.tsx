@@ -33,7 +33,7 @@ const meta = {
       ],
     ],
   },
-} satisfies Meta<typeof OverlaidGameGrid>
+} as Meta<typeof OverlaidGameGrid>
 
 export default meta
 type Story = StoryObj<typeof meta>

@@ -8,7 +8,7 @@ const meta = {
     width: 300,
     gridItemSize: 6,
   },
-} satisfies Meta<typeof GameGrid>
+} as Meta<typeof GameGrid>
 
 export default meta
 type Story = StoryObj<typeof meta>

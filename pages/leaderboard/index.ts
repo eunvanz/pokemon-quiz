@@ -1,1 +1,1 @@
-export { default } from './leaderboard.page'
+export { default } from '../../components/leaderboard-page/leaderboard.page'

@@ -10,7 +10,7 @@ const meta = {
     children:
       'Your payment has been successfully submitted. We’ve sent you an email with all of the details of your order.',
   },
-} satisfies Meta<typeof Modal>
+} as Meta<typeof Modal>
 
 export default meta
 type Story = StoryObj<typeof meta>

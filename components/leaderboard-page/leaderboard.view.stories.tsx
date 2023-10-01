@@ -25,7 +25,7 @@ const meta = {
     })),
     allMons: mockMons.allMons,
   },
-} satisfies Meta<typeof LeaderboardView>
+} as Meta<typeof LeaderboardView>
 
 export default meta
 type Story = StoryObj<typeof meta>
