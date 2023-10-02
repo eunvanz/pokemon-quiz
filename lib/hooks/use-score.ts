@@ -16,7 +16,7 @@ const useScore = () => {
     (wastedTime: number, combo: number) => {
       const bonusScore = Math.round(
         Math.max(100 - Math.floor(wastedTime / 2000) * 10, 10) *
-          (1 + combo * 0.2 + Math.pow(1.03, stage)) *
+          (1 + combo * 0.5 + Math.pow(1.03, stage)) *
           (accuracy / 10 || 5),
       )
       setScore((score) => score + bonusScore)

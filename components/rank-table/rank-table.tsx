@@ -53,7 +53,7 @@ const RankTable: React.FC<RankTableProps> = ({
         <div
           role="row"
           className={classNames(
-            'flex w-full flex-row p-2 h-20 gap-2 items-center hover:bg-gray-100',
+            'flex w-full flex-row p-2 h-20 gap-2 items-center',
             className,
           )}
         >
