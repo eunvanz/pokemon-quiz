@@ -17,7 +17,7 @@ const DropItem = ({ src }: DropItemProps) => {
 
   const size = random(isMobile ? 50 : 100, isMobile ? 100 : 300)
 
-  const left = random(0, window.innerWidth - size)
+  const left = random(0, window.innerWidth - size / 2 - 16)
 
   const handleOnImageLoad = useCallback(() => {
     setDelay(random(0, 500))

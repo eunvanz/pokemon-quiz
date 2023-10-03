@@ -1,3 +1,4 @@
+import useIsMobile from '@/lib/hooks/use-is-mobile'
 import { motion } from 'framer-motion'
 import { random } from 'lodash-es'
 import { useCallback, useState } from 'react'
@@ -10,9 +11,11 @@ export interface RainItemProps {
 const RainItem = ({ src, zIndexRange = [-10, 3] }: RainItemProps) => {
   const [delay, setDelay] = useState(100_000)
 
-  const size = random(100, 200)
+  const isMobile = useIsMobile()
 
-  const left = random(0, window.innerWidth - size)
+  const size = random(isMobile ? 50 : 100, isMobile ? 100 : 200)
+
+  const left = random(0, window.innerWidth - size / 2 - 16)
 
   const zIndex = random(...zIndexRange)
 
@@ -48,8 +51,8 @@ const RainItem = ({ src, zIndexRange = [-10, 3] }: RainItemProps) => {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={src}
-        width="100%"
-        height="100%"
+        width={size}
+        height={size}
         onLoad={handleOnImageLoad}
         alt="mon image"
       />

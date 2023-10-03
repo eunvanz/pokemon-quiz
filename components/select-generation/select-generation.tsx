@@ -161,4 +161,6 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
   )
 }
 
+SelectGeneration.displayName = 'SelectGeneration'
+
 export default SelectGeneration
