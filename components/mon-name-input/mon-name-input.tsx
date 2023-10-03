@@ -107,6 +107,10 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
 
     useImperativeHandle(ref, () => monNameInputRef.current as HTMLInputElement)
 
+    useEffect(() => {
+      reset()
+    }, [correctAnswers, reset])
+
     return (
       <form onSubmit={handleSubmit(handleOnSubmit)}>
         <div css={tw`flex items-start`}>
