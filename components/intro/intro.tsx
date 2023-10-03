@@ -101,6 +101,8 @@ const DropWord = ({ delay, children }: DropWordProps) => {
   )
 }
 
+Intro.displayName = 'Intro'
+
 export default Intro
 
 const DynamicDropItem = dynamic<DropItemProps>(() => import('./drop-item'), {

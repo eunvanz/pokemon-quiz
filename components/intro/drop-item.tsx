@@ -1,15 +1,21 @@
+import useIsMobile from '@/lib/hooks/use-is-mobile'
 import { motion } from 'framer-motion'
 import { random } from 'lodash-es'
 import { useCallback, useState } from 'react'
+import { useWindowSize } from 'usehooks-ts'
 
 export interface DropItemProps {
   src: string
 }
 
 const DropItem = ({ src }: DropItemProps) => {
+  const isMobile = useIsMobile()
+
+  const windowSize = useWindowSize()
+
   const [delay, setDelay] = useState(100_000)
 
-  const size = random(100, 300)
+  const size = random(isMobile ? 50 : 100, isMobile ? 100 : 300)
 
   const left = random(0, window.innerWidth - size)
 
@@ -29,7 +35,7 @@ const DropItem = ({ src }: DropItemProps) => {
         zIndex: 10,
       }}
       animate={{
-        translateY: `${window.innerHeight + size + 100}px`,
+        translateY: `${windowSize.height + size + 100}px`,
         transitionEnd: {
           display: 'none',
         },
