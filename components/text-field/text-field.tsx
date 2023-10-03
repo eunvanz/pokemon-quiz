@@ -43,7 +43,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
       if (hasError) {
         animation.start('vibe')
       }
-    }, [hasError, errorMessage, animation])
+    }, [animation, hasError])
 
     return (
       <motion.div

@@ -47,6 +47,7 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
 
     const handleOnSubmit = useCallback(
       ({ monName }: { monName: string }) => {
+        if (!monName.length) return
         if (
           correctAnswers
             .map((answer) =>
@@ -70,7 +71,8 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
     )
 
     const { ref: monNameInputFormRef, ...restTextFieldProps } = useMemo(() => {
-      return register('monName', { required: 'Input the answer' })
+      return register('monName')
+      // return register('monName', { required: 'Input the answer' })
     }, [register])
 
     const skip = useCallback(() => {
