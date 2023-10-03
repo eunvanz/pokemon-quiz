@@ -9,7 +9,7 @@ export interface GameOverNextProps {
 
 const GameOverNext: React.FC<GameOverNextProps> = ({ onNext }) => {
   return (
-    <div css={tw`flex flex-col items-center`}>
+    <div css={tw`flex flex-col text-sm sm:text-base  items-center`}>
       <h1 css={tw`animate-pulse text-primary`}>
         Click Pokémons to check the answers
       </h1>

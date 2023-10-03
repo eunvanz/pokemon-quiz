@@ -1,7 +1,7 @@
 'use client'
 
 import { GameController } from '@/lib/hooks/use-game-controller'
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import tw from 'twin.macro'
 import Combo from '@/components/combo'
 import GameOver from '@/components/game-over'
@@ -14,6 +14,7 @@ import TargetMon from '@/components/target-mon'
 import { motion } from 'framer-motion'
 import { motionVariants } from '@/lib/helpers/framer'
 import { checkIsSSR } from '@/lib/helpers/common'
+import useIsMobile from '@/lib/hooks/use-is-mobile'
 
 export interface GamePanelProps extends GameController {}
 
@@ -43,6 +44,8 @@ const GamePanel: React.FC<GamePanelProps> = ({
 }) => {
   const monImageRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  const isMobile = useIsMobile()
 
   const [isStarted, setIsStarted] = useState(false)
 
@@ -81,6 +84,31 @@ const GamePanel: React.FC<GamePanelProps> = ({
     }
   }, [achievedMons.length, currentMonImage])
 
+  const targetMon = useMemo(() => {
+    return (
+      <TargetMon
+        ref={monImageRef}
+        mon={isGameOver ? answerMon : currentMon}
+        nextMonImage={nextMonImage}
+        monNames={isGameOver ? answerMon?.names : undefined}
+      />
+    )
+  }, [answerMon, currentMon, isGameOver, nextMonImage])
+
+  const monNameInput = useMemo(() => {
+    return isGameOver ? (
+      <GameOverNext onNext={onNext} />
+    ) : (
+      <MonNameInput
+        ref={inputRef}
+        correctAnswers={answers}
+        onSkip={onSkip}
+        onSubmit={handleOnSuccess}
+        onFail={onFail}
+      />
+    )
+  }, [answers, handleOnSuccess, isGameOver, onFail, onNext, onSkip])
+
   return (
     <>
       <Ready
@@ -90,52 +118,38 @@ const GamePanel: React.FC<GamePanelProps> = ({
         }}
       />
       <motion.div
-        css={tw`flex justify-center items-center w-full h-screen p-4`}
+        css={tw`flex flex-col justify-center items-center w-full h-screen p-4 gap-4`}
         onClick={() => inputRef.current?.focus()}
         animate={animation}
         variants={motionVariants}
       >
-        <OverlaidGameGrid
-          currentColumn={currentColumn}
-          stackedMonImages={stackedMonImages}
-          duration={duration}
-          currentMonImage={isStarted ? currentMonImage : undefined}
-          onStack={onStack}
-          onClickMon={isGameOver ? updateAnswerMon : undefined}
-        />
-        <div css={tw`ml-4 flex flex-col justify-between gap-4`}>
-          <div css={tw`flex flex-col gap-2`}>
-            <Score label="Score" count={score} diff={bonusScore} />
-            <Score label="Gotcha" count={achievedMons.length} />
-            <Score label="Max Combo" count={maxCombo > 1 ? maxCombo : 0} />
-            <Score label="Avg. Speed" count={typingSpeed.avg} unit="wpm" />
-            <Score label="Max Speed" count={typingSpeed.max} unit="wpm" />
-            <Score label="Last Speed" count={typingSpeed.last} unit="wpm" />
-            <Score label="Accuracy" count={accuracy} unit="%" />
-          </div>
-          <Combo count={combo} />
-          <div>
-            <div css={tw`my-4`}>
-              <TargetMon
-                ref={monImageRef}
-                mon={isGameOver ? answerMon : currentMon}
-                nextMonImage={nextMonImage}
-                monNames={isGameOver ? answerMon?.names : undefined}
-              />
+        <div className="flex justify-center items-center w-full">
+          <OverlaidGameGrid
+            currentColumn={currentColumn}
+            stackedMonImages={stackedMonImages}
+            duration={duration}
+            currentMonImage={isStarted ? currentMonImage : undefined}
+            onStack={onStack}
+            onClickMon={isGameOver ? updateAnswerMon : undefined}
+          />
+          <div className="ml-4 flex flex-col justify-between gap-2 sm:gap-4 w-full max-w-sm">
+            <div css={tw`flex flex-col gap-1 sm:gap-2`}>
+              <Score label="Score" count={score} diff={bonusScore} />
+              <Score label="Gotcha" count={achievedMons.length} />
+              <Score label="Max Combo" count={maxCombo > 1 ? maxCombo : 0} />
+              <Score label="Avg. Speed" count={typingSpeed.avg} unit="wpm" />
+              <Score label="Max Speed" count={typingSpeed.max} unit="wpm" />
+              <Score label="Last Speed" count={typingSpeed.last} unit="wpm" />
+              <Score label="Accuracy" count={accuracy} unit="%" />
             </div>
-            {isGameOver ? (
-              <GameOverNext onNext={onNext} />
-            ) : (
-              <MonNameInput
-                ref={inputRef}
-                correctAnswers={answers}
-                onSkip={onSkip}
-                onSubmit={handleOnSuccess}
-                onFail={onFail}
-              />
-            )}
+            <Combo count={combo} />
+            <div>
+              <div css={tw`my-1 sm:my-4`}>{targetMon}</div>
+              {!isMobile && monNameInput}
+            </div>
           </div>
         </div>
+        {isMobile && monNameInput}
       </motion.div>
       <GameOver
         isVisible={isGameOverScreenVisible}

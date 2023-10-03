@@ -55,12 +55,14 @@ const Modal: React.FC<PropsWithChildren<ModalProps>> = ({
               {title && (
                 <Dialog.Title
                   as="h3"
-                  className="text-2xl font-medium leading-6 text-gray-900"
+                  className="text-lg sm:text-2xl font-medium leading-6 text-gray-900"
                 >
                   {title}
                 </Dialog.Title>
               )}
-              <div className="mt-2 text-gray-500 text-lg">{children}</div>
+              <div className="mt-2 text-gray-500 text-sm sm:text-lg">
+                {children}
+              </div>
 
               <div className="mt-4 flex flex-row-reverse gap-2">
                 <Button

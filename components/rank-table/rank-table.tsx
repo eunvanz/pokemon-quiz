@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef } from 'react'
 import classNames from 'classnames'
 import { Rank } from '@/lib/types'
 import AnimatedNumber from 'react-awesome-animated-number'
+import useIsMobile from '@/lib/hooks/use-is-mobile'
 
 export interface RankItem extends Rank {}
 
@@ -25,21 +26,23 @@ const RankTable: React.FC<RankTableProps> = ({
 }) => {
   const endRef = useRef<HTMLDivElement | null>(null)
 
+  const isMobile = useIsMobile()
+
   const entry = useIntersectionObserver(endRef, {})
 
   const ROW_CLASSNAMES = useMemo(() => {
     return [
       'w-1/12',
-      'w-1/4',
-      'w-1/12 justify-end',
+      isMobile ? 'w-1/6' : 'w-1/4',
       'w-1/6 justify-end',
       'w-1/12 justify-end',
       'w-1/12 justify-end',
       'w-1/12 justify-end',
       'w-1/12 justify-end',
       'w-1/12 justify-end',
+      'w-1/12 justify-end',
     ]
-  }, [])
+  }, [isMobile])
 
   useEffect(() => {
     if (entry?.isIntersecting && !isLoadingNextPage && hasNextPage) {
@@ -61,10 +64,10 @@ const RankTable: React.FC<RankTableProps> = ({
             const records = [
               item.seq.toLocaleString(),
               item.name,
-              item.generation === 0 ? 'All' : item.generation,
               <div key="score" css={{ zIndex: -1 }}>
                 <AnimatedNumber value={item.score} hasComma size={16} />
               </div>,
+              item.generation === 0 ? 'All' : item.generation,
               item.gotcha.toLocaleString(),
               item.maxCombo.toLocaleString(),
               <>
@@ -83,8 +86,8 @@ const RankTable: React.FC<RankTableProps> = ({
             const additionalClassName = [
               'text-primary',
               'text-sm',
-              '',
               'text-primary',
+              '',
               '',
               '',
               '',
@@ -109,9 +112,9 @@ const RankTable: React.FC<RankTableProps> = ({
   )
 
   return (
-    <div role="table" className="w-full max-w-6xl mx-4">
+    <div role="table" className="max-w-6xl mx-4" css={{ minWidth: '960px' }}>
       <div className="flex flex-col bg-white top-0 sticky gap-8 pt-4">
-        <h1 className="text-4xl">
+        <h1 className="text-2xl sm:text-4xl">
           <Link href="/" className="text-primary hover:text-blue-600">
             Pokédrops
           </Link>{' '}
@@ -125,8 +128,8 @@ const RankTable: React.FC<RankTableProps> = ({
             const labels = [
               'RANK',
               'NAME',
-              'GENERATION',
               'SCORE',
+              'GENERATION',
               'GOTCHA',
               'MAX COMBO',
               'AVG SPEED',

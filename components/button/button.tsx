@@ -56,7 +56,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       css={[
         tw`
-          p-3 border-2 border-solid rounded-xl shadow-sm text-primary transition-all text-base
+          p-2 sm:p-3 border sm:border-2 border-solid rounded-lg sm:rounded-xl shadow-sm text-primary transition-all text-sm sm:text-base
         `,
         {
           boxShadow: '0px 1px 4px 0px rgba(0,0,0,0.2)',

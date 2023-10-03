@@ -6,6 +6,7 @@ import { uniq } from 'lodash-es'
 import tw from 'twin.macro'
 import { Mon } from '@/lib/types'
 import AnimatedNumber from 'react-awesome-animated-number'
+import useIsMobile from '@/lib/hooks/use-is-mobile'
 
 export interface TargetMonProps {
   mon?: Mon
@@ -15,6 +16,8 @@ export interface TargetMonProps {
 
 const TargetMon = forwardRef<HTMLDivElement, TargetMonProps>(
   ({ mon, nextMonImage, monNames }, ref) => {
+    const isMobile = useIsMobile()
+
     const splitMonNames = useMemo(() => {
       return uniq(monNames?.split(','))
     }, [monNames])
@@ -33,15 +36,18 @@ const TargetMon = forwardRef<HTMLDivElement, TargetMonProps>(
     return (
       <div css={tw`flex`}>
         <div css={tw`flex flex-col justify-center items-center`}>
-          <div ref={ref} css={tw`w-40 h-40 overflow-hidden relative`}>
+          <div
+            ref={ref}
+            css={tw`w-20 h-20 sm:w-40 sm:h-40 overflow-hidden relative`}
+          >
             {/* for caching */}
             {nextMonImage && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={nextMonImage}
                 alt="cache"
-                width={160}
-                height={160}
+                width="100%"
+                height="100%"
                 css={tw`hidden`}
               />
             )}
@@ -68,8 +74,8 @@ const TargetMon = forwardRef<HTMLDivElement, TargetMonProps>(
             )}
           </div>
           {mon && (
-            <div className="text-sm">
-              Gotcha Rate:{' '}
+            <div className="text-xs sm:text-sm">
+              {isMobile ? 'Gotcha' : 'Gotcha Rate'}:{' '}
               <span className="text-primary">
                 <AnimatedNumber value={hasGotchaRate ? gotchaRate || 0 : 0} />
               </span>
@@ -77,7 +83,7 @@ const TargetMon = forwardRef<HTMLDivElement, TargetMonProps>(
             </div>
           )}
         </div>
-        <div css={tw`relative ml-4`}>
+        <div css={tw`relative ml-4 text-xs sm:text-base`}>
           <AnimatePresence key={mon?.id}>
             <motion.div
               initial={{

@@ -12,7 +12,7 @@ const Combo: React.FC<ComboProps> = ({ count }) => {
     <div>
       <AnimatePresence>
         <motion.span
-          css={tw`text-3xl text-blue-600 absolute`}
+          css={tw`sm:text-3xl text-blue-600 absolute`}
           key={count}
           initial={{
             scale: 3,
@@ -29,11 +29,11 @@ const Combo: React.FC<ComboProps> = ({ count }) => {
           {count}
         </motion.span>
       </AnimatePresence>
-      <span css={tw`text-3xl text-blue-600`}>{count}</span>
-      <span css={tw`text-lg`}>combos</span>
+      <span css={tw`sm:text-3xl text-blue-600`}>{count}</span>
+      <span css={tw`sm:text-lg`}>combos</span>
     </div>
   ) : (
-    <div css={tw`h-9`} />
+    <div css={tw`h-6 sm:h-9`} />
   )
 }
 

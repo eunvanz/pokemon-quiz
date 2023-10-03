@@ -31,7 +31,7 @@ const Ready: React.FC<ReadyProps> = ({ onStart }) => {
         >
           <h1
             css={[
-              tw`text-5xl`,
+              tw`text-3xl sm:text-5xl`,
               text === 'START' ? tw`text-primary animate-ping` : undefined,
             ]}
           >

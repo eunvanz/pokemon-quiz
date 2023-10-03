@@ -19,14 +19,14 @@ const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
 
   return (
     <div className="w-full max-w-sm">
-      <h1 className="text-4xl text-center text-black">
+      <h1 className="text-xl sm:text-4xl text-center text-black">
         <Link href="/" className="text-primary hover:text-blue-600">
           Pokédrops
         </Link>{' '}
         Certificate
       </h1>
       <div
-        className="flex flex-col gap-2 justify-center mt-4 cursor-pointer"
+        className="flex flex-col gap-2 justify-center mt-4 cursor-pointer text-sm sm:text-base"
         onClick={() => setDropCount((count) => ++count)}
       >
         <div className="text-center text-secondary mb-4">

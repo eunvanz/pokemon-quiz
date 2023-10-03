@@ -54,7 +54,7 @@ const GameOver: React.FC<GameOverProps> = ({
                 },
               },
             }}
-            css={tw`text-blue-600 text-6xl z-10`}
+            css={tw`text-blue-600 text-3xl sm:text-6xl z-10`}
           >
             {isClear ? 'GAME CLEAR' : 'GAME OVER'}
           </motion.h1>

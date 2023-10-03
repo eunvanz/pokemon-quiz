@@ -31,7 +31,6 @@ const GameGrid: React.FC<GameGridProps> = ({ width, gridItemSize }) => {
           height: width * 2,
         },
       ]}
-      data-testid="game-grid-container"
     >
       {Array.from({ length: gridItemSize ** 2 * 2 }).map((_, idx) => (
         <div css={gridItemCss} key={idx} />
