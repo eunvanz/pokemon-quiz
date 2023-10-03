@@ -55,7 +55,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
       const clientRect = $monImg.getClientRects()[0]
       const { burstStar } = await import('@/lib/helpers/mojs')
       burstStar({
-        top: clientRect.top + clientRect.height / 2,
+        top: clientRect.top + clientRect.height / 2 + window.scrollY,
         left: clientRect.left + clientRect.width / 2,
         color: ['#F59E0B', '#3B82F6', '#DB2777', '#7C3AED'],
         count: 16,
