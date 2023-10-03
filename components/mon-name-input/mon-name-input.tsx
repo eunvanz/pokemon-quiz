@@ -24,6 +24,8 @@ export interface MonNameInputProps {
 
 const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
   ({ onSubmit, correctAnswers, onSkip, onFail }, ref) => {
+    const isSpacePressedRef = useRef<boolean>(false)
+
     const {
       register,
       handleSubmit,
@@ -76,8 +78,11 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
     const skipOnSpaceKeyDown = useCallback(
       (e: KeyboardEvent) => {
         if (e.code === 'Space') {
-          e.preventDefault()
-          skip()
+          if (isSpacePressedRef.current) {
+            skip()
+          }
+          isSpacePressedRef.current = true
+          setTimeout(() => (isSpacePressedRef.current = false), 200)
         }
       },
       [skip],
@@ -124,7 +129,7 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
             type="button"
             onClick={skip}
           >
-            Skip (Space bar)
+            Skip (Space bar x 2)
           </Button>
         </div>
       </form>
