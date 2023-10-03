@@ -73,7 +73,10 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
       onSkip()
       reset()
       focusInput()
-    }, [focusInput, onSkip, reset])
+      setTimeout(() => {
+        setValue('monName', '')
+      })
+    }, [focusInput, onSkip, reset, setValue])
 
     const skipOnSpaceKeyDown = useCallback(
       (e: KeyboardEvent) => {
