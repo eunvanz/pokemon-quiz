@@ -50,9 +50,13 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
         if (
           correctAnswers
             .map((answer) =>
-              answer.toLowerCase().replace(CHARACTERS_TO_IGNORE_REGEX, ''),
+              answer
+                .toLowerCase()
+                .replace(CHARACTERS_TO_IGNORE_REGEX, '')
+                .replaceAll(' ', '')
+                .trim(),
             )
-            .includes(monName.toLowerCase())
+            .includes(monName.toLowerCase().replaceAll(' ', '').trim())
         ) {
           onSubmit(monName)
           resetValue()
