@@ -35,9 +35,7 @@ const RankTable: React.FC<RankTableProps> = ({
 
   const isMobile = useIsMobile()
 
-  const entry = useIntersectionObserver(endRef, {
-    rootMargin: '0px 0px 20%',
-  })
+  const entry = useIntersectionObserver(endRef, {})
 
   const ROW_CLASSNAMES = useMemo(() => {
     return [
@@ -224,7 +222,7 @@ const RankTable: React.FC<RankTableProps> = ({
         )}
       </div>
       {items?.map((item) => <Row key={item.id} item={item} />)}
-      <div ref={endRef} className="w-full h-4" />
+      <div ref={endRef} className="w-full" css={{ height: 1 }} />
       {!!myRank && (
         <div className="sticky bottom-0 w-full border-t border-gray-400 bg-blue-100">
           <Row item={myRank} />
