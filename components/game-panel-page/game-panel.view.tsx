@@ -41,6 +41,7 @@ const GamePanel: React.FC<GamePanelProps> = ({
   accuracy,
   onFail,
   bonusScore,
+  gameMode,
 }) => {
   const monImageRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -70,6 +71,16 @@ const GamePanel: React.FC<GamePanelProps> = ({
 
   const [isGameOverScreenVisible, setIsGameOverScreenVisible] = useState(false)
 
+  const monNames = useMemo(() => {
+    if (isGameOver) {
+      return answerMon?.names
+    } else if (gameMode === 'practice') {
+      return currentMon?.names
+    } else {
+      return undefined
+    }
+  }, [answerMon?.names, currentMon?.names, gameMode, isGameOver])
+
   useEffect(() => {
     if (isGameOver) {
       setIsGameOverScreenVisible(true)
@@ -90,10 +101,10 @@ const GamePanel: React.FC<GamePanelProps> = ({
         ref={monImageRef}
         mon={isGameOver ? answerMon : currentMon}
         nextMonImage={nextMonImage}
-        monNames={isGameOver ? answerMon?.names : undefined}
+        monNames={monNames}
       />
     )
-  }, [answerMon, currentMon, isGameOver, nextMonImage])
+  }, [answerMon, currentMon, isGameOver, monNames, nextMonImage])
 
   const monNameInput = useMemo(() => {
     return isGameOver ? (

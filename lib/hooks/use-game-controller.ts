@@ -11,6 +11,8 @@ import { useRouter } from 'next/navigation'
 import useTypingSpeed, { TypingSpeed } from './use-typing-speed'
 import useAccuracy from './use-accuracy'
 import useGeneration from './use-generation'
+import useGameMode from './use-game-mode'
+import { GameMode } from '../store/game-mode-state'
 
 export interface GameController {
   duration: number
@@ -37,6 +39,7 @@ export interface GameController {
   onFail: VoidFunction
   bonusScore?: number
   generation: number
+  gameMode: GameMode
 }
 
 export const INITIAL_DURATION = 20
@@ -61,6 +64,8 @@ const useGameController: () => GameController = () => {
   const { accuracy, updateAccuracy, resetAccuracy } = useAccuracy()
 
   const { generation } = useGeneration()
+
+  const { gameMode } = useGameMode()
 
   const [startTime, setStartTime] = useState(0)
 
@@ -87,8 +92,6 @@ const useGameController: () => GameController = () => {
         ?.names.split(',') || []
     )
   }, [generationMons, currentMon?.id])
-
-  const currentMonImage = currentMon?.image
 
   const changeCurrentColumn = useCallback(() => {
     const getDifferentColumn: () => number = () => {
@@ -210,6 +213,7 @@ const useGameController: () => GameController = () => {
     accuracy,
     onFail,
     generation,
+    gameMode,
   }
 }
 

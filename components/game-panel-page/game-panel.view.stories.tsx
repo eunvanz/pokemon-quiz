@@ -58,3 +58,10 @@ export const Default: Story = {
     isGameOver: false,
   },
 }
+
+export const Practice: Story = {
+  args: {
+    isGameOver: false,
+    gameMode: 'practice',
+  },
+}
