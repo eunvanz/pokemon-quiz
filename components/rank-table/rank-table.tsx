@@ -1,10 +1,10 @@
-import { useIntersectionObserver } from 'usehooks-ts'
-import Link from 'next/link'
 import { useCallback, useEffect, useMemo, useRef } from 'react'
-import classNames from 'classnames'
-import { Rank } from '@/lib/types'
-import AnimatedNumber from 'react-awesome-animated-number'
 import useIsMobile from '@/lib/hooks/use-is-mobile'
+import { Rank } from '@/lib/types'
+import classNames from 'classnames'
+import Link from 'next/link'
+import AnimatedNumber from 'react-awesome-animated-number'
+import { useIntersectionObserver } from 'usehooks-ts'
 
 export interface RankItem extends Rank {}
 
@@ -45,10 +45,10 @@ const RankTable: React.FC<RankTableProps> = ({
   }, [isMobile])
 
   useEffect(() => {
-    if (entry?.isIntersecting && !isLoadingNextPage && hasNextPage) {
+    if (entry?.isIntersecting && hasNextPage) {
       onLoadNextPage()
     }
-  }, [entry?.isIntersecting, hasNextPage, isLoadingNextPage, onLoadNextPage])
+  }, [entry?.isIntersecting, hasNextPage, onLoadNextPage])
 
   const Row = useCallback(
     ({ item, className }: { item: RankItem; className?: string }) => {
@@ -203,7 +203,9 @@ const RankTable: React.FC<RankTableProps> = ({
           </div>
         )}
       </div>
-      {items?.map((item) => <Row key={item.id} item={item} />)}
+      {items?.map((item) => (
+        <Row key={item.id} item={item} />
+      ))}
       {hasNextPage && !isLoadingNextPage && (
         <div ref={endRef} className="w-full h-4" />
       )}
