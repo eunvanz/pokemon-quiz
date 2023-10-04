@@ -62,6 +62,8 @@ const RankTable: React.FC<RankTableProps> = ({
     setIsCertificateModalOpen(false)
   }, [])
 
+  console.log('===== entry?.isIntersecting', entry?.isIntersecting)
+  console.log('===== hasNextPage', hasNextPage)
   useEffect(() => {
     if (entry?.isIntersecting && hasNextPage) {
       onLoadNextPage()
