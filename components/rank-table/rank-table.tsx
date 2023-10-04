@@ -1,10 +1,12 @@
-import { useCallback, useEffect, useMemo, useRef } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import useIsMobile from '@/lib/hooks/use-is-mobile'
 import { Rank } from '@/lib/types'
 import classNames from 'classnames'
 import Link from 'next/link'
 import AnimatedNumber from 'react-awesome-animated-number'
 import { useIntersectionObserver } from 'usehooks-ts'
+import CertificateModal from '../certificate-modal'
+import useAllMons from '@/lib/hooks/use-all-mons'
 
 export interface RankItem extends Rank {}
 
@@ -26,6 +28,11 @@ const RankTable: React.FC<RankTableProps> = ({
 }) => {
   const endRef = useRef<HTMLDivElement | null>(null)
 
+  const [selectedRank, setSelectedRank] = useState<Rank | undefined>(undefined)
+  const [isCertificateModalOpen, setIsCertificateModalOpen] = useState(false)
+
+  const { allMons } = useAllMons()
+
   const isMobile = useIsMobile()
 
   const entry = useIntersectionObserver(endRef, {
@@ -46,6 +53,15 @@ const RankTable: React.FC<RankTableProps> = ({
     ]
   }, [isMobile])
 
+  const openCertificateModal = useCallback((rank: Rank) => {
+    setSelectedRank(rank)
+    setIsCertificateModalOpen(true)
+  }, [])
+
+  const closeCertificateModal = useCallback(() => {
+    setIsCertificateModalOpen(false)
+  }, [])
+
   useEffect(() => {
     if (entry?.isIntersecting && hasNextPage) {
       onLoadNextPage()
@@ -60,6 +76,7 @@ const RankTable: React.FC<RankTableProps> = ({
             'flex w-full gap-2 flex-row items-start text-sm py-4 border-b border-gray-300',
             className,
           )}
+          onClick={() => openCertificateModal(item)}
         >
           <div className="text-primary w-14">{item.seq.toLocaleString()}</div>
           <div className="flex flex-col gap-2 w-full">
@@ -115,15 +132,16 @@ const RankTable: React.FC<RankTableProps> = ({
         <div
           role="row"
           className={classNames(
-            'flex flex-row p-2 h-20 gap-2 items-center',
+            'flex flex-row p-2 h-20 gap-2 items-center hover:bg-gray-100 cursor-pointer',
             className,
           )}
+          onClick={() => openCertificateModal(item)}
         >
           {ROW_CLASSNAMES.map((className, idx) => {
             const records = [
               item.seq.toLocaleString(),
               item.name,
-              <div key="score" css={{ zIndex: -1 }}>
+              <div key="score">
                 <AnimatedNumber value={item.score} hasComma size={16} />
               </div>,
               item.generation === 0 ? 'All' : item.generation,
@@ -167,12 +185,12 @@ const RankTable: React.FC<RankTableProps> = ({
         </div>
       )
     },
-    [ROW_CLASSNAMES, isMobile],
+    [ROW_CLASSNAMES, isMobile, openCertificateModal],
   )
 
   return (
     <div role="table" className="w-full max-w-6xl mx-4">
-      <div className="flex flex-col bg-white top-0 sticky gap-8 pt-4 pb-4 sm:pb-0">
+      <div className="flex flex-col bg-white top-0 sticky gap-8 pt-4 pb-4 sm:pb-0 z-10">
         <h1 className="text-2xl sm:text-4xl">
           <Link href="/" className="text-primary hover:text-blue-600">
             Pokédrops
@@ -213,6 +231,14 @@ const RankTable: React.FC<RankTableProps> = ({
         <div className="sticky bottom-0 w-full border-t border-gray-400 bg-blue-100">
           <Row item={myRank} />
         </div>
+      )}
+      {!!allMons && (
+        <CertificateModal
+          isOpen={isCertificateModalOpen}
+          onClose={closeCertificateModal}
+          allMons={allMons}
+          rank={selectedRank!}
+        />
       )}
     </div>
   )

@@ -12,10 +12,12 @@ export interface CertificateProps {
 
 const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
   const [dropCount, setDropCount] = useState(0)
+  console.log('===== dropCount', dropCount)
 
   const gotchaMons = useMemo(() => {
     return allMons.filter((mon) => rank.gotchaMons.includes(mon.id))
   }, [allMons, rank.gotchaMons])
+  console.log('===== gotchaMons', gotchaMons)
 
   return (
     <div className="w-full max-w-sm">

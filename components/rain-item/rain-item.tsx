@@ -15,7 +15,7 @@ const RainItem = ({ src, zIndexRange = [-10, 3] }: RainItemProps) => {
 
   const size = random(isMobile ? 50 : 100, isMobile ? 100 : 200)
 
-  const left = random(0, window.innerWidth - size / 2 - 16)
+  const left = random(0, window.innerWidth - size / 2)
 
   const zIndex = random(...zIndexRange)
 
@@ -26,7 +26,7 @@ const RainItem = ({ src, zIndexRange = [-10, 3] }: RainItemProps) => {
   return (
     <motion.div
       initial={{
-        position: 'absolute',
+        position: 'fixed',
         left,
         top: -size,
         translateY: '-50px',
