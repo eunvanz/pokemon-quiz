@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
 import { GENERATIONS } from '@/lib/constants/rules'
-import useGeneration from './use-generation'
 import { useQuery } from 'react-query'
 import api from '../api'
 import { Mon } from '../types'
+import useGeneration from './use-generation'
 
 const useAllMons = () => {
   const { data: allMons, isLoading: isAllMonsLoading } = useQuery<Mon[]>(
-    'allMons',
+    ['allMons'],
     api.getAllMons,
     {
       cacheTime: 10 * 60 * 1000,

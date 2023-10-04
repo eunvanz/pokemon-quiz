@@ -1,10 +1,10 @@
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import api from '@/lib/api'
 import { getMergedPageData } from '@/lib/helpers/react-query'
 import useAllMons from '@/lib/hooks/use-all-mons'
 import useGameController from '@/lib/hooks/use-game-controller'
 import useMons from '@/lib/hooks/use-mons'
 import { Pageable, Rank } from '@/lib/types'
-import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useInfiniteQuery, useMutation } from 'react-query'
 import { useLocalStorage } from 'usehooks-ts'
 import LeaderboardView from './leaderboard.view'
@@ -50,7 +50,7 @@ export default function LeaderBoardPage() {
     isLoading,
     isFetchingNextPage,
   } = useInfiniteQuery<Pageable<Rank>>(
-    'ranks',
+    ['ranks'],
     ({ pageParam = 1 }) => api.getRankList(pageParam),
     {
       getNextPageParam: ({ meta: { totalPages, currentPage } }) =>

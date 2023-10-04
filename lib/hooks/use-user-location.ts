@@ -5,7 +5,7 @@ import { checkIsSSR } from '../helpers/common'
 import { UserLocation } from '../types'
 
 const useUserLocation = () => {
-  const { data } = useQuery<UserLocation>('location', api.getUserLocation, {
+  const { data } = useQuery<UserLocation>(['location'], api.getUserLocation, {
     staleTime: Infinity,
     cacheTime: Infinity,
     initialData:
