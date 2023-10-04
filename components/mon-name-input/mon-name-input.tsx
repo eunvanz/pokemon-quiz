@@ -13,7 +13,7 @@ import tw from 'twin.macro'
 import Button from '../button'
 import TextField from '../text-field'
 
-const CHARACTERS_TO_IGNORE_REGEX = /♂|♀/
+const CHARACTERS_TO_IGNORE_REGEX = /♂|♀|’/
 
 export interface MonNameInputProps {
   onSubmit: (name: string) => void
