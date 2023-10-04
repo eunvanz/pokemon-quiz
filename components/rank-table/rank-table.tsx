@@ -30,6 +30,7 @@ const RankTable: React.FC<RankTableProps> = ({
 
   const [selectedRank, setSelectedRank] = useState<Rank | undefined>(undefined)
   const [isCertificateModalOpen, setIsCertificateModalOpen] = useState(false)
+  const [isNextLoadable, setIsNextLoadable] = useState<boolean>(true)
 
   const { allMons } = useAllMons()
 
@@ -61,10 +62,23 @@ const RankTable: React.FC<RankTableProps> = ({
   }, [])
 
   useEffect(() => {
-    if (entry?.isIntersecting && hasNextPage && !isLoadingNextPage) {
+    if (
+      entry?.isIntersecting &&
+      hasNextPage &&
+      !isLoadingNextPage &&
+      isNextLoadable
+    ) {
       onLoadNextPage()
+      setIsNextLoadable(false)
+      setTimeout(() => setIsNextLoadable(true), 500)
     }
-  }, [entry?.isIntersecting, hasNextPage, isLoadingNextPage, onLoadNextPage])
+  }, [
+    entry?.isIntersecting,
+    hasNextPage,
+    isLoadingNextPage,
+    isNextLoadable,
+    onLoadNextPage,
+  ])
 
   const Row = useCallback(
     ({ item, className }: { item: RankItem; className?: string }) => {
@@ -222,7 +236,7 @@ const RankTable: React.FC<RankTableProps> = ({
         )}
       </div>
       {items?.map((item) => <Row key={item.id} item={item} />)}
-      <div ref={endRef} className="w-full" css={{ height: 1 }} />
+      <div ref={endRef} className="w-full h-4" />
       {!!myRank && (
         <div className="sticky bottom-0 w-full border-t border-gray-400 bg-blue-100">
           <Row item={myRank} />
