@@ -62,13 +62,11 @@ const RankTable: React.FC<RankTableProps> = ({
     setIsCertificateModalOpen(false)
   }, [])
 
-  console.log('===== entry?.isIntersecting', entry?.isIntersecting)
-  console.log('===== hasNextPage', hasNextPage)
   useEffect(() => {
-    if (entry?.isIntersecting && hasNextPage) {
+    if (entry?.isIntersecting && hasNextPage && !isLoadingNextPage) {
       onLoadNextPage()
     }
-  }, [entry?.isIntersecting, hasNextPage, onLoadNextPage])
+  }, [entry?.isIntersecting, hasNextPage, isLoadingNextPage, onLoadNextPage])
 
   const Row = useCallback(
     ({ item, className }: { item: RankItem; className?: string }) => {
@@ -226,9 +224,7 @@ const RankTable: React.FC<RankTableProps> = ({
         )}
       </div>
       {items?.map((item) => <Row key={item.id} item={item} />)}
-      {hasNextPage && !isLoadingNextPage && (
-        <div ref={endRef} className="w-full h-4" />
-      )}
+      <div ref={endRef} className="w-full h-4" />
       {!!myRank && (
         <div className="sticky bottom-0 w-full border-t border-gray-400 bg-blue-100">
           <Row item={myRank} />
