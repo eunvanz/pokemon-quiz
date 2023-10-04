@@ -18,9 +18,10 @@ import { Generation, Mon } from '@/lib/types'
 import Button from '../button'
 import 'swiper/swiper.min.css'
 import RainItem from '../rain-item'
+import { GameMode } from '@/lib/store/game-mode-state'
 
 export interface SelectGenerationProps {
-  onStart: (generation: Generation) => void
+  onStart: (gameMode: GameMode) => void
   onNavigateToLeaderBoard: VoidFunction
   mons: Mon[]
   onChangeGeneration: (generation: Generation) => void
@@ -49,15 +50,17 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
 
   const handleKeydown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') {
+      if (e.code === 'ArrowLeft') {
         swiperRef.current?.slidePrev()
-      } else if (e.key === 'ArrowRight') {
+      } else if (e.code === 'ArrowRight') {
         swiperRef.current?.slideNext()
-      } else if (e.key === 'Enter') {
-        onStart(generation)
+      } else if (e.code === 'Enter') {
+        onStart('normal')
+      } else if (e.code === 'Space') {
+        onStart('practice')
       }
     },
-    [onStart, generation],
+    [onStart],
   )
 
   useEffect(() => {
@@ -134,8 +137,13 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
         </Button>
       </div>
       <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>
-        <Button isBlock onClick={() => onStart(generation)}>
+        <Button isBlock onClick={() => onStart('normal')}>
           Start (Enter)
+        </Button>
+      </div>
+      <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>
+        <Button isBlock variant="outlined" onClick={() => onStart('practice')}>
+          Practice (Space)
         </Button>
       </div>
       <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>

@@ -40,6 +40,7 @@ export interface GameController {
   bonusScore?: number
   generation: number
   gameMode: GameMode
+  setGameMode: (gameMode: GameMode) => void
 }
 
 export const INITIAL_DURATION = 20
@@ -65,7 +66,7 @@ const useGameController: () => GameController = () => {
 
   const { generation } = useGeneration()
 
-  const { gameMode } = useGameMode()
+  const { gameMode, setGameMode } = useGameMode()
 
   const [startTime, setStartTime] = useState(0)
 
@@ -214,6 +215,7 @@ const useGameController: () => GameController = () => {
     onFail,
     generation,
     gameMode,
+    setGameMode,
   }
 }
 
