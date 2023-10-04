@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef } from 'react'
-import useIntersectionObserver from '@/lib/hooks/use-intersection-observer'
 import useIsMobile from '@/lib/hooks/use-is-mobile'
 import { Rank } from '@/lib/types'
 import classNames from 'classnames'
 import Link from 'next/link'
 import AnimatedNumber from 'react-awesome-animated-number'
+import { useIntersectionObserver } from 'usehooks-ts'
 
 export interface RankItem extends Rank {}
 
