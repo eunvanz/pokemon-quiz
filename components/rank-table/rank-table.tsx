@@ -28,7 +28,9 @@ const RankTable: React.FC<RankTableProps> = ({
 
   const isMobile = useIsMobile()
 
-  const entry = useIntersectionObserver(endRef, {})
+  const entry = useIntersectionObserver(endRef, {
+    rootMargin: '0px 0px 20%',
+  })
 
   const ROW_CLASSNAMES = useMemo(() => {
     return [
@@ -203,9 +205,7 @@ const RankTable: React.FC<RankTableProps> = ({
           </div>
         )}
       </div>
-      {items?.map((item) => (
-        <Row key={item.id} item={item} />
-      ))}
+      {items?.map((item) => <Row key={item.id} item={item} />)}
       {hasNextPage && !isLoadingNextPage && (
         <div ref={endRef} className="w-full h-4" />
       )}
