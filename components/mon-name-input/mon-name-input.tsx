@@ -13,7 +13,7 @@ import tw from 'twin.macro'
 import Button from '../button'
 import TextField from '../text-field'
 
-const CHARACTERS_TO_IGNORE_REGEX = /♂|♀|’/
+const CHARACTERS_TO_IGNORE_REGEX = /♂|♀|’|'|`/
 
 export interface MonNameInputProps {
   onSubmit: (name: string) => void
@@ -57,7 +57,13 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
                 .replaceAll(' ', '')
                 .trim(),
             )
-            .includes(monName.toLowerCase().replaceAll(' ', '').trim())
+            .includes(
+              monName
+                .toLowerCase()
+                .replace(CHARACTERS_TO_IGNORE_REGEX, '')
+                .replaceAll(' ', '')
+                .trim(),
+            )
         ) {
           onSubmit(monName)
           resetValue()
