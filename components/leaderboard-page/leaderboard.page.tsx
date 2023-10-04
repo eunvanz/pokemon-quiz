@@ -18,6 +18,7 @@ export default function LeaderBoardPage() {
     generation,
     accuracy,
     resetGame,
+    gameMode,
   } = useGameController()
 
   const [defaultName, setDefaultName] = useLocalStorage('name', '')
@@ -28,7 +29,7 @@ export default function LeaderBoardPage() {
 
   const [myRank, setMyRank] = useState<Rank | undefined>(undefined)
   const [isRankListQueryEnabled, setIsRankListQueryEnabled] = useState(
-    score === 0,
+    score === 0 || gameMode === 'practice',
   )
 
   const { mutateAsync: postRank, isLoading: isPostingRank } = useMutation(
@@ -99,7 +100,7 @@ export default function LeaderBoardPage() {
   }, [])
 
   useEffect(() => {
-    if (score) {
+    if (gameMode !== 'practice' && score) {
       patchMonCount({
         result: [
           ...achievedMons.map((mon) => ({ id: mon.id, isGotten: true })),
@@ -123,7 +124,7 @@ export default function LeaderBoardPage() {
       isLoadingNextPage={isFetchingNextPage}
       onLoadNextPage={fetchNextPage}
       onSkipName={onSkipName}
-      score={score}
+      score={gameMode !== 'practice' ? score : undefined}
       allMons={allMons}
       defaultName={defaultName}
     />
