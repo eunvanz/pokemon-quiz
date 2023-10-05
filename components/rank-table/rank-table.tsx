@@ -6,7 +6,7 @@ import Link from 'next/link'
 import AnimatedNumber from 'react-awesome-animated-number'
 import { useIntersectionObserver } from 'usehooks-ts'
 import CertificateModal from '../certificate-modal'
-import getUnicodeFlagIcon from 'country-flag-icons/unicode'
+import Country from '../country'
 
 export interface RankItem extends Rank {}
 
@@ -96,12 +96,7 @@ const RankTable: React.FC<RankTableProps> = ({
             <div className="whitespace-normal">{item.name}</div>
             <div className="flex flex-row justify-between">
               <div className="text-secondary">Country</div>
-              <div className={item.country ? undefined : 'text-secondary'}>
-                {item.country || 'unknown'}
-                {item.countryCode
-                  ? getUnicodeFlagIcon(item.countryCode.toUpperCase())
-                  : ''}
-              </div>
+              <Country country={item.country} countryCode={item.countryCode} />
             </div>
             <div className="flex flex-row justify-between">
               <div className="text-secondary">Score</div>
@@ -163,15 +158,11 @@ const RankTable: React.FC<RankTableProps> = ({
             const records = [
               item.seq.toLocaleString(),
               item.name,
-              <div
+              <Country
                 key="country"
-                className={item.country ? undefined : 'text-secondary'}
-              >
-                {item.country || 'unknown'}
-                {item.countryCode
-                  ? getUnicodeFlagIcon(item.countryCode.toUpperCase())
-                  : ''}
-              </div>,
+                country={item.country}
+                countryCode={item.countryCode}
+              />,
               <div key="score">
                 <AnimatedNumber value={item.score} hasComma size={16} />
               </div>,
@@ -256,9 +247,7 @@ const RankTable: React.FC<RankTableProps> = ({
           </div>
         )}
       </div>
-      {items?.map((item) => (
-        <Row key={item.id} item={item} />
-      ))}
+      {items?.map((item) => <Row key={item.id} item={item} />)}
       <div ref={endRef} className="w-full h-4" />
       {!!myRank && (
         <div className="sticky bottom-0 w-full border-t border-gray-400 bg-blue-100">

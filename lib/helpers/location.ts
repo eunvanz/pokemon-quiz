@@ -1,7 +1,8 @@
 import { countries, zones } from 'moment-timezone/data/meta/latest.json'
 
 export const getTimeZoneToCountryMap = () => {
-  const timeZoneToCountryMap: Record<string, { name: string; abbr: string }> = {}
+  const timeZoneToCountryMap: Record<string, { name: string; abbr: string }> =
+    {}
   Object.keys(zones).forEach((zone) => {
     const cityArr = zone.split('/')
     const city = cityArr[cityArr.length - 1]
@@ -22,10 +23,13 @@ export const getUserLocationFromTimeZone = () => {
       city,
       country: name,
       countryCode: abbr,
-      region
+      region,
     }
   } else {
     return undefined
   }
 }
 
+export const getCountryFlagImgUrl = (countryCode: string) => {
+  return `http://purecatamphetamine.github.io/country-flag-icons/3x2/${countryCode.toUpperCase()}.svg`
+}
