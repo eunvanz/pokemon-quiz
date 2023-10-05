@@ -62,3 +62,9 @@ export interface UpdateMonCountDto {
     isGotten: boolean
   }[]
 }
+
+export interface RankSearchParams {
+  name?: string
+  country?: string
+  page: number
+}

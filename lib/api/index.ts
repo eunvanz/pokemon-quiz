@@ -2,6 +2,7 @@ import {
   Mon,
   Rank,
   RankDto,
+  RankSearchParams,
   UpdateMonCountDto,
   UserLocation,
 } from '@/lib/types'
@@ -24,11 +25,9 @@ const postRank = async (dto: RankDto) => {
   return data
 }
 
-const getRankList = async (page: number) => {
+const getRankList = async (params: RankSearchParams) => {
   const { data } = await requester.get('/rank', {
-    params: {
-      page,
-    },
+    params,
   })
   return data
 }

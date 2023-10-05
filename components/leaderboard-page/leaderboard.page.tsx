@@ -53,7 +53,7 @@ export default function LeaderBoardPage() {
     isFetchingNextPage,
   } = useInfiniteQuery<Pageable<Rank>>(
     ['ranks'],
-    ({ pageParam = 1 }) => api.getRankList(pageParam),
+    ({ pageParam = 1 }) => api.getRankList({ page: pageParam }),
     {
       getNextPageParam: ({ meta: { totalPages, currentPage } }) =>
         totalPages <= currentPage ? undefined : currentPage + 1,
