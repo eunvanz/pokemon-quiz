@@ -54,6 +54,7 @@ const LeaderboardView: React.FC<LeaderboardViewProps> = ({
         onLoadNextPage={onLoadNextPage}
         items={items}
         myRank={myRank}
+        allMons={allMons}
       />
       {!!score && (
         <NameInputModal

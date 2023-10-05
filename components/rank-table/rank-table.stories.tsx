@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import RankTable from './rank-table'
+import mockMons from '@/mocks/mons'
 
 const meta = {
   title: 'components/RankTable',
@@ -21,6 +22,7 @@ const meta = {
       maxSpeed: 40,
       accuracy: 66.7,
       gotchaMons: [1, 2, 3, 4, 5, 6, 7, 8],
+      mons: mockMons.allMons
     })),
   },
 } as Meta<typeof RankTable>

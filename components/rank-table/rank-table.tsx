@@ -1,12 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import useIsMobile from '@/lib/hooks/use-is-mobile'
-import { Rank } from '@/lib/types'
+import { Mon, Rank } from '@/lib/types'
 import classNames from 'classnames'
 import Link from 'next/link'
 import AnimatedNumber from 'react-awesome-animated-number'
 import { useIntersectionObserver } from 'usehooks-ts'
 import CertificateModal from '../certificate-modal'
-import useAllMons from '@/lib/hooks/use-all-mons'
 
 export interface RankItem extends Rank {}
 
@@ -17,6 +16,7 @@ export interface RankTableProps {
   isLoadingNextPage: boolean
   hasNextPage: boolean
   myRank?: RankItem
+  allMons?: Mon[]
 }
 
 const RankTable: React.FC<RankTableProps> = ({
@@ -25,14 +25,13 @@ const RankTable: React.FC<RankTableProps> = ({
   isLoadingNextPage,
   hasNextPage,
   myRank,
+  allMons,
 }) => {
   const endRef = useRef<HTMLDivElement | null>(null)
 
   const [selectedRank, setSelectedRank] = useState<Rank | undefined>(undefined)
   const [isCertificateModalOpen, setIsCertificateModalOpen] = useState(false)
   const [isNextLoadable, setIsNextLoadable] = useState<boolean>(true)
-
-  const { allMons } = useAllMons()
 
   const isMobile = useIsMobile()
 
@@ -41,7 +40,8 @@ const RankTable: React.FC<RankTableProps> = ({
   const ROW_CLASSNAMES = useMemo(() => {
     return [
       'w-1/12',
-      isMobile ? 'w-1/6' : 'w-1/4',
+      'w-1/4',
+      'w-1/6',
       'w-1/6 justify-end',
       'w-1/12 justify-end',
       'w-1/12 justify-end',
@@ -50,7 +50,7 @@ const RankTable: React.FC<RankTableProps> = ({
       'w-1/12 justify-end',
       'w-1/12 justify-end',
     ]
-  }, [isMobile])
+  }, [])
 
   const openCertificateModal = useCallback((rank: Rank) => {
     setSelectedRank(rank)
@@ -92,7 +92,13 @@ const RankTable: React.FC<RankTableProps> = ({
         >
           <div className="text-primary w-14">{item.seq.toLocaleString()}</div>
           <div className="flex flex-col gap-2 w-full">
-            <div>{item.name}</div>
+            <div className="whitespace-normal">{item.name}</div>
+            <div className="flex flex-row justify-between">
+              <div className="text-secondary">Country</div>
+              <div className={item.country ? undefined : 'text-secondary'}>
+                {item.country || 'unknown'}
+              </div>
+            </div>
             <div className="flex flex-row justify-between">
               <div className="text-secondary">Score</div>
               <div className="text-primary" css={{ zIndex: -1 }}>
@@ -153,6 +159,12 @@ const RankTable: React.FC<RankTableProps> = ({
             const records = [
               item.seq.toLocaleString(),
               item.name,
+              <div
+                key="country"
+                className={item.country ? undefined : 'text-secondary'}
+              >
+                {item.country || 'unknown'}
+              </div>,
               <div key="score">
                 <AnimatedNumber value={item.score} hasComma size={16} />
               </div>,
@@ -174,6 +186,7 @@ const RankTable: React.FC<RankTableProps> = ({
             ]
             const additionalClassName = [
               'text-primary',
+              'text-sm',
               'text-sm',
               'text-primary',
               '',
@@ -201,7 +214,7 @@ const RankTable: React.FC<RankTableProps> = ({
   )
 
   return (
-    <div role="table" className="w-full max-w-6xl mx-4">
+    <div role="table" className="w-full max-w-6xl px-4">
       <div className="flex flex-col bg-white top-0 sticky gap-8 pt-4 pb-4 sm:pb-0 z-10">
         <h1 className="text-2xl sm:text-4xl">
           <Link href="/" className="text-primary hover:text-blue-600">
@@ -218,6 +231,7 @@ const RankTable: React.FC<RankTableProps> = ({
               const labels = [
                 'RANK',
                 'NAME',
+                'COUNTRY',
                 'SCORE',
                 'GENERATION',
                 'GOTCHA',
@@ -235,7 +249,9 @@ const RankTable: React.FC<RankTableProps> = ({
           </div>
         )}
       </div>
-      {items?.map((item) => <Row key={item.id} item={item} />)}
+      {items?.map((item) => (
+        <Row key={item.id} item={item} />
+      ))}
       <div ref={endRef} className="w-full h-4" />
       {!!myRank && (
         <div className="sticky bottom-0 w-full border-t border-gray-400 bg-blue-100">
