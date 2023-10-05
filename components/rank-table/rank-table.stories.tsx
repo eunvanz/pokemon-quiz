@@ -18,6 +18,7 @@ const meta = {
       gotcha: 4211,
       generation: idx % 10,
       country: 'South Korea',
+      countryCode: 'KR',
       avgSpeed: 30,
       maxSpeed: 40,
       accuracy: 66.7,

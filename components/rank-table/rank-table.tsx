@@ -6,6 +6,7 @@ import Link from 'next/link'
 import AnimatedNumber from 'react-awesome-animated-number'
 import { useIntersectionObserver } from 'usehooks-ts'
 import CertificateModal from '../certificate-modal'
+import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 
 export interface RankItem extends Rank {}
 
@@ -97,6 +98,9 @@ const RankTable: React.FC<RankTableProps> = ({
               <div className="text-secondary">Country</div>
               <div className={item.country ? undefined : 'text-secondary'}>
                 {item.country || 'unknown'}
+                {item.countryCode
+                  ? getUnicodeFlagIcon(item.countryCode.toUpperCase())
+                  : ''}
               </div>
             </div>
             <div className="flex flex-row justify-between">
@@ -164,6 +168,9 @@ const RankTable: React.FC<RankTableProps> = ({
                 className={item.country ? undefined : 'text-secondary'}
               >
                 {item.country || 'unknown'}
+                {item.countryCode
+                  ? getUnicodeFlagIcon(item.countryCode.toUpperCase())
+                  : ''}
               </div>,
               <div key="score">
                 <AnimatedNumber value={item.score} hasComma size={16} />

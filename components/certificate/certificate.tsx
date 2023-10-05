@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Fragment, PropsWithChildren, useMemo, useState } from 'react'
 import { createPortal } from 'react-dom'
 import RainItem from '../rain-item'
+import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 
 export interface CertificateProps {
   rank: Rank
@@ -33,7 +34,9 @@ const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
           Pokédrops certifies that you have:
         </div>
         <Row label="Name">{rank.name}</Row>
-        <Row label="Country">{rank.country || 'unknown'}</Row>
+        <Row label="Country">{rank.country || 'unknown'}{rank.countryCode
+                  ? getUnicodeFlagIcon(rank.countryCode.toUpperCase())
+                  : ''}</Row>
         <Row label="Rank">{rank.seq}</Row>
         <Row label="Score">{rank.score.toLocaleString()}</Row>
         <Row label="Generation">
