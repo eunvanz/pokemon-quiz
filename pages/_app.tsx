@@ -1,4 +1,5 @@
 import CommonProvider from '@/components/common-provider'
+import { Analytics } from '@vercel/analytics/react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import './globals.css'
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <CommonProvider>
         <Component {...pageProps} />
       </CommonProvider>
+      <Analytics />
     </>
   )
 }
