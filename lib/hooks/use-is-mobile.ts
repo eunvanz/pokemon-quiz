@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
-import { useWindowSize } from 'usehooks-ts'
+import { useState } from 'react'
+import { useIsomorphicLayoutEffect, useWindowSize } from 'usehooks-ts'
 
 const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false)
-
   const { width } = useWindowSize()
 
-  useEffect(() => {
+  const [isMobile, setIsMobile] = useState(width < 640)
+
+  useIsomorphicLayoutEffect(() => {
     setIsMobile(width < 640)
   }, [width])
 
