@@ -8,6 +8,7 @@ import { Pageable, Rank } from '@/lib/types'
 import { useInfiniteQuery, useMutation } from 'react-query'
 import { useLocalStorage } from 'usehooks-ts'
 import LeaderboardView from './leaderboard.view'
+import { getUserLocationFromTimeZone } from '@/lib/helpers/location'
 
 export default function LeaderBoardPage() {
   const {
@@ -68,6 +69,7 @@ export default function LeaderBoardPage() {
     async (name: string) => {
       setDefaultName(name)
       if (!isPostingRank) {
+        const { city, country } = getUserLocationFromTimeZone() || {}
         await postRank({
           score,
           maxCombo,
@@ -78,6 +80,8 @@ export default function LeaderBoardPage() {
           gotcha: achievedMons.length,
           name,
           gotchaMons: achievedMons.map((mon) => mon.id),
+          city,
+          country,
         })
       }
     },
