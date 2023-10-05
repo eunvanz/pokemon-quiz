@@ -69,7 +69,8 @@ export default function LeaderBoardPage() {
     async (name: string) => {
       setDefaultName(name)
       if (!isPostingRank) {
-        const { city, country } = getUserLocationFromTimeZone() || {}
+        const { city, country, countryCode } =
+          getUserLocationFromTimeZone() || {}
         await postRank({
           score,
           maxCombo,
@@ -82,6 +83,7 @@ export default function LeaderBoardPage() {
           gotchaMons: achievedMons.map((mon) => mon.id),
           city,
           country,
+          countryCode,
         })
       }
     },
