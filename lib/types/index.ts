@@ -67,4 +67,5 @@ export interface RankSearchParams {
   name?: string
   country?: string
   page: number
+  isUniqueName?: boolean
 }

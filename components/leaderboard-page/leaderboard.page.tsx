@@ -38,16 +38,20 @@ export default function LeaderBoardPage() {
     category: 'name',
     keyword: '',
   })
+  const [isUniqueName, setIsUniqueName] = useState(true)
 
   const searchParams = useMemo(() => {
     if (!!searchCondition.keyword) {
       return {
         [searchCondition.category]: searchCondition.keyword,
+        isUniqueName,
       }
     } else {
-      return {}
+      return {
+        isUniqueName,
+      }
     }
-  }, [searchCondition.category, searchCondition.keyword])
+  }, [isUniqueName, searchCondition.category, searchCondition.keyword])
 
   const { mutateAsync: postRank, isLoading: isPostingRank } = useMutation(
     api.postRank,
@@ -151,6 +155,7 @@ export default function LeaderBoardPage() {
       allMons={allMons}
       defaultName={defaultName}
       onSearch={setSearchCondition}
+      onUniqueNameConditionChange={setIsUniqueName}
     />
   )
 }

@@ -8,6 +8,7 @@ import { useIntersectionObserver } from 'usehooks-ts'
 import CertificateModal from '../certificate-modal'
 import Country from '../country'
 import SearchInput, { SearchInputProps } from '../search-input'
+import Checkbox from '../checkbox'
 
 export interface RankItem extends Rank {}
 
@@ -20,6 +21,7 @@ export interface RankTableProps {
   myRank?: RankItem
   allMons?: Mon[]
   onSearch: SearchInputProps['onSearch']
+  onUniqueNameConditionChange: SearchInputProps['onUniqueNameConditionChange']
 }
 
 const RankTable: React.FC<RankTableProps> = ({
@@ -30,6 +32,7 @@ const RankTable: React.FC<RankTableProps> = ({
   myRank,
   allMons,
   onSearch,
+  onUniqueNameConditionChange,
 }) => {
   const endRef = useRef<HTMLDivElement | null>(null)
 
@@ -223,7 +226,10 @@ const RankTable: React.FC<RankTableProps> = ({
           </Link>{' '}
           Leaderboard
         </h1>
-        <SearchInput onSearch={onSearch} />
+        <SearchInput
+          onSearch={onSearch}
+          onUniqueNameConditionChange={onUniqueNameConditionChange}
+        />
         {!isMobile && (
           <div
             role="row"
