@@ -51,7 +51,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
         ]}
         value={category}
         onChange={(value) => setCategory(value as Category)}
-        className="w-52"
+        className="w-28 sm:w-32"
       />
       <TextField
         ref={inputRef}

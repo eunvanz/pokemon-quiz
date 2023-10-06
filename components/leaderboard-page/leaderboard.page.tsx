@@ -9,6 +9,7 @@ import { useInfiniteQuery, useMutation } from 'react-query'
 import { useLocalStorage } from 'usehooks-ts'
 import LeaderboardView from './leaderboard.view'
 import { getUserLocationFromTimeZone } from '@/lib/helpers/location'
+import { SearchCondition } from '../search-input/search-input'
 
 export default function LeaderBoardPage() {
   const {
@@ -33,6 +34,21 @@ export default function LeaderBoardPage() {
     score === 0 || gameMode === 'practice',
   )
 
+  const [searchCondition, setSearchCondition] = useState<SearchCondition>({
+    category: 'name',
+    keyword: '',
+  })
+
+  const searchParams = useMemo(() => {
+    if (!!searchCondition.keyword) {
+      return {
+        [searchCondition.category]: searchCondition.keyword,
+      }
+    } else {
+      return {}
+    }
+  }, [searchCondition.category, searchCondition.keyword])
+
   const { mutateAsync: postRank, isLoading: isPostingRank } = useMutation(
     api.postRank,
     {
@@ -52,8 +68,9 @@ export default function LeaderBoardPage() {
     isLoading,
     isFetchingNextPage,
   } = useInfiniteQuery<Pageable<Rank>>(
-    ['ranks'],
-    ({ pageParam = 1 }) => api.getRankList({ page: pageParam }),
+    ['ranks', searchParams],
+    ({ pageParam = 1 }) =>
+      api.getRankList({ page: pageParam, ...searchParams }),
     {
       getNextPageParam: ({ meta: { totalPages, currentPage } }) =>
         totalPages <= currentPage ? undefined : currentPage + 1,
@@ -133,6 +150,7 @@ export default function LeaderBoardPage() {
       score={gameMode !== 'practice' ? score : undefined}
       allMons={allMons}
       defaultName={defaultName}
+      onSearch={setSearchCondition}
     />
   )
 }

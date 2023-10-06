@@ -7,6 +7,7 @@ import AnimatedNumber from 'react-awesome-animated-number'
 import { useIntersectionObserver } from 'usehooks-ts'
 import CertificateModal from '../certificate-modal'
 import Country from '../country'
+import SearchInput, { SearchInputProps } from '../search-input'
 
 export interface RankItem extends Rank {}
 
@@ -18,6 +19,7 @@ export interface RankTableProps {
   hasNextPage: boolean
   myRank?: RankItem
   allMons?: Mon[]
+  onSearch: SearchInputProps['onSearch']
 }
 
 const RankTable: React.FC<RankTableProps> = ({
@@ -27,6 +29,7 @@ const RankTable: React.FC<RankTableProps> = ({
   hasNextPage,
   myRank,
   allMons,
+  onSearch,
 }) => {
   const endRef = useRef<HTMLDivElement | null>(null)
 
@@ -220,6 +223,7 @@ const RankTable: React.FC<RankTableProps> = ({
           </Link>{' '}
           Leaderboard
         </h1>
+        <SearchInput onSearch={onSearch} />
         {!isMobile && (
           <div
             role="row"

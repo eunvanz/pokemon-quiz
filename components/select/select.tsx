@@ -31,7 +31,7 @@ const Select: React.FC<SelectProps> = ({
   return (
     <Listbox value={value} onChange={onChange}>
       <div className={classNames('relative', className)} {...restProps}>
-        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-300 text-sm sm:text-base border-2 border-gray-200">
+        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white p-2 sm:p-3 pr-10 text-left focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-300 text-sm sm:text-base border-2 border-gray-200">
           <span className="block truncate">
             {selectedOption?.label ?? placeholder}
           </span>
@@ -54,7 +54,7 @@ const Select: React.FC<SelectProps> = ({
               <Listbox.Option
                 key={value}
                 className={({ active }) =>
-                  `relative cursor-default select-none py-2 pl-10 pr-4 ${
+                  `relative cursor-default select-none py-2 pl-4 sm:pl-10 pr-4 ${
                     active ? 'bg-blue-100 text-primary' : 'text-gray-900'
                   }`
                 }
@@ -70,7 +70,7 @@ const Select: React.FC<SelectProps> = ({
                       {label}
                     </span>
                     {selected ? (
-                      <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-primary">
+                      <span className="absolute inset-y-0 left-0 hidden sm:flex items-center pl-3 text-primary">
                         <CheckIcon className="h-5 w-5" aria-hidden="true" />
                       </span>
                     ) : null}
