@@ -55,7 +55,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           ref={ref}
           css={[
             tw`
-              p-2 sm:p-3 border sm:border-2 border-solid rounded-lg sm:rounded-xl border-gray-200 transition-all text-sm sm:text-base outline-none
+              p-2 sm:p-3 border-2 border-solid rounded-lg sm:rounded-xl border-gray-200 transition-all text-sm sm:text-base outline-none
             `,
             {
               '&:hover': props.disabled ? undefined : tw`border-gray-400`,

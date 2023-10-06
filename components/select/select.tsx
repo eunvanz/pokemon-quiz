@@ -1,5 +1,6 @@
-import { Listbox, ListboxProps, Transition } from '@headlessui/react'
+import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import classNames from 'classnames'
 import { Fragment, useMemo } from 'react'
 
 export interface SelectProps {
@@ -7,6 +8,7 @@ export interface SelectProps {
   onChange: (value: string) => void
   options: SelectOption[]
   placeholder?: string
+  className?: string
 }
 
 export interface SelectOption {
@@ -19,6 +21,8 @@ const Select: React.FC<SelectProps> = ({
   onChange,
   options,
   placeholder,
+  className,
+  ...restProps
 }) => {
   const selectedOption = useMemo(() => {
     return options.find((option) => option.value === value)
@@ -26,8 +30,8 @@ const Select: React.FC<SelectProps> = ({
 
   return (
     <Listbox value={value} onChange={onChange}>
-      <div className="relative mt-1">
-        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+      <div className={classNames('relative', className)} {...restProps}>
+        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-300 text-sm sm:text-base border-2 border-gray-200">
           <span className="block truncate">
             {selectedOption?.label ?? placeholder}
           </span>
@@ -45,7 +49,7 @@ const Select: React.FC<SelectProps> = ({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+          <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-sm shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
             {options.map(({ value, label }) => (
               <Listbox.Option
                 key={value}
