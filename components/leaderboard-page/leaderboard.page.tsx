@@ -38,7 +38,7 @@ export default function LeaderBoardPage() {
     category: 'name',
     keyword: '',
   })
-  const [isUniqueName, setIsUniqueName] = useState(true)
+  const [isUniqueName, setIsUniqueName] = useState(score === 0)
 
   const searchParams = useMemo(() => {
     if (!!searchCondition.keyword) {
@@ -156,6 +156,7 @@ export default function LeaderBoardPage() {
       defaultName={defaultName}
       onSearch={setSearchCondition}
       onUniqueNameConditionChange={setIsUniqueName}
+      defaultUniqueNameCondition={isUniqueName}
     />
   )
 }

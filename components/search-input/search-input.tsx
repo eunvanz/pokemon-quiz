@@ -9,6 +9,7 @@ import TextField from '../text-field'
 export interface SearchInputProps {
   onSearch: (condition: SearchCondition) => void
   onUniqueNameConditionChange: (isChecked: boolean) => void
+  defaultUniqueNameCondition?: boolean
 }
 
 export type Category = keyof Omit<RankSearchParams, 'page'>
@@ -21,12 +22,15 @@ export interface SearchCondition {
 const SearchInput: React.FC<SearchInputProps> = ({
   onSearch,
   onUniqueNameConditionChange,
+  defaultUniqueNameCondition,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null)
 
   const [category, setCategory] = useState<Category>('name')
   const [keyword, setKeyword] = useState<string>('')
-  const [isUniqueName, setIsUniqueName] = useState<boolean>(true)
+  const [isUniqueName, setIsUniqueName] = useState<boolean>(
+    defaultUniqueNameCondition || false,
+  )
 
   const handleOnSearch = useCallback(() => {
     onSearch({ category, keyword })

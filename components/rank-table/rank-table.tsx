@@ -22,6 +22,7 @@ export interface RankTableProps {
   allMons?: Mon[]
   onSearch: SearchInputProps['onSearch']
   onUniqueNameConditionChange: SearchInputProps['onUniqueNameConditionChange']
+  defaultUniqueNameCondition: SearchInputProps['defaultUniqueNameCondition']
 }
 
 const RankTable: React.FC<RankTableProps> = ({
@@ -33,6 +34,7 @@ const RankTable: React.FC<RankTableProps> = ({
   allMons,
   onSearch,
   onUniqueNameConditionChange,
+  defaultUniqueNameCondition,
 }) => {
   const endRef = useRef<HTMLDivElement | null>(null)
 
@@ -229,6 +231,7 @@ const RankTable: React.FC<RankTableProps> = ({
         <SearchInput
           onSearch={onSearch}
           onUniqueNameConditionChange={onUniqueNameConditionChange}
+          defaultUniqueNameCondition={defaultUniqueNameCondition}
         />
         {!isMobile && (
           <div

@@ -34,6 +34,7 @@ const LeaderboardView: React.FC<LeaderboardViewProps> = ({
   defaultName,
   onSearch,
   onUniqueNameConditionChange,
+  defaultUniqueNameCondition,
 }) => {
   const [isNameInputModalOpen, setIsNameInputModalOpen] = useState(
     score ? score > MIN_SCORE : false,
@@ -59,6 +60,7 @@ const LeaderboardView: React.FC<LeaderboardViewProps> = ({
         allMons={allMons}
         onSearch={onSearch}
         onUniqueNameConditionChange={onUniqueNameConditionChange}
+        defaultUniqueNameCondition={defaultUniqueNameCondition}
       />
       {!!score && (
         <NameInputModal
