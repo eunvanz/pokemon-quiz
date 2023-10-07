@@ -22,7 +22,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
         id={value || id}
         type="checkbox"
         value={value}
-        className="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded"
+        className="w-4 h-4 text-primary bg-gray-100 border-2 border-gray-200 rounded"
         onChange={(e) => onChange(e.target.checked)}
       />
       <label htmlFor={value || id} className="ml-2 text-sm sm:text-base">
