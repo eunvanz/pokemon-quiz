@@ -80,7 +80,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
         onChange={setIsUniqueName}
         value="uniqueName"
       >
-        Unique by name
+        Highest score only by name
       </Checkbox>
     </div>
   )
