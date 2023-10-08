@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Jua&family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Do+Hyeon&family=Mochiy+Pop+One&family=Noto+Sans+TC&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: 'Carter One', 'Jua', 'Mochiy Pop One', cursive;
+  font-family: 'Carter One', 'Do Hyeon', 'Mochiy Pop One', 'Noto Sans TC',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
