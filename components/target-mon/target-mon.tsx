@@ -7,6 +7,7 @@ import tw from 'twin.macro'
 import { Mon } from '@/lib/types'
 import AnimatedNumber from 'react-awesome-animated-number'
 import useIsMobile from '@/lib/hooks/use-is-mobile'
+import i18n from '@/lib/i18n'
 
 export interface TargetMonProps {
   mon?: Mon
@@ -75,7 +76,8 @@ const TargetMon = forwardRef<HTMLDivElement, TargetMonProps>(
           </div>
           {mon && (
             <div className="text-xs sm:text-sm">
-              {isMobile ? 'Gotcha' : 'Gotcha Rate'}:{' '}
+              {isMobile ? i18n.t('common.gotcha') : i18n.t('common.gotchaRate')}
+              :{' '}
               <span className="text-primary">
                 <AnimatedNumber value={hasGotchaRate ? gotchaRate || 0 : 0} />
               </span>

@@ -1,0 +1,54 @@
+{
+  "intro": {
+    "loading": "読み込み中...",
+    "pressEnter": "Enterを押すか、任意の場所をクリックしてください"
+  },
+  "selectGeneration": {
+    "start": "始める",
+    "next": "次",
+    "practice": "練習する",
+    "previous": "前の",
+    "leaderboard": "リーダーボード",
+    "9thGeneration": "9代目",
+    "7thGeneration": "第7世代",
+    "8thGeneration": "第8世代",
+    "2ndGeneration": "第2世代",
+    "6thGeneration": "第6世代",
+    "4thGeneration": "第4世代",
+    "5thGeneration": "第5世代",
+    "1stGeneration": "初代",
+    "allGenerations": "全世代",
+    "3rdGeneration": "3代目",
+    "chooseGeneration": "挑戦する世代を選択してください"
+  },
+  "common": {
+    "combos": "コンボ",
+    "name": "名前",
+    "generation": "世代",
+    "maxCombo": "マックスコンボ",
+    "rank": "ランク",
+    "avgSpeed": "平均スピード",
+    "maxSpeed": "マックス・スピード",
+    "accuracy": "正確さ",
+    "country": "国",
+    "score": "スコア",
+    "lastSpeed": "ラストスピード"
+  },
+  "monNameInput": {
+    "fire": "提出する",
+    "skip": "スキップ",
+    "error": "間違った答えです",
+    "placeholder": "ポケモンの名前を入力してください"
+  },
+  "searchInput": {
+    "search": "検索",
+    "countryPlaceholder": "プレイヤーの国を入力してください",
+    "namePlaceholder": "プレイヤーの名前を入力してください",
+    "highestScoreOnly": "名前ごとに最高スコアのみを表示"
+  },
+  "certificate": {
+    "close": "近い",
+    "copyLink": "証明書リンクのコピー",
+    "certifies": "ポケドロップはあなたが持っていることを証明します"
+  }
+}

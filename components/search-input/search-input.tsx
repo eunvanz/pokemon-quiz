@@ -1,5 +1,6 @@
+import i18n from '@/lib/i18n'
 import { RankSearchParams } from '@/lib/types'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useEventListener } from 'usehooks-ts'
 import Button from '../button'
 import Checkbox from '../checkbox'
@@ -32,6 +33,14 @@ const SearchInput: React.FC<SearchInputProps> = ({
     defaultUniqueNameCondition || false,
   )
 
+  const placeholder = useMemo(() => {
+    if (category === 'name') {
+      return i18n.t('searchInput.namePlaceholder')
+    } else if (category === 'country') {
+      return i18n.t('searchInput.countryPlaceholder')
+    }
+  }, [category])
+
   const handleOnSearch = useCallback(() => {
     onSearch({ category, keyword })
   }, [category, keyword, onSearch])
@@ -56,11 +65,11 @@ const SearchInput: React.FC<SearchInputProps> = ({
         <Select
           options={[
             {
-              label: 'Name',
+              label: i18n.t('common.name'),
               value: 'name',
             },
             {
-              label: 'Country',
+              label: i18n.t('common.country'),
               value: 'country',
             },
           ]}
@@ -72,15 +81,16 @@ const SearchInput: React.FC<SearchInputProps> = ({
           ref={inputRef}
           value={keyword}
           onChange={(e) => setKeyword(e.target.value)}
+          placeholder={placeholder}
         />
-        <Button onClick={handleOnSearch}>Search</Button>
+        <Button onClick={handleOnSearch}>{i18n.t('searchInput.search')}</Button>
       </div>
       <Checkbox
         isChecked={isUniqueName}
         onChange={setIsUniqueName}
         value="uniqueName"
       >
-        Highest score only by name
+        {i18n.t('searchInput.highestScoreOnly')}
       </Checkbox>
     </div>
   )

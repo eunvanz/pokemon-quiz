@@ -9,6 +9,7 @@ import CertificateModal from '../certificate-modal'
 import Country from '../country'
 import SearchInput, { SearchInputProps } from '../search-input'
 import Checkbox from '../checkbox'
+import i18n from '@/lib/i18n'
 
 export interface RankItem extends Rank {}
 
@@ -240,16 +241,16 @@ const RankTable: React.FC<RankTableProps> = ({
           >
             {ROW_CLASSNAMES.map((className, idx) => {
               const labels = [
-                'RANK',
-                'NAME',
-                'COUNTRY',
-                'SCORE',
-                'GENERATION',
-                'GOTCHA',
-                'MAX COMBO',
-                'AVG SPEED',
-                'MAX SPEED',
-                'ACCURACY',
+                i18n.t('common.rank'),
+                i18n.t('common.name'),
+                i18n.t('common.country'),
+                i18n.t('common.score'),
+                i18n.t('common.generation'),
+                i18n.t('common.gotcha'),
+                i18n.t('common.maxCombo'),
+                i18n.t('common.avgSpeed'),
+                i18n.t('common.maxSpeed'),
+                i18n.t('common.accuracy'),
               ]
               return (
                 <div key={idx} className={`flex ${className}`}>

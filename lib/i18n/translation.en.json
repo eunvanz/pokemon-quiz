@@ -1,0 +1,56 @@
+{
+  "intro": {
+    "loading": "loading...",
+    "pressEnter": "Press enter or click anywhere"
+  },
+  "selectGeneration": {
+    "chooseGeneration": "CHOOSE A GENERATION TO CHALLENGE",
+    "allGenerations": "All Generations",
+    "1stGeneration": "1st Generation",
+    "2ndGeneration": "2nd Generation",
+    "3rdGeneration": "3rd Generation",
+    "4thGeneration": "4th Generation",
+    "5thGeneration": "5th Generation",
+    "6thGeneration": "6th Generation",
+    "7thGeneration": "7th Generation",
+    "8thGeneration": "8th Generation",
+    "9thGeneration": "9th Generation",
+    "previous": "Previous",
+    "next": "Next",
+    "start": "Start",
+    "practice": "Practice",
+    "leaderboard": "Leaderboard"
+  },
+  "common": {
+    "gotcha": "Gotcha",
+    "gotchaRate": "Gotcha rate",
+    "score": "Score",
+    "maxCombo": "Max Combo",
+    "avgSpeed": "Avg. Speed",
+    "maxSpeed": "Max Speed",
+    "lastSpeed": "Last Speed",
+    "accuracy": "Accuracy",
+    "combos": "Combo",
+    "rank": "Rank",
+    "name": "Name",
+    "country": "Country",
+    "generation": "Generation"
+  },
+  "monNameInput": {
+    "fire": "Submit",
+    "skip": "Skip",
+    "placeholder": "Enter Pokémon's name",
+    "error": "It's wrong answer"
+  },
+  "searchInput": {
+    "search": "Search",
+    "highestScoreOnly": "View only the highest scores by name",
+    "namePlaceholder": "Enter player's name",
+    "countryPlaceholder": "Enter player's country"
+  },
+  "certificate": {
+    "certifies": "Pokédrops certifies that you have",
+    "copyLink": "Copy Certificate Link",
+    "close": "Close"
+  }
+}

@@ -7,6 +7,7 @@ import tw from 'twin.macro'
 import { Mon } from '@/lib/types'
 import dynamic from 'next/dynamic'
 import { DropItemProps } from './drop-item'
+import i18n from '@/lib/i18n'
 
 export interface IntroProps {
   mons?: Mon[]
@@ -67,7 +68,7 @@ const Intro: React.FC<IntroProps> = ({ mons = [], onEnter, isLoading }) => {
         <DropWord delay={wordsDelays[8]}>s</DropWord>
       </h1>
       <h2 css={tw`sm:text-2xl text-white animate-pulse text-center`}>
-        {isLoading ? 'Loading...' : 'Press enter or click anywhere'}
+        {isLoading ? i18n.t('intro.loading') : i18n.t('intro.pressEnter')}
       </h2>
       <Fragment key={dropCount}>{dropMon()}</Fragment>
     </div>

@@ -1,0 +1,56 @@
+{
+  "intro": {
+    "loading": "로드 중...",
+    "pressEnter": "Enter 키를 누르거나 아무 곳이나 클릭하세요."
+  },
+  "selectGeneration": {
+    "practice": "연습",
+    "9thGeneration": "9세대",
+    "previous": "이전",
+    "start": "시작",
+    "2ndGeneration": "2세대",
+    "next": "다음",
+    "leaderboard": "리더보드",
+    "7thGeneration": "7세대",
+    "allGenerations": "모든 세대",
+    "8thGeneration": "8세대",
+    "4thGeneration": "4세대",
+    "5thGeneration": "5세대",
+    "3rdGeneration": "3세대",
+    "chooseGeneration": "도전할 세대를 선택하세요",
+    "6thGeneration": "6세대",
+    "1stGeneration": "1세대"
+  },
+  "common": {
+    "rank": "순위",
+    "gotcha": "획득",
+    "maxSpeed": "최대 속도",
+    "country": "국가",
+    "generation": "세대",
+    "accuracy": "정확도",
+    "score": "점수",
+    "combos": "콤보",
+    "name": "이름",
+    "avgSpeed": "평균 속도",
+    "gotchaRate": "획득률",
+    "maxCombo": "최대 콤보",
+    "lastSpeed": "마지막 속도"
+  },
+  "monNameInput": {
+    "skip": "건너뛰기",
+    "fire": "제출",
+    "error": "틀린 답이에요",
+    "placeholder": "포켓몬의 이름을 입력하세요"
+  },
+  "searchInput": {
+    "search": "검색",
+    "countryPlaceholder": "플레이어의 국가를 입력하세요",
+    "namePlaceholder": "플레이어의 이름을 입력하세요",
+    "highestScoreOnly": "이름별로 가장 높은 점수만 보기"
+  },
+  "certificate": {
+    "close": "닫기",
+    "copyLink": "인증서 링크 복사",
+    "certifies": "Pokédrops는 당신의 성적을 아래와 같이 증명함"
+  }
+}

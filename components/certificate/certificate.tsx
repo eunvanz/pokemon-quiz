@@ -6,6 +6,7 @@ import { createPortal } from 'react-dom'
 import RainItem from '../rain-item'
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 import Country from '../country'
+import i18n from '@/lib/i18n'
 
 export interface CertificateProps {
   rank: Rank
@@ -32,28 +33,28 @@ const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
         onClick={() => setDropCount((count) => ++count)}
       >
         <div className="text-center text-secondary mb-4">
-          Pokédrops certifies that you have:
+          {i18n.t('certificate.certifies')}:
         </div>
-        <Row label="Name">{rank.name}</Row>
-        <Row label="Country">
+        <Row label={i18n.t('common.name')}>{rank.name}</Row>
+        <Row label={i18n.t('common.country')}>
           <Country country={rank.country} countryCode={rank.countryCode} />
         </Row>
-        <Row label="Rank">{rank.seq}</Row>
-        <Row label="Score">{rank.score.toLocaleString()}</Row>
-        <Row label="Generation">
+        <Row label={i18n.t('common.rank')}>{rank.seq}</Row>
+        <Row label={i18n.t('common.score')}>{rank.score.toLocaleString()}</Row>
+        <Row label={i18n.t('common.generation')}>
           {rank.generation === 0 ? 'All' : rank.generation}
         </Row>
-        <Row label="Gotcha">{rank.gotcha}</Row>
-        <Row label="Max Combo">{rank.maxCombo}</Row>
-        <Row label="Avg. Speed">
+        <Row label={i18n.t('common.gotcha')}>{rank.gotcha}</Row>
+        <Row label={i18n.t('common.maxCombo')}>{rank.maxCombo}</Row>
+        <Row label={i18n.t('common.avgSpeed')}>
           {rank.avgSpeed}
           <span className="text-secondary text-xs">wpm</span>
         </Row>
-        <Row label="Max Speed">
+        <Row label={i18n.t('common.maxSpeed')}>
           {rank.maxSpeed}
           <span className="text-secondary text-xs">wpm</span>
         </Row>
-        <Row label="Accuracy">
+        <Row label={i18n.t('common.accuracy')}>
           {rank.accuracy}
           <span className="text-secondary text-xs">%</span>
         </Row>

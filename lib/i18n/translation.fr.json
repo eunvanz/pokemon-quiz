@@ -1,0 +1,54 @@
+{
+  "intro": {
+    "loading": "chargement...",
+    "pressEnter": "Appuyez sur Entrée ou cliquez n'importe où"
+  },
+  "selectGeneration": {
+    "practice": "Pratique",
+    "previous": "Précédent",
+    "start": "Commencer",
+    "next": "Suivant",
+    "chooseGeneration": "CHOISISSEZ UNE GÉNÉRATION À DÉFIER",
+    "1stGeneration": "1ère génération",
+    "7thGeneration": "7ème génération",
+    "leaderboard": "Classement",
+    "5thGeneration": "5ème génération",
+    "4thGeneration": "4ème génération",
+    "2ndGeneration": "2e génération",
+    "9thGeneration": "9ème génération",
+    "allGenerations": "Toutes les générations",
+    "3rdGeneration": "3ème génération",
+    "8thGeneration": "8ème génération",
+    "6thGeneration": "6ème génération"
+  },
+  "common": {
+    "score": "Score",
+    "accuracy": "Précision",
+    "combos": "Combo",
+    "maxCombo": "Combo maximum",
+    "avgSpeed": "Moy. Vitesse",
+    "name": "Nom",
+    "country": "Pays",
+    "generation": "Génération",
+    "lastSpeed": "Dernière vitesse",
+    "rank": "Rang",
+    "maxSpeed": "Vitesse maximale"
+  },
+  "monNameInput": {
+    "skip": "Sauter",
+    "fire": "Soumettre",
+    "placeholder": "Entrez le nom du Pokémon",
+    "error": "C'est une mauvaise réponse"
+  },
+  "searchInput": {
+    "search": "Recherche",
+    "namePlaceholder": "Entrez le nom du joueur",
+    "countryPlaceholder": "Entrez le pays du joueur",
+    "highestScoreOnly": "Afficher uniquement les scores les plus élevés par nom"
+  },
+  "certificate": {
+    "close": "Fermer",
+    "copyLink": "Copier le lien du certificat",
+    "certifies": "Pokédrops certifie que vous avez"
+  }
+}

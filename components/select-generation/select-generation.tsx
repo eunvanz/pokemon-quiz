@@ -19,6 +19,7 @@ import Button from '../button'
 import 'swiper/swiper.min.css'
 import RainItem from '../rain-item'
 import { GameMode } from '@/lib/store/game-mode-state'
+import i18n from '@/lib/i18n'
 
 export interface SelectGenerationProps {
   onStart: (gameMode: GameMode) => void
@@ -75,16 +76,16 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
   }, [generation, onChangeGeneration])
 
   const generationTexts = [
-    'All Generations',
-    '1st Generation',
-    '2nd Generation',
-    '3rd Generation',
-    '4th Generation',
-    '5th Generation',
-    '6th Generation',
-    '7th Generation',
-    '8th Generation',
-    '9th Generation',
+    i18n.t('selectGeneration.allGenerations'),
+    i18n.t('selectGeneration.1stGeneration'),
+    i18n.t('selectGeneration.2ndGeneration'),
+    i18n.t('selectGeneration.3rdGeneration'),
+    i18n.t('selectGeneration.4thGeneration'),
+    i18n.t('selectGeneration.5thGeneration'),
+    i18n.t('selectGeneration.6thGeneration'),
+    i18n.t('selectGeneration.7thGeneration'),
+    i18n.t('selectGeneration.8thGeneration'),
+    i18n.t('selectGeneration.9thGeneration'),
   ]
 
   return (
@@ -92,7 +93,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
       css={tw`relative flex flex-col h-screen w-full justify-center overflow-hidden p-4`}
     >
       <div css={tw`sm:text-2xl text-xl text-center text-primary animate-pulse`}>
-        CHOOSE A GENERATION TO CHALLENGE
+        {i18n.t('selectGeneration.chooseGeneration')}
       </div>
       <div>
         <Swiper
@@ -125,7 +126,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           variant="outlined"
           onClick={() => swiperRef.current?.slidePrev()}
         >
-          Previous (Left)
+          {i18n.t('selectGeneration.previous')} (Left)
         </Button>
         <Button
           isBlock
@@ -133,17 +134,17 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           variant="outlined"
           onClick={() => swiperRef.current?.slideNext()}
         >
-          Next (Right)
+          {i18n.t('selectGeneration.next')} (Right)
         </Button>
       </div>
       <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>
         <Button isBlock onClick={() => onStart('normal')}>
-          Start (Enter)
+          {i18n.t('selectGeneration.start')} (Enter)
         </Button>
       </div>
       <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>
         <Button isBlock variant="outlined" onClick={() => onStart('practice')}>
-          Practice (Space)
+          {i18n.t('selectGeneration.practice')} (Space bar)
         </Button>
       </div>
       <div css={tw`mx-auto sm:w-1/2 w-full mt-4`}>
@@ -152,7 +153,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           color="secondary"
           onClick={() => onNavigateToLeaderBoard()}
         >
-          Leaderboard
+          {i18n.t('selectGeneration.leaderboard')}
         </Button>
       </div>
       <AnimatePresence>

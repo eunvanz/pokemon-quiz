@@ -1,5 +1,6 @@
 'use client'
 
+import i18n from '@/lib/i18n'
 import { AnimatePresence, motion } from 'framer-motion'
 import tw from 'twin.macro'
 
@@ -30,7 +31,7 @@ const Combo: React.FC<ComboProps> = ({ count }) => {
         </motion.span>
       </AnimatePresence>
       <span css={tw`sm:text-3xl text-blue-600`}>{count}</span>
-      <span css={tw`sm:text-lg`}>combos</span>
+      <span css={tw`sm:text-lg`}>{i18n.t('common.combos')}</span>
     </div>
   ) : (
     <div css={tw`h-6 sm:h-9`} />

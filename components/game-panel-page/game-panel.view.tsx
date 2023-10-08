@@ -15,6 +15,7 @@ import { motion } from 'framer-motion'
 import { motionVariants } from '@/lib/helpers/framer'
 import { checkIsSSR } from '@/lib/helpers/common'
 import useIsMobile from '@/lib/hooks/use-is-mobile'
+import i18n from '@/lib/i18n'
 
 export interface GamePanelProps extends GameController {}
 
@@ -145,13 +146,39 @@ const GamePanel: React.FC<GamePanelProps> = ({
           />
           <div className="ml-4 flex flex-col justify-between gap-2 sm:gap-4 w-full max-w-sm">
             <div css={tw`flex flex-col gap-1 sm:gap-2`}>
-              <Score label="Score" count={score} diff={bonusScore} />
-              <Score label="Gotcha" count={achievedMons.length} />
-              <Score label="Max Combo" count={maxCombo > 1 ? maxCombo : 0} />
-              <Score label="Avg. Speed" count={typingSpeed.avg} unit="wpm" />
-              <Score label="Max Speed" count={typingSpeed.max} unit="wpm" />
-              <Score label="Last Speed" count={typingSpeed.last} unit="wpm" />
-              <Score label="Accuracy" count={accuracy} unit="%" />
+              <Score
+                label={i18n.t('common.score')}
+                count={score}
+                diff={bonusScore}
+              />
+              <Score
+                label={i18n.t('common.gotcha')}
+                count={achievedMons.length}
+              />
+              <Score
+                label={i18n.t('common.maxCombo')}
+                count={maxCombo > 1 ? maxCombo : 0}
+              />
+              <Score
+                label={i18n.t('common.avgSpeed')}
+                count={typingSpeed.avg}
+                unit="wpm"
+              />
+              <Score
+                label={i18n.t('common.maxSpeed')}
+                count={typingSpeed.max}
+                unit="wpm"
+              />
+              <Score
+                label={i18n.t('common.lastSpeed')}
+                count={typingSpeed.last}
+                unit="wpm"
+              />
+              <Score
+                label={i18n.t('common.accuracy')}
+                count={accuracy}
+                unit="%"
+              />
             </div>
             <Combo count={combo} />
             <div>

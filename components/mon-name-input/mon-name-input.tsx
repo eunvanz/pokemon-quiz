@@ -1,5 +1,6 @@
 'use client'
 
+import i18n from '@/lib/i18n'
 import {
   forwardRef,
   useCallback,
@@ -68,7 +69,7 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
           onSubmit(monName)
           resetValue()
         } else {
-          setError('monName', { message: "It's wrong answer" })
+          setError('monName', { message: i18n.t('monNameInput.error') })
           resetValue()
           onFail()
         }
@@ -130,14 +131,14 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
               }}
               aria-label="mon name"
               isBlock
-              placeholder="Enter Pokémon's name"
+              placeholder={i18n.t('monNameInput.placeholder')}
               hasError={!!errors.monName}
               errorMessage={errors.monName?.message}
               autoComplete="off"
             />
           </div>
           <Button css={tw`px-6`} type="submit" onClick={focusInput}>
-            Fire (Enter)
+            {i18n.t('monNameInput.fire')} (Enter)
           </Button>
         </div>
         <div css={tw`pt-2`}>
@@ -147,7 +148,7 @@ const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
             type="button"
             onClick={skip}
           >
-            Skip (Space bar x 2)
+            {i18n.t('monNameInput.skip')} (Space bar x2)
           </Button>
         </div>
       </form>
