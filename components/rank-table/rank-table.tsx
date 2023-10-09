@@ -104,32 +104,38 @@ const RankTable: React.FC<RankTableProps> = ({
           <div className="flex flex-col gap-2 w-full">
             <div className="whitespace-normal">{item.name}</div>
             <div className="flex flex-row justify-between">
-              <div className="text-secondary">Country</div>
+              <div className="text-secondary">{i18n.t('common.country')}</div>
               <Country country={item.country} countryCode={item.countryCode} />
             </div>
             <div className="flex flex-row justify-between">
-              <div className="text-secondary">Score</div>
+              <div className="text-secondary">{i18n.t('common.score')}</div>
               <div className="text-primary" css={{ zIndex: -1 }}>
                 <AnimatedNumber value={item.score} hasComma size={16} />
               </div>
             </div>
             <div className="flex flex-row gap-8">
               <div className="flex flex-row justify-between w-full">
-                <div className="text-secondary">Generation</div>
+                <div className="text-secondary">
+                  {i18n.t('common.generation')}
+                </div>
                 <div>{item.generation === 0 ? 'All' : item.generation}</div>
               </div>
               <div className="flex flex-row justify-between w-full">
-                <div className="text-secondary">Gotcha</div>
+                <div className="text-secondary">{i18n.t('common.gotcha')}</div>
                 <div>{item.gotcha.toLocaleString()}</div>
               </div>
             </div>
             <div className="flex flex-row gap-8">
               <div className="flex flex-row justify-between w-full">
-                <div className="text-secondary">Max Combo</div>
+                <div className="text-secondary">
+                  {i18n.t('common.maxCombo')}
+                </div>
                 <div>{item.maxCombo.toLocaleString()}</div>
               </div>
               <div className="flex flex-row justify-between w-full">
-                <div className="text-secondary">Accuracy</div>
+                <div className="text-secondary">
+                  {i18n.t('common.accuracy')}
+                </div>
                 <div>
                   {item.accuracy}
                   <span className="text-gray-400 text-xs">%</span>
@@ -138,14 +144,18 @@ const RankTable: React.FC<RankTableProps> = ({
             </div>
             <div className="flex flex-row gap-8">
               <div className="flex flex-row justify-between w-full">
-                <div className="text-secondary">Avg Spd</div>
+                <div className="text-secondary">
+                  {i18n.t('common.avgSpeed')}
+                </div>
                 <div>
                   {item.avgSpeed.toLocaleString()}
                   <span className="text-gray-400 text-xs">wpm</span>
                 </div>
               </div>
               <div className="flex flex-row justify-between w-full">
-                <div className="text-secondary">Max Spd</div>
+                <div className="text-secondary">
+                  {i18n.t('common.maxSpeed')}
+                </div>
                 <div>
                   {item.maxSpeed.toLocaleString()}
                   <span className="text-gray-400 text-xs">wpm</span>

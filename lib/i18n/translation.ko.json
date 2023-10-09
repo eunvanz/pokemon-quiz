@@ -1,7 +1,7 @@
 {
   "intro": {
     "loading": "로드 중...",
-    "pressEnter": "Enter 키를 누르거나 아무 곳이나 클릭하세요."
+    "pressEnter": "엔터키를 누르거나 아무 곳이나 클릭하세요"
   },
   "selectGeneration": {
     "practice": "연습",
@@ -23,7 +23,7 @@
   },
   "common": {
     "rank": "순위",
-    "gotcha": "획득",
+    "gotcha": "갓챠",
     "maxSpeed": "최대 속도",
     "country": "국가",
     "generation": "세대",
@@ -32,7 +32,7 @@
     "combos": "콤보",
     "name": "이름",
     "avgSpeed": "평균 속도",
-    "gotchaRate": "획득률",
+    "gotchaRate": "갓챠비율",
     "maxCombo": "최대 콤보",
     "lastSpeed": "마지막 속도"
   },
