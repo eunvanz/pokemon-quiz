@@ -15,7 +15,6 @@ export const getTimeZoneToCountryMap = () => {
 export const getUserLocationFromTimeZone = () => {
   const timeZone = Intl?.DateTimeFormat().resolvedOptions().timeZone
   if (timeZone) {
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
     const tzArr = timeZone.split('/')
     const region = tzArr[0]
     const city = tzArr[tzArr.length - 1]
