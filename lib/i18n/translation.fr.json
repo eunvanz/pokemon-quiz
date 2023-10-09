@@ -1,55 +1,56 @@
 {
   "intro": {
-    "pressEnter": "Appuyez sur Entrée ou cliquez n'importe où",
-    "loading": "chargement..."
+    "loading": "chargement...",
+    "pressEnter": "Appuyez sur Entrée ou cliquez n'importe où"
   },
   "selectGeneration": {
-    "start": "Commencer",
-    "next": "Suivant",
-    "practice": "Pratique",
     "previous": "Précédent",
-    "chooseGeneration": "CHOISISSEZ UNE GÉNÉRATION À DÉFIER",
-    "9thGeneration": "9ème génération",
-    "7thGeneration": "7ème génération",
-    "5thGeneration": "5ème génération",
-    "leaderboard": "Classement",
-    "8thGeneration": "8ème génération",
-    "3rdGeneration": "3ème génération",
-    "2ndGeneration": "2e génération",
-    "6thGeneration": "6ème génération",
+    "next": "Suivant",
+    "start": "Commencer",
     "1stGeneration": "1ère génération",
     "allGenerations": "Toutes les générations",
-    "4thGeneration": "4ème génération"
+    "4thGeneration": "4ème génération",
+    "9thGeneration": "9ème génération",
+    "3rdGeneration": "3ème génération",
+    "7thGeneration": "7ème génération",
+    "5thGeneration": "5ème génération",
+    "2ndGeneration": "2e génération",
+    "8thGeneration": "8ème génération",
+    "6thGeneration": "6ème génération",
+    "chooseGeneration": "CHOISISSEZ UNE GÉNÉRATION À DÉFIER",
+    "practice": "Pratique",
+    "leaderboard": "Classement"
   },
   "common": {
     "score": "Score",
-    "accuracy": "Précision",
-    "combos": "Combo",
     "avgSpeed": "Moy. Vitesse",
+    "accuracy": "Précision",
     "name": "Nom",
+    "unknown": "inconnu",
     "country": "Pays",
-    "generation": "Génération",
-    "maxSpeed": "Vitesse maximale",
+    "combos": "Combo",
     "maxCombo": "Combo maximum",
+    "maxSpeed": "Vitesse maximale",
     "lastSpeed": "Dernière vitesse",
+    "generation": "Génération",
     "rank": "Rang"
   },
   "monNameInput": {
-    "skip": "Sauter",
     "fire": "Soumettre",
+    "skip": "Sauter",
     "error": "C'est une mauvaise réponse",
     "placeholder": "Entrez le nom du Pokémon"
   },
   "searchInput": {
     "search": "Recherche",
-    "highestScoreOnly": "Afficher uniquement les scores les plus élevés par nom",
     "countryPlaceholder": "Entrez le pays du joueur",
-    "namePlaceholder": "Entrez le nom du joueur"
+    "namePlaceholder": "Entrez le nom du joueur",
+    "highestScoreOnly": "Afficher uniquement les scores les plus élevés par nom"
   },
   "certificate": {
     "close": "Fermer",
-    "copied": "Lien de partage copié dans le presse-papier !",
+    "copyLink": "Copier le lien du certificat",
     "certifies": "Pokédrops certifie que vous avez",
-    "copyLink": "Copier le lien du certificat"
+    "copied": "Lien de partage copié dans le presse-papier !"
   }
 }

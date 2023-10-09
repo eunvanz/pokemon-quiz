@@ -115,25 +115,25 @@ const RankTable: React.FC<RankTableProps> = ({
               </div>
             </div>
             <div className="flex flex-row gap-8">
-              <div className="flex flex-row justify-between w-full">
+              <div className="flex flex-row justify-between w-full items-center">
                 <div className="text-secondary">
                   {i18n.t('common.generation')}
                 </div>
                 <div>{item.generation === 0 ? 'All' : item.generation}</div>
               </div>
-              <div className="flex flex-row justify-between w-full">
+              <div className="flex flex-row justify-between w-full items-center">
                 <div className="text-secondary">{i18n.t('common.gotcha')}</div>
                 <div>{item.gotcha.toLocaleString()}</div>
               </div>
             </div>
             <div className="flex flex-row gap-8">
-              <div className="flex flex-row justify-between w-full">
+              <div className="flex flex-row justify-between w-full items-center">
                 <div className="text-secondary">
                   {i18n.t('common.maxCombo')}
                 </div>
                 <div>{item.maxCombo.toLocaleString()}</div>
               </div>
-              <div className="flex flex-row justify-between w-full">
+              <div className="flex flex-row justify-between w-full items-center">
                 <div className="text-secondary">
                   {i18n.t('common.accuracy')}
                 </div>
@@ -144,7 +144,7 @@ const RankTable: React.FC<RankTableProps> = ({
               </div>
             </div>
             <div className="flex flex-row gap-8">
-              <div className="flex flex-row justify-between w-full">
+              <div className="flex flex-row justify-between w-full items-center">
                 <div className="text-secondary">
                   {i18n.t('common.avgSpeed')}
                 </div>
@@ -153,7 +153,7 @@ const RankTable: React.FC<RankTableProps> = ({
                   <span className="text-gray-400 text-xs">wpm</span>
                 </div>
               </div>
-              <div className="flex flex-row justify-between w-full">
+              <div className="flex flex-row justify-between w-full items-center">
                 <div className="text-secondary">
                   {i18n.t('common.maxSpeed')}
                 </div>

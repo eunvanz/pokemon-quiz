@@ -34,7 +34,8 @@
     "rank": "Rank",
     "name": "Name",
     "country": "Country",
-    "generation": "Generation"
+    "generation": "Generation",
+    "unknown": "unknown"
   },
   "monNameInput": {
     "fire": "Submit",

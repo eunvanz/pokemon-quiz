@@ -5,34 +5,35 @@
   },
   "selectGeneration": {
     "previous": "Anterior",
+    "start": "Começar",
     "next": "Próximo",
     "practice": "Prática",
-    "start": "Começar",
+    "5thGeneration": "5ª Geração",
+    "2ndGeneration": "2ª Geração",
+    "7thGeneration": "7ª Geração",
+    "1stGeneration": "1ª Geração",
+    "leaderboard": "Entre os melhores",
+    "4thGeneration": "4ª Geração",
+    "8thGeneration": "8ª Geração",
+    "3rdGeneration": "3ª Geração",
     "9thGeneration": "9ª Geração",
     "allGenerations": "Todas as gerações",
-    "8thGeneration": "8ª Geração",
-    "5thGeneration": "5ª Geração",
     "6thGeneration": "6ª Geração",
-    "1stGeneration": "1ª Geração",
-    "7thGeneration": "7ª Geração",
-    "leaderboard": "Entre os melhores",
-    "3rdGeneration": "3ª Geração",
-    "2ndGeneration": "2ª Geração",
-    "4thGeneration": "4ª Geração",
     "chooseGeneration": "ESCOLHA UMA GERAÇÃO PARA DESAFIAR"
   },
   "common": {
-    "maxSpeed": "Velocidade máxima",
-    "rank": "Classificação",
-    "name": "Nome",
-    "country": "País",
     "avgSpeed": "Média Velocidade",
+    "maxSpeed": "Velocidade máxima",
     "score": "Pontuação",
+    "country": "País",
+    "rank": "Classificação",
     "generation": "Geração",
-    "accuracy": "Precisão",
+    "unknown": "desconhecido",
     "maxCombo": "Combinação máxima",
-    "combos": "Combinação",
-    "lastSpeed": "Última velocidade"
+    "accuracy": "Precisão",
+    "lastSpeed": "Última velocidade",
+    "name": "Nome",
+    "combos": "Combinação"
   },
   "monNameInput": {
     "fire": "Enviar",
@@ -42,14 +43,14 @@
   },
   "searchInput": {
     "search": "Procurar",
-    "highestScoreOnly": "Veja apenas as pontuações mais altas por nome",
+    "countryPlaceholder": "Insira o país do jogador",
     "namePlaceholder": "Digite o nome do jogador",
-    "countryPlaceholder": "Insira o país do jogador"
+    "highestScoreOnly": "Veja apenas as pontuações mais altas por nome"
   },
   "certificate": {
     "close": "Fechar",
+    "copyLink": "Copiar link do certificado",
     "copied": "Compartilhar link copiado para a área de transferência!",
-    "certifies": "Pokédrops certifica que você tem",
-    "copyLink": "Copiar link do certificado"
+    "certifies": "Pokédrops certifica que você tem"
   }
 }

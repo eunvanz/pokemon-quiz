@@ -1,4 +1,5 @@
 import { getCountryFlagImgUrl } from '@/lib/helpers/location'
+import useI18n from '@/lib/hooks/use-i18n'
 import classNames from 'classnames'
 import { hasFlag } from 'country-flag-icons'
 import Image from 'next/image'
@@ -9,6 +10,8 @@ export interface CountryProps {
 }
 
 const Country: React.FC<CountryProps> = ({ country, countryCode }) => {
+  const i18n = useI18n()
+
   return (
     <div
       className={classNames(
@@ -24,7 +27,7 @@ const Country: React.FC<CountryProps> = ({ country, countryCode }) => {
           height={14}
         />
       )}
-      {country || 'unknown'}
+      {country || i18n.t('common.unknown')}
     </div>
   )
 }
