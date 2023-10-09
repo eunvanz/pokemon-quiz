@@ -163,35 +163,35 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           {i18n.t('selectGeneration.leaderboard')}
         </Button>
       </div>
-      <div className="fixed top-4 right-4 w-60 sm:w-80">
+      <div className="fixed top-4 right-4 w-36 sm:w-50">
         <Select
           options={[
             {
-              label: 'Language: English',
+              label: 'English',
               value: 'en',
             },
             {
-              label: '언어: 한국어',
+              label: '한국어',
               value: 'ko',
             },
             {
-              label: '言語: 日本語',
+              label: '日本語',
               value: 'ja',
             },
             {
-              label: '言語: 中国言',
+              label: '中国言',
               value: 'zh',
             },
             {
-              label: 'langue: Français',
+              label: 'Français',
               value: 'fr',
             },
             {
-              label: 'idioma: Español',
+              label: 'Español',
               value: 'es',
             },
             {
-              label: 'linguagem: Português',
+              label: 'Português',
               value: 'pt',
             },
           ]}

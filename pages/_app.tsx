@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Pokédrops" />
         <meta property="og:description" content="Typing game with Pokémon" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <title>Pokédrops</title>
       </Head>
       <CommonProvider>
