@@ -4,13 +4,18 @@ import { useIsomorphicLayoutEffect, useLocalStorage } from 'usehooks-ts'
 import { checkIsSSR } from '../helpers/common'
 import localeState from '../store/locale-state'
 
+const SUPPORTED_LANGUAGES = ['en', 'ko', 'ja', 'zh', 'fr', 'es', 'pt']
+
 const useLocale = () => {
   const [lng, setLng] = useLocalStorage<string>(
     'lng',
     checkIsSSR()
       ? 'en'
       : window.localStorage.getItem('lng') ||
-          Intl?.DateTimeFormat().resolvedOptions().locale,
+          window.navigator.languages.find((language) =>
+            SUPPORTED_LANGUAGES.includes(language),
+          ) ||
+          'en',
   )
   const [locale, setLocale] = useRecoilState<string>(localeState)
 
