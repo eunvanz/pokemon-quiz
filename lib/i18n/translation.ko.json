@@ -45,8 +45,8 @@
   },
   "searchInput": {
     "search": "검색",
-    "countryPlaceholder": "플레이어의 국가를 입력하세요",
-    "namePlaceholder": "플레이어의 이름을 입력하세요",
+    "countryPlaceholder": "플레이어의 국가 입력",
+    "namePlaceholder": "플레이어의 이름 입력",
     "highestScoreOnly": "이름별로 가장 높은 점수만 보기"
   },
   "certificate": {
