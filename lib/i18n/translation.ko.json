@@ -38,7 +38,7 @@
   },
   "monNameInput": {
     "skip": "건너뛰기",
-    "fire": "제출",
+    "fire": "입력",
     "error": "틀린 답이에요",
     "placeholder": "포켓몬의 이름을 입력하세요"
   },
