@@ -20,12 +20,15 @@ import 'swiper/swiper.min.css'
 import RainItem from '../rain-item'
 import { GameMode } from '@/lib/store/game-mode-state'
 import useI18n from '@/lib/hooks/use-i18n'
+import Select from '../select'
 
 export interface SelectGenerationProps {
   onStart: (gameMode: GameMode) => void
   onNavigateToLeaderBoard: VoidFunction
   mons: Mon[]
   onChangeGeneration: (generation: Generation) => void
+  locale: string
+  onChangeLocale: (locale: string) => void
 }
 
 const SelectGeneration: React.FC<SelectGenerationProps> = ({
@@ -33,6 +36,8 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
   onNavigateToLeaderBoard,
   mons,
   onChangeGeneration,
+  locale,
+  onChangeLocale,
 }) => {
   const i18n = useI18n()
 
@@ -158,6 +163,43 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
           {i18n.t('selectGeneration.leaderboard')}
         </Button>
       </div>
+      <div className="fixed top-4 right-4 w-60 sm:w-80">
+        <Select
+          options={[
+            {
+              label: 'Language: English',
+              value: 'en',
+            },
+            {
+              label: '언어: 한국어',
+              value: 'ko',
+            },
+            {
+              label: '言語: 日本語',
+              value: 'ja',
+            },
+            {
+              label: '言語: 中国言',
+              value: 'zh',
+            },
+            {
+              label: 'langue: Français',
+              value: 'fr',
+            },
+            {
+              label: 'idioma: Español',
+              value: 'es',
+            },
+            {
+              label: 'linguagem: Português',
+              value: 'pt',
+            },
+          ]}
+          value={locale}
+          onChange={onChangeLocale}
+        />
+      </div>
+
       <AnimatePresence>
         <Fragment key={generation}>
           {shuffle(generationMons)

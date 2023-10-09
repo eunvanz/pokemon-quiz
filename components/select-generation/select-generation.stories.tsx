@@ -7,6 +7,7 @@ const meta = {
   component: SelectGeneration,
   args: {
     mons: mockMons.allMons,
+    locale: 'pt',
   },
 } as Meta<typeof SelectGeneration>
 

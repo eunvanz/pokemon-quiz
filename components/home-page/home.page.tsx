@@ -1,6 +1,7 @@
 import useAllMons from '@/lib/hooks/use-all-mons'
 import useGameController from '@/lib/hooks/use-game-controller'
 import useGeneration from '@/lib/hooks/use-generation'
+import useLocale from '@/lib/hooks/use-locale'
 import { GameMode } from '@/lib/store/game-mode-state'
 import { useRouter } from 'next/navigation'
 import { useCallback, useEffect } from 'react'
@@ -14,6 +15,8 @@ export default function HomePage() {
   const { allMons, isAllMonsLoading } = useAllMons()
 
   const { resetGame, setGameMode } = useGameController()
+
+  const { locale, setLocale } = useLocale()
 
   const onStart = useCallback(
     (gameMode: GameMode) => {
@@ -35,6 +38,8 @@ export default function HomePage() {
       mons={allMons}
       onChangeGeneration={setGeneration}
       isLoading={isAllMonsLoading}
+      locale={locale}
+      onChangeLocale={setLocale}
     />
   )
 }

@@ -9,6 +9,7 @@ export interface SelectProps {
   options: SelectOption[]
   placeholder?: string
   className?: string
+  buttonClassName?: string
 }
 
 export interface SelectOption {
@@ -22,6 +23,7 @@ const Select: React.FC<SelectProps> = ({
   options,
   placeholder,
   className,
+  buttonClassName,
   ...restProps
 }) => {
   const selectedOption = useMemo(() => {
@@ -31,7 +33,12 @@ const Select: React.FC<SelectProps> = ({
   return (
     <Listbox value={value} onChange={onChange}>
       <div className={classNames('relative', className)} {...restProps}>
-        <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white p-2 sm:p-3 pr-10 text-left focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-300 text-sm sm:text-base border-2 border-gray-200">
+        <Listbox.Button
+          className={classNames(
+            'relative w-full cursor-default rounded-lg bg-white p-2 sm:p-3 pr-10 text-left focus:outline-none focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-blue-300 text-sm sm:text-base border-2 border-gray-200',
+            buttonClassName,
+          )}
+        >
           <span className="block truncate">
             {selectedOption?.label ?? placeholder}
           </span>
