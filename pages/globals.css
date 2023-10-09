@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Mochiy+Pop+One&family=Noto+Sans+KR:wght@800&family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Mochiy+Pop+One&family=Noto+Sans+KR:wght@600&family=Noto+Sans+SC:wght@600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: 'Carter One', 'Noto Sans KR', 'Mochiy Pop One', 'Noto Sans TC',
+  font-family: 'Carter One', 'Noto Sans KR', 'Mochiy Pop One', 'Noto Sans SC',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
