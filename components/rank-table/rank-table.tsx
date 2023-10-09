@@ -8,8 +8,7 @@ import { useIntersectionObserver } from 'usehooks-ts'
 import CertificateModal from '../certificate-modal'
 import Country from '../country'
 import SearchInput, { SearchInputProps } from '../search-input'
-import Checkbox from '../checkbox'
-import i18n from '@/lib/i18n'
+import useI18n from '@/lib/hooks/use-i18n'
 
 export interface RankItem extends Rank {}
 
@@ -37,6 +36,8 @@ const RankTable: React.FC<RankTableProps> = ({
   onUniqueNameConditionChange,
   defaultUniqueNameCondition,
 }) => {
+  const i18n = useI18n()
+
   const endRef = useRef<HTMLDivElement | null>(null)
 
   const [selectedRank, setSelectedRank] = useState<Rank | undefined>(undefined)

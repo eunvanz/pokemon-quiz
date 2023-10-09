@@ -1,6 +1,6 @@
 'use client'
 
-import i18n from '@/lib/i18n'
+import useI18n from '@/lib/hooks/use-i18n'
 import {
   forwardRef,
   useCallback,
@@ -25,6 +25,8 @@ export interface MonNameInputProps {
 
 const MonNameInput = forwardRef<HTMLInputElement, MonNameInputProps>(
   ({ onSubmit, correctAnswers, onSkip, onFail }, ref) => {
+    const i18n = useI18n()
+
     const isSpacePressedRef = useRef<boolean>(false)
 
     const {

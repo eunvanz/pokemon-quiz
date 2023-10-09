@@ -4,51 +4,52 @@
     "pressEnter": "按 Enter 键或单击任意位置"
   },
   "selectGeneration": {
-    "5thGeneration": "第五代",
-    "2ndGeneration": "第二代",
-    "start": "开始",
-    "4thGeneration": "第四代",
-    "previous": "以前的",
+    "practice": "实践",
+    "next": "下一个",
     "3rdGeneration": "第三代",
     "leaderboard": "排行榜",
-    "next": "下一个",
-    "practice": "实践",
-    "7thGeneration": "第七代",
-    "9thGeneration": "第九代",
-    "allGenerations": "所有世代",
-    "8thGeneration": "第八代",
-    "1stGeneration": "第一代",
+    "2ndGeneration": "第二代",
+    "previous": "以前的",
+    "5thGeneration": "第五代",
+    "start": "开始",
+    "4thGeneration": "第四代",
     "chooseGeneration": "选择一代人来挑战",
-    "6thGeneration": "第六代"
+    "9thGeneration": "第九代",
+    "6thGeneration": "第六代",
+    "8thGeneration": "第八代",
+    "7thGeneration": "第七代",
+    "1stGeneration": "第一代",
+    "allGenerations": "所有世代"
   },
   "common": {
-    "maxCombo": "最大组合",
     "name": "姓名",
-    "country": "国家",
-    "maxSpeed": "最大速度",
-    "rank": "秩",
     "combos": "组合",
+    "country": "国家",
+    "maxCombo": "最大组合",
     "avgSpeed": "平均。速度",
-    "accuracy": "准确性",
     "score": "分数",
     "generation": "一代",
+    "rank": "秩",
+    "accuracy": "准确性",
+    "maxSpeed": "最大速度",
     "lastSpeed": "最后速度"
   },
   "monNameInput": {
-    "skip": "跳过",
     "fire": "提交",
+    "skip": "跳过",
     "error": "这是错误的答案",
     "placeholder": "输入神奇宝贝的名字"
   },
   "searchInput": {
     "search": "搜索",
-    "namePlaceholder": "输入玩家姓名",
+    "highestScoreOnly": "仅按名称查看最高分",
     "countryPlaceholder": "输入玩家所在国家/地区",
-    "highestScoreOnly": "仅按名称查看最高分"
+    "namePlaceholder": "输入玩家姓名"
   },
   "certificate": {
     "close": "关闭",
-    "copyLink": "复制证书链接",
-    "certifies": "Pokédrops 证明您拥有"
+    "certifies": "Pokédrops 证明您拥有",
+    "copied": "分享链接已复制到剪贴板！",
+    "copyLink": "复制证书链接"
   }
 }

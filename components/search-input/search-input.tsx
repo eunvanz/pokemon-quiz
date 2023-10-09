@@ -1,4 +1,4 @@
-import i18n from '@/lib/i18n'
+import useI18n from '@/lib/hooks/use-i18n'
 import { RankSearchParams } from '@/lib/types'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useEventListener } from 'usehooks-ts'
@@ -25,6 +25,8 @@ const SearchInput: React.FC<SearchInputProps> = ({
   onUniqueNameConditionChange,
   defaultUniqueNameCondition,
 }) => {
+  const i18n = useI18n()
+
   const inputRef = useRef<HTMLInputElement>(null)
 
   const [category, setCategory] = useState<Category>('name')
@@ -39,7 +41,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
     } else if (category === 'country') {
       return i18n.t('searchInput.countryPlaceholder')
     }
-  }, [category])
+  }, [category, i18n])
 
   const handleOnSearch = useCallback(() => {
     onSearch({ category, keyword })

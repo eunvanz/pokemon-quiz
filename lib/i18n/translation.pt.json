@@ -4,51 +4,52 @@
     "pressEnter": "Pressione Enter ou clique em qualquer lugar"
   },
   "selectGeneration": {
-    "next": "Próximo",
     "previous": "Anterior",
+    "next": "Próximo",
     "practice": "Prática",
     "start": "Começar",
-    "4thGeneration": "4ª Geração",
-    "5thGeneration": "5ª Geração",
-    "1stGeneration": "1ª Geração",
-    "8thGeneration": "8ª Geração",
-    "7thGeneration": "7ª Geração",
-    "6thGeneration": "6ª Geração",
-    "2ndGeneration": "2ª Geração",
-    "3rdGeneration": "3ª Geração",
-    "leaderboard": "Entre os melhores",
     "9thGeneration": "9ª Geração",
     "allGenerations": "Todas as gerações",
+    "8thGeneration": "8ª Geração",
+    "5thGeneration": "5ª Geração",
+    "6thGeneration": "6ª Geração",
+    "1stGeneration": "1ª Geração",
+    "7thGeneration": "7ª Geração",
+    "leaderboard": "Entre os melhores",
+    "3rdGeneration": "3ª Geração",
+    "2ndGeneration": "2ª Geração",
+    "4thGeneration": "4ª Geração",
     "chooseGeneration": "ESCOLHA UMA GERAÇÃO PARA DESAFIAR"
   },
   "common": {
-    "score": "Pontuação",
     "maxSpeed": "Velocidade máxima",
-    "avgSpeed": "Média Velocidade",
-    "generation": "Geração",
     "rank": "Classificação",
     "name": "Nome",
     "country": "País",
-    "combos": "Combinação",
+    "avgSpeed": "Média Velocidade",
+    "score": "Pontuação",
+    "generation": "Geração",
+    "accuracy": "Precisão",
     "maxCombo": "Combinação máxima",
-    "lastSpeed": "Última velocidade",
-    "accuracy": "Precisão"
+    "combos": "Combinação",
+    "lastSpeed": "Última velocidade"
   },
   "monNameInput": {
-    "skip": "Pular",
     "fire": "Enviar",
-    "placeholder": "Digite o nome do Pokémon",
-    "error": "É uma resposta errada"
+    "skip": "Pular",
+    "error": "É uma resposta errada",
+    "placeholder": "Digite o nome do Pokémon"
   },
   "searchInput": {
     "search": "Procurar",
-    "countryPlaceholder": "Insira o país do jogador",
+    "highestScoreOnly": "Veja apenas as pontuações mais altas por nome",
     "namePlaceholder": "Digite o nome do jogador",
-    "highestScoreOnly": "Veja apenas as pontuações mais altas por nome"
+    "countryPlaceholder": "Insira o país do jogador"
   },
   "certificate": {
     "close": "Fechar",
-    "copyLink": "Copiar link do certificado",
-    "certifies": "Pokédrops certifica que você tem"
+    "copied": "Compartilhar link copiado para a área de transferência!",
+    "certifies": "Pokédrops certifica que você tem",
+    "copyLink": "Copiar link do certificado"
   }
 }

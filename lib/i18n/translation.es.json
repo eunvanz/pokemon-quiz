@@ -4,41 +4,41 @@
     "pressEnter": "Presione enter o haga clic en cualquier lugar"
   },
   "selectGeneration": {
-    "previous": "Anterior",
-    "next": "Próximo",
     "start": "Comenzar",
+    "previous": "Anterior",
     "leaderboard": "Tabla de clasificación",
+    "next": "Próximo",
     "practice": "Práctica",
-    "3rdGeneration": "3ra generación",
-    "1stGeneration": "1ra generación",
-    "4thGeneration": "4ta generación",
     "8thGeneration": "8va generación",
+    "allGenerations": "Todas las generaciones",
     "9thGeneration": "9na generación",
-    "2ndGeneration": "2da generación",
+    "1stGeneration": "1ra generación",
+    "3rdGeneration": "3ra generación",
+    "5thGeneration": "5ta generación",
     "7thGeneration": "Séptima generación",
     "6thGeneration": "6ta generación",
-    "5thGeneration": "5ta generación",
-    "allGenerations": "Todas las generaciones",
-    "chooseGeneration": "ELIGE UNA GENERACIÓN PARA DESAFIR"
+    "4thGeneration": "4ta generación",
+    "chooseGeneration": "ELIGE UNA GENERACIÓN PARA DESAFIR",
+    "2ndGeneration": "2da generación"
   },
   "common": {
+    "generation": "Generación",
     "score": "Puntaje",
     "accuracy": "Exactitud",
-    "generation": "Generación",
-    "maxSpeed": "Máxima velocidad",
-    "avgSpeed": "Promedio Velocidad",
-    "combos": "combinado",
-    "rank": "Rango",
-    "country": "País",
     "name": "Nombre",
-    "lastSpeed": "Última velocidad",
-    "maxCombo": "Combinación máxima"
+    "combos": "combinado",
+    "country": "País",
+    "avgSpeed": "Promedio Velocidad",
+    "maxSpeed": "Máxima velocidad",
+    "rank": "Rango",
+    "maxCombo": "Combinación máxima",
+    "lastSpeed": "Última velocidad"
   },
   "monNameInput": {
     "skip": "Saltar",
     "fire": "Entregar",
-    "placeholder": "Introduce el nombre de Pokémon",
-    "error": "es una respuesta incorrecta"
+    "error": "es una respuesta incorrecta",
+    "placeholder": "Introduce el nombre de Pokémon"
   },
   "searchInput": {
     "search": "Buscar",
@@ -48,7 +48,8 @@
   },
   "certificate": {
     "close": "Cerca",
-    "certifies": "Pokédrops certifica que tienes",
-    "copyLink": "Copiar enlace del certificado"
+    "copied": "¡Compartir enlace copiado al portapapeles!",
+    "copyLink": "Copiar enlace del certificado",
+    "certifies": "Pokédrops certifica que tienes"
   }
 }

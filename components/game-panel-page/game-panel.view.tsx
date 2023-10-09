@@ -15,7 +15,7 @@ import { motion } from 'framer-motion'
 import { motionVariants } from '@/lib/helpers/framer'
 import { checkIsSSR } from '@/lib/helpers/common'
 import useIsMobile from '@/lib/hooks/use-is-mobile'
-import i18n from '@/lib/i18n'
+import useI18n from '@/lib/hooks/use-i18n'
 
 export interface GamePanelProps extends GameController {}
 
@@ -44,6 +44,8 @@ const GamePanel: React.FC<GamePanelProps> = ({
   bonusScore,
   gameMode,
 }) => {
+  const i18n = useI18n()
+
   const monImageRef = useRef<HTMLDivElement | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 

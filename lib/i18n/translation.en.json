@@ -51,6 +51,7 @@
   "certificate": {
     "certifies": "Pokédrops certifies that you have",
     "copyLink": "Copy Certificate Link",
-    "close": "Close"
+    "close": "Close",
+    "copied": "Share link copied to clipboard!"
   }
 }

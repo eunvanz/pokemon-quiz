@@ -7,7 +7,7 @@ import tw from 'twin.macro'
 import { Mon } from '@/lib/types'
 import dynamic from 'next/dynamic'
 import { DropItemProps } from './drop-item'
-import i18n from '@/lib/i18n'
+import useI18n from '@/lib/hooks/use-i18n'
 
 export interface IntroProps {
   mons?: Mon[]
@@ -16,6 +16,8 @@ export interface IntroProps {
 }
 
 const Intro: React.FC<IntroProps> = ({ mons = [], onEnter, isLoading }) => {
+  const i18n = useI18n()
+
   const [dropCount, setDropCount] = useState(0)
 
   const start = useCallback(() => {

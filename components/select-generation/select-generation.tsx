@@ -19,7 +19,7 @@ import Button from '../button'
 import 'swiper/swiper.min.css'
 import RainItem from '../rain-item'
 import { GameMode } from '@/lib/store/game-mode-state'
-import i18n from '@/lib/i18n'
+import useI18n from '@/lib/hooks/use-i18n'
 
 export interface SelectGenerationProps {
   onStart: (gameMode: GameMode) => void
@@ -34,6 +34,8 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
   mons,
   onChangeGeneration,
 }) => {
+  const i18n = useI18n()
+
   const swiperRef = useRef<SwiperCore>()
 
   const [generation, setGeneration] = useState<Generation>(0)

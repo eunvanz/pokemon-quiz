@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { withRecoilRoot } from '../lib/helpers/test'
 import '../pages/globals.css'
 
 const preview: Preview = {
@@ -19,6 +20,7 @@ const preview: Preview = {
       appDirectory: true,
     },
   },
+  decorators: [withRecoilRoot],
 }
 
 export default preview

@@ -4,9 +4,8 @@ import Link from 'next/link'
 import { Fragment, PropsWithChildren, useMemo, useState } from 'react'
 import { createPortal } from 'react-dom'
 import RainItem from '../rain-item'
-import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 import Country from '../country'
-import i18n from '@/lib/i18n'
+import useI18n from '@/lib/hooks/use-i18n'
 
 export interface CertificateProps {
   rank: Rank
@@ -14,6 +13,8 @@ export interface CertificateProps {
 }
 
 const Certificate: React.FC<CertificateProps> = ({ rank, allMons }) => {
+  const i18n = useI18n()
+
   const [dropCount, setDropCount] = useState(0)
 
   const gotchaMons = useMemo(() => {

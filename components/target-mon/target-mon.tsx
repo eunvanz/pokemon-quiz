@@ -7,7 +7,7 @@ import tw from 'twin.macro'
 import { Mon } from '@/lib/types'
 import AnimatedNumber from 'react-awesome-animated-number'
 import useIsMobile from '@/lib/hooks/use-is-mobile'
-import i18n from '@/lib/i18n'
+import useI18n from '@/lib/hooks/use-i18n'
 
 export interface TargetMonProps {
   mon?: Mon
@@ -17,6 +17,8 @@ export interface TargetMonProps {
 
 const TargetMon = forwardRef<HTMLDivElement, TargetMonProps>(
   ({ mon, nextMonImage, monNames }, ref) => {
+    const i18n = useI18n()
+
     const isMobile = useIsMobile()
 
     const splitMonNames = useMemo(() => {
