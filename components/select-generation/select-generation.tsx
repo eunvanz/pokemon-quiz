@@ -179,7 +179,7 @@ const SelectGeneration: React.FC<SelectGenerationProps> = ({
               value: 'ja',
             },
             {
-              label: '中国語',
+              label: '中文',
               value: 'zh',
             },
             {
