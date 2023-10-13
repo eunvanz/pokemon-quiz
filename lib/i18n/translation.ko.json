@@ -52,6 +52,7 @@
   "certificate": {
     "close": "닫기",
     "copyLink": "인증서 링크 복사",
-    "certifies": "Pokédrops는 당신의 성적을 아래와 같이 증명함"
+    "certifies": "Pokédrops는 당신의 성적을 아래와 같이 증명함",
+    "copied": "공유 링크가 복사되었습니다!"
   }
 }
